@@ -22,7 +22,7 @@ pod 'PartnerOneSDK'
 
 ## Author
 
-ci-mobile-unicred, thyago_casablancas@hotmail.com
+PartnerOne TI
 
 ## License
 
