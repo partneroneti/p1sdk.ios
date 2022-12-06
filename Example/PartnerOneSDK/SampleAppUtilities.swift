@@ -385,6 +385,7 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
         var successAnimationView: UIView? = nil
         switch currentTheme {
             case "FaceTec Theme":
+                successAnimationView = WellRoundedSuccessView()
                 break
             case "Config Wizard Theme":
                 break

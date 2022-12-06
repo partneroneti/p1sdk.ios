@@ -69,8 +69,8 @@ class WellRoundedSuccessView : UIView {
         checkmarkLayer!.strokeEnd = 0
         checkmarkLayer!.lineWidth = round(6.0 * contentScalingFactor())
         checkmarkLayer!.miterLimit = 10
-        checkmarkLayer!.lineCap = .round
-        checkmarkLayer!.lineJoin = .round
+        checkmarkLayer!.lineCap = kCALineCapRound
+        checkmarkLayer!.lineJoin = kCALineJoinRound
         checkmarkLayer!.strokeColor = UIColor(red: 0.035, green: 0.710, blue: 0.639, alpha: 1).cgColor // green
         checkmarkLayer!.fillColor = UIColor.clear.cgColor
 
@@ -98,9 +98,9 @@ class WellRoundedSuccessView : UIView {
         checkmarkStrokeEndAnimation.toValue = 1
         checkmarkStrokeEndAnimation.duration = 0.3
         checkmarkStrokeEndAnimation.autoreverses = false
-        checkmarkStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        checkmarkStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         checkmarkStrokeEndAnimation.repeatCount = 0
-        checkmarkStrokeEndAnimation.fillMode = .forwards
+        checkmarkStrokeEndAnimation.fillMode = kCAFillModeForwards
         checkmarkStrokeEndAnimation.isRemovedOnCompletion = false
         checkmarkStrokeEndAnimation.beginTime = CACurrentMediaTime() + 0.2
         

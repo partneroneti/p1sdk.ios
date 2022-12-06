@@ -50,8 +50,8 @@ class EKYCSuccessView : UIView {
         backCheckmarkLayer = CAShapeLayer()
         backCheckmarkLayer!.path = checkmarkPath()
         backCheckmarkLayer!.lineWidth = round(10.0 * contentScalingFactor())
-        backCheckmarkLayer!.lineCap = .square
-        backCheckmarkLayer!.lineJoin = .miter
+        backCheckmarkLayer!.lineCap = kCALineCapSquare
+        backCheckmarkLayer!.lineJoin = kCALineJoinMiter
         backCheckmarkLayer!.strokeColor = UIColor.black.cgColor
         backCheckmarkLayer!.fillColor = UIColor.clear.cgColor
 
@@ -63,8 +63,8 @@ class EKYCSuccessView : UIView {
         frontCheckmarkLayer = CAShapeLayer()
         frontCheckmarkLayer!.path = checkmarkPath()
         frontCheckmarkLayer!.lineWidth = round(10.0 * contentScalingFactor())
-        frontCheckmarkLayer!.lineCap = .square
-        frontCheckmarkLayer!.lineJoin = .miter
+        frontCheckmarkLayer!.lineCap = kCALineCapSquare
+        frontCheckmarkLayer!.lineJoin = kCALineJoinMiter
         frontCheckmarkLayer!.strokeColor = UIColor.black.cgColor
         frontCheckmarkLayer!.fillColor = UIColor.clear.cgColor
 
@@ -104,9 +104,9 @@ class EKYCSuccessView : UIView {
         backCheckmarkAnimations.animations = [checkmarkOpacityAnimation, checkmarkStrokeColorAnimation, checkmarkStrokeWidthAnimation]
         backCheckmarkAnimations.duration = 0.5
         backCheckmarkAnimations.autoreverses = false
-        backCheckmarkAnimations.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        backCheckmarkAnimations.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         backCheckmarkAnimations.repeatCount = 0
-        backCheckmarkAnimations.fillMode = .forwards
+        backCheckmarkAnimations.fillMode = kCAFillModeForwards
         backCheckmarkAnimations.isRemovedOnCompletion = false
         backCheckmarkAnimations.beginTime = CACurrentMediaTime() + 0.6
         
@@ -117,9 +117,9 @@ class EKYCSuccessView : UIView {
         checkmarkScaleAnimation.toValue = 1.2
         checkmarkScaleAnimation.duration = 0.5
         checkmarkScaleAnimation.autoreverses = false
-        checkmarkScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        checkmarkScaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         checkmarkScaleAnimation.repeatCount = 0
-        checkmarkScaleAnimation.fillMode = .forwards
+        checkmarkScaleAnimation.fillMode = kCAFillModeForwards
         checkmarkScaleAnimation.isRemovedOnCompletion = false
         checkmarkScaleAnimation.beginTime = CACurrentMediaTime() + 0.1
 

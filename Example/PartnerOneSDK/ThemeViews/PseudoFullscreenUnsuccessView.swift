@@ -57,7 +57,7 @@ class PseudoFullscreenUnsuccessView : UIView {
         circleLayer!.path = circlePath()
         circleLayer!.strokeEnd = 0
         circleLayer!.lineWidth = round(4.0 * contentScalingFactor())
-        circleLayer!.lineCap = .round
+        circleLayer!.lineCap = kCALineCapRound
         circleLayer!.strokeColor = UIColor(red: 0.169, green: 0.169, blue: 0.169, alpha: 1).cgColor // black
         circleLayer!.fillColor = UIColor.clear.cgColor
 
@@ -70,7 +70,7 @@ class PseudoFullscreenUnsuccessView : UIView {
         crossLayer!.path = crossPath()
         crossLayer!.strokeEnd = 0
         crossLayer!.lineWidth = round(4.0 * contentScalingFactor())
-        crossLayer!.lineCap = .round
+        crossLayer!.lineCap = kCALineCapRound
         crossLayer!.strokeColor = UIColor(red: 0.765, green: 0.282, blue: 0.231, alpha: 1).cgColor // red
         crossLayer!.fillColor = UIColor.clear.cgColor
 
@@ -102,9 +102,9 @@ class PseudoFullscreenUnsuccessView : UIView {
         circleStrokeEndAnimation.toValue = 1
         circleStrokeEndAnimation.duration = 0.3
         circleStrokeEndAnimation.autoreverses = false
-        circleStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        circleStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         circleStrokeEndAnimation.repeatCount = 0
-        circleStrokeEndAnimation.fillMode = .forwards
+        circleStrokeEndAnimation.fillMode = kCAFillModeForwards
         circleStrokeEndAnimation.isRemovedOnCompletion = false
 
         let circleLineWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
@@ -117,8 +117,8 @@ class PseudoFullscreenUnsuccessView : UIView {
         circleAnimations.duration = 0.6
         circleAnimations.repeatCount = 0
         circleAnimations.autoreverses = false
-        circleAnimations.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        circleAnimations.fillMode = .forwards
+        circleAnimations.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        circleAnimations.fillMode = kCAFillModeForwards
         circleAnimations.animations = [circleLineWidthAnimation, circlePathAnimation]
         circleAnimations.isRemovedOnCompletion = false
         circleAnimations.beginTime = CACurrentMediaTime() + 0.15
@@ -127,9 +127,9 @@ class PseudoFullscreenUnsuccessView : UIView {
         crossStrokeEndAnimation.toValue = 1
         crossStrokeEndAnimation.duration = 0.3
         crossStrokeEndAnimation.autoreverses = false
-        crossStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        crossStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         crossStrokeEndAnimation.repeatCount = 0
-        crossStrokeEndAnimation.fillMode = .forwards
+        crossStrokeEndAnimation.fillMode = kCAFillModeForwards
         crossStrokeEndAnimation.isRemovedOnCompletion = false
         crossStrokeEndAnimation.beginTime = CACurrentMediaTime() + 0.75
         

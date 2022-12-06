@@ -54,8 +54,8 @@ class EKYCUnsuccessView : UIView {
         backCrossLayer = CAShapeLayer()
         backCrossLayer!.path = crossPath()
         backCrossLayer!.lineWidth = round(10.0 * contentScalingFactor())
-        backCrossLayer!.lineCap = .square
-        backCrossLayer!.lineJoin = .miter
+        backCrossLayer!.lineCap = kCALineCapSquare
+        backCrossLayer!.lineJoin = kCALineJoinMiter
         backCrossLayer!.strokeColor = UIColor.black.cgColor
         backCrossLayer!.fillColor = UIColor.clear.cgColor
 
@@ -68,8 +68,8 @@ class EKYCUnsuccessView : UIView {
         frontCrossLayer = CAShapeLayer()
         frontCrossLayer!.path = crossPath()
         frontCrossLayer!.lineWidth = round(10.0 * contentScalingFactor())
-        frontCrossLayer!.lineCap = .square
-        frontCrossLayer!.lineJoin = .miter
+        frontCrossLayer!.lineCap = kCALineCapSquare
+        frontCrossLayer!.lineJoin = kCALineJoinMiter
         frontCrossLayer!.strokeColor = UIColor.black.cgColor
         frontCrossLayer!.fillColor = UIColor.clear.cgColor
 
@@ -107,9 +107,9 @@ class EKYCUnsuccessView : UIView {
         crossAnimations.animations = [crossOpacityAnimation, crossColorAnimation, strokeWidthAnimation]
         crossAnimations.duration = 0.5
         crossAnimations.autoreverses = false
-        crossAnimations.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        crossAnimations.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         crossAnimations.repeatCount = 0
-        crossAnimations.fillMode = .forwards
+        crossAnimations.fillMode = kCAFillModeForwards
         crossAnimations.isRemovedOnCompletion = false
         crossAnimations.beginTime = CACurrentMediaTime() + 0.6
         
@@ -120,9 +120,9 @@ class EKYCUnsuccessView : UIView {
         crossScaleAnimation.toValue = 1.2
         crossScaleAnimation.duration = 0.5
         crossScaleAnimation.autoreverses = false
-        crossScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        crossScaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         crossScaleAnimation.repeatCount = 0
-        crossScaleAnimation.fillMode = .forwards
+        crossScaleAnimation.fillMode = kCAFillModeForwards
         crossScaleAnimation.isRemovedOnCompletion = false
         crossScaleAnimation.beginTime = CACurrentMediaTime() + 0.1
 

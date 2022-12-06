@@ -194,7 +194,7 @@ class AdditionalReviewAnimationViewRed: UIView
         iDLayer.bounds = CGRect(x: 0, y: 0, width: 118.927091, height: 75.207084)
         iDLayer.position = CGPoint(x: 3, y: 2.729758)
         iDLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        iDLayer.contentsGravity = .center
+        iDLayer.contentsGravity = kCAGravityCenter
         iDLayer.contentsScale = 2
         iDLayer.allowsEdgeAntialiasing = true
         iDLayer.allowsGroupOpacity = true
@@ -213,11 +213,11 @@ class AdditionalReviewAnimationViewRed: UIView
             layerLayer.bounds = CGRect(x: 0, y: 0, width: 118.927091, height: 75.207084)
             layerLayer.position = CGPoint(x: 0, y: 0)
             layerLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            layerLayer.contentsGravity = .center
+            layerLayer.contentsGravity = kCAGravityCenter
             layerLayer.shadowOffset = CGSize(width: 0, height: 1)
             layerLayer.allowsEdgeAntialiasing = true
             layerLayer.allowsGroupOpacity = true
-            layerLayer.fillMode = .forwards
+            layerLayer.fillMode = kCAFillModeForwards
 
                 // Layer Sublayers
                 //
@@ -229,14 +229,14 @@ class AdditionalReviewAnimationViewRed: UIView
                 strokeLayer.bounds = CGRect(x: 0, y: 0, width: 118.927091, height: 75.207084)
                 strokeLayer.position = CGPoint(x: 0, y: 0)
                 strokeLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                strokeLayer.contentsGravity = .center
+                strokeLayer.contentsGravity = kCAGravityCenter
                 strokeLayer.contentsScale = 2
                 strokeLayer.allowsEdgeAntialiasing = true
                 strokeLayer.allowsGroupOpacity = true
                 strokeLayer.path = strokePath
                 strokeLayer.fillColor = fillColor.cgColor
                 strokeLayer.strokeColor = strokeColor.cgColor
-                strokeLayer.fillRule = .evenOdd
+                strokeLayer.fillRule = kCAFillRuleEvenOdd
                 strokeLayer.lineWidth = 4
 
                 layerLayer.addSublayer(strokeLayer)
@@ -250,14 +250,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer.bounds = CGRect(x: 0, y: 0, width: 20.256009, height: 3.467015)
             fillLayer.position = CGPoint(x: 48.045441, y: 61.690934)
             fillLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer.contentsGravity = .center
+            fillLayer.contentsGravity = kCAGravityCenter
             fillLayer.contentsScale = 2
             fillLayer.allowsEdgeAntialiasing = true
             fillLayer.allowsGroupOpacity = true
             fillLayer.path = fillPath
             fillLayer.fillColor = fillColor1.cgColor
             fillLayer.strokeColor = fillColor.cgColor
-            fillLayer.fillRule = .evenOdd
+            fillLayer.fillRule = kCAFillRuleEvenOdd
             fillLayer.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer)
@@ -269,14 +269,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer1.bounds = CGRect(x: 0, y: 0, width: 11.964009, height: 3.436015)
             fillLayer1.position = CGPoint(x: 97.852841, y: 41.745134)
             fillLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer1.contentsGravity = .center
+            fillLayer1.contentsGravity = kCAGravityCenter
             fillLayer1.contentsScale = 2
             fillLayer1.allowsEdgeAntialiasing = true
             fillLayer1.allowsGroupOpacity = true
             fillLayer1.path = fillPath1
             fillLayer1.fillColor = fillColor1.cgColor
             fillLayer1.strokeColor = fillColor.cgColor
-            fillLayer1.fillRule = .evenOdd
+            fillLayer1.fillRule = kCAFillRuleEvenOdd
             fillLayer1.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer1)
@@ -288,14 +288,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer2.bounds = CGRect(x: 0, y: 0, width: 11.964009, height: 3.436015)
             fillLayer2.position = CGPoint(x: 97.816541, y: 31.848534)
             fillLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer2.contentsGravity = .center
+            fillLayer2.contentsGravity = kCAGravityCenter
             fillLayer2.contentsScale = 2
             fillLayer2.allowsEdgeAntialiasing = true
             fillLayer2.allowsGroupOpacity = true
             fillLayer2.path = fillPath2
             fillLayer2.fillColor = fillColor1.cgColor
             fillLayer2.strokeColor = fillColor.cgColor
-            fillLayer2.fillRule = .evenOdd
+            fillLayer2.fillRule = kCAFillRuleEvenOdd
             fillLayer2.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer2)
@@ -307,14 +307,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer3.bounds = CGRect(x: 0, y: 0, width: 37.848004, height: 3.531015)
             fillLayer3.position = CGPoint(x: 48.008847, y: 51.729734)
             fillLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer3.contentsGravity = .center
+            fillLayer3.contentsGravity = kCAGravityCenter
             fillLayer3.contentsScale = 2
             fillLayer3.allowsEdgeAntialiasing = true
             fillLayer3.allowsGroupOpacity = true
             fillLayer3.path = fillPath3
             fillLayer3.fillColor = fillColor1.cgColor
             fillLayer3.strokeColor = fillColor.cgColor
-            fillLayer3.fillRule = .evenOdd
+            fillLayer3.fillRule = kCAFillRuleEvenOdd
             fillLayer3.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer3)
@@ -326,14 +326,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer4.bounds = CGRect(x: 0, y: 0, width: 37.848004, height: 3.531015)
             fillLayer4.position = CGPoint(x: 47.972547, y: 41.833234)
             fillLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer4.contentsGravity = .center
+            fillLayer4.contentsGravity = kCAGravityCenter
             fillLayer4.contentsScale = 2
             fillLayer4.allowsEdgeAntialiasing = true
             fillLayer4.allowsGroupOpacity = true
             fillLayer4.path = fillPath4
             fillLayer4.fillColor = fillColor1.cgColor
             fillLayer4.strokeColor = fillColor.cgColor
-            fillLayer4.fillRule = .evenOdd
+            fillLayer4.fillRule = kCAFillRuleEvenOdd
             fillLayer4.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer4)
@@ -345,14 +345,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer5.bounds = CGRect(x: 0, y: 0, width: 37.848004, height: 3.531015)
             fillLayer5.position = CGPoint(x: 47.936247, y: 31.936634)
             fillLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer5.contentsGravity = .center
+            fillLayer5.contentsGravity = kCAGravityCenter
             fillLayer5.contentsScale = 2
             fillLayer5.allowsEdgeAntialiasing = true
             fillLayer5.allowsGroupOpacity = true
             fillLayer5.path = fillPath5
             fillLayer5.fillColor = fillColor1.cgColor
             fillLayer5.strokeColor = fillColor.cgColor
-            fillLayer5.fillRule = .evenOdd
+            fillLayer5.fillRule = kCAFillRuleEvenOdd
             fillLayer5.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer5)
@@ -364,14 +364,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer6.bounds = CGRect(x: 0, y: 0, width: 28.144253, height: 28.143127)
             fillLayer6.position = CGPoint(x: 9.109195, y: 34.635742)
             fillLayer6.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer6.contentsGravity = .center
+            fillLayer6.contentsGravity = kCAGravityCenter
             fillLayer6.contentsScale = 2
             fillLayer6.allowsEdgeAntialiasing = true
             fillLayer6.allowsGroupOpacity = true
             fillLayer6.path = fillPath6
             fillLayer6.fillColor = fillColor1.cgColor
             fillLayer6.strokeColor = fillColor.cgColor
-            fillLayer6.fillRule = .evenOdd
+            fillLayer6.fillRule = kCAFillRuleEvenOdd
             fillLayer6.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer6)
@@ -383,14 +383,14 @@ class AdditionalReviewAnimationViewRed: UIView
             strokeLayer1.bounds = CGRect(x: 0, y: 0, width: 107.449, height: 1)
             strokeLayer1.position = CGPoint(x: 7.738449, y: 21.5059)
             strokeLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-            strokeLayer1.contentsGravity = .center
+            strokeLayer1.contentsGravity = kCAGravityCenter
             strokeLayer1.contentsScale = 2
             strokeLayer1.allowsEdgeAntialiasing = true
             strokeLayer1.allowsGroupOpacity = true
             strokeLayer1.path = strokePath1
             strokeLayer1.fillColor = fillColor.cgColor
             strokeLayer1.strokeColor = fillColor1.cgColor
-            strokeLayer1.fillRule = .evenOdd
+            strokeLayer1.fillRule = kCAFillRuleEvenOdd
             strokeLayer1.lineWidth = 1
 
             iDLayer.addSublayer(strokeLayer1)
@@ -402,14 +402,14 @@ class AdditionalReviewAnimationViewRed: UIView
             fillLayer7.bounds = CGRect(x: 0, y: 0, width: 37.848004, height: 3.531015)
             fillLayer7.position = CGPoint(x: 7.738047, y: 11.365592)
             fillLayer7.anchorPoint = CGPoint(x: 0, y: 0)
-            fillLayer7.contentsGravity = .center
+            fillLayer7.contentsGravity = kCAGravityCenter
             fillLayer7.contentsScale = 2
             fillLayer7.allowsEdgeAntialiasing = true
             fillLayer7.allowsGroupOpacity = true
             fillLayer7.path = fillPath7
             fillLayer7.fillColor = fillColor1.cgColor
             fillLayer7.strokeColor = fillColor.cgColor
-            fillLayer7.fillRule = .evenOdd
+            fillLayer7.fillRule = kCAFillRuleEvenOdd
             fillLayer7.lineWidth = 0
 
             iDLayer.addSublayer(fillLayer7)
@@ -423,7 +423,7 @@ class AdditionalReviewAnimationViewRed: UIView
         magnifierLayer.bounds = CGRect(x: 0, y: 0, width: 50.0465, height: 50.9067)
         magnifierLayer.position = CGPoint(x: 0, y: 23.8663)
         magnifierLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        magnifierLayer.contentsGravity = .center
+        magnifierLayer.contentsGravity = kCAGravityCenter
         magnifierLayer.contentsScale = 2
         magnifierLayer.allowsEdgeAntialiasing = true
         magnifierLayer.allowsGroupOpacity = true
@@ -436,14 +436,14 @@ class AdditionalReviewAnimationViewRed: UIView
             let positionAnimation = CAKeyframeAnimation()
             positionAnimation.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             positionAnimation.duration = 1.5
-            positionAnimation.fillMode = .both
+            positionAnimation.fillMode = kCAFillModeBoth
             positionAnimation.isRemovedOnCompletion = false
             positionAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.111726, -0.055537, 0.85845, 1.053796)
             positionAnimation.keyPath = "position"
             positionAnimation.values = [ CGPoint(x: 0, y: 23), CGPoint(x: 63, y: 23) ]
             positionAnimation.keyTimes = [ 0.000595, 1 ]
-            positionAnimation.timingFunctions = [ CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut) ]
-            positionAnimation.calculationMode = .linear
+            positionAnimation.timingFunctions = [ CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut) ]
+            positionAnimation.calculationMode = kCAFilterLinear
 
             magnifierLayer.add(positionAnimation, forKey: "positionAnimation")
 
@@ -457,11 +457,11 @@ class AdditionalReviewAnimationViewRed: UIView
             ekycLayer.bounds = CGRect(x: 0, y: 0, width: 46.428, height: 46.428)
             ekycLayer.position = CGPoint(x: 0, y: 0)
             ekycLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            ekycLayer.contentsGravity = .center
+            ekycLayer.contentsGravity = kCAGravityCenter
             ekycLayer.shadowOffset = CGSize(width: 0, height: 1)
             ekycLayer.allowsEdgeAntialiasing = true
             ekycLayer.allowsGroupOpacity = true
-            ekycLayer.fillMode = .forwards
+            ekycLayer.fillMode = kCAFillModeForwards
 
                 // eKYC Sublayers
                 //
@@ -473,14 +473,14 @@ class AdditionalReviewAnimationViewRed: UIView
                 strokeLayer2.bounds = CGRect(x: 0, y: 0, width: 46.428, height: 46.428)
                 strokeLayer2.position = CGPoint(x: 0, y: 0)
                 strokeLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                strokeLayer2.contentsGravity = .center
+                strokeLayer2.contentsGravity = kCAGravityCenter
                 strokeLayer2.contentsScale = 2
                 strokeLayer2.allowsEdgeAntialiasing = true
                 strokeLayer2.allowsGroupOpacity = true
                 strokeLayer2.path = strokePath2
                 strokeLayer2.fillColor = fillColor.cgColor
                 strokeLayer2.strokeColor = strokeColor1.cgColor
-                strokeLayer2.fillRule = .evenOdd
+                strokeLayer2.fillRule = kCAFillRuleEvenOdd
                 strokeLayer2.lineWidth = 5
 
                 ekycLayer.addSublayer(strokeLayer2)
@@ -492,16 +492,16 @@ class AdditionalReviewAnimationViewRed: UIView
                 strokeLayer3.bounds = CGRect(x: 0, y: 0, width: 10.125, height: 10.125)
                 strokeLayer3.position = CGPoint(x: 42.9215, y: 41.7817)
                 strokeLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                strokeLayer3.contentsGravity = .center
+                strokeLayer3.contentsGravity = kCAGravityCenter
                 strokeLayer3.contentsScale = 2
                 strokeLayer3.allowsEdgeAntialiasing = true
                 strokeLayer3.allowsGroupOpacity = true
                 strokeLayer3.path = strokePath3
                 strokeLayer3.fillColor = fillColor.cgColor
                 strokeLayer3.strokeColor = strokeColor1.cgColor
-                strokeLayer3.fillRule = .evenOdd
-                strokeLayer3.lineCap = .round
-                strokeLayer3.lineJoin = .round
+                strokeLayer3.fillRule = kCAFillRuleEvenOdd
+                strokeLayer3.lineCap = kCALineCapRound
+                strokeLayer3.lineJoin = kCALineJoinRound
                 strokeLayer3.lineWidth = 5
 
                 ekycLayer.addSublayer(strokeLayer3)

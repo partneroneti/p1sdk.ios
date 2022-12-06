@@ -505,7 +505,7 @@ class NFCCardStartingAnimationView: UIView {
         eCardLayer.bounds = CGRect(x: 0, y: 0, width: 135.7, height: 89.82)
         eCardLayer.position = CGPoint(x: 49, y: 46)
         eCardLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        eCardLayer.contentsGravity = .center
+        eCardLayer.contentsGravity = kCAGravityCenter
         eCardLayer.contentsScale = 2
         eCardLayer.allowsEdgeAntialiasing = true
         eCardLayer.allowsGroupOpacity = true
@@ -519,11 +519,11 @@ class NFCCardStartingAnimationView: UIView {
             opacityAnimation.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             opacityAnimation.duration = 6
             opacityAnimation.repeatCount = 100
-            opacityAnimation.fillMode = .backwards
+            opacityAnimation.fillMode = kCAFillModeBackwards
             opacityAnimation.isRemovedOnCompletion = false
             opacityAnimation.keyPath = "opacity"
             opacityAnimation.values = [ 1, 1 ]
-            opacityAnimation.calculationMode = .linear
+            opacityAnimation.calculationMode = kCAFilterLinear
 
             eCardLayer.add(opacityAnimation, forKey: "opacityAnimation")
 
@@ -537,7 +537,7 @@ class NFCCardStartingAnimationView: UIView {
             eCardSVGOkLayer.bounds = CGRect(x: 0, y: 0, width: 138.7, height: 85)
             eCardSVGOkLayer.position = CGPoint(x: -0, y: 2)
             eCardSVGOkLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            eCardSVGOkLayer.contentsGravity = .center
+            eCardSVGOkLayer.contentsGravity = kCAGravityCenter
             eCardSVGOkLayer.contentsScale = 2
             eCardSVGOkLayer.allowsEdgeAntialiasing = true
             eCardSVGOkLayer.allowsGroupOpacity = true
@@ -555,7 +555,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer.name = "Rectangle"
                 rectangleLayer.bounds = CGRect(x: 0, y: 0, width: 74.82, height: 118.7)
                 rectangleLayer.position = CGPoint(x: 61.35, y: 37.41)
-                rectangleLayer.contentsGravity = .center
+                rectangleLayer.contentsGravity = kCAGravityCenter
                 rectangleLayer.contentsScale = 2
                 rectangleLayer.allowsEdgeAntialiasing = true
                 rectangleLayer.allowsGroupOpacity = true
@@ -577,15 +577,15 @@ class NFCCardStartingAnimationView: UIView {
                 pathLayer.bounds = CGRect(x: 0, y: 0, width: 107.45, height: 1)
                 pathLayer.position = CGPoint(x: 5.97, y: 20.41)
                 pathLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer.contentsGravity = .center
+                pathLayer.contentsGravity = kCAGravityCenter
                 pathLayer.contentsScale = 2
                 pathLayer.allowsEdgeAntialiasing = true
                 pathLayer.allowsGroupOpacity = true
                 pathLayer.path = pathPath
                 pathLayer.fillColor = strokeColor.cgColor
                 pathLayer.strokeColor = strokeColor1.cgColor
-                pathLayer.fillRule = .evenOdd
-                pathLayer.lineCap = .round
+                pathLayer.fillRule = kCAFillRuleEvenOdd
+                pathLayer.lineCap = kCALineCapRound
                 pathLayer.lineWidth = 0.5
 
                 eCardSVGOkLayer.addSublayer(pathLayer)
@@ -597,7 +597,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer1.bounds = CGRect(x: 0, y: 0, width: 20.25, height: 3.4)
                 rectangleLayer1.position = CGPoint(x: 46.21, y: 61.96)
                 rectangleLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer1.contentsGravity = .center
+                rectangleLayer1.contentsGravity = kCAGravityCenter
                 rectangleLayer1.contentsScale = 2
                 rectangleLayer1.allowsEdgeAntialiasing = true
                 rectangleLayer1.allowsGroupOpacity = true
@@ -615,7 +615,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer2.bounds = CGRect(x: 0, y: 0, width: 11.96, height: 3.4)
                 rectangleLayer2.position = CGPoint(x: 96.09, y: 42.17)
                 rectangleLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer2.contentsGravity = .center
+                rectangleLayer2.contentsGravity = kCAGravityCenter
                 rectangleLayer2.contentsScale = 2
                 rectangleLayer2.allowsEdgeAntialiasing = true
                 rectangleLayer2.allowsGroupOpacity = true
@@ -633,7 +633,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer3.bounds = CGRect(x: 0, y: 0, width: 11.96, height: 3.4)
                 rectangleLayer3.position = CGPoint(x: 96.09, y: 32.27)
                 rectangleLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer3.contentsGravity = .center
+                rectangleLayer3.contentsGravity = kCAGravityCenter
                 rectangleLayer3.contentsScale = 2
                 rectangleLayer3.allowsEdgeAntialiasing = true
                 rectangleLayer3.allowsGroupOpacity = true
@@ -651,7 +651,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer4.bounds = CGRect(x: 0, y: 0, width: 37.84, height: 3.4)
                 rectangleLayer4.position = CGPoint(x: 46.21, y: 52.06)
                 rectangleLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer4.contentsGravity = .center
+                rectangleLayer4.contentsGravity = kCAGravityCenter
                 rectangleLayer4.contentsScale = 2
                 rectangleLayer4.allowsEdgeAntialiasing = true
                 rectangleLayer4.allowsGroupOpacity = true
@@ -669,7 +669,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer5.bounds = CGRect(x: 0, y: 0, width: 37.84, height: 3.4)
                 rectangleLayer5.position = CGPoint(x: 46.21, y: 42.17)
                 rectangleLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer5.contentsGravity = .center
+                rectangleLayer5.contentsGravity = kCAGravityCenter
                 rectangleLayer5.contentsScale = 2
                 rectangleLayer5.allowsEdgeAntialiasing = true
                 rectangleLayer5.allowsGroupOpacity = true
@@ -687,7 +687,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer6.bounds = CGRect(x: 0, y: 0, width: 37.84, height: 3.4)
                 rectangleLayer6.position = CGPoint(x: 46.21, y: 32.27)
                 rectangleLayer6.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer6.contentsGravity = .center
+                rectangleLayer6.contentsGravity = kCAGravityCenter
                 rectangleLayer6.contentsScale = 2
                 rectangleLayer6.allowsEdgeAntialiasing = true
                 rectangleLayer6.allowsGroupOpacity = true
@@ -705,7 +705,7 @@ class NFCCardStartingAnimationView: UIView {
                 pathLayer1.bounds = CGRect(x: 0, y: 0, width: 3.091224, height: 3.453342)
                 pathLayer1.position = CGPoint(x: 5.459446, y: 11.579369)
                 pathLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer1.contentsGravity = .center
+                pathLayer1.contentsGravity = kCAGravityCenter
                 pathLayer1.contentsScale = 2
                 pathLayer1.allowsEdgeAntialiasing = true
                 pathLayer1.allowsGroupOpacity = true
@@ -723,7 +723,7 @@ class NFCCardStartingAnimationView: UIView {
                 pathLayer2.bounds = CGRect(x: 0, y: 0, width: 4.081744, height: 4.665142)
                 pathLayer2.position = CGPoint(x: 8.998256, y: 10.369182)
                 pathLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer2.contentsGravity = .center
+                pathLayer2.contentsGravity = kCAGravityCenter
                 pathLayer2.contentsScale = 2
                 pathLayer2.allowsEdgeAntialiasing = true
                 pathLayer2.allowsGroupOpacity = true
@@ -741,7 +741,7 @@ class NFCCardStartingAnimationView: UIView {
                 shapeLayer.bounds = CGRect(x: 0, y: 0, width: 4.16, height: 4.55)
                 shapeLayer.position = CGPoint(x: 13.28, y: 10.45)
                 shapeLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                shapeLayer.contentsGravity = .center
+                shapeLayer.contentsGravity = kCAGravityCenter
                 shapeLayer.contentsScale = 2
                 shapeLayer.allowsEdgeAntialiasing = true
                 shapeLayer.allowsGroupOpacity = true
@@ -759,7 +759,7 @@ class NFCCardStartingAnimationView: UIView {
                 shapeLayer1.bounds = CGRect(x: 0, y: 0, width: 3.52, height: 4.551303)
                 shapeLayer1.position = CGPoint(x: 17.93, y: 10.448697)
                 shapeLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                shapeLayer1.contentsGravity = .center
+                shapeLayer1.contentsGravity = kCAGravityCenter
                 shapeLayer1.contentsScale = 2
                 shapeLayer1.allowsEdgeAntialiasing = true
                 shapeLayer1.allowsGroupOpacity = true
@@ -777,7 +777,7 @@ class NFCCardStartingAnimationView: UIView {
                 shapeLayer2.bounds = CGRect(x: 0, y: 0, width: 3.830843, height: 4.532504)
                 shapeLayer2.position = CGPoint(x: 22, y: 10.448455)
                 shapeLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                shapeLayer2.contentsGravity = .center
+                shapeLayer2.contentsGravity = kCAGravityCenter
                 shapeLayer2.contentsScale = 2
                 shapeLayer2.allowsEdgeAntialiasing = true
                 shapeLayer2.allowsGroupOpacity = true
@@ -795,7 +795,7 @@ class NFCCardStartingAnimationView: UIView {
                 pathLayer3.bounds = CGRect(x: 0, y: 0, width: 9.01, height: 2.39)
                 pathLayer3.position = CGPoint(x: 28.31, y: 9.83)
                 pathLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer3.contentsGravity = .center
+                pathLayer3.contentsGravity = kCAGravityCenter
                 pathLayer3.contentsScale = 2
                 pathLayer3.allowsEdgeAntialiasing = true
                 pathLayer3.allowsGroupOpacity = true
@@ -813,7 +813,7 @@ class NFCCardStartingAnimationView: UIView {
                 pathLayer4.bounds = CGRect(x: 0, y: 0, width: 9.01, height: 2.381071)
                 pathLayer4.position = CGPoint(x: 28.31, y: 12.908929)
                 pathLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer4.contentsGravity = .center
+                pathLayer4.contentsGravity = kCAGravityCenter
                 pathLayer4.contentsScale = 2
                 pathLayer4.allowsEdgeAntialiasing = true
                 pathLayer4.allowsGroupOpacity = true
@@ -831,7 +831,7 @@ class NFCCardStartingAnimationView: UIView {
                 pathLayer5.bounds = CGRect(x: 0, y: 0, width: 2.54012, height: 2.540041)
                 pathLayer5.position = CGPoint(x: 31.54984, y: 11.3)
                 pathLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer5.contentsGravity = .center
+                pathLayer5.contentsGravity = kCAGravityCenter
                 pathLayer5.contentsScale = 2
                 pathLayer5.allowsEdgeAntialiasing = true
                 pathLayer5.allowsGroupOpacity = true
@@ -849,7 +849,7 @@ class NFCCardStartingAnimationView: UIView {
                 shapeLayer3.bounds = CGRect(x: 0, y: 0, width: 28.160415, height: 28.160415)
                 shapeLayer3.position = CGPoint(x: 7.309592, y: 34.739993)
                 shapeLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                shapeLayer3.contentsGravity = .center
+                shapeLayer3.contentsGravity = kCAGravityCenter
                 shapeLayer3.contentsScale = 2
                 shapeLayer3.allowsEdgeAntialiasing = true
                 shapeLayer3.allowsGroupOpacity = true
@@ -871,11 +871,11 @@ class NFCCardStartingAnimationView: UIView {
         deviceLayer.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 157.89444)
         deviceLayer.position = CGPoint(x: 157, y: 20)
         deviceLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        deviceLayer.contentsGravity = .center
+        deviceLayer.contentsGravity = kCAGravityCenter
         deviceLayer.shadowOffset = CGSize(width: 0, height: 1)
         deviceLayer.allowsEdgeAntialiasing = true
         deviceLayer.allowsGroupOpacity = true
-        deviceLayer.fillMode = .forwards
+        deviceLayer.fillMode = kCAFillModeForwards
 
             // Device Animations
             //
@@ -886,11 +886,11 @@ class NFCCardStartingAnimationView: UIView {
             opacityAnimation1.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             opacityAnimation1.duration = 5.999999
             opacityAnimation1.repeatCount = 100
-            opacityAnimation1.fillMode = .backwards
+            opacityAnimation1.fillMode = kCAFillModeBackwards
             opacityAnimation1.isRemovedOnCompletion = false
             opacityAnimation1.keyPath = "opacity"
             opacityAnimation1.values = [ 1, 1 ]
-            opacityAnimation1.calculationMode = .linear
+            opacityAnimation1.calculationMode = kCAFilterLinear
 
             deviceLayer.add(opacityAnimation1, forKey: "opacityAnimation1")
 
@@ -904,11 +904,11 @@ class NFCCardStartingAnimationView: UIView {
             groupLayer.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 157.89444)
             groupLayer.position = CGPoint(x: -80, y: -5)
             groupLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            groupLayer.contentsGravity = .center
+            groupLayer.contentsGravity = kCAGravityCenter
             groupLayer.shadowOffset = CGSize(width: 0, height: 1)
             groupLayer.allowsEdgeAntialiasing = true
             groupLayer.allowsGroupOpacity = true
-            groupLayer.fillMode = .forwards
+            groupLayer.fillMode = kCAFillModeForwards
             groupLayer.transform = CATransform3D( m11: 0.95, m12: 0, m13: 0, m14: 0,
                                               m21: 0, m22: 0.95, m23: 0, m24: 0,
                                               m31: 0, m32: 0, m33: 1, m34: 0,
@@ -924,12 +924,12 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer7.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 114.601166)
                 rectangleLayer7.position = CGPoint(x: 0, y: 19.14679)
                 rectangleLayer7.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer7.contentsGravity = .center
+                rectangleLayer7.contentsGravity = kCAGravityCenter
                 rectangleLayer7.backgroundColor = backgroundColor.cgColor
                 rectangleLayer7.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer7.allowsEdgeAntialiasing = true
                 rectangleLayer7.allowsGroupOpacity = true
-                rectangleLayer7.fillMode = .forwards
+                rectangleLayer7.fillMode = kCAFillModeForwards
 
                 groupLayer.addSublayer(rectangleLayer7)
 
@@ -940,7 +940,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer8.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 24.433228)
                 rectangleLayer8.position = CGPoint(x: 0, y: 133.461273)
                 rectangleLayer8.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer8.contentsGravity = .center
+                rectangleLayer8.contentsGravity = kCAGravityCenter
                 rectangleLayer8.backgroundColor = backgroundColor1.cgColor
                 rectangleLayer8.cornerRadius = 5
                 if #available(iOS 11.0, *) {
@@ -952,7 +952,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer8.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer8.allowsEdgeAntialiasing = true
                 rectangleLayer8.allowsGroupOpacity = true
-                rectangleLayer8.fillMode = .forwards
+                rectangleLayer8.fillMode = kCAFillModeForwards
 
                 groupLayer.addSublayer(rectangleLayer8)
 
@@ -963,7 +963,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer9.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 19.348602)
                 rectangleLayer9.position = CGPoint(x: 91, y: 20)
                 rectangleLayer9.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer9.contentsGravity = .center
+                rectangleLayer9.contentsGravity = kCAGravityCenter
                 rectangleLayer9.backgroundColor = backgroundColor1.cgColor
                 rectangleLayer9.cornerRadius = 5
                 if #available(iOS 11.0, *) {
@@ -975,7 +975,7 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer9.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer9.allowsEdgeAntialiasing = true
                 rectangleLayer9.allowsGroupOpacity = true
-                rectangleLayer9.fillMode = .forwards
+                rectangleLayer9.fillMode = kCAFillModeForwards
                 rectangleLayer9.transform = CATransform3D( m11: -1, m12: 0, m13: 0, m14: 0,
                                                    m21: 0, m22: -1, m23: 0, m24: 0,
                                                    m31: 0, m32: 0, m33: 1, m34: 0,
@@ -990,13 +990,13 @@ class NFCCardStartingAnimationView: UIView {
                 rectangleLayer10.bounds = CGRect(x: 0, y: 0, width: 21.381104, height: 7.996185)
                 rectangleLayer10.position = CGPoint(x: 34.726318, y: 5.67627)
                 rectangleLayer10.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer10.contentsGravity = .center
+                rectangleLayer10.contentsGravity = kCAGravityCenter
                 rectangleLayer10.backgroundColor = backgroundColor2.cgColor
                 rectangleLayer10.cornerRadius = 2.438305
                 rectangleLayer10.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer10.allowsEdgeAntialiasing = true
                 rectangleLayer10.allowsGroupOpacity = true
-                rectangleLayer10.fillMode = .forwards
+                rectangleLayer10.fillMode = kCAFillModeForwards
 
                 groupLayer.addSublayer(rectangleLayer10)
 
@@ -1007,11 +1007,11 @@ class NFCCardStartingAnimationView: UIView {
                 groupLayer1.bounds = CGRect(x: 0, y: 0, width: 20.375, height: 30.180573)
                 groupLayer1.position = CGPoint(x: 35.229736, y: 61.356964)
                 groupLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                groupLayer1.contentsGravity = .center
+                groupLayer1.contentsGravity = kCAGravityCenter
                 groupLayer1.shadowOffset = CGSize(width: 0, height: 1)
                 groupLayer1.allowsEdgeAntialiasing = true
                 groupLayer1.allowsGroupOpacity = true
-                groupLayer1.fillMode = .forwards
+                groupLayer1.fillMode = kCAFillModeForwards
 
                     // Group 13 Sublayers
                     //
@@ -1023,13 +1023,13 @@ class NFCCardStartingAnimationView: UIView {
                     pathLayer6.bounds = CGRect(x: 0, y: 0, width: 7.93103, height: 30.180573)
                     pathLayer6.position = CGPoint(x: 12.44397, y: 0)
                     pathLayer6.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer6.contentsGravity = .center
+                    pathLayer6.contentsGravity = kCAGravityCenter
                     pathLayer6.backgroundColor = strokeColor.cgColor
                     pathLayer6.borderColor = strokeColor.cgColor
                     pathLayer6.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer6.allowsEdgeAntialiasing = true
                     pathLayer6.allowsGroupOpacity = true
-                    pathLayer6.fillMode = .forwards
+                    pathLayer6.fillMode = kCAFillModeForwards
                     pathLayer6.path = pathPath6
                     pathLayer6.fillColor = fillColor2.cgColor
                     pathLayer6.strokeColor = strokeColor2.cgColor
@@ -1044,13 +1044,13 @@ class NFCCardStartingAnimationView: UIView {
                     pathLayer7.bounds = CGRect(x: 0, y: 0, width: 6.364502, height: 22.60144)
                     pathLayer7.position = CGPoint(x: 8.136963, y: 3.797516)
                     pathLayer7.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer7.contentsGravity = .center
+                    pathLayer7.contentsGravity = kCAGravityCenter
                     pathLayer7.backgroundColor = strokeColor.cgColor
                     pathLayer7.borderColor = strokeColor.cgColor
                     pathLayer7.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer7.allowsEdgeAntialiasing = true
                     pathLayer7.allowsGroupOpacity = true
-                    pathLayer7.fillMode = .forwards
+                    pathLayer7.fillMode = kCAFillModeForwards
                     pathLayer7.path = pathPath7
                     pathLayer7.fillColor = fillColor2.cgColor
                     pathLayer7.strokeColor = strokeColor2.cgColor
@@ -1065,13 +1065,13 @@ class NFCCardStartingAnimationView: UIView {
                     pathLayer8.bounds = CGRect(x: 0, y: 0, width: 4.938965, height: 15.498047)
                     pathLayer8.position = CGPoint(x: 3.893433, y: 7.349426)
                     pathLayer8.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer8.contentsGravity = .center
+                    pathLayer8.contentsGravity = kCAGravityCenter
                     pathLayer8.backgroundColor = strokeColor.cgColor
                     pathLayer8.borderColor = strokeColor.cgColor
                     pathLayer8.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer8.allowsEdgeAntialiasing = true
                     pathLayer8.allowsGroupOpacity = true
-                    pathLayer8.fillMode = .forwards
+                    pathLayer8.fillMode = kCAFillModeForwards
                     pathLayer8.path = pathPath8
                     pathLayer8.fillColor = fillColor2.cgColor
                     pathLayer8.strokeColor = strokeColor2.cgColor
@@ -1086,13 +1086,13 @@ class NFCCardStartingAnimationView: UIView {
                     pathLayer9.bounds = CGRect(x: 0, y: 0, width: 3.70166, height: 8.938507)
                     pathLayer9.position = CGPoint(x: -0.000122, y: 10.596069)
                     pathLayer9.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer9.contentsGravity = .center
+                    pathLayer9.contentsGravity = kCAGravityCenter
                     pathLayer9.backgroundColor = strokeColor.cgColor
                     pathLayer9.borderColor = strokeColor.cgColor
                     pathLayer9.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer9.allowsEdgeAntialiasing = true
                     pathLayer9.allowsGroupOpacity = true
-                    pathLayer9.fillMode = .forwards
+                    pathLayer9.fillMode = kCAFillModeForwards
                     pathLayer9.path = pathPath9
                     pathLayer9.fillColor = fillColor2.cgColor
                     pathLayer9.strokeColor = strokeColor2.cgColor

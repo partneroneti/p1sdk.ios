@@ -786,11 +786,11 @@ class NFCScanningAnimationViewBlack: UIView
         closedPassportLayer.bounds = CGRect(x: 0, y: 0, width: 97.290802, height: 136.198425)
         closedPassportLayer.position = CGPoint(x: 68.854599, y: 21.900787)
         closedPassportLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        closedPassportLayer.contentsGravity = .center
+        closedPassportLayer.contentsGravity = kCAGravityCenter
         closedPassportLayer.shadowOffset = CGSize(width: 0, height: 1)
         closedPassportLayer.allowsEdgeAntialiasing = true
         closedPassportLayer.allowsGroupOpacity = true
-        closedPassportLayer.fillMode = .forwards
+        closedPassportLayer.fillMode = kCAFillModeForwards
 
             // Closed Passport Animations
             //
@@ -801,12 +801,12 @@ class NFCScanningAnimationViewBlack: UIView
             opacityAnimation.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             opacityAnimation.duration = 6
             opacityAnimation.repeatCount = 100
-            opacityAnimation.fillMode = .backwards
+            opacityAnimation.fillMode = kCAFillModeBackwards
             opacityAnimation.isRemovedOnCompletion = false
             opacityAnimation.keyPath = "opacity"
             opacityAnimation.values = [ 0, 1, 1, 0 ]
             opacityAnimation.keyTimes = [ 0.0089, 0.0585, 0.167083, 0.229924 ]
-            opacityAnimation.calculationMode = .linear
+            opacityAnimation.calculationMode = kCAFilterLinear
 
             closedPassportLayer.add(opacityAnimation, forKey: "opacityAnimation")
 
@@ -820,11 +820,11 @@ class NFCScanningAnimationViewBlack: UIView
             groupLayer.bounds = CGRect(x: 0, y: 0, width: 97.290802, height: 136.198425)
             groupLayer.position = CGPoint(x: 0, y: 0)
             groupLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            groupLayer.contentsGravity = .center
+            groupLayer.contentsGravity = kCAGravityCenter
             groupLayer.shadowOffset = CGSize(width: 0, height: 1)
             groupLayer.allowsEdgeAntialiasing = true
             groupLayer.allowsGroupOpacity = true
-            groupLayer.fillMode = .forwards
+            groupLayer.fillMode = kCAFillModeForwards
 
                 // Group 12 Sublayers
                 //
@@ -836,7 +836,7 @@ class NFCScanningAnimationViewBlack: UIView
                 redLayer.bounds = CGRect(x: 0, y: 0, width: 97.290802, height: 136.198425)
                 redLayer.position = CGPoint(x: 0, y: 0)
                 redLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                redLayer.contentsGravity = .center
+                redLayer.contentsGravity = kCAGravityCenter
                 redLayer.backgroundColor = backgroundColor.cgColor
                 redLayer.cornerRadius = 7
         if #available(iOS 11.0, *) {
@@ -847,7 +847,7 @@ class NFCScanningAnimationViewBlack: UIView
                 redLayer.shadowOffset = CGSize(width: 0, height: 1)
                 redLayer.allowsEdgeAntialiasing = true
                 redLayer.allowsGroupOpacity = true
-                redLayer.fillMode = .forwards
+                redLayer.fillMode = kCAFillModeForwards
 
                     // Red Sublayers
                     //
@@ -859,7 +859,7 @@ class NFCScanningAnimationViewBlack: UIView
                     blueLayer.bounds = CGRect(x: 0, y: 0, width: 97.290802, height: 136.198425)
                     blueLayer.position = CGPoint(x: 0, y: 0)
                     blueLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                    blueLayer.contentsGravity = .center
+                    blueLayer.contentsGravity = kCAGravityCenter
                     blueLayer.backgroundColor = backgroundColor1.cgColor
                     blueLayer.cornerRadius = 7
         if #available(iOS 11.0, *) {
@@ -870,7 +870,7 @@ class NFCScanningAnimationViewBlack: UIView
                     blueLayer.shadowOffset = CGSize(width: 0, height: 1)
                     blueLayer.allowsEdgeAntialiasing = true
                     blueLayer.allowsGroupOpacity = true
-                    blueLayer.fillMode = .forwards
+                    blueLayer.fillMode = kCAFillModeForwards
 
                         // Blue Sublayers
                         //
@@ -882,7 +882,7 @@ class NFCScanningAnimationViewBlack: UIView
                         blackLayer.bounds = CGRect(x: 0, y: 0, width: 97.290802, height: 136.198425)
                         blackLayer.position = CGPoint(x: 0, y: 0)
                         blackLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                        blackLayer.contentsGravity = .center
+                        blackLayer.contentsGravity = kCAGravityCenter
                         blackLayer.backgroundColor = backgroundColor2.cgColor
                         blackLayer.cornerRadius = 7
         if #available(iOS 11.0, *) {
@@ -893,7 +893,7 @@ class NFCScanningAnimationViewBlack: UIView
                         blackLayer.shadowOffset = CGSize(width: 0, height: 1)
                         blackLayer.allowsEdgeAntialiasing = true
                         blackLayer.allowsGroupOpacity = true
-                        blackLayer.fillMode = .forwards
+                        blackLayer.fillMode = kCAFillModeForwards
 
                             // Black Sublayers
                             //
@@ -905,7 +905,7 @@ class NFCScanningAnimationViewBlack: UIView
                             greenLayer.bounds = CGRect(x: 0, y: 0, width: 97.290802, height: 136.198425)
                             greenLayer.position = CGPoint(x: 0, y: 0)
                             greenLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                            greenLayer.contentsGravity = .center
+                            greenLayer.contentsGravity = kCAGravityCenter
                             greenLayer.isHidden = true
                             greenLayer.backgroundColor = backgroundColor3.cgColor
                             greenLayer.cornerRadius = 7
@@ -917,7 +917,7 @@ class NFCScanningAnimationViewBlack: UIView
                             greenLayer.shadowOffset = CGSize(width: 0, height: 1)
                             greenLayer.allowsEdgeAntialiasing = true
                             greenLayer.allowsGroupOpacity = true
-                            greenLayer.fillMode = .forwards
+                            greenLayer.fillMode = kCAFillModeForwards
 
                             blackLayer.addSublayer(greenLayer)
 
@@ -934,11 +934,11 @@ class NFCScanningAnimationViewBlack: UIView
                 nFCLogoLayer.bounds = CGRect(x: 0, y: 0, width: 14.7836, height: 8.965912)
                 nFCLogoLayer.position = CGPoint(x: 41.253601, y: 113.505219)
                 nFCLogoLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                nFCLogoLayer.contentsGravity = .center
+                nFCLogoLayer.contentsGravity = kCAGravityCenter
                 nFCLogoLayer.shadowOffset = CGSize(width: 0, height: 1)
                 nFCLogoLayer.allowsEdgeAntialiasing = true
                 nFCLogoLayer.allowsGroupOpacity = true
-                nFCLogoLayer.fillMode = .forwards
+                nFCLogoLayer.fillMode = kCAFillModeForwards
 
                     // NFC logo Sublayers
                     //
@@ -950,13 +950,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer.bounds = CGRect(x: 0, y: 0, width: 14.7836, height: 3.917267)
                     pathLayer.position = CGPoint(x: 0, y: 0)
                     pathLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer.contentsGravity = .center
+                    pathLayer.contentsGravity = kCAGravityCenter
                     pathLayer.backgroundColor = backgroundColor4.cgColor
                     pathLayer.borderColor = backgroundColor4.cgColor
                     pathLayer.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer.allowsEdgeAntialiasing = true
                     pathLayer.allowsGroupOpacity = true
-                    pathLayer.fillMode = .forwards
+                    pathLayer.fillMode = kCAFillModeForwards
                     pathLayer.path = pathPath
                     pathLayer.fillColor = fillColor.cgColor
                     pathLayer.strokeColor = strokeColor.cgColor
@@ -971,13 +971,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer1.bounds = CGRect(x: 0, y: 0, width: 14.781952, height: 3.87793)
                     pathLayer1.position = CGPoint(x: 0.000824, y: 5.087982)
                     pathLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer1.contentsGravity = .center
+                    pathLayer1.contentsGravity = kCAGravityCenter
                     pathLayer1.backgroundColor = backgroundColor4.cgColor
                     pathLayer1.borderColor = backgroundColor4.cgColor
                     pathLayer1.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer1.allowsEdgeAntialiasing = true
                     pathLayer1.allowsGroupOpacity = true
-                    pathLayer1.fillMode = .forwards
+                    pathLayer1.fillMode = kCAFillModeForwards
                     pathLayer1.path = pathPath1
                     pathLayer1.fillColor = fillColor.cgColor
                     pathLayer1.strokeColor = strokeColor.cgColor
@@ -992,13 +992,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer2.bounds = CGRect(x: 0, y: 0, width: 4.157318, height: 4.176361)
                     pathLayer2.position = CGPoint(x: 5.313141, y: 2.403809)
                     pathLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer2.contentsGravity = .center
+                    pathLayer2.contentsGravity = kCAGravityCenter
                     pathLayer2.backgroundColor = backgroundColor4.cgColor
                     pathLayer2.borderColor = backgroundColor4.cgColor
                     pathLayer2.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer2.allowsEdgeAntialiasing = true
                     pathLayer2.allowsGroupOpacity = true
-                    pathLayer2.fillMode = .forwards
+                    pathLayer2.fillMode = kCAFillModeForwards
                     pathLayer2.path = pathPath2
                     pathLayer2.fillColor = fillColor.cgColor
                     pathLayer2.strokeColor = strokeColor.cgColor
@@ -1015,11 +1015,11 @@ class NFCScanningAnimationViewBlack: UIView
                 globeLayer.bounds = CGRect(x: 0, y: 0, width: 52.614441, height: 52.598663)
                 globeLayer.position = CGPoint(x: 22.338181, y: 36.402924)
                 globeLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                globeLayer.contentsGravity = .center
+                globeLayer.contentsGravity = kCAGravityCenter
                 globeLayer.shadowOffset = CGSize(width: 0, height: 1)
                 globeLayer.allowsEdgeAntialiasing = true
                 globeLayer.allowsGroupOpacity = true
-                globeLayer.fillMode = .forwards
+                globeLayer.fillMode = kCAFillModeForwards
 
                     // Globe Sublayers
                     //
@@ -1031,13 +1031,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer3.bounds = CGRect(x: 0, y: 0, width: 52.614441, height: 52.598633)
                     pathLayer3.position = CGPoint(x: 0, y: 0.000015)
                     pathLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer3.contentsGravity = .center
+                    pathLayer3.contentsGravity = kCAGravityCenter
                     pathLayer3.backgroundColor = backgroundColor4.cgColor
                     pathLayer3.borderColor = backgroundColor4.cgColor
                     pathLayer3.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer3.allowsEdgeAntialiasing = true
                     pathLayer3.allowsGroupOpacity = true
-                    pathLayer3.fillMode = .forwards
+                    pathLayer3.fillMode = kCAFillModeForwards
                     pathLayer3.path = pathPath3
                     pathLayer3.fillColor = fillColor1.cgColor
                     pathLayer3.strokeColor = strokeColor.cgColor
@@ -1056,11 +1056,11 @@ class NFCScanningAnimationViewBlack: UIView
             ePassportLayer.bounds = CGRect(x: 0, y: 0, width: 64.54245, height: 13.602798)
             ePassportLayer.position = CGPoint(x: 7.574176, y: 11.099213)
             ePassportLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            ePassportLayer.contentsGravity = .center
+            ePassportLayer.contentsGravity = kCAGravityCenter
             ePassportLayer.shadowOffset = CGSize(width: 0, height: 1)
             ePassportLayer.allowsEdgeAntialiasing = true
             ePassportLayer.allowsGroupOpacity = true
-            ePassportLayer.fillMode = .forwards
+            ePassportLayer.fillMode = kCAFillModeForwards
             ePassportLayer.transform = CATransform3D( m11: 1, m12: 0, m13: 0, m14: 0,
                                                   m21: 0, m22: 1, m23: 0, m24: 0,
                                                   m31: 0, m32: 0, m33: 1, m34: 0,
@@ -1080,13 +1080,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer4.bounds = CGRect(x: 0, y: 0, width: 3.868011, height: 4.564224)
                 pathLayer4.position = CGPoint(x: 0, y: 1.439484)
                 pathLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer4.contentsGravity = .center
+                pathLayer4.contentsGravity = kCAGravityCenter
                 pathLayer4.backgroundColor = backgroundColor4.cgColor
                 pathLayer4.borderColor = backgroundColor4.cgColor
                 pathLayer4.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer4.allowsEdgeAntialiasing = true
                 pathLayer4.allowsGroupOpacity = true
-                pathLayer4.fillMode = .forwards
+                pathLayer4.fillMode = kCAFillModeForwards
                 pathLayer4.path = pathPath4
                 pathLayer4.fillColor = fillColor1.cgColor
                 pathLayer4.strokeColor = strokeColor.cgColor
@@ -1101,13 +1101,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer5.bounds = CGRect(x: 0, y: 0, width: 4.392502, height: 5.912796)
                 pathLayer5.position = CGPoint(x: 4.752457, y: 0)
                 pathLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer5.contentsGravity = .center
+                pathLayer5.contentsGravity = kCAGravityCenter
                 pathLayer5.backgroundColor = backgroundColor4.cgColor
                 pathLayer5.borderColor = backgroundColor4.cgColor
                 pathLayer5.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer5.allowsEdgeAntialiasing = true
                 pathLayer5.allowsGroupOpacity = true
-                pathLayer5.fillMode = .forwards
+                pathLayer5.fillMode = kCAFillModeForwards
                 pathLayer5.path = pathPath5
                 pathLayer5.fillColor = fillColor1.cgColor
                 pathLayer5.strokeColor = strokeColor.cgColor
@@ -1122,13 +1122,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer6.bounds = CGRect(x: 0, y: 0, width: 3.751312, height: 4.56311)
                 pathLayer6.position = CGPoint(x: 9.751144, y: 1.440781)
                 pathLayer6.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer6.contentsGravity = .center
+                pathLayer6.contentsGravity = kCAGravityCenter
                 pathLayer6.backgroundColor = backgroundColor4.cgColor
                 pathLayer6.borderColor = backgroundColor4.cgColor
                 pathLayer6.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer6.allowsEdgeAntialiasing = true
                 pathLayer6.allowsGroupOpacity = true
-                pathLayer6.fillMode = .forwards
+                pathLayer6.fillMode = kCAFillModeForwards
                 pathLayer6.path = pathPath6
                 pathLayer6.fillColor = fillColor1.cgColor
                 pathLayer6.strokeColor = strokeColor.cgColor
@@ -1143,13 +1143,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer7.bounds = CGRect(x: 0, y: 0, width: 3.682343, height: 4.5672)
                 pathLayer7.position = CGPoint(x: 14.112457, y: 1.441147)
                 pathLayer7.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer7.contentsGravity = .center
+                pathLayer7.contentsGravity = kCAGravityCenter
                 pathLayer7.backgroundColor = backgroundColor4.cgColor
                 pathLayer7.borderColor = backgroundColor4.cgColor
                 pathLayer7.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer7.allowsEdgeAntialiasing = true
                 pathLayer7.allowsGroupOpacity = true
-                pathLayer7.fillMode = .forwards
+                pathLayer7.fillMode = kCAFillModeForwards
                 pathLayer7.path = pathPath7
                 pathLayer7.fillColor = fillColor1.cgColor
                 pathLayer7.strokeColor = strokeColor.cgColor
@@ -1164,13 +1164,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer8.bounds = CGRect(x: 0, y: 0, width: 3.662338, height: 4.53833)
                 pathLayer8.position = CGPoint(x: 18.442459, y: 1.470749)
                 pathLayer8.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer8.contentsGravity = .center
+                pathLayer8.contentsGravity = kCAGravityCenter
                 pathLayer8.backgroundColor = backgroundColor4.cgColor
                 pathLayer8.borderColor = backgroundColor4.cgColor
                 pathLayer8.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer8.allowsEdgeAntialiasing = true
                 pathLayer8.allowsGroupOpacity = true
-                pathLayer8.fillMode = .forwards
+                pathLayer8.fillMode = kCAFillModeForwards
                 pathLayer8.path = pathPath8
                 pathLayer8.fillColor = fillColor1.cgColor
                 pathLayer8.strokeColor = strokeColor.cgColor
@@ -1185,13 +1185,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer9.bounds = CGRect(x: 0, y: 0, width: 3.814606, height: 6.162369)
                 pathLayer9.position = CGPoint(x: 23.002441, y: 1.44043)
                 pathLayer9.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer9.contentsGravity = .center
+                pathLayer9.contentsGravity = kCAGravityCenter
                 pathLayer9.backgroundColor = backgroundColor4.cgColor
                 pathLayer9.borderColor = backgroundColor4.cgColor
                 pathLayer9.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer9.allowsEdgeAntialiasing = true
                 pathLayer9.allowsGroupOpacity = true
-                pathLayer9.fillMode = .forwards
+                pathLayer9.fillMode = kCAFillModeForwards
                 pathLayer9.path = pathPath9
                 pathLayer9.fillColor = fillColor1.cgColor
                 pathLayer9.strokeColor = strokeColor.cgColor
@@ -1206,13 +1206,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer10.bounds = CGRect(x: 0, y: 0, width: 4.103424, height: 4.563736)
                 pathLayer10.position = CGPoint(x: 27.439575, y: 1.440994)
                 pathLayer10.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer10.contentsGravity = .center
+                pathLayer10.contentsGravity = kCAGravityCenter
                 pathLayer10.backgroundColor = backgroundColor4.cgColor
                 pathLayer10.borderColor = backgroundColor4.cgColor
                 pathLayer10.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer10.allowsEdgeAntialiasing = true
                 pathLayer10.allowsGroupOpacity = true
-                pathLayer10.fillMode = .forwards
+                pathLayer10.fillMode = kCAFillModeForwards
                 pathLayer10.path = pathPath10
                 pathLayer10.fillColor = fillColor1.cgColor
                 pathLayer10.strokeColor = strokeColor.cgColor
@@ -1227,13 +1227,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer11.bounds = CGRect(x: 0, y: 0, width: 2.320007, height: 4.500259)
                 pathLayer11.position = CGPoint(x: 32.362457, y: 1.442535)
                 pathLayer11.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer11.contentsGravity = .center
+                pathLayer11.contentsGravity = kCAGravityCenter
                 pathLayer11.backgroundColor = backgroundColor4.cgColor
                 pathLayer11.borderColor = backgroundColor4.cgColor
                 pathLayer11.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer11.allowsEdgeAntialiasing = true
                 pathLayer11.allowsGroupOpacity = true
-                pathLayer11.fillMode = .forwards
+                pathLayer11.fillMode = kCAFillModeForwards
                 pathLayer11.path = pathPath11
                 pathLayer11.fillColor = fillColor1.cgColor
                 pathLayer11.strokeColor = strokeColor.cgColor
@@ -1248,13 +1248,13 @@ class NFCScanningAnimationViewBlack: UIView
                 pathLayer12.bounds = CGRect(x: 0, y: 0, width: 2.540009, height: 5.540009)
                 pathLayer12.position = CGPoint(x: 35.002441, y: 0.452789)
                 pathLayer12.anchorPoint = CGPoint(x: 0, y: 0)
-                pathLayer12.contentsGravity = .center
+                pathLayer12.contentsGravity = kCAGravityCenter
                 pathLayer12.backgroundColor = backgroundColor4.cgColor
                 pathLayer12.borderColor = backgroundColor4.cgColor
                 pathLayer12.shadowOffset = CGSize(width: 0, height: 1)
                 pathLayer12.allowsEdgeAntialiasing = true
                 pathLayer12.allowsGroupOpacity = true
-                pathLayer12.fillMode = .forwards
+                pathLayer12.fillMode = kCAFillModeForwards
                 pathLayer12.path = pathPath12
                 pathLayer12.fillColor = fillColor1.cgColor
                 pathLayer12.strokeColor = strokeColor.cgColor
@@ -1273,11 +1273,11 @@ class NFCScanningAnimationViewBlack: UIView
         opennedPassportLayer.bounds = CGRect(x: 0, y: 0, width: 195.149231, height: 136.198486)
         opennedPassportLayer.position = CGPoint(x: 19.925385, y: 20.900757)
         opennedPassportLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        opennedPassportLayer.contentsGravity = .center
+        opennedPassportLayer.contentsGravity = kCAGravityCenter
         opennedPassportLayer.shadowOffset = CGSize(width: 0, height: 1)
         opennedPassportLayer.allowsEdgeAntialiasing = true
         opennedPassportLayer.allowsGroupOpacity = true
-        opennedPassportLayer.fillMode = .forwards
+        opennedPassportLayer.fillMode = kCAFillModeForwards
 
             // Openned Passport Animations
             //
@@ -1288,12 +1288,12 @@ class NFCScanningAnimationViewBlack: UIView
             opacityAnimation1.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             opacityAnimation1.duration = 6
             opacityAnimation1.repeatCount = 100
-            opacityAnimation1.fillMode = .backwards
+            opacityAnimation1.fillMode = kCAFillModeBackwards
             opacityAnimation1.isRemovedOnCompletion = false
             opacityAnimation1.keyPath = "opacity"
             opacityAnimation1.values = [ 0, 1, 1, 0 ]
             opacityAnimation1.keyTimes = [ 0.229924, 0.2954, 0.94456, 1 ]
-            opacityAnimation1.calculationMode = .linear
+            opacityAnimation1.calculationMode = kCAFilterLinear
 
             opennedPassportLayer.add(opacityAnimation1, forKey: "opacityAnimation1")
 
@@ -1307,11 +1307,11 @@ class NFCScanningAnimationViewBlack: UIView
             groupLayer1.bounds = CGRect(x: 0, y: 0, width: 195.149231, height: 136.198486)
             groupLayer1.position = CGPoint(x: 0, y: 0)
             groupLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-            groupLayer1.contentsGravity = .center
+            groupLayer1.contentsGravity = kCAGravityCenter
             groupLayer1.shadowOffset = CGSize(width: 0, height: 1)
             groupLayer1.allowsEdgeAntialiasing = true
             groupLayer1.allowsGroupOpacity = true
-            groupLayer1.fillMode = .forwards
+            groupLayer1.fillMode = kCAFillModeForwards
 
                 // Group 9 Sublayers
                 //
@@ -1323,11 +1323,11 @@ class NFCScanningAnimationViewBlack: UIView
                 groupLayer2.bounds = CGRect(x: 0, y: 0, width: 195.149231, height: 136.198486)
                 groupLayer2.position = CGPoint(x: 0, y: 0)
                 groupLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                groupLayer2.contentsGravity = .center
+                groupLayer2.contentsGravity = kCAGravityCenter
                 groupLayer2.shadowOffset = CGSize(width: 0, height: 1)
                 groupLayer2.allowsEdgeAntialiasing = true
                 groupLayer2.allowsGroupOpacity = true
-                groupLayer2.fillMode = .forwards
+                groupLayer2.fillMode = kCAFillModeForwards
 
                     // Group 6 Sublayers
                     //
@@ -1339,13 +1339,13 @@ class NFCScanningAnimationViewBlack: UIView
                     rectangleLayer.bounds = CGRect(x: 0, y: 0, width: 97.290833, height: 136.198425)
                     rectangleLayer.position = CGPoint(x: -0.000061, y: 0.000031)
                     rectangleLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                    rectangleLayer.contentsGravity = .center
+                    rectangleLayer.contentsGravity = kCAGravityCenter
                     rectangleLayer.backgroundColor = backgroundColor5.cgColor
                     rectangleLayer.cornerRadius = 5
                     rectangleLayer.shadowOffset = CGSize(width: 0, height: 1)
                     rectangleLayer.allowsEdgeAntialiasing = true
                     rectangleLayer.allowsGroupOpacity = true
-                    rectangleLayer.fillMode = .forwards
+                    rectangleLayer.fillMode = kCAFillModeForwards
 
                     groupLayer2.addSublayer(rectangleLayer)
 
@@ -1356,11 +1356,11 @@ class NFCScanningAnimationViewBlack: UIView
                     groupLayer3.bounds = CGRect(x: 0, y: 0, width: 97.290833, height: 136.198456)
                     groupLayer3.position = CGPoint(x: 97.858398, y: 0.000031)
                     groupLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                    groupLayer3.contentsGravity = .center
+                    groupLayer3.contentsGravity = kCAGravityCenter
                     groupLayer3.shadowOffset = CGSize(width: 0, height: 1)
                     groupLayer3.allowsEdgeAntialiasing = true
                     groupLayer3.allowsGroupOpacity = true
-                    groupLayer3.fillMode = .forwards
+                    groupLayer3.fillMode = kCAFillModeForwards
 
                         // Group 5 Sublayers
                         //
@@ -1372,13 +1372,13 @@ class NFCScanningAnimationViewBlack: UIView
                         rectangleLayer1.bounds = CGRect(x: 0, y: 0, width: 97.290833, height: 136.198456)
                         rectangleLayer1.position = CGPoint(x: -1, y: 0)
                         rectangleLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                        rectangleLayer1.contentsGravity = .center
+                        rectangleLayer1.contentsGravity = kCAGravityCenter
                         rectangleLayer1.backgroundColor = backgroundColor5.cgColor
                         rectangleLayer1.cornerRadius = 5
                         rectangleLayer1.shadowOffset = CGSize(width: 0, height: 1)
                         rectangleLayer1.allowsEdgeAntialiasing = true
                         rectangleLayer1.allowsGroupOpacity = true
-                        rectangleLayer1.fillMode = .forwards
+                        rectangleLayer1.fillMode = kCAFillModeForwards
 
                         groupLayer3.addSublayer(rectangleLayer1)
 
@@ -1393,11 +1393,11 @@ class NFCScanningAnimationViewBlack: UIView
                 groupLayer4.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 26.003601)
                 groupLayer4.position = CGPoint(x: 19.765137, y: 22.376282)
                 groupLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-                groupLayer4.contentsGravity = .center
+                groupLayer4.contentsGravity = kCAGravityCenter
                 groupLayer4.shadowOffset = CGSize(width: 0, height: 1)
                 groupLayer4.allowsEdgeAntialiasing = true
                 groupLayer4.allowsGroupOpacity = true
-                groupLayer4.fillMode = .forwards
+                groupLayer4.fillMode = kCAFillModeForwards
 
                     // Group 7 Sublayers
                     //
@@ -1409,13 +1409,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer.position = CGPoint(x: 0, y: 0)
                     lineLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer.contentsGravity = .center
+                    lineLayer.contentsGravity = kCAGravityCenter
                     lineLayer.backgroundColor = backgroundColor4.cgColor
                     lineLayer.borderColor = backgroundColor4.cgColor
                     lineLayer.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer.allowsEdgeAntialiasing = true
                     lineLayer.allowsGroupOpacity = true
-                    lineLayer.fillMode = .forwards
+                    lineLayer.fillMode = kCAFillModeForwards
                     lineLayer.path = linePath
                     lineLayer.fillColor = backgroundColor4.cgColor
                     lineLayer.strokeColor = strokeColor1.cgColor
@@ -1430,13 +1430,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer1.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer1.position = CGPoint(x: 0, y: 8.667877)
                     lineLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer1.contentsGravity = .center
+                    lineLayer1.contentsGravity = kCAGravityCenter
                     lineLayer1.backgroundColor = backgroundColor4.cgColor
                     lineLayer1.borderColor = backgroundColor4.cgColor
                     lineLayer1.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer1.allowsEdgeAntialiasing = true
                     lineLayer1.allowsGroupOpacity = true
-                    lineLayer1.fillMode = .forwards
+                    lineLayer1.fillMode = kCAFillModeForwards
                     lineLayer1.path = linePath1
                     lineLayer1.fillColor = backgroundColor4.cgColor
                     lineLayer1.strokeColor = strokeColor1.cgColor
@@ -1451,13 +1451,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer2.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer2.position = CGPoint(x: 0, y: 17.335724)
                     lineLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer2.contentsGravity = .center
+                    lineLayer2.contentsGravity = kCAGravityCenter
                     lineLayer2.backgroundColor = backgroundColor4.cgColor
                     lineLayer2.borderColor = backgroundColor4.cgColor
                     lineLayer2.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer2.allowsEdgeAntialiasing = true
                     lineLayer2.allowsGroupOpacity = true
-                    lineLayer2.fillMode = .forwards
+                    lineLayer2.fillMode = kCAFillModeForwards
                     lineLayer2.path = linePath2
                     lineLayer2.fillColor = backgroundColor4.cgColor
                     lineLayer2.strokeColor = strokeColor1.cgColor
@@ -1472,13 +1472,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer3.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer3.position = CGPoint(x: 0, y: 26.003601)
                     lineLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer3.contentsGravity = .center
+                    lineLayer3.contentsGravity = kCAGravityCenter
                     lineLayer3.backgroundColor = backgroundColor4.cgColor
                     lineLayer3.borderColor = backgroundColor4.cgColor
                     lineLayer3.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer3.allowsEdgeAntialiasing = true
                     lineLayer3.allowsGroupOpacity = true
-                    lineLayer3.fillMode = .forwards
+                    lineLayer3.fillMode = kCAFillModeForwards
                     lineLayer3.path = linePath3
                     lineLayer3.fillColor = backgroundColor4.cgColor
                     lineLayer3.strokeColor = strokeColor1.cgColor
@@ -1495,11 +1495,11 @@ class NFCScanningAnimationViewBlack: UIView
                 groupLayer5.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 26.003632)
                 groupLayer5.position = CGPoint(x: 18.119324, y: 87.85083)
                 groupLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-                groupLayer5.contentsGravity = .center
+                groupLayer5.contentsGravity = kCAGravityCenter
                 groupLayer5.shadowOffset = CGSize(width: 0, height: 1)
                 groupLayer5.allowsEdgeAntialiasing = true
                 groupLayer5.allowsGroupOpacity = true
-                groupLayer5.fillMode = .forwards
+                groupLayer5.fillMode = kCAFillModeForwards
 
                     // Group 8 Sublayers
                     //
@@ -1511,13 +1511,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer4.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer4.position = CGPoint(x: 0, y: 0)
                     lineLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer4.contentsGravity = .center
+                    lineLayer4.contentsGravity = kCAGravityCenter
                     lineLayer4.backgroundColor = backgroundColor4.cgColor
                     lineLayer4.borderColor = backgroundColor4.cgColor
                     lineLayer4.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer4.allowsEdgeAntialiasing = true
                     lineLayer4.allowsGroupOpacity = true
-                    lineLayer4.fillMode = .forwards
+                    lineLayer4.fillMode = kCAFillModeForwards
                     lineLayer4.path = linePath4
                     lineLayer4.fillColor = backgroundColor4.cgColor
                     lineLayer4.strokeColor = strokeColor1.cgColor
@@ -1532,13 +1532,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer5.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer5.position = CGPoint(x: 0, y: 8.667847)
                     lineLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer5.contentsGravity = .center
+                    lineLayer5.contentsGravity = kCAGravityCenter
                     lineLayer5.backgroundColor = backgroundColor4.cgColor
                     lineLayer5.borderColor = backgroundColor4.cgColor
                     lineLayer5.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer5.allowsEdgeAntialiasing = true
                     lineLayer5.allowsGroupOpacity = true
-                    lineLayer5.fillMode = .forwards
+                    lineLayer5.fillMode = kCAFillModeForwards
                     lineLayer5.path = linePath5
                     lineLayer5.fillColor = backgroundColor4.cgColor
                     lineLayer5.strokeColor = strokeColor1.cgColor
@@ -1553,13 +1553,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer6.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer6.position = CGPoint(x: 0, y: 17.335754)
                     lineLayer6.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer6.contentsGravity = .center
+                    lineLayer6.contentsGravity = kCAGravityCenter
                     lineLayer6.backgroundColor = backgroundColor4.cgColor
                     lineLayer6.borderColor = backgroundColor4.cgColor
                     lineLayer6.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer6.allowsEdgeAntialiasing = true
                     lineLayer6.allowsGroupOpacity = true
-                    lineLayer6.fillMode = .forwards
+                    lineLayer6.fillMode = kCAFillModeForwards
                     lineLayer6.path = linePath6
                     lineLayer6.fillColor = backgroundColor4.cgColor
                     lineLayer6.strokeColor = strokeColor1.cgColor
@@ -1574,13 +1574,13 @@ class NFCScanningAnimationViewBlack: UIView
                     lineLayer7.bounds = CGRect(x: 0, y: 0, width: 60.943542, height: 0)
                     lineLayer7.position = CGPoint(x: 0, y: 26.003632)
                     lineLayer7.anchorPoint = CGPoint(x: 0, y: 0)
-                    lineLayer7.contentsGravity = .center
+                    lineLayer7.contentsGravity = kCAGravityCenter
                     lineLayer7.backgroundColor = backgroundColor4.cgColor
                     lineLayer7.borderColor = backgroundColor4.cgColor
                     lineLayer7.shadowOffset = CGSize(width: 0, height: 1)
                     lineLayer7.allowsEdgeAntialiasing = true
                     lineLayer7.allowsGroupOpacity = true
-                    lineLayer7.fillMode = .forwards
+                    lineLayer7.fillMode = kCAFillModeForwards
                     lineLayer7.path = linePath7
                     lineLayer7.fillColor = backgroundColor4.cgColor
                     lineLayer7.strokeColor = strokeColor1.cgColor
@@ -1599,12 +1599,12 @@ class NFCScanningAnimationViewBlack: UIView
             middleLineLayer.bounds = CGRect(x: 0, y: 0, width: 100, height: 136)
             middleLineLayer.position = CGPoint(x: 97, y: 3)
             middleLineLayer.anchorPoint = CGPoint(x: 0, y: 0)
-            middleLineLayer.contentsGravity = .center
+            middleLineLayer.contentsGravity = kCAGravityCenter
             middleLineLayer.borderColor = borderColor.cgColor
             middleLineLayer.shadowOffset = CGSize(width: 0, height: 1)
             middleLineLayer.allowsEdgeAntialiasing = true
             middleLineLayer.allowsGroupOpacity = true
-            middleLineLayer.fillMode = .forwards
+            middleLineLayer.fillMode = kCAFillModeForwards
             middleLineLayer.path = middleLinePath
             middleLineLayer.fillColor = fillColor2.cgColor
             middleLineLayer.strokeColor = strokeColor2.cgColor
@@ -1619,11 +1619,11 @@ class NFCScanningAnimationViewBlack: UIView
             groupLayer6.bounds = CGRect(x: 0, y: 0, width: 46.736572, height: 46.736481)
             groupLayer6.position = CGPoint(x: 123.701416, y: 27.631775)
             groupLayer6.anchorPoint = CGPoint(x: 0, y: 0)
-            groupLayer6.contentsGravity = .center
+            groupLayer6.contentsGravity = kCAGravityCenter
             groupLayer6.shadowOffset = CGSize(width: 0, height: 1)
             groupLayer6.allowsEdgeAntialiasing = true
             groupLayer6.allowsGroupOpacity = true
-            groupLayer6.fillMode = .forwards
+            groupLayer6.fillMode = kCAFillModeForwards
 
                 // Group 15 Sublayers
                 //
@@ -1635,13 +1635,13 @@ class NFCScanningAnimationViewBlack: UIView
                 ellipseLayer.bounds = CGRect(x: 0, y: 0, width: 46.736572, height: 46.736481)
                 ellipseLayer.position = CGPoint(x: 0, y: 0)
                 ellipseLayer.anchorPoint = CGPoint(x: 0, y: 0)
-                ellipseLayer.contentsGravity = .center
+                ellipseLayer.contentsGravity = kCAGravityCenter
                 ellipseLayer.backgroundColor = backgroundColor4.cgColor
                 ellipseLayer.borderColor = backgroundColor4.cgColor
                 ellipseLayer.shadowOffset = CGSize(width: 0, height: 1)
                 ellipseLayer.allowsEdgeAntialiasing = true
                 ellipseLayer.allowsGroupOpacity = true
-                ellipseLayer.fillMode = .forwards
+                ellipseLayer.fillMode = kCAFillModeForwards
 
                     // Ellipse 1 Animations
                     //
@@ -1652,12 +1652,12 @@ class NFCScanningAnimationViewBlack: UIView
                     opacityAnimation2.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000125
                     opacityAnimation2.duration = 5.999875
                     opacityAnimation2.repeatCount = 100
-                    opacityAnimation2.fillMode = .backwards
+                    opacityAnimation2.fillMode = kCAFillModeBackwards
                     opacityAnimation2.isRemovedOnCompletion = false
                     opacityAnimation2.keyPath = "opacity"
                     opacityAnimation2.values = [ 0, 1, 0, 1, 0 ]
                     opacityAnimation2.keyTimes = [ 0.3229, 0.3826, 0.504156, 0.6067, 0.667076 ]
-                    opacityAnimation2.calculationMode = .linear
+                    opacityAnimation2.calculationMode = kCAFilterLinear
 
                     ellipseLayer.add(opacityAnimation2, forKey: "opacityAnimation2")
                 ellipseLayer.path = ellipsePath
@@ -1674,13 +1674,13 @@ class NFCScanningAnimationViewBlack: UIView
                 ellipseLayer1.bounds = CGRect(x: 0, y: 0, width: 32.375244, height: 32.375366)
                 ellipseLayer1.position = CGPoint(x: 7.180664, y: 7.180542)
                 ellipseLayer1.anchorPoint = CGPoint(x: 0, y: 0)
-                ellipseLayer1.contentsGravity = .center
+                ellipseLayer1.contentsGravity = kCAGravityCenter
                 ellipseLayer1.backgroundColor = backgroundColor4.cgColor
                 ellipseLayer1.borderColor = backgroundColor4.cgColor
                 ellipseLayer1.shadowOffset = CGSize(width: 0, height: 1)
                 ellipseLayer1.allowsEdgeAntialiasing = true
                 ellipseLayer1.allowsGroupOpacity = true
-                ellipseLayer1.fillMode = .forwards
+                ellipseLayer1.fillMode = kCAFillModeForwards
 
                     // Ellipse 2 Animations
                     //
@@ -1691,12 +1691,12 @@ class NFCScanningAnimationViewBlack: UIView
                     opacityAnimation3.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000125
                     opacityAnimation3.duration = 5.999875
                     opacityAnimation3.repeatCount = 100
-                    opacityAnimation3.fillMode = .backwards
+                    opacityAnimation3.fillMode = kCAFillModeBackwards
                     opacityAnimation3.isRemovedOnCompletion = false
                     opacityAnimation3.keyPath = "opacity"
                     opacityAnimation3.values = [ 0, 1, 0, 1, 0 ]
                     opacityAnimation3.keyTimes = [ 0.2735, 0.333617, 0.4604, 0.5717, 0.6296 ]
-                    opacityAnimation3.calculationMode = .linear
+                    opacityAnimation3.calculationMode = kCAFilterLinear
 
                     ellipseLayer1.add(opacityAnimation3, forKey: "opacityAnimation3")
                 ellipseLayer1.path = ellipsePath1
@@ -1713,13 +1713,13 @@ class NFCScanningAnimationViewBlack: UIView
                 ellipseLayer2.bounds = CGRect(x: 0, y: 0, width: 18.633057, height: 18.633087)
                 ellipseLayer2.position = CGPoint(x: 14.051758, y: 14.051697)
                 ellipseLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                ellipseLayer2.contentsGravity = .center
+                ellipseLayer2.contentsGravity = kCAGravityCenter
                 ellipseLayer2.backgroundColor = backgroundColor4.cgColor
                 ellipseLayer2.borderColor = backgroundColor4.cgColor
                 ellipseLayer2.shadowOffset = CGSize(width: 0, height: 1)
                 ellipseLayer2.allowsEdgeAntialiasing = true
                 ellipseLayer2.allowsGroupOpacity = true
-                ellipseLayer2.fillMode = .forwards
+                ellipseLayer2.fillMode = kCAFillModeForwards
 
                     // Ellipse 3 Animations
                     //
@@ -1730,12 +1730,12 @@ class NFCScanningAnimationViewBlack: UIView
                     opacityAnimation4.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000125
                     opacityAnimation4.duration = 5.999875
                     opacityAnimation4.repeatCount = 100
-                    opacityAnimation4.fillMode = .backwards
+                    opacityAnimation4.fillMode = kCAFillModeBackwards
                     opacityAnimation4.isRemovedOnCompletion = false
                     opacityAnimation4.keyPath = "opacity"
                     opacityAnimation4.values = [ 0, 1, 0, 1, 0 ]
                     opacityAnimation4.keyTimes = [ 0.229908, 0.291, 0.4146, 0.5381, 0.5946 ]
-                    opacityAnimation4.calculationMode = .linear
+                    opacityAnimation4.calculationMode = kCAFilterLinear
 
                     ellipseLayer2.add(opacityAnimation4, forKey: "opacityAnimation4")
                 ellipseLayer2.path = ellipsePath2
@@ -1756,11 +1756,11 @@ class NFCScanningAnimationViewBlack: UIView
         deviceLayer.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 157.89444)
         deviceLayer.position = CGPoint(x: 137, y: 20)
         deviceLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        deviceLayer.contentsGravity = .center
+        deviceLayer.contentsGravity = kCAGravityCenter
         deviceLayer.shadowOffset = CGSize(width: 0, height: 1)
         deviceLayer.allowsEdgeAntialiasing = true
         deviceLayer.allowsGroupOpacity = true
-        deviceLayer.fillMode = .forwards
+        deviceLayer.fillMode = kCAFillModeForwards
 
             // Device Animations
             //
@@ -1771,12 +1771,12 @@ class NFCScanningAnimationViewBlack: UIView
             opacityAnimation5.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             opacityAnimation5.duration = 5.999999
             opacityAnimation5.repeatCount = 100
-            opacityAnimation5.fillMode = .backwards
+            opacityAnimation5.fillMode = kCAFillModeBackwards
             opacityAnimation5.isRemovedOnCompletion = false
             opacityAnimation5.keyPath = "opacity"
             opacityAnimation5.values = [ 0, 1, 1, 0 ]
             opacityAnimation5.keyTimes = [ 0.595833, 0.666912, 0.94456, 1 ]
-            opacityAnimation5.calculationMode = .linear
+            opacityAnimation5.calculationMode = kCAFilterLinear
 
             deviceLayer.add(opacityAnimation5, forKey: "opacityAnimation5")
 
@@ -1786,12 +1786,12 @@ class NFCScanningAnimationViewBlack: UIView
             positionAnimation.beginTime = self.layer.convertTime(CACurrentMediaTime(), from: nil) + 0.000001
             positionAnimation.duration = 6
             positionAnimation.repeatCount = 100
-            positionAnimation.fillMode = .backwards
+            positionAnimation.fillMode = kCAFillModeBackwards
             positionAnimation.isRemovedOnCompletion = false
             positionAnimation.keyPath = "position"
             positionAnimation.values = [ CGPoint(x: 0, y: 0), CGPoint(x: -16, y: 0) ]
             positionAnimation.keyTimes = [ 0.6286, 0.7488 ]
-            positionAnimation.calculationMode = .linear
+            positionAnimation.calculationMode = kCAFilterLinear
 
             deviceLayer.add(positionAnimation, forKey: "positionAnimation")
 
@@ -1805,11 +1805,11 @@ class NFCScanningAnimationViewBlack: UIView
             groupLayer7.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 157.89444)
             groupLayer7.position = CGPoint(x: 139, y: 28)
             groupLayer7.anchorPoint = CGPoint(x: 0, y: 0)
-            groupLayer7.contentsGravity = .center
+            groupLayer7.contentsGravity = kCAGravityCenter
             groupLayer7.shadowOffset = CGSize(width: 0, height: 1)
             groupLayer7.allowsEdgeAntialiasing = true
             groupLayer7.allowsGroupOpacity = true
-            groupLayer7.fillMode = .forwards
+            groupLayer7.fillMode = kCAFillModeForwards
             groupLayer7.transform = CATransform3D( m11: 0.95, m12: 0, m13: 0, m14: 0,
                                                m21: 0, m22: 0.95, m23: 0, m24: 0,
                                                m31: 0, m32: 0, m33: 1, m34: 0,
@@ -1825,12 +1825,12 @@ class NFCScanningAnimationViewBlack: UIView
                 rectangleLayer2.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 114.601166)
                 rectangleLayer2.position = CGPoint(x: 0, y: 19.14679)
                 rectangleLayer2.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer2.contentsGravity = .center
+                rectangleLayer2.contentsGravity = kCAGravityCenter
                 rectangleLayer2.backgroundColor = backgroundColor6.cgColor
                 rectangleLayer2.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer2.allowsEdgeAntialiasing = true
                 rectangleLayer2.allowsGroupOpacity = true
-                rectangleLayer2.fillMode = .forwards
+                rectangleLayer2.fillMode = kCAFillModeForwards
 
                 groupLayer7.addSublayer(rectangleLayer2)
 
@@ -1841,7 +1841,7 @@ class NFCScanningAnimationViewBlack: UIView
                 rectangleLayer3.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 24.433228)
                 rectangleLayer3.position = CGPoint(x: 0, y: 133.461273)
                 rectangleLayer3.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer3.contentsGravity = .center
+                rectangleLayer3.contentsGravity = kCAGravityCenter
                 rectangleLayer3.backgroundColor = strokeColor1.cgColor
                 rectangleLayer3.cornerRadius = 5
         if #available(iOS 11.0, *) {
@@ -1852,7 +1852,7 @@ class NFCScanningAnimationViewBlack: UIView
                 rectangleLayer3.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer3.allowsEdgeAntialiasing = true
                 rectangleLayer3.allowsGroupOpacity = true
-                rectangleLayer3.fillMode = .forwards
+                rectangleLayer3.fillMode = kCAFillModeForwards
 
                 groupLayer7.addSublayer(rectangleLayer3)
 
@@ -1863,7 +1863,7 @@ class NFCScanningAnimationViewBlack: UIView
                 rectangleLayer4.bounds = CGRect(x: 0, y: 0, width: 90.833862, height: 19.348602)
                 rectangleLayer4.position = CGPoint(x: 91, y: 20)
                 rectangleLayer4.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer4.contentsGravity = .center
+                rectangleLayer4.contentsGravity = kCAGravityCenter
                 rectangleLayer4.backgroundColor = strokeColor1.cgColor
                 rectangleLayer4.cornerRadius = 5
         if #available(iOS 11.0, *) {
@@ -1874,7 +1874,7 @@ class NFCScanningAnimationViewBlack: UIView
                 rectangleLayer4.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer4.allowsEdgeAntialiasing = true
                 rectangleLayer4.allowsGroupOpacity = true
-                rectangleLayer4.fillMode = .forwards
+                rectangleLayer4.fillMode = kCAFillModeForwards
                 rectangleLayer4.transform = CATransform3D( m11: -1, m12: 0, m13: 0, m14: 0,
                                                    m21: 0, m22: -1, m23: 0, m24: 0,
                                                    m31: 0, m32: 0, m33: 1, m34: 0,
@@ -1889,13 +1889,13 @@ class NFCScanningAnimationViewBlack: UIView
                 rectangleLayer5.bounds = CGRect(x: 0, y: 0, width: 21.381104, height: 7.996185)
                 rectangleLayer5.position = CGPoint(x: 34.726318, y: 5.67627)
                 rectangleLayer5.anchorPoint = CGPoint(x: 0, y: 0)
-                rectangleLayer5.contentsGravity = .center
+                rectangleLayer5.contentsGravity = kCAGravityCenter
                 rectangleLayer5.backgroundColor = backgroundColor7.cgColor
                 rectangleLayer5.cornerRadius = 2.438305
                 rectangleLayer5.shadowOffset = CGSize(width: 0, height: 1)
                 rectangleLayer5.allowsEdgeAntialiasing = true
                 rectangleLayer5.allowsGroupOpacity = true
-                rectangleLayer5.fillMode = .forwards
+                rectangleLayer5.fillMode = kCAFillModeForwards
 
                 groupLayer7.addSublayer(rectangleLayer5)
 
@@ -1906,11 +1906,11 @@ class NFCScanningAnimationViewBlack: UIView
                 groupLayer8.bounds = CGRect(x: 0, y: 0, width: 20.375, height: 30.180573)
                 groupLayer8.position = CGPoint(x: 35.229736, y: 61.356964)
                 groupLayer8.anchorPoint = CGPoint(x: 0, y: 0)
-                groupLayer8.contentsGravity = .center
+                groupLayer8.contentsGravity = kCAGravityCenter
                 groupLayer8.shadowOffset = CGSize(width: 0, height: 1)
                 groupLayer8.allowsEdgeAntialiasing = true
                 groupLayer8.allowsGroupOpacity = true
-                groupLayer8.fillMode = .forwards
+                groupLayer8.fillMode = kCAFillModeForwards
 
                     // Group 13 Sublayers
                     //
@@ -1922,13 +1922,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer13.bounds = CGRect(x: 0, y: 0, width: 7.93103, height: 30.180573)
                     pathLayer13.position = CGPoint(x: 12.44397, y: 0)
                     pathLayer13.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer13.contentsGravity = .center
+                    pathLayer13.contentsGravity = kCAGravityCenter
                     pathLayer13.backgroundColor = backgroundColor4.cgColor
                     pathLayer13.borderColor = backgroundColor4.cgColor
                     pathLayer13.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer13.allowsEdgeAntialiasing = true
                     pathLayer13.allowsGroupOpacity = true
-                    pathLayer13.fillMode = .forwards
+                    pathLayer13.fillMode = kCAFillModeForwards
                     pathLayer13.path = pathPath13
                     pathLayer13.fillColor = fillColor.cgColor
                     pathLayer13.strokeColor = strokeColor.cgColor
@@ -1943,13 +1943,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer14.bounds = CGRect(x: 0, y: 0, width: 6.364502, height: 22.60144)
                     pathLayer14.position = CGPoint(x: 8.136963, y: 3.797516)
                     pathLayer14.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer14.contentsGravity = .center
+                    pathLayer14.contentsGravity = kCAGravityCenter
                     pathLayer14.backgroundColor = backgroundColor4.cgColor
                     pathLayer14.borderColor = backgroundColor4.cgColor
                     pathLayer14.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer14.allowsEdgeAntialiasing = true
                     pathLayer14.allowsGroupOpacity = true
-                    pathLayer14.fillMode = .forwards
+                    pathLayer14.fillMode = kCAFillModeForwards
                     pathLayer14.path = pathPath14
                     pathLayer14.fillColor = fillColor.cgColor
                     pathLayer14.strokeColor = strokeColor.cgColor
@@ -1964,13 +1964,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer15.bounds = CGRect(x: 0, y: 0, width: 4.938965, height: 15.498047)
                     pathLayer15.position = CGPoint(x: 3.893433, y: 7.349426)
                     pathLayer15.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer15.contentsGravity = .center
+                    pathLayer15.contentsGravity = kCAGravityCenter
                     pathLayer15.backgroundColor = backgroundColor4.cgColor
                     pathLayer15.borderColor = backgroundColor4.cgColor
                     pathLayer15.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer15.allowsEdgeAntialiasing = true
                     pathLayer15.allowsGroupOpacity = true
-                    pathLayer15.fillMode = .forwards
+                    pathLayer15.fillMode = kCAFillModeForwards
                     pathLayer15.path = pathPath15
                     pathLayer15.fillColor = fillColor.cgColor
                     pathLayer15.strokeColor = strokeColor.cgColor
@@ -1985,13 +1985,13 @@ class NFCScanningAnimationViewBlack: UIView
                     pathLayer16.bounds = CGRect(x: 0, y: 0, width: 3.70166, height: 8.938507)
                     pathLayer16.position = CGPoint(x: -0.000122, y: 10.596069)
                     pathLayer16.anchorPoint = CGPoint(x: 0, y: 0)
-                    pathLayer16.contentsGravity = .center
+                    pathLayer16.contentsGravity = kCAGravityCenter
                     pathLayer16.backgroundColor = backgroundColor4.cgColor
                     pathLayer16.borderColor = backgroundColor4.cgColor
                     pathLayer16.shadowOffset = CGSize(width: 0, height: 1)
                     pathLayer16.allowsEdgeAntialiasing = true
                     pathLayer16.allowsGroupOpacity = true
-                    pathLayer16.fillMode = .forwards
+                    pathLayer16.fillMode = kCAFillModeForwards
                     pathLayer16.path = pathPath16
                     pathLayer16.fillColor = fillColor.cgColor
                     pathLayer16.strokeColor = strokeColor.cgColor

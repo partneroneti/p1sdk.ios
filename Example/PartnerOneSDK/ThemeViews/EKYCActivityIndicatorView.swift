@@ -79,7 +79,7 @@ class EKYCActvityIndicatorView : UIView {
             rotateAnimation.duration = animationDurations[index]
             rotateAnimation.repeatCount = Float.infinity
             rotateAnimation.isRemovedOnCompletion = false
-            rotateAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+            rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
             
             let strokeWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
             strokeWidthAnimation.fromValue = round(4.0 * contentScalingFactor())
@@ -94,7 +94,7 @@ class EKYCActvityIndicatorView : UIView {
             circleAnimations.duration = animationDurations[index] / 2.0
             circleAnimations.repeatCount = Float.infinity
             circleAnimations.autoreverses = true
-            circleAnimations.fillMode = .forwards
+            circleAnimations.fillMode = kCAFillModeForwards
             circleAnimations.isRemovedOnCompletion = false
             
             view.layer.add(rotateAnimation, forKey: "circle\(animationDurations[index])RotateAnimation")

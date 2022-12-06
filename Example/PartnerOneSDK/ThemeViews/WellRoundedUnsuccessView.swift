@@ -68,8 +68,8 @@ class WellRoundedUnsuccessView : UIView {
         crossLayer!.path = crossPath()
         crossLayer!.strokeEnd = 0
         crossLayer!.lineWidth = round(6.0 * contentScalingFactor())
-        crossLayer!.lineCap = .round
-        crossLayer!.lineJoin = .round
+        crossLayer!.lineCap = kCALineCapRound
+        crossLayer!.lineJoin = kCALineJoinRound
         crossLayer!.strokeColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1).cgColor // off-white
         crossLayer!.fillColor = UIColor.clear.cgColor
 
@@ -97,9 +97,9 @@ class WellRoundedUnsuccessView : UIView {
         crossStrokeEndAnimation.toValue = 1
         crossStrokeEndAnimation.duration = 0.3
         crossStrokeEndAnimation.autoreverses = false
-        crossStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        crossStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         crossStrokeEndAnimation.repeatCount = 0
-        crossStrokeEndAnimation.fillMode = .forwards
+        crossStrokeEndAnimation.fillMode = kCAFillModeForwards
         crossStrokeEndAnimation.isRemovedOnCompletion = false
         crossStrokeEndAnimation.beginTime = CACurrentMediaTime() + 0.2
 

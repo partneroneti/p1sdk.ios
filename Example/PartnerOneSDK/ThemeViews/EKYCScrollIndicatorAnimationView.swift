@@ -43,14 +43,14 @@ class EKYCScrollIndicatorAnimationView : UIView {
         let downPath: UIBezierPath = createCompletePath(size: pathSize)
         downLayer?.path = downPath.cgPath
         downLayer?.lineWidth = strokeWidth
-        downLayer?.lineCap = .round
+        downLayer?.lineCap = kCALineCapRound
         downLayer?.strokeColor = UIColor(red: 0.929, green: 0.110, blue: 0.141, alpha: 1).cgColor // red
         downLayer?.fillColor = UIColor.clear.cgColor
         
         let circleRadius = pathSize / 2
         let circlePath: UIBezierPath = UIBezierPath(arcCenter: CGPoint.init(x: circleRadius, y: circleRadius), radius: circleRadius, startAngle: 0, endAngle: CGFloat(Double.pi) * 2, clockwise: true)
         circleLayer?.path = circlePath.cgPath
-        circleLayer?.lineCap = .round
+        circleLayer?.lineCap = kCALineCapRound
         circleLayer?.strokeColor = UIColor.black.cgColor
         circleLayer?.fillColor = UIColor.black.cgColor
         
@@ -123,7 +123,7 @@ class EKYCScrollIndicatorAnimationView : UIView {
         positionAnimation.duration = 0.2
         positionAnimation.autoreverses = true
         positionAnimation.isRemovedOnCompletion = true
-        positionAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        positionAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
         pathView!.layer.add(positionAnimation, forKey: "positionAnimation")
     }

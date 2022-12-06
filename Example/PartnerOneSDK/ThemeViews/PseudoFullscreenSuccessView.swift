@@ -57,7 +57,7 @@ class PseudoFullscreenSuccessView : UIView {
         circleLayer!.path = circlePath()
         circleLayer!.strokeEnd = 0
         circleLayer!.lineWidth = round(4.0 * contentScalingFactor())
-        circleLayer!.lineCap = .round
+        circleLayer!.lineCap = kCALineCapRound
         circleLayer!.strokeColor = UIColor(red: 0.169, green: 0.169, blue: 0.169, alpha: 1).cgColor // black
         circleLayer!.fillColor = UIColor.clear.cgColor
 
@@ -71,8 +71,8 @@ class PseudoFullscreenSuccessView : UIView {
         checkmarkLayer!.strokeEnd = 0
         checkmarkLayer!.lineWidth = round(4.0 * contentScalingFactor())
         checkmarkLayer!.miterLimit = 10
-        checkmarkLayer!.lineCap = .round
-        checkmarkLayer!.lineJoin = .round
+        checkmarkLayer!.lineCap = kCALineCapRound
+        checkmarkLayer!.lineJoin = kCALineJoinRound
         checkmarkLayer!.strokeColor = UIColor(red: 0.235, green: 0.702, blue: 0.443, alpha: 1).cgColor // green
         checkmarkLayer!.fillColor = UIColor.clear.cgColor
 
@@ -104,9 +104,9 @@ class PseudoFullscreenSuccessView : UIView {
         circleStrokeEndAnimation.toValue = 1
         circleStrokeEndAnimation.duration = 0.3
         circleStrokeEndAnimation.autoreverses = false
-        circleStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        circleStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         circleStrokeEndAnimation.repeatCount = 0
-        circleStrokeEndAnimation.fillMode = .forwards
+        circleStrokeEndAnimation.fillMode = kCAFillModeForwards
         circleStrokeEndAnimation.isRemovedOnCompletion = false
 
         let circleLineWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
@@ -119,8 +119,8 @@ class PseudoFullscreenSuccessView : UIView {
         circleAnimations.duration = 0.6
         circleAnimations.repeatCount = 0
         circleAnimations.autoreverses = false
-        circleAnimations.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        circleAnimations.fillMode = .forwards
+        circleAnimations.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        circleAnimations.fillMode = kCAFillModeForwards
         circleAnimations.animations = [circleLineWidthAnimation, circlePathAnimation]
         circleAnimations.isRemovedOnCompletion = false
         circleAnimations.beginTime = CACurrentMediaTime() + 0.15
@@ -129,9 +129,9 @@ class PseudoFullscreenSuccessView : UIView {
         checkmarkStrokeEndAnimation.toValue = 1
         checkmarkStrokeEndAnimation.duration = 0.3
         checkmarkStrokeEndAnimation.autoreverses = false
-        checkmarkStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        checkmarkStrokeEndAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         checkmarkStrokeEndAnimation.repeatCount = 0
-        checkmarkStrokeEndAnimation.fillMode = .forwards
+        checkmarkStrokeEndAnimation.fillMode = kCAFillModeForwards
         checkmarkStrokeEndAnimation.isRemovedOnCompletion = false
         checkmarkStrokeEndAnimation.beginTime = CACurrentMediaTime() + 0.75
         
