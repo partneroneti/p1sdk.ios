@@ -239,8 +239,7 @@ extension ScanViewController {
   func onLivenessCheckPressed(_ sender: Any) {
     getSessionToken() { sessionToken in
 //        self.resetLatestResults()
-//      self.latestProcessor = LivenessCheckProcessor(sessionToken: sessionToken, fromViewController: self)
-      self.latestProcessor = AuthenticateProcessor(sessionToken: sessionToken, fromViewController: self)
+      self.latestProcessor = LivenessCheckProcessor(sessionToken: sessionToken, fromViewController: self)
     }
     print("BUTTON TAPPED!")
   }

@@ -728,7 +728,7 @@
 				DEVELOPMENT_TEAM = F48MGZ2AUR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(LD_RUNPATH_SEARCH_PATHS)",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -749,7 +749,7 @@
 				DEVELOPMENT_TEAM = F48MGZ2AUR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"${LD_RUNPATH_SEARCH_PATHS}",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

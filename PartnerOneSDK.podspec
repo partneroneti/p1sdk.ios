@@ -35,8 +35,8 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'PartnerOneSDK' => ['PartnerOneSDK/Assets/*.png']
   # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+   s.public_header_files = 'Pods/Classes/**/*.h'
+   s.frameworks = 'FaceTecSDK'
+#   s.dependency 'FaceTecSDK'
 end
