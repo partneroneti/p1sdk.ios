@@ -14,7 +14,6 @@ class ThemeHelpers {
         Config.currentLowLightCustomization = getLowLightCustomizationForTheme(theme: theme)
         Config.currentDynamicDimmingCustomization = getDynamicDimmingCustomizationForTheme(theme: theme)
         
-//        SampleAppUtilities.setVocalGuidanceSoundFiles()
         FaceTec.sdk.setCustomization(Config.currentCustomization)
         FaceTec.sdk.setLowLightCustomization(Config.currentLowLightCustomization)
         FaceTec.sdk.setDynamicDimmingCustomization(Config.currentDynamicDimmingCustomization)

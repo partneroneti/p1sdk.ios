@@ -40,7 +40,7 @@ class EnrollmentProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelegate
         // DEVELOPER NOTE:  These properties are for demonstration purposes only so the Sample App can get information about what is happening in the processor.
         // In the code in your own App, you can pass around signals, flags, intermediates, and results however you would like.
         //
-//        fromViewController.setLatestSessionResult(sessionResult: sessionResult)
+        fromViewController.setLatestSessionResult(sessionResult: sessionResult)
         
         //
         // DEVELOPER NOTE:  A reference to the callback is stored as a class variable so that we can have access to it while performing the Upload and updating progress.
@@ -66,7 +66,7 @@ class EnrollmentProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelegate
         parameters["faceScan"] = sessionResult.faceScanBase64
         parameters["auditTrailImage"] = sessionResult.auditTrailCompressedBase64![0]
         parameters["lowQualityAuditTrailImage"] = sessionResult.lowQualityAuditTrailCompressedBase64![0]
-//        parameters["externalDatabaseRefID"] = fromViewController.getLatestExternalDatabaseRefID()
+        parameters["externalDatabaseRefID"] = fromViewController.getLatestExternalDatabaseRefID()
         
         //
         // Part 5:  Make the Networking Call to Your Servers.  Below is just example code, you are free to customize based on how your own API works.

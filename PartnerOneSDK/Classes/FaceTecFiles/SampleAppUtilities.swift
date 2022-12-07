@@ -24,14 +24,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
     
     init(vc: ScanViewController) {
         sampleAppVC = vc
-
-        if #available(iOS 13.0, *) {
-            // For iOS 13+, use the rounded system font for displayed text
-//            if let roundedDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body).withDesign(.rounded) {
-//                let roundedMessageFont = UIFont(descriptor: roundedDescriptor, size: sampleAppVC.statusLabel.font.pointSize)
-//                sampleAppVC.statusLabel.font = roundedMessageFont
-//            }
-        }
     }
     
     func startSessionTokenConnectionTextTimer() {
@@ -51,12 +43,13 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
 //            self.sampleAppVC.themeTransitionText.alpha = 0
         }
     }
- 
+    
     func handleErrorGettingServerSessionToken() {
         networkIssueDetected = true
-        hideSessionTokenConnectionText();
+      hideSessionTokenConnectionText();
     }
   
+    
     public static func setOCRLocalization() {
         // Set the strings to be used for group names, field names, and placeholder texts for the FaceTec ID Scan User OCR Confirmation Screen.
         // DEVELOPER NOTE: For this demo, we are using the template json file, 'FaceTec_OCR_Customization.json,' as the parameter in calling this API.
