@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		008A3E36861491005AB2DDF9A43CA75F /* PartnerOneSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB2086F4F38616D383B59DF043E3EA3 /* PartnerOneSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03DA124360CDFA9973D2B6DAFE776134 /* EKYCActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348414771F918C80FB2E100D707D5B0F /* EKYCActivityIndicatorView.swift */; };
 		04A7046C18529EC8A5A1A83D0657B2B1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F688AEDE4FAEB34B607D97BC73B560C /* UIView+Extension.swift */; };
 		06B98FC7556397D3C09A551564D8251D /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06656F9FF829FD8FB89835B70FBDBB75 /* ScanView.swift */; };
 		09F8D378C12B7DEDDA72367FBA5D567B /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA68CD3DF32DB42FC4AA2872CF92B0 /* SampleAppUtilities.swift */; };
-		0EC18D1781E9F4A78744FACBA6D67D7B /* AdditionalReviewAnimationViewOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB436EDAB29053575B871C52DDA352 /* AdditionalReviewAnimationViewOrange.swift */; };
 		1BD34228D7483EFE80EF69FEFD917CB6 /* LivenessCheckProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E2F0D39AF3245C507B60D04088848 /* LivenessCheckProcessor.swift */; };
 		1C5295A2958A4444C06D9D02D1355500 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15754D6BB10F53C0E444A9A835D795 /* ScanViewController.swift */; };
 		1F84FE646CD1D7BAFFB58C243277AFF8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,23 +21,17 @@
 		2BAA5029634EC5ACE2E3469185B1A058 /* FaceTecConfigurationForTestApplication.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 8E18A3DC44D06D64464B9543E07F5BCF /* FaceTecConfigurationForTestApplication.xcconfig */; };
 		2CB61F6FA511CAACB43A50DC3A82E0DD /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
 		2ECCAC52EF4C74E1032E0BC646BBE5B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08755D3ABB49CE5818645A8FB1026226 /* Foundation.framework */; };
-		30A34F0E18BD9D541BCEB46FF0B1EB73 /* PseudoFullscreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E53C0D3E32FCE4353B65553D32E1CE /* PseudoFullscreenSuccessView.swift */; };
 		30D475DF57C0C682A723231E7BCA0D14 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
 		373413256658309F9053CE22BF62077E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3BA4582FDB5A23320AB3FF9AFAE58511 /* NFCCardStartingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02C25A023C71C7A3299CA7EE92CDDD /* NFCCardStartingAnimationView.swift */; };
 		3F3010AF2F53C07A97C18DBC48351F3C /* PhotoIDScanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E23141B804E0D7D9D7A20E606E7E41 /* PhotoIDScanProcessor.swift */; };
-		429757D3AFA0161C9F95F1B0124FEB3C /* AdditionalReviewAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AFD43ABE0F6BC9BE713B33D47036C /* AdditionalReviewAnimationViewRed.swift */; };
 		47DC76BAB28700128B7ED44CCCE6887D /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5396321CBF7C6909DBA1193FC05C65 /* CapturedImageView.swift */; };
 		496CA8AEB201893BFA86557A117C85F5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA971647E93A220B5276C7871A658663 /* BaseView.swift */; };
-		550F901CF25316F5466663FDB120066E /* EKYCScrollIndicatorAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E0AC77B0562512D02D02155782AC2 /* EKYCScrollIndicatorAnimationView.swift */; };
 		5558B876B579BC1E79BD3D2B19148329 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		558522DF9703ACAEF14643E706CE5F16 /* EKYCSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCCD8E78DA59F97679C8B66CAC2B6BF /* EKYCSuccessView.swift */; };
 		564A3AA60FE57FC6B14B7C7D32726AD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08755D3ABB49CE5818645A8FB1026226 /* Foundation.framework */; };
 		56E16FB40F1FFCC7FC900E3B50BAF2A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08755D3ABB49CE5818645A8FB1026226 /* Foundation.framework */; };
 		57E7AE507D577B44B7C955AB22EF3B04 /* FaceTec.strings in Sources */ = {isa = PBXBuildFile; fileRef = DA4296885EC6C657292405558BEE7F01 /* FaceTec.strings */; };
 		5BE525FF6FA14B999ED2CCC0AA4FA0CF /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
 		5D0150E92F6D5D79D39A46BC52C298E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390AB506E55B2012C34ABC67F7462F34 /* BaseViewController.swift */; };
-		5E1AE7F73D4A6605E4C767E79A909863 /* NFCStartingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EFB103E9717161CCE1D7CA87BF00B /* NFCStartingAnimationView.swift */; };
 		640CCE9C3A28AA3CA15510899F9140EE /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67F1963AA7C9EDB78127AD5F566A4949 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		74339C58AC4E5631FB8C0E662668A796 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
@@ -51,30 +43,18 @@
 		7C67CBD15D9B5D0B7769B2F469478332 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
 		875A310EAF4D0C136C3FFFF5E0335BE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD96A80F11FCA8E9E5585A94BC0B26F /* UIKit.framework */; };
 		8AE19756F0126FE92AF625E36F3D70FE /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		90591C70F29E8A47EA1CD02949E6E452 /* NFCScanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839FE2CD5E205F3BB903439CAC36410 /* NFCScanningAnimationView.swift */; };
-		91F954CAE9B4192D75C3C91D13DAD4B6 /* WellRoundedUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70971A8F4E831699F098A473756B4F21 /* WellRoundedUnsuccessView.swift */; };
-		926BBCAFCE19EAC8CBE1C87EF3A28379 /* NFCScanningAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB80E8A9F5D167CF9D97F0FF046E9D /* NFCScanningAnimationViewRed.swift */; };
-		98E7BFAFFC00FDF61B0F3E816830AF35 /* EKYCUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A68957A923605CECE91AB005768826 /* EKYCUnsuccessView.swift */; };
-		9C7287C523B5A792FFF8B16A6111398D /* WellRoundedActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19DAA5610075F325BC4037BB46A80D /* WellRoundedActivityIndicatorView.swift */; };
 		9D3C5E2F56838937146191468A893244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBB47A5846D72C6E4C471F832BA1D27 /* XCTest.framework */; };
-		A24092946FE76CD48E25D6213984FA09 /* NFCScanningAnimationViewGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D6D811B02B782D5E8C35D313A710B /* NFCScanningAnimationViewGreen.swift */; };
 		A3A8FEBB08BEE81D5DCED780E5DB106B /* Pods-PartnerOneSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34835D1AC934C02DDA9D5E27A14D43FB /* Pods-PartnerOneSDK_Example-dummy.m */; };
 		A52147CD716E144AA02CA6CF586DB6FB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34AAD377A0FF3CF6775BBF8422CFE84 /* Config.swift */; };
-		B3DDE584D3E06BE48D2B0900B88DBCC2 /* PseudoFullscreenUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F0583EACB2D68ACEC5A1347B126F0 /* PseudoFullscreenUnsuccessView.swift */; };
 		B52281F9F4340D4FC8ABB2FEB1FEC08E /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
 		B52984217FC93C702A8DFCFC6395447D /* PartnerOneSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A05ABA6E5827C6238CE03EA3CEFB17B0 /* PartnerOneSDK-dummy.m */; };
-		B94B63985C60F4F2EF99F2D07A41701F /* NFCCardScanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443E1CBA4AAEF27269F8F042CFFBCB69 /* NFCCardScanningAnimationView.swift */; };
 		C390C6005353FB986CB52F474CEF8588 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
 		C9F76407497DF0205D7460B36D22259F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DF6A5A886890710D3E6019FB3519E9 /* QuartzCore.framework */; };
 		CA54C09A12400567AFFCB407EEB7E154 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
 		CD793731334A2B7D495665E7310510D1 /* CroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB684454B09170EE5F28E51D0872021 /* CroppingView.swift */; };
 		CFA9871D4333984CC4D438E19D44C71D /* PartnerOneSDK.entitlements in Sources */ = {isa = PBXBuildFile; fileRef = 87DD239CC0D417FDD4E6C0C407BE1CC9 /* PartnerOneSDK.entitlements */; };
-		DE1B2F680CFC1D47DC6C6EE3184A3A5A /* AdditionalReviewAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4E881423EA8DB2595EE80390BD27E /* AdditionalReviewAnimationView.swift */; };
-		E4FBB93951FDE14058EE10F07C4156E4 /* PseudoFullscreenActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CF905B627B71D90608D5DCF2C3B31 /* PseudoFullscreenActivityIndicatorView.swift */; };
-		E8DBD0AFE41235CE52B9E6E11796CCB4 /* WellRoundedSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B2000A93F6979EE227AD71AD5DF5A /* WellRoundedSuccessView.swift */; };
 		EFCE7296293FFF9C00636B4C /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCE7295293FFF9C00636B4C /* FaceTecSDK.xcframework */; };
 		EFCE7297293FFF9C00636B4C /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCE7295293FFF9C00636B4C /* FaceTecSDK.xcframework */; };
-		F0C98AA41D973C4D6FDC9696424BD622 /* NFCScanningAnimationViewBlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67554C7CC5EB1E9A6A976FFC606F181 /* NFCScanningAnimationViewBlack.swift */; };
 		F67C9230A4190966A3C7172B16F4CA20 /* Pods-PartnerOneSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 397969FF04734EC474A9696BB98BD2A0 /* Pods-PartnerOneSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7958BD4DA3A2B6A1586BAC7036BADC1 /* PhotoIDMatchProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67130DBBACB5AE14D02C9DCA132EF786 /* PhotoIDMatchProcessor.swift */; };
 		FF8307B7346F4D3BA13C11AECFE6EDD0 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -122,30 +102,23 @@
 		2BD96A80F11FCA8E9E5585A94BC0B26F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2D0D118E1F2E8F5D76955B05E55AFB14 /* Pods-PartnerOneSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PartnerOneSDK; path = PartnerOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		307CF905B627B71D90608D5DCF2C3B31 /* PseudoFullscreenActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenActivityIndicatorView.swift; sourceTree = "<group>"; };
 		34835D1AC934C02DDA9D5E27A14D43FB /* Pods-PartnerOneSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		348414771F918C80FB2E100D707D5B0F /* EKYCActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EKYCActivityIndicatorView.swift; sourceTree = "<group>"; };
 		35989E54C8E8F9168773613E45715037 /* Pods-PartnerOneSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		38316EAB796607D4770743ABEC7EFEC2 /* Pods-PartnerOneSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		390AB506E55B2012C34ABC67F7462F34 /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		397969FF04734EC474A9696BB98BD2A0 /* Pods-PartnerOneSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartnerOneSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		43D22B0B4038D13DCBC89E816D50F5AF /* Pods-PartnerOneSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Example.modulemap"; sourceTree = "<group>"; };
-		443E1CBA4AAEF27269F8F042CFFBCB69 /* NFCCardScanningAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCCardScanningAnimationView.swift; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		4A6268017D608D7D69C2A5F7D3D5D1D6 /* ThemeHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeHelpers.swift; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		4F688AEDE4FAEB34B607D97BC73B560C /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "PartnerOneSDK/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
-		4FCCD8E78DA59F97679C8B66CAC2B6BF /* EKYCSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EKYCSuccessView.swift; sourceTree = "<group>"; };
-		5A19DAA5610075F325BC4037BB46A80D /* WellRoundedActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WellRoundedActivityIndicatorView.swift; sourceTree = "<group>"; };
 		5BB684454B09170EE5F28E51D0872021 /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		67130DBBACB5AE14D02C9DCA132EF786 /* PhotoIDMatchProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoIDMatchProcessor.swift; sourceTree = "<group>"; };
-		696D6D811B02B782D5E8C35D313A710B /* NFCScanningAnimationViewGreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewGreen.swift; sourceTree = "<group>"; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		6E06AB5E24915BF49FE5EA405AD2766C /* PartnerOneSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-prefix.pch"; sourceTree = "<group>"; };
-		70971A8F4E831699F098A473756B4F21 /* WellRoundedUnsuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WellRoundedUnsuccessView.swift; sourceTree = "<group>"; };
 		73A464D6B2127805273FC86A8AEE56EB /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		77FABCD82EBB5E8D72ABA698C82D21A3 /* PartnerOneSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PartnerOneSDK.modulemap; sourceTree = "<group>"; };
 		784D97A39B3786F823721DCB5AB65F33 /* ScanViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewModel.swift; path = PartnerOneSDK/Classes/ScanViewModel.swift; sourceTree = "<group>"; };
@@ -168,19 +141,12 @@
 		9FBB47A5846D72C6E4C471F832BA1D27 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A05ABA6E5827C6238CE03EA3CEFB17B0 /* PartnerOneSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PartnerOneSDK-dummy.m"; sourceTree = "<group>"; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		B24B2000A93F6979EE227AD71AD5DF5A /* WellRoundedSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WellRoundedSuccessView.swift; sourceTree = "<group>"; };
-		B45F0583EACB2D68ACEC5A1347B126F0 /* PseudoFullscreenUnsuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenUnsuccessView.swift; sourceTree = "<group>"; };
-		B53E0AC77B0562512D02D02155782AC2 /* EKYCScrollIndicatorAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EKYCScrollIndicatorAnimationView.swift; sourceTree = "<group>"; };
 		B5E23141B804E0D7D9D7A20E606E7E41 /* PhotoIDScanProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotoIDScanProcessor.swift; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		BB3E296DA41A51DB9AEBD6698396435E /* Pods-PartnerOneSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BD1AFD43ABE0F6BC9BE713B33D47036C /* AdditionalReviewAnimationViewRed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewRed.swift; sourceTree = "<group>"; };
 		BEF48A2EE52C22F1BC6D2F30B5D2616D /* Pods-PartnerOneSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PartnerOneSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C0C150A27BD75BE9C37E1B624D5B3582 /* Pods-PartnerOneSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C1FB80E8A9F5D167CF9D97F0FF046E9D /* NFCScanningAnimationViewRed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewRed.swift; sourceTree = "<group>"; };
-		C5AB436EDAB29053575B871C52DDA352 /* AdditionalReviewAnimationViewOrange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewOrange.swift; sourceTree = "<group>"; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		D06EFB103E9717161CCE1D7CA87BF00B /* NFCStartingAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCStartingAnimationView.swift; sourceTree = "<group>"; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		D4DF6A5A886890710D3E6019FB3519E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		D64A0C0B052B3EEE1D4B50E07F0D7880 /* EnrollmentProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnrollmentProcessor.swift; sourceTree = "<group>"; };
@@ -188,21 +154,15 @@
 		D7CA671E4628936A527F0806CF16BD04 /* Pods-PartnerOneSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartnerOneSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		DA4296885EC6C657292405558BEE7F01 /* FaceTec.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
-		DD02C25A023C71C7A3299CA7EE92CDDD /* NFCCardStartingAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCCardStartingAnimationView.swift; sourceTree = "<group>"; };
 		DE341866E9EA457C0BDF9F448CBA3B97 /* Pods-PartnerOneSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DFB2086F4F38616D383B59DF043E3EA3 /* PartnerOneSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-umbrella.h"; sourceTree = "<group>"; };
-		E0A68957A923605CECE91AB005768826 /* EKYCUnsuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EKYCUnsuccessView.swift; sourceTree = "<group>"; };
 		E452F54F836B3FE921BB95BF78268FDB /* Pods-PartnerOneSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Tests-Info.plist"; sourceTree = "<group>"; };
 		E4C9E7C8BF80ED9CB3C0A31ABDDCE280 /* Pods-PartnerOneSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartnerOneSDK_Tests"; path = Pods_PartnerOneSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E67554C7CC5EB1E9A6A976FFC606F181 /* NFCScanningAnimationViewBlack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewBlack.swift; sourceTree = "<group>"; };
 		E854064DA08D0E144A5B92D08F1D15D4 /* Pods-PartnerOneSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EA971647E93A220B5276C7871A658663 /* BaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = PartnerOneSDK/Classes/BaseView.swift; sourceTree = "<group>"; };
 		EFCE7295293FFF9C00636B4C /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		F34AAD377A0FF3CF6775BBF8422CFE84 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		F4E4E881423EA8DB2595EE80390BD27E /* AdditionalReviewAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationView.swift; sourceTree = "<group>"; };
 		F73F43609D6CB51FFF75B1550A8AF50F /* Pods-PartnerOneSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartnerOneSDK_Example"; path = Pods_PartnerOneSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7E53C0D3E32FCE4353B65553D32E1CE /* PseudoFullscreenSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenSuccessView.swift; sourceTree = "<group>"; };
-		F839FE2CD5E205F3BB903439CAC36410 /* NFCScanningAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationView.swift; sourceTree = "<group>"; };
 		FBE1BC767D67ED1381FDA0C22E5A00E3 /* Pods-PartnerOneSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PartnerOneSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		FF136ECB4BAE25CF4BF6D4A40678F329 /* Pods-PartnerOneSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -452,38 +412,18 @@
 		EFC91E345BE3376A05974F092F910F93 /* FaceTecFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F4E4E881423EA8DB2595EE80390BD27E /* AdditionalReviewAnimationView.swift */,
-				C5AB436EDAB29053575B871C52DDA352 /* AdditionalReviewAnimationViewOrange.swift */,
-				BD1AFD43ABE0F6BC9BE713B33D47036C /* AdditionalReviewAnimationViewRed.swift */,
 				02293BD670C8471FBDEDBE2B7D40F3D6 /* AuthenticateProcessor.swift */,
 				F34AAD377A0FF3CF6775BBF8422CFE84 /* Config.swift */,
-				348414771F918C80FB2E100D707D5B0F /* EKYCActivityIndicatorView.swift */,
-				B53E0AC77B0562512D02D02155782AC2 /* EKYCScrollIndicatorAnimationView.swift */,
-				4FCCD8E78DA59F97679C8B66CAC2B6BF /* EKYCSuccessView.swift */,
-				E0A68957A923605CECE91AB005768826 /* EKYCUnsuccessView.swift */,
 				D64A0C0B052B3EEE1D4B50E07F0D7880 /* EnrollmentProcessor.swift */,
 				DA4296885EC6C657292405558BEE7F01 /* FaceTec.strings */,
 				8E18A3DC44D06D64464B9543E07F5BCF /* FaceTecConfigurationForTestApplication.xcconfig */,
 				191E2F0D39AF3245C507B60D04088848 /* LivenessCheckProcessor.swift */,
-				443E1CBA4AAEF27269F8F042CFFBCB69 /* NFCCardScanningAnimationView.swift */,
-				DD02C25A023C71C7A3299CA7EE92CDDD /* NFCCardStartingAnimationView.swift */,
-				F839FE2CD5E205F3BB903439CAC36410 /* NFCScanningAnimationView.swift */,
-				E67554C7CC5EB1E9A6A976FFC606F181 /* NFCScanningAnimationViewBlack.swift */,
-				696D6D811B02B782D5E8C35D313A710B /* NFCScanningAnimationViewGreen.swift */,
-				C1FB80E8A9F5D167CF9D97F0FF046E9D /* NFCScanningAnimationViewRed.swift */,
-				D06EFB103E9717161CCE1D7CA87BF00B /* NFCStartingAnimationView.swift */,
 				87DD239CC0D417FDD4E6C0C407BE1CC9 /* PartnerOneSDK.entitlements */,
 				67130DBBACB5AE14D02C9DCA132EF786 /* PhotoIDMatchProcessor.swift */,
 				B5E23141B804E0D7D9D7A20E606E7E41 /* PhotoIDScanProcessor.swift */,
 				D798C02056EFA76E2606DE1C79134666 /* ProcesingDelegate.swift */,
-				307CF905B627B71D90608D5DCF2C3B31 /* PseudoFullscreenActivityIndicatorView.swift */,
-				F7E53C0D3E32FCE4353B65553D32E1CE /* PseudoFullscreenSuccessView.swift */,
-				B45F0583EACB2D68ACEC5A1347B126F0 /* PseudoFullscreenUnsuccessView.swift */,
 				81EA68CD3DF32DB42FC4AA2872CF92B0 /* SampleAppUtilities.swift */,
 				4A6268017D608D7D69C2A5F7D3D5D1D6 /* ThemeHelpers.swift */,
-				5A19DAA5610075F325BC4037BB46A80D /* WellRoundedActivityIndicatorView.swift */,
-				B24B2000A93F6979EE227AD71AD5DF5A /* WellRoundedSuccessView.swift */,
-				70971A8F4E831699F098A473756B4F21 /* WellRoundedUnsuccessView.swift */,
 			);
 			name = FaceTecFiles;
 			path = PartnerOneSDK/Classes/FaceTecFiles;
@@ -675,47 +615,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1B2F680CFC1D47DC6C6EE3184A3A5A /* AdditionalReviewAnimationView.swift in Sources */,
-				0EC18D1781E9F4A78744FACBA6D67D7B /* AdditionalReviewAnimationViewOrange.swift in Sources */,
-				429757D3AFA0161C9F95F1B0124FEB3C /* AdditionalReviewAnimationViewRed.swift in Sources */,
 				FFFF8276AC7999029686FACB81F46CB3 /* AuthenticateProcessor.swift in Sources */,
 				496CA8AEB201893BFA86557A117C85F5 /* BaseView.swift in Sources */,
 				5D0150E92F6D5D79D39A46BC52C298E2 /* BaseViewController.swift in Sources */,
 				47DC76BAB28700128B7ED44CCCE6887D /* CapturedImageView.swift in Sources */,
 				A52147CD716E144AA02CA6CF586DB6FB /* Config.swift in Sources */,
 				CD793731334A2B7D495665E7310510D1 /* CroppingView.swift in Sources */,
-				03DA124360CDFA9973D2B6DAFE776134 /* EKYCActivityIndicatorView.swift in Sources */,
-				550F901CF25316F5466663FDB120066E /* EKYCScrollIndicatorAnimationView.swift in Sources */,
-				558522DF9703ACAEF14643E706CE5F16 /* EKYCSuccessView.swift in Sources */,
-				98E7BFAFFC00FDF61B0F3E816830AF35 /* EKYCUnsuccessView.swift in Sources */,
 				2A1099B2FF1522B3AFB4ECF2529B9D16 /* EnrollmentProcessor.swift in Sources */,
 				57E7AE507D577B44B7C955AB22EF3B04 /* FaceTec.strings in Sources */,
 				2BAA5029634EC5ACE2E3469185B1A058 /* FaceTecConfigurationForTestApplication.xcconfig in Sources */,
 				1BD34228D7483EFE80EF69FEFD917CB6 /* LivenessCheckProcessor.swift in Sources */,
-				B94B63985C60F4F2EF99F2D07A41701F /* NFCCardScanningAnimationView.swift in Sources */,
-				3BA4582FDB5A23320AB3FF9AFAE58511 /* NFCCardStartingAnimationView.swift in Sources */,
-				90591C70F29E8A47EA1CD02949E6E452 /* NFCScanningAnimationView.swift in Sources */,
-				F0C98AA41D973C4D6FDC9696424BD622 /* NFCScanningAnimationViewBlack.swift in Sources */,
-				A24092946FE76CD48E25D6213984FA09 /* NFCScanningAnimationViewGreen.swift in Sources */,
-				926BBCAFCE19EAC8CBE1C87EF3A28379 /* NFCScanningAnimationViewRed.swift in Sources */,
-				5E1AE7F73D4A6605E4C767E79A909863 /* NFCStartingAnimationView.swift in Sources */,
 				CFA9871D4333984CC4D438E19D44C71D /* PartnerOneSDK.entitlements in Sources */,
 				B52984217FC93C702A8DFCFC6395447D /* PartnerOneSDK-dummy.m in Sources */,
 				F7958BD4DA3A2B6A1586BAC7036BADC1 /* PhotoIDMatchProcessor.swift in Sources */,
 				3F3010AF2F53C07A97C18DBC48351F3C /* PhotoIDScanProcessor.swift in Sources */,
 				759E26DC71F1FDFB4917D3D777753D0C /* ProcesingDelegate.swift in Sources */,
-				E4FBB93951FDE14058EE10F07C4156E4 /* PseudoFullscreenActivityIndicatorView.swift in Sources */,
-				30A34F0E18BD9D541BCEB46FF0B1EB73 /* PseudoFullscreenSuccessView.swift in Sources */,
-				B3DDE584D3E06BE48D2B0900B88DBCC2 /* PseudoFullscreenUnsuccessView.swift in Sources */,
 				09F8D378C12B7DEDDA72367FBA5D567B /* SampleAppUtilities.swift in Sources */,
 				06B98FC7556397D3C09A551564D8251D /* ScanView.swift in Sources */,
 				1C5295A2958A4444C06D9D02D1355500 /* ScanViewController.swift in Sources */,
 				799EEAF42F6D254D3505F13BCC5F4671 /* ScanViewModel.swift in Sources */,
 				26E163BCF0728EB8BD42762116F8956F /* ThemeHelpers.swift in Sources */,
 				04A7046C18529EC8A5A1A83D0657B2B1 /* UIView+Extension.swift in Sources */,
-				9C7287C523B5A792FFF8B16A6111398D /* WellRoundedActivityIndicatorView.swift in Sources */,
-				E8DBD0AFE41235CE52B9E6E11796CCB4 /* WellRoundedSuccessView.swift in Sources */,
-				91F954CAE9B4192D75C3C91D13DAD4B6 /* WellRoundedUnsuccessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
