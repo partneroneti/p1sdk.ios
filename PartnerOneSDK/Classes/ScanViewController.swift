@@ -15,6 +15,7 @@ open class ScanViewController: BaseViewController<ScanView>, FaceTecFaceScanProc
   var captureConnection: AVCaptureConnection?
   var photoOutput = AVCapturePhotoOutput()
   
+  var latestExternalDatabaseRefID: String = ""
   var latestSessionResult: FaceTecSessionResult!
   var latestIDScanResult: FaceTecIDScanResult!
   var latestProcessor: Processor!
@@ -220,6 +221,10 @@ extension ScanViewController {
   
   func onComplete() {
     print("SCAN COMPLETED!")
+  }
+  
+  func getLatestExternalDatabaseRefID() -> String {
+      return latestExternalDatabaseRefID;
   }
   
   func setLatestSessionResult(sessionResult: FaceTecSessionResult) {

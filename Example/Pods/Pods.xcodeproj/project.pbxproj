@@ -27,10 +27,10 @@
 		A3A8FEBB08BEE81D5DCED780E5DB106B /* Pods-PartnerOneSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0324F94612FB38E4F9449689DF40 /* Pods-PartnerOneSDK_Example-dummy.m */; };
 		AB546FA3A976766038A131D1BC5973D0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DE89CC9E237435516C8A0F7451EFD /* Config.swift */; };
 		BCC74EB5C4A86702621296FAC1D5FC24 /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72EC23D74924E0EE5A5435A22382AF9 /* SampleAppUtilities.swift */; };
+		BF526A7C7F04638299833C50FB0C446D /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */; };
 		C2B302C3D2F4468E3D1BF3E2783AD6B4 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005342662005BACC2F2773FA2A2EAB9 /* CapturedImageView.swift */; };
 		E3424641184734D971467CE8533EC8F9 /* AuthenticateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70084FB35C48498A66BDC7FB93AC7BC /* AuthenticateProcessor.swift */; };
 		E5F77A7DBE841559B3BC31052634DAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */; };
-		EFCE74112940445D00636B4C /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCE74102940445D00636B4C /* FaceTecSDK.xcframework */; };
 		F67C9230A4190966A3C7172B16F4CA20 /* Pods-PartnerOneSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE3595BB2FB7127C4BF22712D373EC /* Pods-PartnerOneSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F96BE2579C7DA969F2A0C0FE5E9BB56C /* Pods-PartnerOneSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 058203571A0C7C4230713DF83B2CC184 /* Pods-PartnerOneSDK_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -40,8 +40,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
-			remoteInfo = FBSnapshotTestCase;
+			remoteGlobalIDString = FBC248ECF0F08825682530A66FC64978;
+			remoteInfo = "Pods-PartnerOneSDK_Example";
 		};
 		CE185F577342BD070A806B83B987A09D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,19 +52,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EFCE740E2940430600636B4C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0568CE4CA86C4D21337CEB599803631E /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		058203571A0C7C4230713DF83B2CC184 /* Pods-PartnerOneSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -73,16 +60,16 @@
 		0C7D54854286C6EEC6BE777960E69911 /* PartnerOneSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-prefix.pch"; sourceTree = "<group>"; };
 		194D9590D1637B4AE85144DFDAEA8A4F /* Pods-PartnerOneSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartnerOneSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1F0DE89CC9E237435516C8A0F7451EFD /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PartnerOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PartnerOneSDK; path = PartnerOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3779A15686F414A683787524938906 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "PartnerOneSDK/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
-		2EED9F425E71363DA8530916A19BB64F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2EED9F425E71363DA8530916A19BB64F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		31C992AA7CE070D2918E528B6C2D3634 /* Pods-PartnerOneSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3ADC145F9C1B68D6F0DE3E249D915FA5 /* Pods-PartnerOneSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3C3ADA302E50424D4D24DACED635F681 /* Pods-PartnerOneSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Example.modulemap"; sourceTree = "<group>"; };
 		59C296938E38BA08287CBF3723EFCEAE /* Pods-PartnerOneSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		61FA54F8D9A4FE187DCE576920B05647 /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = PartnerOneSDK/Classes/ScanViewController.swift; sourceTree = "<group>"; };
 		63FA6850B79F2EED1C62E4997A7104D4 /* EnrollmentProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnrollmentProcessor.swift; sourceTree = "<group>"; };
-		772FB0522AA2D0FF4A4149606AB9EE38 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		772FB0522AA2D0FF4A4149606AB9EE38 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7D190873CBD00F6AE14BDF0B0168633D /* Pods-PartnerOneSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		88CE3595BB2FB7127C4BF22712D373EC /* Pods-PartnerOneSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartnerOneSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		8E00B5182A3405044A17F6B8A6D8B033 /* Pods-PartnerOneSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -90,7 +77,7 @@
 		9455CF2E736C1775D4EBB0AFB2FE9E25 /* ProcesingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProcesingDelegate.swift; sourceTree = "<group>"; };
 		994802E833404BA63345F1B0C48E61C0 /* Pods-PartnerOneSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		99EB0324F94612FB38E4F9449689DF40 /* Pods-PartnerOneSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A005342662005BACC2F2773FA2A2EAB9 /* CapturedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapturedImageView.swift; path = PartnerOneSDK/Classes/CapturedImageView.swift; sourceTree = "<group>"; };
 		A1119EB1CACFC358609EA6849DC574CF /* PartnerOneSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PartnerOneSDK.modulemap; sourceTree = "<group>"; };
 		AD44D0B407E7941E7A86DC03D15AAEA7 /* ScanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanView.swift; path = PartnerOneSDK/Classes/ScanView.swift; sourceTree = "<group>"; };
@@ -99,6 +86,7 @@
 		BE57555373C5CB1AE7E11C6B1E2107DE /* Pods-PartnerOneSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BF16CFDFCB90A6397A90B261B34ACD2C /* FaceTec.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
 		C3B91959A5D33EAB8EA2549D2DAE9089 /* PartnerOneSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PartnerOneSDK-Info.plist"; sourceTree = "<group>"; };
+		C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceTecSDK.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/FaceTecSDK.framework; sourceTree = DEVELOPER_DIR; };
 		CFD85A511EF41563E99622BAA85B3F8E /* PartnerOneSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-umbrella.h"; sourceTree = "<group>"; };
 		D48F54C710739F8388E91314A515DAFC /* ThemeHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeHelpers.swift; sourceTree = "<group>"; };
 		D8FA5864EFBFD65C336C414A445BA8BE /* Pods-PartnerOneSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -108,9 +96,8 @@
 		E70084FB35C48498A66BDC7FB93AC7BC /* AuthenticateProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticateProcessor.swift; sourceTree = "<group>"; };
 		ECFA323EB7175AE292A6D8F949668531 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF58A38D624C720CACE91F7876AC72F2 /* PartnerOneSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PartnerOneSDK.debug.xcconfig; sourceTree = "<group>"; };
-		EFCE74102940445D00636B4C /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		F3BAE147987AA82E68C70109EA8498CE /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
-		F4E3ED7E4B03CAC8C2B631E74EDF6D02 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F4E3ED7E4B03CAC8C2B631E74EDF6D02 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		F5D457CC7978894D163FD9E9EFE936C1 /* LivenessCheckProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LivenessCheckProcessor.swift; sourceTree = "<group>"; };
 		F73F43609D6CB51FFF75B1550A8AF50F /* Pods-PartnerOneSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartnerOneSDK_Example"; path = Pods_PartnerOneSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEAB10950D696C831AB677C22AB3D0B /* Pods-PartnerOneSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -122,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCE74112940445D00636B4C /* FaceTecSDK.xcframework in Frameworks */,
+				BF526A7C7F04638299833C50FB0C446D /* FaceTecSDK.framework in Frameworks */,
 				E5F77A7DBE841559B3BC31052634DAC6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +200,7 @@
 		6FFB071BB8B1B63C928B53AA558C5A37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK.framework */,
+				2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK */,
 				F73F43609D6CB51FFF75B1550A8AF50F /* Pods-PartnerOneSDK_Example */,
 				E4C9E7C8BF80ED9CB3C0A31ABDDCE280 /* Pods-PartnerOneSDK_Tests */,
 			);
@@ -242,7 +229,7 @@
 		C113A1B6789FF094537BD5211B183964 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EFCE74102940445D00636B4C /* FaceTecSDK.xcframework */,
+				C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */,
 				DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */,
 			);
 			name = iOS;
@@ -321,20 +308,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6A79623435FB5876290A8AA09DA9DEA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C68A8F33A4DC88C448E0C768D0735B91 /* FaceTecPublicApi.h in Headers */,
-				C68A8F33A4DC88C448E0C768D0735B91 /* FaceTecPublicApi.h in Headers */,
-				5FFE71E37C37BDCE28A4777301DFBE99 /* FaceTecPublicStringKeys.h in Headers */,
-				5FFE71E37C37BDCE28A4777301DFBE99 /* FaceTecPublicStringKeys.h in Headers */,
-				FB7C661081E43827559EDD3907F508CB /* FaceTecSDK.h in Headers */,
-				FB7C661081E43827559EDD3907F508CB /* FaceTecSDK.h in Headers */,
-				DAA9C6143C21C7D0422E15E9DB9E9078 /* PartnerOneSDK-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -346,7 +319,6 @@
 				14D37F6E3D3A5AC5726A3E1FD9D1D948 /* Sources */,
 				429B4BF0ECCAC28797C60D3E02FF0345 /* Frameworks */,
 				06BA878FAF9B9A798BE229C263782AEE /* Resources */,
-				EFCE740E2940430600636B4C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,7 +326,7 @@
 			);
 			name = PartnerOneSDK;
 			productName = PartnerOneSDK;
-			productReference = 2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK.framework */;
+			productReference = 2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK */;
 			productType = "com.apple.product-type.framework";
 		};
 		2794A337BC9383AFD3E6FB05DCE64016 /* Pods-PartnerOneSDK_Tests */ = {
@@ -443,7 +415,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCE73F929403EE500636B4C /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,69 +453,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E084E9A2A68C5A69B34382724A53D81B /* Sources */ = {
+		DD9738277AEEC2F049A3BF8FEC60931B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D727ED6F163914C19A357EA6CC9C6440 /* 1f5b84f51ce0fcfbb76e904b7bcaa7560f601e1394a0b29367a09385312287eb in Sources */,
-				821FD1F2F03906504E88C92396804C46 /* 2b075ac1a6132b5b8a4c9ef0ba6b0cd84db7838aca9a000e50d907f40770a4ab in Sources */,
-				7F1C4165AA84C512BBF5E81D143538A0 /* 4c4774668f9b9333977fc891e7695420a0b4c27cc2c1cd3920ce9e0870e3c0e8 in Sources */,
-				A62B183FBB28177573C285AC8AF00B49 /* 59cc2a9af81aaca2376702c2490650f4da2775fa673274db98aad41b7ef101c0 in Sources */,
-				F1A845F71DEF2A5DD7EB6C3E51CB2BA0 /* 66388dc76dc16bc6b76b682edd218a575bf45b9b in Sources */,
-				C035FDB0C43A609D09A1B9E8DE96D35B /* 6b3133f0f39ff89a2a169d61176ee17cafacc5e288f334e2b64ee82892d11ccd in Sources */,
-				E7E20189ED978909B72B4863C9DCAFB7 /* 9077d16225f9314163ef1e7db6fc7d4088bb903d134bd95f23d5591ca4dfbfca in Sources */,
-				581613DDFAC328466E317827E0BFF924 /* 9Uo-4b-JiE-view-Ae0-rb-UqS.nib in Sources */,
-				6CD8D79032931FEACFF8313F3C944658 /* a74f2afb9d20f2375ccbd14e67c094b85c89ceb608f7cf8ae04f3f646a6c5672 in Sources */,
-				02AA797C241756D8F145564D1A6B660B /* alz-Ia-X3d-view-IKu-EI-Hug.nib in Sources */,
-				EFCE73FD29403EE500636B4C /* SampleAppUtilities.swift in Sources */,
-				4638E27881E4C1858C8FDF9F63174BD5 /* Assets.car in Sources */,
-				C926EEF2365F8451A4882377253337D3 /* attributions.txt in Sources */,
-				36FC3DC49144D2E30629618FE1F905B4 /* b501893e75f62ee1707643e35b21109927b07ed5b202321c961b424cbc2e4695 in Sources */,
-				94B321EB5AD4EE49792E35CDB0AB021E /* b82962a4847bcf6d1bf89ea7543f83e184a1df7c4e7e3c343dd3e3e17cb9a645 in Sources */,
-				7E6B97AF6B337C27C51B3663AF3FA509 /* BaseView.swift in Sources */,
-				EE8694B96B3C0FB84E3EEB5805376031 /* BaseViewController.swift in Sources */,
-				AEDF223BFB6DFBBA40D9D82C89BF77A0 /* CapturedImageView.swift in Sources */,
-				F33F3F5B747BD74A8CFD98F81AF90DD2 /* CJ6-MX-bJp-view-8JL-Rc-0g1.nib in Sources */,
-				DCD545C61C65D00C0505B4375C0445AB /* CodeResources in Sources */,
-				A277814CD0BE6A6181AD9F4AF42D8A5E /* CroppingView.swift in Sources */,
-				D6E4A54CD4DEBC01C7976AB3B8D2A337 /* dbd7a353f0130bb983d6ba05917e9be991d70e8f028df4b74e30bc6497ef7f71 in Sources */,
-				EFCE73FE29403EE500636B4C /* ProcesingDelegate.swift in Sources */,
-				7B2E338734E0E89F9FF4252F02772FB2 /* f2.xml in Sources */,
-				EFCE73FC29403EE500636B4C /* ThemeHelpers.swift in Sources */,
-				101CA9B89B24E48888E48CD710C9F5B9 /* FaceScanViewController.nib in Sources */,
-				B1B80881F7FC336769B65EA88545B38D /* FaceTec.strings in Sources */,
-				EFCE73F729403EE500636B4C /* LivenessCheckProcessor.swift in Sources */,
-				4B99628BEEA9C544606BAC90764A39C5 /* FaceTecAdditionalReviewViewController.nib in Sources */,
-				D48FB0B04273EE544A44AFE387706805 /* FaceTecOCRConfirmationViewController.nib in Sources */,
-				EFCE73F829403EE500636B4C /* AuthenticateProcessor.swift in Sources */,
-				C4F723BF4DCF94A61756CAB59681E595 /* FaceTecSDK in Sources */,
-				C4F723BF4DCF94A61756CAB59681E595 /* FaceTecSDK in Sources */,
-				09D384247827B076C7CA05A453C84E9C /* fd6d368a5658496536e2bfae170d1b823a3629b242cafc09784bfba4e56d8c80 in Sources */,
-				0903544E447EDB18E25B7C21DB16AFF8 /* GenericGuidanceContentLayout.nib in Sources */,
-				F1FD690DCE7AAC9D78446D12E91164F9 /* IDCaptureViewController.nib in Sources */,
-				7D183956F7A6D1B5406EDBFC7F5C146A /* IDSelectionViewController.nib in Sources */,
-				A94C4D3D222114EFF487391FAD39014A /* Info.plist in Sources */,
-				A94C4D3D222114EFF487391FAD39014A /* Info.plist in Sources */,
-				A94C4D3D222114EFF487391FAD39014A /* Info.plist in Sources */,
-				A94C4D3D222114EFF487391FAD39014A /* Info.plist in Sources */,
-				EA70B0D94E92483958D8B93BEA178D65 /* l2Q-cc-kD8-view-UUy-6c-meu.nib in Sources */,
-				93FF01313B3C7B43F21E18E6DDED325D /* marker in Sources */,
-				EFCE73FA29403EE500636B4C /* EnrollmentProcessor.swift in Sources */,
-				BA4398A2A8E092C66A39AC5B78CBF5B6 /* module.modulemap in Sources */,
-				BA4398A2A8E092C66A39AC5B78CBF5B6 /* module.modulemap in Sources */,
-				42D4BDE0394AF3FDE486AEBA7B597FE6 /* PartnerOneSDK-dummy.m in Sources */,
-				7ED47B63175D5950FD168A3E37305EAE /* Pyw-6G-JSY-view-Zue-Eo-Q2U.nib in Sources */,
-				EFCE73FB29403EE500636B4C /* Config.swift in Sources */,
-				19B6D7FDBB608D42CE767138D6B9A8CC /* ReadyScreenGuidanceContentLayout.nib in Sources */,
-				E51E7776468554B7EBDA7D6C1D127855 /* RetryScreenGuidanceContentLayout.nib in Sources */,
-				E475666DA91B5CDC850F3B77039441DD /* ScanView.swift in Sources */,
-				190628CBF2B82B7B207D897B4939116B /* ScanViewController.swift in Sources */,
-				2A035E2A8401298E6FEBE92F9AEE4AB2 /* ScanViewModel.swift in Sources */,
-				927962BF8B3A317D0721665C1DE0324A /* SharedGuidanceLayout.nib in Sources */,
-				27FC0C732A8C2D99A683C1DA370EE33D /* strip-unused-architectures-from-target.sh in Sources */,
-				DFCD976DF473EDA831D083B90A434FC6 /* UIView+Extension.swift in Sources */,
-				2681E7747318C27FD650209CB34B84DC /* vu0ilin6we3lrzo5f83f7qs2jul4aq7v4aoynrmch8zfvpi8ezrfyafa4t0fx87l in Sources */,
-				2D24C92255D8D3356980F6FE8DC544B6 /* Ys4TQh4aewlf1CpyzWLi in Sources */,
+				A3A8FEBB08BEE81D5DCED780E5DB106B /* Pods-PartnerOneSDK_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,18 +478,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		88EC64AA32C771B3C391D4BDC930C9CD /* FaceTec.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CBB77607BF6E276FB7FD4B8E471DB98 /* FaceTec.strings */,
-			);
-			name = FaceTec.strings;
-			path = .;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		05458D4819BBC1FD4EC61EBC98EE289A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -595,11 +496,7 @@
 				INFOPLIST_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK.modulemap";
 				PRODUCT_MODULE_NAME = PartnerOneSDK;
 				PRODUCT_NAME = PartnerOneSDK;
@@ -631,11 +528,7 @@
 				INFOPLIST_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK.modulemap";
 				PRODUCT_MODULE_NAME = PartnerOneSDK;
 				PRODUCT_NAME = PartnerOneSDK;
@@ -704,7 +597,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -714,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ECFA323EB7175AE292A6D8F949668531 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -723,24 +618,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PartnerOneSDK/PartnerOneSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK.modulemap";
-				PRODUCT_MODULE_NAME = PartnerOneSDK;
-				PRODUCT_NAME = PartnerOneSDK;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		980123B5952EC8FFD471ED200ECEED60 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -892,11 +787,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -919,8 +810,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8877DB6568228DE61B86BA2B8D9C1E7 /* Debug */,
-				A5732E007C28B179366C5F79135F6648 /* Release */,
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

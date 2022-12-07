@@ -10,12 +10,6 @@
 #endif
 #endif
 
-#import "FaceTecPublicApi.h"
-#import "FaceTecPublicStringKeys.h"
-#import "FaceTecSDK.h"
-#import "FaceTecPublicApi.h"
-#import "FaceTecPublicStringKeys.h"
-#import "FaceTecSDK.h"
 
 FOUNDATION_EXPORT double PartnerOneSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char PartnerOneSDKVersionString[];
