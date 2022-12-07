@@ -16,8 +16,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A75293FA7A600A31D9A /* EnrollmentProcessor.swift */; };
-		EF073A7E293FA7A900A31D9A /* PhotoIDMatchProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A76293FA7A600A31D9A /* PhotoIDMatchProcessor.swift */; };
-		EF073A7F293FA7A900A31D9A /* PhotoIDScanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A77293FA7A700A31D9A /* PhotoIDScanProcessor.swift */; };
 		EF073A80293FA7A900A31D9A /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A79293FA7A700A31D9A /* ThemeHelpers.swift */; };
 		EF073A81293FA7A900A31D9A /* LivenessCheckProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A7A293FA7A800A31D9A /* LivenessCheckProcessor.swift */; };
 		EF073A82293FA7A900A31D9A /* ProcesingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A7B293FA7A800A31D9A /* ProcesingDelegate.swift */; };
@@ -35,23 +33,12 @@
 		EFEFAB8B293FBCC800ED8C9D /* CroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB89293FBCC800ED8C9D /* CroppingView.swift */; };
 		EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB8C293FBD7900ED8C9D /* UIView+Extension.swift */; };
 		EFEFABCA293FC77C00ED8C9D /* WellRoundedActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABB6293FC77B00ED8C9D /* WellRoundedActivityIndicatorView.swift */; };
-		EFEFABCB293FC77C00ED8C9D /* NFCStartingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABB7293FC77B00ED8C9D /* NFCStartingAnimationView.swift */; };
-		EFEFABCC293FC77C00ED8C9D /* EKYCUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABB8293FC77B00ED8C9D /* EKYCUnsuccessView.swift */; };
-		EFEFABCD293FC77C00ED8C9D /* NFCCardScanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABB9293FC77B00ED8C9D /* NFCCardScanningAnimationView.swift */; };
 		EFEFABCE293FC77C00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBA293FC77B00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift */; };
 		EFEFABCF293FC77C00ED8C9D /* WellRoundedSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBB293FC77B00ED8C9D /* WellRoundedSuccessView.swift */; };
 		EFEFABD0293FC77C00ED8C9D /* PseudoFullscreenUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBC293FC77B00ED8C9D /* PseudoFullscreenUnsuccessView.swift */; };
-		EFEFABD1293FC77C00ED8C9D /* EKYCSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBD293FC77B00ED8C9D /* EKYCSuccessView.swift */; };
-		EFEFABD2293FC77C00ED8C9D /* NFCScanningAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBE293FC77B00ED8C9D /* NFCScanningAnimationViewRed.swift */; };
-		EFEFABD3293FC77C00ED8C9D /* EKYCActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBF293FC77B00ED8C9D /* EKYCActivityIndicatorView.swift */; };
-		EFEFABD4293FC77C00ED8C9D /* NFCCardStartingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC0293FC77B00ED8C9D /* NFCCardStartingAnimationView.swift */; };
-		EFEFABD5293FC77C00ED8C9D /* NFCScanningAnimationViewGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC1293FC77B00ED8C9D /* NFCScanningAnimationViewGreen.swift */; };
 		EFEFABD6293FC77C00ED8C9D /* AdditionalReviewAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC2293FC77B00ED8C9D /* AdditionalReviewAnimationView.swift */; };
-		EFEFABD7293FC77C00ED8C9D /* NFCScanningAnimationViewBlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC3293FC77B00ED8C9D /* NFCScanningAnimationViewBlack.swift */; };
 		EFEFABD8293FC77C00ED8C9D /* PseudoFullscreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC4293FC77B00ED8C9D /* PseudoFullscreenSuccessView.swift */; };
-		EFEFABD9293FC77C00ED8C9D /* NFCScanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC5293FC77B00ED8C9D /* NFCScanningAnimationView.swift */; };
 		EFEFABDA293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC6293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift */; };
-		EFEFABDB293FC77C00ED8C9D /* EKYCScrollIndicatorAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC7293FC77C00ED8C9D /* EKYCScrollIndicatorAnimationView.swift */; };
 		EFEFABDC293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC8293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift */; };
 		EFEFABDD293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC9293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift */; };
 		EFEFABE0293FE1F000ED8C9D /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */; };
@@ -102,8 +89,6 @@
 		945FB5B56B6487D0D4D51694 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E5D58D1D8A4623F0E8F28F45 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF073A75293FA7A600A31D9A /* EnrollmentProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentProcessor.swift; sourceTree = "<group>"; };
-		EF073A76293FA7A600A31D9A /* PhotoIDMatchProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoIDMatchProcessor.swift; sourceTree = "<group>"; };
-		EF073A77293FA7A700A31D9A /* PhotoIDScanProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoIDScanProcessor.swift; sourceTree = "<group>"; };
 		EF073A79293FA7A700A31D9A /* ThemeHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeHelpers.swift; sourceTree = "<group>"; };
 		EF073A7A293FA7A800A31D9A /* LivenessCheckProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessCheckProcessor.swift; sourceTree = "<group>"; };
 		EF073A7B293FA7A800A31D9A /* ProcesingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcesingDelegate.swift; sourceTree = "<group>"; };
@@ -122,23 +107,12 @@
 		EFEFAB89293FBCC800ED8C9D /* CroppingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppingView.swift; sourceTree = "<group>"; };
 		EFEFAB8C293FBD7900ED8C9D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EFEFABB6293FC77B00ED8C9D /* WellRoundedActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedActivityIndicatorView.swift; sourceTree = "<group>"; };
-		EFEFABB7293FC77B00ED8C9D /* NFCStartingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCStartingAnimationView.swift; sourceTree = "<group>"; };
-		EFEFABB8293FC77B00ED8C9D /* EKYCUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCUnsuccessView.swift; sourceTree = "<group>"; };
-		EFEFABB9293FC77B00ED8C9D /* NFCCardScanningAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCCardScanningAnimationView.swift; sourceTree = "<group>"; };
 		EFEFABBA293FC77B00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenActivityIndicatorView.swift; sourceTree = "<group>"; };
 		EFEFABBB293FC77B00ED8C9D /* WellRoundedSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedSuccessView.swift; sourceTree = "<group>"; };
 		EFEFABBC293FC77B00ED8C9D /* PseudoFullscreenUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenUnsuccessView.swift; sourceTree = "<group>"; };
-		EFEFABBD293FC77B00ED8C9D /* EKYCSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCSuccessView.swift; sourceTree = "<group>"; };
-		EFEFABBE293FC77B00ED8C9D /* NFCScanningAnimationViewRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewRed.swift; sourceTree = "<group>"; };
-		EFEFABBF293FC77B00ED8C9D /* EKYCActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCActivityIndicatorView.swift; sourceTree = "<group>"; };
-		EFEFABC0293FC77B00ED8C9D /* NFCCardStartingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCCardStartingAnimationView.swift; sourceTree = "<group>"; };
-		EFEFABC1293FC77B00ED8C9D /* NFCScanningAnimationViewGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewGreen.swift; sourceTree = "<group>"; };
 		EFEFABC2293FC77B00ED8C9D /* AdditionalReviewAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationView.swift; sourceTree = "<group>"; };
-		EFEFABC3293FC77B00ED8C9D /* NFCScanningAnimationViewBlack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewBlack.swift; sourceTree = "<group>"; };
 		EFEFABC4293FC77B00ED8C9D /* PseudoFullscreenSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenSuccessView.swift; sourceTree = "<group>"; };
-		EFEFABC5293FC77B00ED8C9D /* NFCScanningAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationView.swift; sourceTree = "<group>"; };
 		EFEFABC6293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedUnsuccessView.swift; sourceTree = "<group>"; };
-		EFEFABC7293FC77C00ED8C9D /* EKYCScrollIndicatorAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCScrollIndicatorAnimationView.swift; sourceTree = "<group>"; };
 		EFEFABC8293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewOrange.swift; sourceTree = "<group>"; };
 		EFEFABC9293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewRed.swift; sourceTree = "<group>"; };
 		EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceTecSDK.framework; path = "../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.framework"; sourceTree = "<group>"; };
@@ -262,12 +236,10 @@
 		EF073A74293FA78600A31D9A /* Processors */ = {
 			isa = PBXGroup;
 			children = (
+				EF073A78293FA7A700A31D9A /* Helpers */,
 				EF073A7C293FA7A900A31D9A /* AuthenticateProcessor.swift */,
 				EF073A75293FA7A600A31D9A /* EnrollmentProcessor.swift */,
-				EF073A78293FA7A700A31D9A /* Helpers */,
 				EF073A7A293FA7A800A31D9A /* LivenessCheckProcessor.swift */,
-				EF073A76293FA7A600A31D9A /* PhotoIDMatchProcessor.swift */,
-				EF073A77293FA7A700A31D9A /* PhotoIDScanProcessor.swift */,
 				EF073A7B293FA7A800A31D9A /* ProcesingDelegate.swift */,
 			);
 			name = Processors;
@@ -324,17 +296,6 @@
 				EFEFABC2293FC77B00ED8C9D /* AdditionalReviewAnimationView.swift */,
 				EFEFABC8293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift */,
 				EFEFABC9293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift */,
-				EFEFABBF293FC77B00ED8C9D /* EKYCActivityIndicatorView.swift */,
-				EFEFABC7293FC77C00ED8C9D /* EKYCScrollIndicatorAnimationView.swift */,
-				EFEFABBD293FC77B00ED8C9D /* EKYCSuccessView.swift */,
-				EFEFABB8293FC77B00ED8C9D /* EKYCUnsuccessView.swift */,
-				EFEFABB9293FC77B00ED8C9D /* NFCCardScanningAnimationView.swift */,
-				EFEFABC0293FC77B00ED8C9D /* NFCCardStartingAnimationView.swift */,
-				EFEFABC5293FC77B00ED8C9D /* NFCScanningAnimationView.swift */,
-				EFEFABC3293FC77B00ED8C9D /* NFCScanningAnimationViewBlack.swift */,
-				EFEFABC1293FC77B00ED8C9D /* NFCScanningAnimationViewGreen.swift */,
-				EFEFABBE293FC77B00ED8C9D /* NFCScanningAnimationViewRed.swift */,
-				EFEFABB7293FC77B00ED8C9D /* NFCStartingAnimationView.swift */,
 				EFEFABBA293FC77B00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift */,
 				EFEFABC4293FC77B00ED8C9D /* PseudoFullscreenSuccessView.swift */,
 				EFEFABBC293FC77B00ED8C9D /* PseudoFullscreenUnsuccessView.swift */,
@@ -548,36 +509,23 @@
 				EFEFABCE293FC77C00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift in Sources */,
 				EF073A83293FA7A900A31D9A /* AuthenticateProcessor.swift in Sources */,
 				EFEFABDA293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift in Sources */,
-				EFEFABD1293FC77C00ED8C9D /* EKYCSuccessView.swift in Sources */,
 				EFEFABD6293FC77C00ED8C9D /* AdditionalReviewAnimationView.swift in Sources */,
-				EFEFABD4293FC77C00ED8C9D /* NFCCardStartingAnimationView.swift in Sources */,
-				EFEFABCB293FC77C00ED8C9D /* NFCStartingAnimationView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ScanViewController.swift in Sources */,
 				EF073A80293FA7A900A31D9A /* ThemeHelpers.swift in Sources */,
-				EFEFABCD293FC77C00ED8C9D /* NFCCardScanningAnimationView.swift in Sources */,
 				EFEFABDC293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift in Sources */,
-				EFEFABD2293FC77C00ED8C9D /* NFCScanningAnimationViewRed.swift in Sources */,
 				EFEFABD8293FC77C00ED8C9D /* PseudoFullscreenSuccessView.swift in Sources */,
 				EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */,
-				EFEFABD5293FC77C00ED8C9D /* NFCScanningAnimationViewGreen.swift in Sources */,
-				EFEFABDB293FC77C00ED8C9D /* EKYCScrollIndicatorAnimationView.swift in Sources */,
-				EFEFABD7293FC77C00ED8C9D /* NFCScanningAnimationViewBlack.swift in Sources */,
 				EFEFAB87293FBCAD00ED8C9D /* ScanView.swift in Sources */,
 				EFEFABD0293FC77C00ED8C9D /* PseudoFullscreenUnsuccessView.swift in Sources */,
 				EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */,
 				EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */,
 				EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */,
 				EFEFABCA293FC77C00ED8C9D /* WellRoundedActivityIndicatorView.swift in Sources */,
-				EF073A7F293FA7A900A31D9A /* PhotoIDScanProcessor.swift in Sources */,
-				EF073A7E293FA7A900A31D9A /* PhotoIDMatchProcessor.swift in Sources */,
 				EFEFABCF293FC77C00ED8C9D /* WellRoundedSuccessView.swift in Sources */,
 				EF073A88293FA7ED00A31D9A /* SampleAppUtilities.swift in Sources */,
 				EFEFAB8A293FBCC800ED8C9D /* CapturedImageView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				EFEFABD9293FC77C00ED8C9D /* NFCScanningAnimationView.swift in Sources */,
-				EFEFABD3293FC77C00ED8C9D /* EKYCActivityIndicatorView.swift in Sources */,
 				EF073A81293FA7A900A31D9A /* LivenessCheckProcessor.swift in Sources */,
-				EFEFABCC293FC77C00ED8C9D /* EKYCUnsuccessView.swift in Sources */,
 				EF073A82293FA7A900A31D9A /* ProcesingDelegate.swift in Sources */,
 				EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */,
 			);

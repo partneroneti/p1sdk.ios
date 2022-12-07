@@ -24,14 +24,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
     
     init(vc: ScanViewController) {
         sampleAppVC = vc
-
-        if #available(iOS 13.0, *) {
-            // For iOS 13+, use the rounded system font for displayed text
-//            if let roundedDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body).withDesign(.rounded) {
-//                let roundedMessageFont = UIFont(descriptor: roundedDescriptor, size: sampleAppVC.statusLabel.font.pointSize)
-//                sampleAppVC.statusLabel.font = roundedMessageFont
-//            }
-        }
     }
     
     func startSessionTokenConnectionTextTimer() {
@@ -52,45 +44,9 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
         }
     }
     
-    func fadeOutMainUIAndPrepareForFaceTecSDK() {
-        enableButtons(shouldEnable: false) {
-            if(self.networkIssueDetected) {
-                self.networkIssueDetected = false
-                return
-            }
-            
-            UIView.animate(withDuration: 0.3) {
-//                self.sampleAppVC.vocalGuidanceSettingButton.alpha = 0
-//                self.sampleAppVC.mainInterfaceStackView.alpha = 0
-//                self.sampleAppVC.themeTransitionImageView.alpha = 1
-            };
-        }
-    }
-    
-    func fadeInMainUI() {
-        UIView.animate(withDuration: 0.6) {
-//            self.sampleAppVC.vocalGuidanceSettingButton.alpha = 1
-//            self.sampleAppVC.mainInterfaceStackView.alpha = 1
-//            self.sampleAppVC.statusLabel.alpha = 1
-//            self.sampleAppVC.themeTransitionImageView.alpha = 0
-        } completion: { _ in
-            self.enableButtons(shouldEnable: true)
-        };
-    }
-
-    
     func handleErrorGettingServerSessionToken() {
         networkIssueDetected = true
-        displayStatus(statusString: "Session could not be started due to an unexpected issue during the network request.")
-        fadeInMainUI()
-        hideSessionTokenConnectionText();
-    }
-    
-    func displayStatus(statusString: String) {
-        DispatchQueue.main.async {
-//            self.sampleAppVC.statusLabel.text = statusString
-            print(statusString)
-        }
+      hideSessionTokenConnectionText();
     }
     
     func showThemeSelectionMenu() {
@@ -114,9 +70,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
         let selectBitcoinExchangeThemeAction = UIAlertAction(title: "Bitcoin Exchange", style: .default) {
             (_) -> Void in self.handleThemeSelection(theme: "Bitcoin Exchange")
         }
-        let selectEKYCThemeAction = UIAlertAction(title: "eKYC", style: .default) {
-            (_) -> Void in self.handleThemeSelection(theme: "eKYC")
-        }
         let selectSampleBankThemeAction = UIAlertAction(title: "Sample Bank", style: .default) {
             (_) -> Void in self.handleThemeSelection(theme: "Sample Bank")
         }
@@ -126,7 +79,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
         themeSelectionMenu.addAction(selectPseudoFullscreenThemeAction)
         themeSelectionMenu.addAction(selectWellRoundedThemeAction)
         themeSelectionMenu.addAction(selectBitcoinExchangeThemeAction)
-        themeSelectionMenu.addAction(selectEKYCThemeAction)
         themeSelectionMenu.addAction(selectSampleBankThemeAction)
         themeSelectionMenu.addAction(cancelAction)
         // Must use popover controller for iPad
@@ -176,11 +128,7 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
             let decodedimage = UIImage(data: dataDecoded)
             auditTrailAndIDScanImages.append(decodedimage!)
         }
-        
-        if auditTrailAndIDScanImages.count == 0 {
-            displayStatus(statusString: "No Audit Trail Images")
-            return
-        }
+      
         for auditImage in auditTrailAndIDScanImages.reversed() {
             addDismissableImageToInterface(image: auditImage)
         }
@@ -220,7 +168,7 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
     
     func handleThemeSelection(theme: String) {
         currentTheme = theme
-//        ThemeHelpers.setAppTheme(theme: theme)
+        ThemeHelpers.setAppTheme(theme: theme)
         updateThemeTransitionView()
 
         // Set this class as the delegate to handle the FaceTecCustomAnimationDelegate methods. This delegate needs to be applied to the current FaceTecCustomization object before starting a new Session in order to use FaceTecCustomAnimationDelegate methods to provide a new instance of a custom UIView that will be displayed for the method-specified animation.
@@ -264,25 +212,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
 //        self.sampleAppVC.themeTransitionText.textColor = transitionTextColor
     }
     
-    func enableButtons(shouldEnable: Bool, completion: (() -> ())? = nil) {
-        DispatchQueue.main.async {
-//          self.sampleAppVC.livenessButton.isEnabled = shouldEnable
-//          self.sampleAppVC.livenessButton.backgroundColor = shouldEnable ? .systemBlue : .lightGray
-//            self.sampleAppVC.enrollUserButton.isEnabled = shouldEnable
-//            self.sampleAppVC.authenticateUserButton.isEnabled = shouldEnable
-//            self.sampleAppVC.photoIDMatchButton.isEnabled = shouldEnable
-//            self.sampleAppVC.photoIDScanButton.isEnabled = shouldEnable
-//            self.sampleAppVC.auditTrailButton.isEnabled = shouldEnable
-//            self.sampleAppVC.themesButton.isEnabled = shouldEnable
-            
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
-                if completion != nil {
-                    completion!()
-                }
-            }
-        }
-    }
-    
     func onCreateNewResultScreenActivityIndicatorView() -> UIView? {
         var activityIndicatorView: UIView? = nil
         switch currentTheme {
@@ -291,15 +220,13 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
             case "Config Wizard Theme":
                 break
             case "Pseudo-Fullscreen":
-//                activityIndicatorView = PseudoFullscreenActivityIndicatorView()
+                activityIndicatorView = PseudoFullscreenActivityIndicatorView()
                 break
             case "Well-Rounded":
-//                activityIndicatorView = WellRoundedActivityIndicatorView()
+                activityIndicatorView = WellRoundedActivityIndicatorView()
                 break
             case "Bitcoin Exchange":
                 break
-            case "eKYC":
-//                activityIndicatorView = EKYCActvityIndicatorView()
                 break
             case "Sample Bank":
                 break
@@ -307,78 +234,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
                 break
         }
         return activityIndicatorView
-    }
-    
-    func onCreateNFCStartingAnimationView() -> UIView? {
-        return NFCStartingAnimationView()
-    }
-    
-    func onCreateNFCCardStartingAnimationView() -> UIView? {
-        return NFCCardStartingAnimationView()
-    }
-    
-    func onCreateNFCCardScanningAnimationView() -> UIView? {
-        return NFCCardScanningAnimationView()
-    }
-    
-    func onCreateNFCScanningAnimationView() -> UIView? {
-        var scanningAnimationView: UIView? = nil
-        switch currentTheme {
-            case "FaceTec Theme":
-                break
-            case "Config Wizard Theme":
-                break
-            case "Pseudo-Fullscreen":
-                scanningAnimationView = NFCScanningAnimationViewBlack()
-                break
-            case "Well-Rounded":
-                scanningAnimationView = NFCScanningAnimationViewGreen()
-                break
-            case "Bitcoin Exchange":
-                break
-            case "eKYC":
-                scanningAnimationView = NFCScanningAnimationViewRed()
-                break
-            case "Sample Bank":
-                break
-            default:
-                break
-        }
-        
-        if scanningAnimationView == nil {
-            scanningAnimationView = NFCScanningAnimationView()
-        }
-        
-        return scanningAnimationView
-    }
-    
-    func onCreateNFCSkipOrErrorAnimationView() -> UIView? {
-        var skipOrErrorAnimationView: UIView? = nil
-        switch currentTheme {
-            case "FaceTec Theme":
-                break
-            case "Config Wizard Theme":
-                break
-            case "Pseudo-Fullscreen":
-                skipOrErrorAnimationView = PseudoFullscreenUnsuccessView()
-                break
-            case "Well-Rounded":
-                skipOrErrorAnimationView = UIImageView(image: UIImage(named: "warning_green"))
-                break
-            case "Bitcoin Exchange":
-                skipOrErrorAnimationView = UIImageView(image: UIImage(named: "warning_orange"))
-                break
-            case "eKYC":
-                skipOrErrorAnimationView = EKYCUnsuccessView()
-                break
-            case "Sample Bank":
-                skipOrErrorAnimationView = UIImageView(image: UIImage(named: "warning_white"))
-                break
-            default:
-                break
-        }
-        
-        return skipOrErrorAnimationView
     }
     
     func onCreateNewResultScreenSuccessAnimationView() -> UIView? {
@@ -396,9 +251,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
                 successAnimationView = WellRoundedSuccessView()
                 break
             case "Bitcoin Exchange":
-                break
-            case "eKYC":
-                successAnimationView = EKYCSuccessView()
                 break
             case "Sample Bank":
                 break
@@ -423,9 +275,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
                 break
             case "Bitcoin Exchange":
                 break
-            case "eKYC":
-                unsuccessAnimationView = EKYCUnsuccessView()
-                break
             case "Sample Bank":
                 break
             default:
@@ -448,9 +297,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
                 break
             case "Bitcoin Exchange":
                 animationView = AdditionalReviewAnimationViewOrange()
-                break
-            case "eKYC":
-                animationView = AdditionalReviewAnimationViewRed()
                 break
             case "Sample Bank":
                 break
@@ -475,9 +321,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
                 break
             case "Bitcoin Exchange":
                 break
-            case "eKYC":
-                animationView = EKYCActvityIndicatorView()
-                break
             case "Sample Bank":
                 break
             default:
@@ -498,9 +341,6 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
             case "Well-Rounded":
                 break
             case "Bitcoin Exchange":
-                break
-            case "eKYC":
-                animationView =  EKYCScrollIndicatorAnimationView()
                 break
             case "Sample Bank":
                 break
