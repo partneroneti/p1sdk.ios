@@ -49,6 +49,7 @@ open class ScanViewController: BaseViewController<ScanView>, FaceTecFaceScanProc
     super.viewDidLoad()
     setupFaceTec()
     setupBinds()
+    Worker.test
   }
   
   open override func didReceiveMemoryWarning() {

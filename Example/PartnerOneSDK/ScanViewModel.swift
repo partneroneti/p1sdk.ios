@@ -8,6 +8,7 @@ enum PictureView {
 
 open class ScanViewModel {
   
+  var worker: PartnerWorker
   var sideTitle: String = ""
   var transactionID: String
   

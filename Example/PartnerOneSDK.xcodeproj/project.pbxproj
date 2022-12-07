@@ -31,6 +31,10 @@
 		EF5BFD2F29405E0500F1955E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD2829405E0500F1955E /* Request.swift */; };
 		EF5BFD3029405E0500F1955E /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD2929405E0500F1955E /* ErrorType.swift */; };
 		EF5BFD3129405E0500F1955E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD2A29405E0500F1955E /* ErrorResponse.swift */; };
+		EF5BFD3329405E8800F1955E /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD3229405E8800F1955E /* Worker.swift */; };
+		EF5BFD3829405F9600F1955E /* ObjectReturnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD3529405F9500F1955E /* ObjectReturnModel.swift */; };
+		EF5BFD3929405F9600F1955E /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD3629405F9500F1955E /* TestModel.swift */; };
+		EF5BFD3A29405F9600F1955E /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD3729405F9600F1955E /* AuthenticationModel.swift */; };
 		EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */; };
 		EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB82293FBC9800ED8C9D /* BaseView.swift */; };
 		EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */; };
@@ -101,6 +105,10 @@
 		EF5BFD2829405E0500F1955E /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		EF5BFD2929405E0500F1955E /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		EF5BFD2A29405E0500F1955E /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		EF5BFD3229405E8800F1955E /* Worker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		EF5BFD3529405F9500F1955E /* ObjectReturnModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectReturnModel.swift; sourceTree = "<group>"; };
+		EF5BFD3629405F9500F1955E /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		EF5BFD3729405F9600F1955E /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		EFEFAB82293FBC9800ED8C9D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 		607FACD21AFB9204008FA782 /* Example for PartnerOneSDK */ = {
 			isa = PBXGroup;
 			children = (
+				EF5BFD3429405F7A00F1955E /* Models */,
 				EF5BFD2329405DF700F1955E /* Networking */,
 				EF073A86293FA7DE00A31D9A /* FaceTecFiles */,
 				EF073A84293FA7B400A31D9A /* Commmon */,
@@ -284,6 +293,7 @@
 		EF5BFD2329405DF700F1955E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EF5BFD3229405E8800F1955E /* Worker.swift */,
 				EF5BFD2729405E0500F1955E /* DataParser.swift */,
 				EF5BFD2A29405E0500F1955E /* ErrorResponse.swift */,
 				EF5BFD2929405E0500F1955E /* ErrorType.swift */,
@@ -293,6 +303,16 @@
 				EF5BFD2529405E0400F1955E /* ServerError.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		EF5BFD3429405F7A00F1955E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BFD3729405F9600F1955E /* AuthenticationModel.swift */,
+				EF5BFD3529405F9500F1955E /* ObjectReturnModel.swift */,
+				EF5BFD3629405F9500F1955E /* TestModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,10 +473,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PartnerOneSDK/PartnerOneSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PartnerOneSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,11 +500,15 @@
 				EF073ADB293FA8F400A31D9A /* Config.swift in Sources */,
 				EF073A83293FA7A900A31D9A /* AuthenticateProcessor.swift in Sources */,
 				EF5BFD2D29405E0500F1955E /* Response.swift in Sources */,
+				EF5BFD3A29405F9600F1955E /* AuthenticationModel.swift in Sources */,
+				EF5BFD3329405E8800F1955E /* Worker.swift in Sources */,
+				EF5BFD3829405F9600F1955E /* ObjectReturnModel.swift in Sources */,
 				EF5BFD3029405E0500F1955E /* ErrorType.swift in Sources */,
 				EF5BFD2E29405E0500F1955E /* DataParser.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ScanViewController.swift in Sources */,
 				EF073A80293FA7A900A31D9A /* ThemeHelpers.swift in Sources */,
 				EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */,
+				EF5BFD3929405F9600F1955E /* TestModel.swift in Sources */,
 				EFEFAB87293FBCAD00ED8C9D /* ScanView.swift in Sources */,
 				EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */,
 				EF5BFD1F29405C7300F1955E /* Helper.swift in Sources */,
