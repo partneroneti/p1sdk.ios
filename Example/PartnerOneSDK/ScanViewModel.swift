@@ -12,6 +12,7 @@ open class ScanViewModel {
   var transactionID: String
   
   var didTapOpenFaceTec: (() -> Void)?
+  var didOpenStatusView: (() -> Void)?
   
   public init(transactionID: String) {
     self.transactionID = transactionID
@@ -31,8 +32,14 @@ open class ScanViewModel {
     }
     
     if sideTitle == setPhotoSide(.backView) {
-      self.didTapOpenFaceTec?()
+      didTapOpenFaceTec?()
       print("@! >>> Starting FaceTec...")
+    }
+  }
+  
+  func navigateStatusView() {
+    if sideTitle == setPhotoSide(.backView) {
+      didOpenStatusView?()
     }
   }
   

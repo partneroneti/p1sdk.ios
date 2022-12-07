@@ -4,26 +4,29 @@ import FaceTecSDK
 
 open class ScanViewController: BaseViewController<ScanView>, FaceTecFaceScanProcessorDelegate, URLSessionDelegate {
   
+  public var nextViewController: UIViewController
+  
   /// FaceTec Variables
-  var viewModel: ScanViewModel
-  var viewTitle: String
+  private var viewModel: ScanViewModel
+  private var viewTitle: String
   
-  var previewLayer: AVCaptureVideoPreviewLayer!
-  var captureSession: AVCaptureSession!
-  var backCamera: AVCaptureDevice!
-  var backInput: AVCaptureInput!
-  var captureConnection: AVCaptureConnection?
-  var photoOutput = AVCapturePhotoOutput()
+  private var previewLayer: AVCaptureVideoPreviewLayer!
+  private var captureSession: AVCaptureSession!
+  private var backCamera: AVCaptureDevice!
+  private var backInput: AVCaptureInput!
+  private var captureConnection: AVCaptureConnection?
+  private var photoOutput = AVCapturePhotoOutput()
   
-  var latestExternalDatabaseRefID: String = ""
-  var latestSessionResult: FaceTecSessionResult!
-  var latestIDScanResult: FaceTecIDScanResult!
-  var latestProcessor: Processor!
-  var utils: SampleAppUtilities?
+  private var latestExternalDatabaseRefID: String = ""
+  private var latestSessionResult: FaceTecSessionResult!
+  private var latestIDScanResult: FaceTecIDScanResult!
+  private var latestProcessor: Processor!
+  private var utils: SampleAppUtilities?
   
-  public init(viewModel: ScanViewModel, viewTitle: String = "") {
+  public init(viewModel: ScanViewModel, viewTitle: String = "", nextViewController: UIViewController = UIViewController()) {
     self.viewModel = viewModel
     self.viewTitle = viewTitle
+    self.nextViewController = nextViewController
     super.init()
   }
   
@@ -170,16 +173,21 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
 
 extension ScanViewController {
   func setupBinds() {
-    self.navigationItem.hidesBackButton = true
+    navigationItem.hidesBackButton = true
     baseView.viewTitle.text = viewTitle
     viewModel.sideTitle = viewTitle
     
-    self.viewModel.didTapOpenFaceTec = {
+    viewModel.didTapOpenFaceTec = { [weak self] in
+      guard let self = self else { return }
       self.getSessionToken() { sessionToken in
-        //        self.resetLatestResults()
         self.latestProcessor = LivenessCheckProcessor(sessionToken: sessionToken,
                                                       fromViewController: self)
       }
+    }
+    
+    viewModel.didOpenStatusView = { [weak self] in
+      guard let self = self else { return }
+      self.navigationController?.pushViewController(self.nextViewController, animated: true)
     }
     
     baseView.didTapTakePicture = { [weak self] in
@@ -212,15 +220,13 @@ extension ScanViewController {
   }
   
   public func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSessionResult,
-                                          faceScanResultCallback: FaceTecFaceScanResultCallback) {
-  }
+                                          faceScanResultCallback: FaceTecFaceScanResultCallback) {}
   
-  public func onFaceTecSDKCompletelyDone() {
-    print("COMPLETELY DONE")
-  }
+  public func onFaceTecSDKCompletelyDone() {}
   
   func onComplete() {
-    print("SCAN COMPLETED!")
+    print("Escaneamento Completo. Navegando para Status!")
+    viewModel.navigateStatusView()
   }
   
   func getLatestExternalDatabaseRefID() -> String {
@@ -234,7 +240,6 @@ extension ScanViewController {
   @objc
   func onLivenessCheckPressed(_ sender: Any) {
     getSessionToken() { sessionToken in
-//        self.resetLatestResults()
       self.latestProcessor = LivenessCheckProcessor(sessionToken: sessionToken, fromViewController: self)
     }
     print("BUTTON TAPPED!")
