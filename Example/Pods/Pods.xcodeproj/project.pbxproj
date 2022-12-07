@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -74,6 +74,7 @@
 		E02CF609F92A697CACAD3AF05831F651 /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D851C1A298740703299B1B53CC5BB6FD /* SampleAppUtilities.swift */; };
 		E288BDF41B3C287145911A343BB1F991 /* IntegerOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A89278756743331738866CAF0E880B5 /* IntegerOperators.swift */; };
 		E5EC111C9EB089D63E72B9CDBE40D616 /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FEA3F4F1B6517F147B77E29420C22 /* MapError.swift */; };
+		EF5BFD3C2940624300F1955E /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5BFD3B2940624300F1955E /* FaceTecSDK.xcframework */; };
 		F2C2DA346F8A0BF2FE79795C23E194EE /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */; };
 		F3D97C739435E828FAD365A65DB0FBEA /* ProcesingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F547FB6051ABA7187BB0BD9B7200A5B /* ProcesingDelegate.swift */; };
 		F5C92DC8E274C4FC541267A97575BC05 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491CE8637E17DC2BE7138C422386C07 /* ParameterEncoding.swift */; };
@@ -173,7 +174,7 @@
 		91A66FF3CD4EA348837E037A2706F5A1 /* CapturedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapturedImageView.swift; path = PartnerOneSDK/Classes/CapturedImageView.swift; sourceTree = "<group>"; };
 		994802E833404BA63345F1B0C48E61C0 /* Pods-PartnerOneSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		99EB0324F94612FB38E4F9449689DF40 /* Pods-PartnerOneSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F2913F758561759C4F130FCDD38476C /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		A39A315B444B57054C9031F28D4E5A52 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		A4B726B4B3CA9145F3ADB4B3AA1867B8 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
@@ -188,13 +189,13 @@
 		B94E68C424DC8343AF5FBF2FA8671F17 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
 		BBCBAF05B03E54708B92037A43593BC4 /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
 		BBDECD80DBD0F6D1B2EB898AFF1E9393 /* ScanViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewModel.swift; path = PartnerOneSDK/Classes/ScanViewModel.swift; sourceTree = "<group>"; };
-		BCBB19EEF8C5F0CEC4B7B80C04B58DD7 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCBB19EEF8C5F0CEC4B7B80C04B58DD7 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD3B75D7E1026DC2B39CD51AB6853D83 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		BE57555373C5CB1AE7E11C6B1E2107DE /* Pods-PartnerOneSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C0D8A245E6BB18D999E5101722A34AC5 /* ScanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanView.swift; path = PartnerOneSDK/Classes/ScanView.swift; sourceTree = "<group>"; };
 		C275818ED9D088D042D0923FDAE968FC /* Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = PartnerOneSDK/Classes/Helper.swift; sourceTree = "<group>"; };
 		C33007D74D5A6F1785986EE11BF5493A /* DictionaryTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryTransform.swift; path = Sources/DictionaryTransform.swift; sourceTree = "<group>"; };
-		C33A63754AB836664E85C7AB4788A52E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C33A63754AB836664E85C7AB4788A52E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C37AA7D38AE8EF7266A5FD7962DB0348 /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Sources/DataTransform.swift; sourceTree = "<group>"; };
 		C450C1E8CBEBF045665442E4468EF57A /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		C451561C08745061E9FD090F27CA4683 /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
@@ -202,7 +203,7 @@
 		C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceTecSDK.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/FaceTecSDK.framework; sourceTree = DEVELOPER_DIR; };
 		C8535132E692648EADFBF4516B5ECEAA /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		D491CE8637E17DC2BE7138C422386C07 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		D4F52717C3DA2B4A62EE8DAE05358B37 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D4F52717C3DA2B4A62EE8DAE05358B37 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D56241F8A7717367186BE4D76CEA7134 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		D72E0DB8703B2E1F4F36B6773F4EC5A9 /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Sources/EnumTransform.swift; sourceTree = "<group>"; };
 		D851C1A298740703299B1B53CC5BB6FD /* SampleAppUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 		EC7D6DFED7A3A4C243BFA53DF747797C /* PartnerOneSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-umbrella.h"; sourceTree = "<group>"; };
 		ECFA323EB7175AE292A6D8F949668531 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED6E84492E5CFFD916349D5E8DE65146 /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = Sources/FromJSON.swift; sourceTree = "<group>"; };
+		EF5BFD3B2940624300F1955E /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		F286B4D9825507BC5AB26F752F21C7F3 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
 		F6643782A311DD8A6B6A8E1F07F9EE20 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		F73F43609D6CB51FFF75B1550A8AF50F /* Pods-PartnerOneSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartnerOneSDK_Example"; path = Pods_PartnerOneSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5BFD3C2940624300F1955E /* FaceTecSDK.xcframework in Frameworks */,
 				F2C2DA346F8A0BF2FE79795C23E194EE /* FaceTecSDK.framework in Frameworks */,
 				47446AEC0C667E3A3008B3650D8D8041 /* Foundation.framework in Frameworks */,
 			);
@@ -338,7 +341,6 @@
 				35A54BC30102AE1515C4021BF0876AC5 /* URLTransform.swift */,
 				A1F47761C32A1BD3EB399EA5DF256780 /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -417,6 +419,7 @@
 		C113A1B6789FF094537BD5211B183964 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EF5BFD3B2940624300F1955E /* FaceTecSDK.xcframework */,
 				C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */,
 				DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */,
 			);
@@ -457,7 +460,6 @@
 				8A77233FDE344E98ECB6DC2FFCCE4EEC /* Validation.swift */,
 				88678458D3591363C493D790D0B39CEA /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -873,7 +875,11 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -905,7 +911,11 @@
 				INFOPLIST_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK.modulemap";
 				PRODUCT_MODULE_NAME = PartnerOneSDK;
 				PRODUCT_NAME = PartnerOneSDK;
@@ -935,7 +945,11 @@
 				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
 				PRODUCT_MODULE_NAME = ObjectMapper;
 				PRODUCT_NAME = ObjectMapper;
@@ -966,7 +980,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1061,7 +1079,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1093,7 +1115,11 @@
 				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
 				PRODUCT_MODULE_NAME = ObjectMapper;
 				PRODUCT_NAME = ObjectMapper;
@@ -1125,7 +1151,11 @@
 				INFOPLIST_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PartnerOneSDK/PartnerOneSDK.modulemap";
 				PRODUCT_MODULE_NAME = PartnerOneSDK;
 				PRODUCT_NAME = PartnerOneSDK;
@@ -1156,7 +1186,11 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -1253,7 +1287,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1287,7 +1325,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example.modulemap";
 				OTHER_LDFLAGS = "";
