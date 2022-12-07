@@ -44,6 +44,6 @@ open class ScanViewModel {
   }
   
   func sendPicture() {
-    print("PHOTO HAS SENT")
+    print("Foto enviada.")
   }
 }
