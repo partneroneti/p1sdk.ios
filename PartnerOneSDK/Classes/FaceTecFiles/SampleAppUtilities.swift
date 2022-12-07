@@ -39,17 +39,8 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
     func hideSessionTokenConnectionText() {
         themeTransitionTextTimer.invalidate()
         themeTransitionTextTimer = nil
-        UIView.animate(withDuration: 0.6) {
-//            self.sampleAppVC.themeTransitionText.alpha = 0
-        }
     }
-    
-    func handleErrorGettingServerSessionToken() {
-        networkIssueDetected = true
-      hideSessionTokenConnectionText();
-    }
-  
-    
+ 
     public static func setOCRLocalization() {
         // Set the strings to be used for group names, field names, and placeholder texts for the FaceTec ID Scan User OCR Confirmation Screen.
         // DEVELOPER NOTE: For this demo, we are using the template json file, 'FaceTec_OCR_Customization.json,' as the parameter in calling this API.
