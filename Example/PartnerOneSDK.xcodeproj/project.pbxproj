@@ -22,9 +22,7 @@
 		EF073A83293FA7A900A31D9A /* AuthenticateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A7C293FA7A900A31D9A /* AuthenticateProcessor.swift */; };
 		EF073A88293FA7ED00A31D9A /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */; };
 		EF073ADB293FA8F400A31D9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073ADA293FA8F400A31D9A /* Config.swift */; };
-		EF073ADF293FAD1400A31D9A /* FaceTecConfigurationForTestApplication.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EF073ADC293FAD1300A31D9A /* FaceTecConfigurationForTestApplication.xcconfig */; };
 		EF073AE0293FAD1400A31D9A /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF073ADD293FAD1300A31D9A /* FaceTec.strings */; };
-		EF073AE7293FAEC000A31D9A /* FaceTec_OCR_Customization.json in Resources */ = {isa = PBXBuildFile; fileRef = EF073AE6293FAEC000A31D9A /* FaceTec_OCR_Customization.json */; };
 		EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */; };
 		EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB82293FBC9800ED8C9D /* BaseView.swift */; };
 		EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */; };
@@ -32,15 +30,6 @@
 		EFEFAB8A293FBCC800ED8C9D /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB88293FBCC700ED8C9D /* CapturedImageView.swift */; };
 		EFEFAB8B293FBCC800ED8C9D /* CroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB89293FBCC800ED8C9D /* CroppingView.swift */; };
 		EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB8C293FBD7900ED8C9D /* UIView+Extension.swift */; };
-		EFEFABCA293FC77C00ED8C9D /* WellRoundedActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABB6293FC77B00ED8C9D /* WellRoundedActivityIndicatorView.swift */; };
-		EFEFABCE293FC77C00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBA293FC77B00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift */; };
-		EFEFABCF293FC77C00ED8C9D /* WellRoundedSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBB293FC77B00ED8C9D /* WellRoundedSuccessView.swift */; };
-		EFEFABD0293FC77C00ED8C9D /* PseudoFullscreenUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABBC293FC77B00ED8C9D /* PseudoFullscreenUnsuccessView.swift */; };
-		EFEFABD6293FC77C00ED8C9D /* AdditionalReviewAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC2293FC77B00ED8C9D /* AdditionalReviewAnimationView.swift */; };
-		EFEFABD8293FC77C00ED8C9D /* PseudoFullscreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC4293FC77B00ED8C9D /* PseudoFullscreenSuccessView.swift */; };
-		EFEFABDA293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC6293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift */; };
-		EFEFABDC293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC8293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift */; };
-		EFEFABDD293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFABC9293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift */; };
 		EFEFABE0293FE1F000ED8C9D /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */; };
 		EFEFABE1293FE1F000ED8C9D /* FaceTecSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -95,10 +84,7 @@
 		EF073A7C293FA7A900A31D9A /* AuthenticateProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateProcessor.swift; sourceTree = "<group>"; };
 		EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
 		EF073ADA293FA8F400A31D9A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		EF073ADC293FAD1300A31D9A /* FaceTecConfigurationForTestApplication.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = FaceTecConfigurationForTestApplication.xcconfig; sourceTree = "<group>"; };
 		EF073ADD293FAD1300A31D9A /* FaceTec.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
-		EF073ADE293FAD1400A31D9A /* PartnerOneSDK.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PartnerOneSDK.entitlements; sourceTree = "<group>"; };
-		EF073AE6293FAEC000A31D9A /* FaceTec_OCR_Customization.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FaceTec_OCR_Customization.json; sourceTree = "<group>"; };
 		EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		EFEFAB82293FBC9800ED8C9D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -106,15 +92,6 @@
 		EFEFAB88293FBCC700ED8C9D /* CapturedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		EFEFAB89293FBCC800ED8C9D /* CroppingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppingView.swift; sourceTree = "<group>"; };
 		EFEFAB8C293FBD7900ED8C9D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		EFEFABB6293FC77B00ED8C9D /* WellRoundedActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedActivityIndicatorView.swift; sourceTree = "<group>"; };
-		EFEFABBA293FC77B00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenActivityIndicatorView.swift; sourceTree = "<group>"; };
-		EFEFABBB293FC77B00ED8C9D /* WellRoundedSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedSuccessView.swift; sourceTree = "<group>"; };
-		EFEFABBC293FC77B00ED8C9D /* PseudoFullscreenUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenUnsuccessView.swift; sourceTree = "<group>"; };
-		EFEFABC2293FC77B00ED8C9D /* AdditionalReviewAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationView.swift; sourceTree = "<group>"; };
-		EFEFABC4293FC77B00ED8C9D /* PseudoFullscreenSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenSuccessView.swift; sourceTree = "<group>"; };
-		EFEFABC6293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedUnsuccessView.swift; sourceTree = "<group>"; };
-		EFEFABC8293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewOrange.swift; sourceTree = "<group>"; };
-		EFEFABC9293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewRed.swift; sourceTree = "<group>"; };
 		EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceTecSDK.framework; path = "../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.framework"; sourceTree = "<group>"; };
 		F6E5C446F71875C2E80D08F6 /* Pods-PartnerOneSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartnerOneSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -278,32 +255,12 @@
 		EF073A86293FA7DE00A31D9A /* FaceTecFiles */ = {
 			isa = PBXGroup;
 			children = (
-				EF073AE6293FAEC000A31D9A /* FaceTec_OCR_Customization.json */,
 				EF073ADD293FAD1300A31D9A /* FaceTec.strings */,
-				EF073ADC293FAD1300A31D9A /* FaceTecConfigurationForTestApplication.xcconfig */,
-				EF073ADE293FAD1400A31D9A /* PartnerOneSDK.entitlements */,
 				EF073ADA293FA8F400A31D9A /* Config.swift */,
 				EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */,
-				EF073A89293FA81700A31D9A /* ThemeViews */,
 				EF073A74293FA78600A31D9A /* Processors */,
 			);
 			name = FaceTecFiles;
-			sourceTree = "<group>";
-		};
-		EF073A89293FA81700A31D9A /* ThemeViews */ = {
-			isa = PBXGroup;
-			children = (
-				EFEFABC2293FC77B00ED8C9D /* AdditionalReviewAnimationView.swift */,
-				EFEFABC8293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift */,
-				EFEFABC9293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift */,
-				EFEFABBA293FC77B00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift */,
-				EFEFABC4293FC77B00ED8C9D /* PseudoFullscreenSuccessView.swift */,
-				EFEFABBC293FC77B00ED8C9D /* PseudoFullscreenUnsuccessView.swift */,
-				EFEFABB6293FC77B00ED8C9D /* WellRoundedActivityIndicatorView.swift */,
-				EFEFABBB293FC77B00ED8C9D /* WellRoundedSuccessView.swift */,
-				EFEFABC6293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift */,
-			);
-			path = ThemeViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,8 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF073AE0293FAD1400A31D9A /* FaceTec.strings in Resources */,
-				EF073ADF293FAD1400A31D9A /* FaceTecConfigurationForTestApplication.xcconfig in Resources */,
-				EF073AE7293FAEC000A31D9A /* FaceTec_OCR_Customization.json in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -486,23 +441,14 @@
 			files = (
 				EFEFAB8B293FBCC800ED8C9D /* CroppingView.swift in Sources */,
 				EF073ADB293FA8F400A31D9A /* Config.swift in Sources */,
-				EFEFABDD293FC77C00ED8C9D /* AdditionalReviewAnimationViewRed.swift in Sources */,
-				EFEFABCE293FC77C00ED8C9D /* PseudoFullscreenActivityIndicatorView.swift in Sources */,
 				EF073A83293FA7A900A31D9A /* AuthenticateProcessor.swift in Sources */,
-				EFEFABDA293FC77C00ED8C9D /* WellRoundedUnsuccessView.swift in Sources */,
-				EFEFABD6293FC77C00ED8C9D /* AdditionalReviewAnimationView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ScanViewController.swift in Sources */,
 				EF073A80293FA7A900A31D9A /* ThemeHelpers.swift in Sources */,
-				EFEFABDC293FC77C00ED8C9D /* AdditionalReviewAnimationViewOrange.swift in Sources */,
-				EFEFABD8293FC77C00ED8C9D /* PseudoFullscreenSuccessView.swift in Sources */,
 				EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */,
 				EFEFAB87293FBCAD00ED8C9D /* ScanView.swift in Sources */,
-				EFEFABD0293FC77C00ED8C9D /* PseudoFullscreenUnsuccessView.swift in Sources */,
 				EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */,
 				EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */,
 				EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */,
-				EFEFABCA293FC77C00ED8C9D /* WellRoundedActivityIndicatorView.swift in Sources */,
-				EFEFABCF293FC77C00ED8C9D /* WellRoundedSuccessView.swift in Sources */,
 				EF073A88293FA7ED00A31D9A /* SampleAppUtilities.swift in Sources */,
 				EFEFAB8A293FBCC800ED8C9D /* CapturedImageView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
