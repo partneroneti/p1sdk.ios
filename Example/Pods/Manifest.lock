@@ -1,27 +1,16 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - PartnerOneSDK (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
   - PartnerOneSDK (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   PartnerOneSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   PartnerOneSDK: ce8d01fb886b0eb70408b8d44e86226bdb535df6
 
-PODFILE CHECKSUM: 29d75a249f1b7396ee81e5edcd844344e2ce05a7
+PODFILE CHECKSUM: 44644c36600bae87d0d2967cda9ba02899487b5d
 
 COCOAPODS: 1.11.3
