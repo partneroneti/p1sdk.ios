@@ -23,7 +23,7 @@
 		EF073A88293FA7ED00A31D9A /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */; };
 		EF073ADB293FA8F400A31D9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073ADA293FA8F400A31D9A /* Config.swift */; };
 		EF073AE0293FAD1400A31D9A /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF073ADD293FAD1300A31D9A /* FaceTec.strings */; };
-		EF5BFD1B2940572000F1955E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD1A2940572000F1955E /* Helper.swift */; };
+		EF5BFD1F29405C7300F1955E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD1E29405C7300F1955E /* Helper.swift */; };
 		EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */; };
 		EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB82293FBC9800ED8C9D /* BaseView.swift */; };
 		EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */; };
@@ -86,7 +86,7 @@
 		EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
 		EF073ADA293FA8F400A31D9A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EF073ADD293FAD1300A31D9A /* FaceTec.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
-		EF5BFD1A2940572000F1955E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ../../Helper.swift; sourceTree = "<group>"; };
+		EF5BFD1E29405C7300F1955E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ../../PartnerOneSDK/Classes/Helper.swift; sourceTree = "<group>"; };
 		EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		EFEFAB82293FBC9800ED8C9D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				EF073A86293FA7DE00A31D9A /* FaceTecFiles */,
 				EF073A84293FA7B400A31D9A /* Commmon */,
 				EF073A85293FA7C500A31D9A /* Extension */,
-				EF5BFD1A2940572000F1955E /* Helper.swift */,
+				EF5BFD1E29405C7300F1955E /* Helper.swift */,
 				EFEFAB86293FBCAD00ED8C9D /* ScanView.swift */,
 				607FACD71AFB9204008FA782 /* ScanViewController.swift */,
 				EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */,
@@ -450,7 +450,7 @@
 				EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */,
 				EFEFAB87293FBCAD00ED8C9D /* ScanView.swift in Sources */,
 				EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */,
-				EF5BFD1B2940572000F1955E /* Helper.swift in Sources */,
+				EF5BFD1F29405C7300F1955E /* Helper.swift in Sources */,
 				EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */,
 				EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */,
 				EF073A88293FA7ED00A31D9A /* SampleAppUtilities.swift in Sources */,
