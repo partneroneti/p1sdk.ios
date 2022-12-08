@@ -5,10 +5,17 @@ protocol PartnerHelperProtocol: AnyObject {
   var transactionID: String { get }
 }
 
-public class PartnerHelper: PartnerHelperProtocol {
+open class PartnerHelper: PartnerHelperProtocol {
   
   public var mainViewController = UIViewController()
   public var transactionID: String = ""
+  
+  public func initializeSDK(_ viewController: UIViewController) {
+    let mainWorker = PartnerOneWorker()
+    let mainViewModel = ScanViewModel(worker: mainWorker)
+    let mainViewController = ScanViewController(viewModel: mainViewModel)
+    viewController.navigationController?.pushViewController(mainViewController, animated: true)
+  }
   
   public func openViewAfter(_ viewController: UIViewController) {
     viewController.navigationController?.popToViewController(mainViewController, animated: true)
