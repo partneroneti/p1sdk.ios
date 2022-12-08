@@ -97,7 +97,7 @@ open class ScanView: BaseView {
     let path = UIBezierPath(roundedRect: background.bounds,
                             byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight],
                             cornerRadii: CGSize(width: 20, height: 20))
-    maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
+//    maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
     
     background.cropReferenceView.addDashedBorder(radius: 10, pattern: [4,4], color: UIColor.white.cgColor)
     background.cropReferenceView.layer.borderWidth = 10
