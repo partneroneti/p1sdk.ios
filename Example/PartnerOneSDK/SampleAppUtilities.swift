@@ -17,7 +17,7 @@ class SampleAppUtilities: NSObject, FaceTecCustomAnimationDelegate {
     // Reference to app's main view controller
     let sampleAppVC: ScanViewController!
     
-    var currentTheme = Config.wasSDKConfiguredWithConfigWizard ? "Config Wizard Theme" : "FaceTec Theme"
+    var currentTheme = Config.wasSDKConfiguredWithConfigWizard ? "Config Wizard Theme" : "FaceTec Theme" 
     var themeTransitionTextTimer: Timer!
     
     var networkIssueDetected = false

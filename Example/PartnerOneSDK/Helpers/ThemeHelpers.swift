@@ -21,11 +21,11 @@ class ThemeHelpers {
     
     class func getCustomizationForTheme(theme: String) -> FaceTecCustomization {
         var currentCustomization = FaceTecCustomization()
-        
+      
         let retryScreenSlideshowImages = [UIImage(named: "FaceTec_ideal_1")!, UIImage(named: "FaceTec_ideal_2")!, UIImage(named: "FaceTec_ideal_3")!, UIImage(named: "FaceTec_ideal_4")!, UIImage(named: "FaceTec_ideal_5")!]
         
         if theme == "FaceTec Theme" {
-            // using default customizations -- do nothing
+          
         }
         else if theme == "Config Wizard Theme" {
             currentCustomization = Config.retrieveConfigurationWizardCustomization()

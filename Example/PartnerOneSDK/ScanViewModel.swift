@@ -8,13 +8,16 @@ enum PictureView {
 
 open class ScanViewModel {
   
+  var worker: PartnerOneWorker
   var sideTitle: String = ""
   var transactionID: String
   
   var didTapOpenFaceTec: (() -> Void)?
   var didOpenStatusView: (() -> Void)?
   
-  public init(transactionID: String) {
+  init(worker: PartnerOneWorker,
+              transactionID: String) {
+    self.worker = worker
     self.transactionID = transactionID
   }
   
