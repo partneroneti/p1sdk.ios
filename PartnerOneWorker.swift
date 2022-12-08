@@ -1,6 +1,4 @@
 import UIKit
-import Alamofire
-import ObjectMapper
 
 //MARK: - Protocol
 
@@ -12,7 +10,7 @@ protocol PartnerOneWorkerProtocol: AnyObject {
   func getSession(completion: @escaping ((Response<SessionModel>) -> Void))
 }
 
-class PartnerOneWorker: Request, PartnerOneWorkerProtocol {
+class PartnerOneWorker: PartnerOneWorkerProtocol {
   
   //MARK: - Properties
   

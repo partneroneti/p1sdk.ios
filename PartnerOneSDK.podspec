@@ -37,6 +37,6 @@ TODO: Add long description of the pod here.
   # }
   
    s.public_header_files = 'Pods/Classes/**/*.h'
-   s.frameworks = 'FaceTecSDK', 'ObjectMapper'
+   s.frameworks = 'FaceTecSDK'
 #   s.dependency 'FaceTecSDK'
 end

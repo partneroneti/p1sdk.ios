@@ -1,14 +1,5 @@
 import Foundation
-import ObjectMapper
 
-struct SessionModel: Mappable {
+struct SessionModel: Codable {
   var session: String?
-  
-  init?(map: Map) {
-    session = (try? map.value("session")) ?? ""
-  }
-
-  mutating func mapping(map: Map) {
-    session <- map["session"]
-  }
 }
