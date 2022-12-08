@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  PartnerOneSDK
-//
-//  Created by ci-mobile-unicred on 12/06/2022.
-//  Copyright (c) 2022 ci-mobile-unicred. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
