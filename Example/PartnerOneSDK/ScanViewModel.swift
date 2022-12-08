@@ -10,7 +10,7 @@ open class ScanViewModel {
   
   var worker: PartnerOneWorker
   var sideTitle: String = ""
-  private var transactionID: String = ""
+  var transactionID: String = ""
   private var latestProcessor: Processor!
   
   var didTapOpenFaceTec: (() -> Void)?
