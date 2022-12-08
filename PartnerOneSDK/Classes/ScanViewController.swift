@@ -5,7 +5,6 @@ import PartnerOneSDK
 
 open class ScanViewController: BaseViewController<ScanView>, FaceTecFaceScanProcessorDelegate, URLSessionDelegate {
   
-  weak var helper: PartnerHelper?
   private var viewModel: ScanViewModel
   private var viewTitle: String
   
@@ -195,7 +194,7 @@ extension ScanViewController {
     
     viewModel.didOpenStatusView = { [weak self] in
       guard let self = self else { return }
-      self.helper?.openViewAfter(from: self)
+      
     }
     
     baseView.didTapTakePicture = { [weak self] in
