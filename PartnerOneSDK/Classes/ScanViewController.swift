@@ -144,7 +144,7 @@ extension ScanViewController {
     
     
     baseView.cameraContainer.addSubview(baseView.background)
-    baseView.sendSubview(toBack: baseView.cameraContainer)
+    baseView.sendSubviewToBack(baseView.cameraContainer)
   }
 }
 
