@@ -48,6 +48,8 @@ open class ScanViewController: BaseViewController<ScanView>, FaceTecFaceScanProc
     super.viewDidLoad()
     setupFaceTec()
     setupBinds()
+    
+    viewModel.getSession()
   }
   
   open override func didReceiveMemoryWarning() {
@@ -194,7 +196,7 @@ extension ScanViewController {
     
     viewModel.didOpenStatusView = { [weak self] in
       guard let self = self else { return }
-      
+      PartnerHelper().openViewAfter(self)
     }
     
     baseView.didTapTakePicture = { [weak self] in
