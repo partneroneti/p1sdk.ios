@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
-      var transactionID: String?
+      let helper = PartnerHelper()
+      
+      var transactionID: String = helper.transactionID
       
       let worker = PartnerOneWorker()
       let viewModel = ScanViewModel(worker: worker, transactionID: transactionID)

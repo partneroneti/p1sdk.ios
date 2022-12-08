@@ -6,7 +6,7 @@ protocol PartnerHelperProtocol: AnyObject {
 
 public class PartnerHelper: PartnerHelperProtocol {
   
-  var transactionID: String = ""
+  public var transactionID: String = ""
   
   public func openViewAfter(from viewController: UIViewController, to: UIViewController = UIViewController()) {
     DispatchQueue.main.async {
