@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
-      let worker = PartnerOneWorker(apiURL: "")
+      let worker = PartnerOneWorker()
       let viewModel = ScanViewModel(worker: worker, transactionID: "")
       let rootViewController = ScanViewController(viewModel: viewModel, viewTitle: "Frente")
       let navigationController = UINavigationController(rootViewController: rootViewController)
