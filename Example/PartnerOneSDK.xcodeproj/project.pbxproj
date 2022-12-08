@@ -100,7 +100,7 @@
 		EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
 		EF073ADA293FA8F400A31D9A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EF073ADD293FAD1300A31D9A /* FaceTec.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
-		EF5BFD1E29405C7300F1955E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ../../PartnerOneSDK/Classes/Helper.swift; sourceTree = "<group>"; };
+		EF5BFD1E29405C7300F1955E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ../../Helper.swift; sourceTree = "<group>"; };
 		EF5BFD2429405E0400F1955E /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../Result.swift; sourceTree = "<group>"; };
 		EF5BFD2529405E0400F1955E /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerError.swift; path = ../../ServerError.swift; sourceTree = "<group>"; };
 		EF5BFD2629405E0400F1955E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = ../../Response.swift; sourceTree = "<group>"; };
