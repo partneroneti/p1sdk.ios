@@ -16,7 +16,7 @@ open class ScanViewModel {
   var didTapOpenFaceTec: (() -> Void)?
   var didOpenStatusView: (() -> Void)?
   
-  init(worker: PartnerOneWorker) {
+  init(worker: PartnerOneWorker = PartnerOneWorker()) {
     self.worker = worker
   }
   

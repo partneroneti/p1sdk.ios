@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     self.window = window
     
-    helper.mainViewController = navigationController
-    
     return true
   }
   
