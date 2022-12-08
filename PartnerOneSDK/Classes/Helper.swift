@@ -10,9 +10,15 @@ open class PartnerHelper: PartnerHelperProtocol {
   public var mainViewController = UIViewController()
   public var transactionID: String = ""
   
+  public init(mainViewController: UIViewController = UIViewController(),
+              transactionID: String = "") {
+    self.mainViewController = mainViewController
+    self.transactionID = transactionID
+  }
+  
   public func initializeSDK(_ viewController: UIViewController) {
-//    let mainWorker = PartnerOneWorker()
-    let mainViewModel = ScanViewModel()
+    let mainWorker = PartnerOneWorker()
+    let mainViewModel = ScanViewModel(worker: mainWorker)
     let mainViewController = ScanViewController(viewModel: mainViewModel)
     viewController.navigationController?.pushViewController(mainViewController, animated: true)
   }
