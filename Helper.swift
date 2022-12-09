@@ -1,12 +1,7 @@
 import UIKit
 import FaceTecSDK
 
-protocol PartnerHelperProtocol: AnyObject {
-  var mainViewController: UIViewController { get }
-  var transactionID: String { get }
-}
-
-open class PartnerHelper: PartnerHelperProtocol {
+open class PartnerHelper {
   
   //MARK: - Public Properties
   
