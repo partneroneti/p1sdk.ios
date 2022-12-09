@@ -36,6 +36,7 @@
 		EF5BFD8D29418D9100F1955E /* DocumentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD8C29418D9100F1955E /* DocumentDataModel.swift */; };
 		EF5BFD8F2941921800F1955E /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD8E2941921800F1955E /* SessionModel.swift */; };
 		EF6ADDD8294219370018F3C5 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ADDD7294219370018F3C5 /* DataParser.swift */; };
+		EF9202DF294367E700302029 /* FacialScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9202DE294367E700302029 /* FacialScanViewController.swift */; };
 		EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */; };
 		EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB82293FBC9800ED8C9D /* BaseView.swift */; };
 		EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */; };
@@ -112,6 +113,7 @@
 		EF5BFD8C29418D9100F1955E /* DocumentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DocumentDataModel.swift; path = ../../DocumentDataModel.swift; sourceTree = "<group>"; };
 		EF5BFD8E2941921800F1955E /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionModel.swift; path = ../../SessionModel.swift; sourceTree = "<group>"; };
 		EF6ADDD7294219370018F3C5 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataParser.swift; path = ../../DataParser.swift; sourceTree = "<group>"; };
+		EF9202DE294367E700302029 /* FacialScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialScanViewController.swift; sourceTree = "<group>"; };
 		EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		EFEFAB82293FBC9800ED8C9D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				EFEFAB86293FBCAD00ED8C9D /* ScanView.swift */,
 				607FACD71AFB9204008FA782 /* ScanViewController.swift */,
 				EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */,
+				EF9202DE294367E700302029 /* FacialScanViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -512,6 +515,7 @@
 				EFEFAB87293FBCAD00ED8C9D /* ScanView.swift in Sources */,
 				EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */,
 				EF5BFD1F29405C7300F1955E /* Helper.swift in Sources */,
+				EF9202DF294367E700302029 /* FacialScanViewController.swift in Sources */,
 				EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */,
 				EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */,
 				EF5BFD3129405E0500F1955E /* ErrorResponse.swift in Sources */,

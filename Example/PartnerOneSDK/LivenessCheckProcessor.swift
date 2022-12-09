@@ -11,10 +11,10 @@ import FaceTecSDK
 class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelegate, URLSessionTaskDelegate {
     var latestNetworkRequest: URLSessionTask!
     var success = false
-    var fromViewController: ScanViewController!
+    var fromViewController: FacialScanViewController!
     var faceScanResultCallback: FaceTecFaceScanResultCallback!
     
-    init(sessionToken: String, fromViewController: ScanViewController) {
+    init(sessionToken: String, fromViewController: FacialScanViewController) {
         self.fromViewController = fromViewController
         super.init()
         

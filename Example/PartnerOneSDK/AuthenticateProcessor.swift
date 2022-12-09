@@ -11,10 +11,10 @@ import FaceTecSDK
 class AuthenticateProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelegate, URLSessionTaskDelegate {
     var latestNetworkRequest: URLSessionTask!
     var success = false
-    var fromViewController: ScanViewController!
+    var fromViewController: FacialScanViewController!
     var faceScanResultCallback: FaceTecFaceScanResultCallback!
 
-    init(sessionToken: String, fromViewController: ScanViewController) {
+    init(sessionToken: String, fromViewController: FacialScanViewController) {
         self.fromViewController = fromViewController
         super.init()
         //
@@ -68,7 +68,7 @@ class AuthenticateProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelega
         parameters["faceScan"] = sessionResult.faceScanBase64
         parameters["auditTrailImage"] = sessionResult.auditTrailCompressedBase64![0]
         parameters["lowQualityAuditTrailImage"] = sessionResult.lowQualityAuditTrailCompressedBase64![0]
-//        parameters["externalDatabaseRefID"] = fromViewController.getLatestExternalDatabaseRefID()
+        parameters["externalDatabaseRefID"] = fromViewController.getLatestExternalDatabaseRefID()
         
         //
         // Part 5:  Make the Networking Call to Your Servers.  Below is just example code, you are free to customize based on how your own API works.

@@ -10,6 +10,9 @@ open class PartnerHelper: PartnerHelperProtocol {
   
   //MARK: - Public Properties
   
+  private let mainWorker = PartnerOneWorker()
+  private let mainViewModel = ScanViewModel(worker: PartnerHelper().mainWorker)
+  
   public var mainViewController = UIViewController()
   public var transactionID: String = ""
   
@@ -24,14 +27,11 @@ open class PartnerHelper: PartnerHelperProtocol {
   //MARK: - Public Functions
   
   public func initializeSDK(_ viewController: UIViewController) {
-    let mainWorker = PartnerOneWorker()
-    let mainViewModel = ScanViewModel(worker: mainWorker)
-    let mainViewController = ScanViewController(viewModel: mainViewModel)
-    viewController.navigationController?.pushViewController(mainViewController, animated: true)
+    viewController.navigationController?.pushViewController(ScanViewController(viewModel: mainViewModel), animated: true)
   }
   
   public func openViewAfter(_ viewController: UIViewController) {
-    viewController.navigationController?.popToViewController(mainViewController, animated: true)
+    viewController.navigationController?.popToViewController(ScanViewController(viewModel: mainViewModel), animated: true)
   }
   
   public func createUserAgentForNewSession() -> String {
