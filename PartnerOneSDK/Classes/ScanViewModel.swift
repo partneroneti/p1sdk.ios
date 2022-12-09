@@ -19,7 +19,7 @@ open class ScanViewModel {
   init(worker: PartnerOneWorker) {
     self.worker = worker
   }
-
+  
   func setPhotoSide(_ cases: PictureView) -> String {
     switch cases {
     case .backView:  return "Verso"

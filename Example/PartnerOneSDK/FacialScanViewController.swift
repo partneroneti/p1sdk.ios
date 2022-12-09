@@ -15,8 +15,9 @@ final class FacialScanViewController: UIViewController, FaceTecFaceScanProcessor
   
   //MARK: - init
   
-  init(viewModel: ScanViewModel = ScanViewModel()) {
+  init(viewModel: ScanViewModel) {
     self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
   }
   
   required init?(coder: NSCoder) {
