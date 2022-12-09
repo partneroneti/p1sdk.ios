@@ -30,8 +30,12 @@ open class PartnerHelper: PartnerHelperProtocol {
     viewController.navigationController?.pushViewController(ScanViewController(viewModel: mainViewModel), animated: true)
   }
   
-  public func openViewAfter(_ viewController: UIViewController) {
-    viewController.navigationController?.popToViewController(ScanViewController(viewModel: mainViewModel), animated: true)
+  public func startFaceCapture() -> UIViewController {
+    return ScanViewController(viewModel: mainViewModel)
+  }
+  
+  public func startDocumentCapture() -> UIViewController {
+    return FacialScanViewController(viewModel: mainViewModel)
   }
   
   public func createUserAgentForNewSession() -> String {

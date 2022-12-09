@@ -178,10 +178,7 @@ extension ScanViewController {
     
     viewModel.didTapOpenFaceTec = { [weak self] in
       guard let self = self else { return }
-      self.getSessionToken() { sessionToken in
-        self.latestProcessor = LivenessCheckProcessor(sessionToken: sessionToken,
-                                                      fromViewController: self)
-      }
+      
     }
     
     viewModel.didOpenStatusView = { [weak self] in
@@ -209,44 +206,6 @@ extension ScanViewController {
         self.captureSession.startRunning()
       }
     }
-  }
-  
-  @objc
-  func onLivenessCheckPressed(_ sender: Any) {
-    getSessionToken() { sessionToken in
-      self.latestProcessor = LivenessCheckProcessor(sessionToken: sessionToken, fromViewController: self)
-    }
-    print("@! >>> Abrindo escaneamento facial (FaceTec).")
-  }
-  
-  func getSessionToken(sessionTokenCallback: @escaping (String) -> ()) {
-      utils?.startSessionTokenConnectionTextTimer();
-
-      let endpoint = Config.BaseURL + "/session-token"
-      let request = NSMutableURLRequest(url: NSURL(string: endpoint)! as URL)
-      request.httpMethod = "GET"
-      // Required parameters to interact with the FaceTec Managed Testing API.
-      request.addValue(Config.DeviceKeyIdentifier, forHTTPHeaderField: "X-Device-Key")
-      request.addValue(FaceTec.sdk.createFaceTecAPIUserAgentString(""), forHTTPHeaderField: "User-Agent")
-
-      let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue.main)
-      let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-          // Ensure the data object is not nil otherwise callback with empty dictionary.
-          guard let data = data else {
-              print("Exception raised while attempting HTTPS call.")
-              return
-          }
-          if let responseJSONObj = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: AnyObject] {
-              if((responseJSONObj["sessionToken"] as? String) != nil) {
-                  self.utils?.hideSessionTokenConnectionText()
-                  sessionTokenCallback(responseJSONObj["sessionToken"] as! String)
-                  return
-              } else {
-                  print("Exception raised while attempting HTTPS call.")
-              }
-          }
-      })
-      task.resume()
   }
 }
 

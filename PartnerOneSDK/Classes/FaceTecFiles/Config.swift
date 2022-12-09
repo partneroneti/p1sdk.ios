@@ -16,7 +16,7 @@ class Config {
   
   static let ProductionKeyText = PartnerHelper().faceTecProductionKeyText()
   
-  func displayLogs() {
+  static func displayLogs() {
     print("@! >>> FaceTec_BaseURL: ", Config.BaseURL)
     print("@! >>> FaceTec_DeviceKeyIdentifier: ", Config.DeviceKeyIdentifier)
     print("@! >>> FaceTec_PublicFaceScanEncryptionKey: ", Config.PublicFaceScanEncryptionKey)
