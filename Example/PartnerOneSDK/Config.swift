@@ -8,32 +8,38 @@ import FaceTecSDK
 
 class Config {
   
-    static let DeviceKeyIdentifier = "dioxhbQHfJHmnHTzJ40hCiUm3FR0IkXY"
-  
-//    static let DeviceKeyIdentifier = PartnerHelper().faceTecDeviceKeyIdentifier()
-  
-//    static let BaseURL = "https://digital-id.webdatadome.com/api"
+    static let DeviceKeyIdentifier = PartnerHelper().faceTecDeviceKeyIdentifier()
   
     static let BaseURL = PartnerHelper().faceTecBaseURL()
   
-    static let PublicFaceScanEncryptionKey =
-        "-----BEGIN PUBLIC KEY-----\n" +
-        "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5PxZ3DLj+zP6T6HFgzzk\n" +
-        "M77LdzP3fojBoLasw7EfzvLMnJNUlyRb5m8e5QyyJxI+wRjsALHvFgLzGwxM8ehz\n" +
-        "DqqBZed+f4w33GgQXFZOS4AOvyPbALgCYoLehigLAbbCNTkeY5RDcmmSI/sbp+s6\n" +
-        "mAiAKKvCdIqe17bltZ/rfEoL3gPKEfLXeN549LTj3XBp0hvG4loQ6eC1E1tRzSkf\n" +
-        "GJD4GIVvR+j12gXAaftj3ahfYxioBH7F7HQxzmWkwDyn3bqU54eaiB7f0ftsPpWM\n" +
-        "ceUaqkL2DZUvgN0efEJjnWy5y1/Gkq5GGWCROI9XG/SwXJ30BbVUehTbVcD70+ZF\n" +
-        "8QIDAQAB\n" +
-        "-----END PUBLIC KEY-----"
+    static let PublicFaceScanEncryptionKey = PartnerHelper().faceTecPublicFaceScanEncryptionKey()
   
-//  static let PublicFaceScanEncryptionKey = PartnerHelper().faceTecPublicFaceScanEncryptionKey()
+    static let ProductionKeyText = PartnerHelper().faceTecProductionKeyText()
   
-    static let ProductionKeyText = "appId      = *\n" +
-    "expiryDate = 2023-02-10\n" +
-    "key        = 003045022064245be6a70ccac99d3f744cbafdb8fdf416aafa45fb42f90d907465852246ef022100922a1b802481c572d4b1bef5d86d8dd70055d16164fff61a486796e7e7a68fed\n"
+    print("@! >>> FaceTec_BaseURL: ", BaseURL)
+    print("@! >>> FaceTec_DeviceKeyIdentifier: ", DeviceKeyIdentifier)
+    print("@! >>> FaceTec_PublicFaceScanEncryptionKey: ", PublicFaceScanEncryptionKey)
+    print("@! >>> FaceTec_ProductionKeyText: ", ProductionKeyText)
   
-//  static let ProductionKeyText = PartnerHelper().faceTecProductionKeyText()
+//    static let DeviceKeyIdentifier = "dioxhbQHfJHmnHTzJ40hCiUm3FR0IkXY"
+
+//    static let BaseURL = "https://digital-id.webdatadome.com/api"
+  
+//    static let PublicFaceScanEncryptionKey =
+//        "-----BEGIN PUBLIC KEY-----\n" +
+//        "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5PxZ3DLj+zP6T6HFgzzk\n" +
+//        "M77LdzP3fojBoLasw7EfzvLMnJNUlyRb5m8e5QyyJxI+wRjsALHvFgLzGwxM8ehz\n" +
+//        "DqqBZed+f4w33GgQXFZOS4AOvyPbALgCYoLehigLAbbCNTkeY5RDcmmSI/sbp+s6\n" +
+//        "mAiAKKvCdIqe17bltZ/rfEoL3gPKEfLXeN549LTj3XBp0hvG4loQ6eC1E1tRzSkf\n" +
+//        "GJD4GIVvR+j12gXAaftj3ahfYxioBH7F7HQxzmWkwDyn3bqU54eaiB7f0ftsPpWM\n" +
+//        "ceUaqkL2DZUvgN0efEJjnWy5y1/Gkq5GGWCROI9XG/SwXJ30BbVUehTbVcD70+ZF\n" +
+//        "8QIDAQAB\n" +
+//        "-----END PUBLIC KEY-----"
+  
+//    static let ProductionKeyText = "appId      = *\n" +
+//    "expiryDate = 2023-02-10\n" +
+//    "key        = 003045022064245be6a70ccac99d3f744cbafdb8fdf416aafa45fb42f90d907465852246ef022100922a1b802481c572d4b1bef5d86d8dd70055d16164fff61a486796e7e7a68fed\n"
+  
 
 
     // -------------------------------------
