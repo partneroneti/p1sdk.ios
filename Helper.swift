@@ -13,14 +13,12 @@ open class PartnerHelper: PartnerHelperProtocol {
   private let mainWorker = PartnerOneWorker()
   private let mainViewModel = ScanViewModel(worker: PartnerHelper().mainWorker)
   
-  public var mainViewController = UIViewController()
+  public var getSessionToken: (() -> Void)?
   public var transactionID: String = ""
   
   //MARK: - init
 
-  public init(mainViewController: UIViewController = UIViewController(),
-              transactionID: String = "") {
-    self.mainViewController = mainViewController
+  public init(transactionID: String = "") {
     self.transactionID = transactionID
   }
   
@@ -40,6 +38,10 @@ open class PartnerHelper: PartnerHelperProtocol {
   
   public func createUserAgentForNewSession() -> String {
     return ""
+  }
+  
+  public func createUserAgentForSession(_ sessionId: String) -> String {
+    return sessionId
   }
   
   public func faceTecDeviceKeyIdentifier(_ clientKey: String = "") -> String {

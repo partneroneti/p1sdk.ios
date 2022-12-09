@@ -69,7 +69,9 @@ extension ScanViewController {
   }
   
   func startCaptureSession() {
-    DispatchQueue.global(qos: .userInitiated).async {
+    DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+      guard let self = self else { return }
+      
       self.captureSession = AVCaptureSession()
       self.captureSession.beginConfiguration()
       
