@@ -1,5 +1,4 @@
 import UIKit
-import FaceTecSDK
 
 enum PictureView {
   case frontView
@@ -8,9 +7,9 @@ enum PictureView {
 
 open class ScanViewModel {
   
+  let helper = PartnerHelper()
   var sideTitle: String = ""
   var transactionID: String = ""
-  private var latestProcessor: Processor!
   
   func setPhotoSide(_ cases: PictureView) -> String {
     switch cases {
