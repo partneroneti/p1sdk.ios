@@ -12,9 +12,6 @@ open class ScanViewModel {
   var transactionID: String = ""
   private var latestProcessor: Processor!
   
-  var didTapOpenFaceTec: (() -> Void)?
-  var didOpenStatusView: (() -> Void)?
-  
   func setPhotoSide(_ cases: PictureView) -> String {
     switch cases {
     case .backView:  return "Verso"
@@ -26,17 +23,6 @@ open class ScanViewModel {
     if sideTitle == setPhotoSide(.frontView) {
       let nextViewController = ScanViewController(viewModel: self, viewTitle: "Verso")
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
-    }
-    
-    if sideTitle == setPhotoSide(.backView) {
-      didTapOpenFaceTec?()
-      print("@! >>> Starting FaceTec...")
-    }
-  }
-  
-  func navigateStatusView() {
-    if sideTitle == setPhotoSide(.backView) {
-      didOpenStatusView?()
     }
   }
   

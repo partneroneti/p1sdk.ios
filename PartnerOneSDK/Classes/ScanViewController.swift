@@ -14,7 +14,7 @@ open class ScanViewController: BaseViewController<ScanView> {
   private var backCamera: AVCaptureDevice!
   private var backInput: AVCaptureInput!
   private var captureConnection: AVCaptureConnection?
-  private let photoSettings: AVCapturePhotoSettings!
+  private var photoSettings: AVCapturePhotoSettings!
   private var photoOutput = AVCapturePhotoOutput()
   
   //MARK: - init
@@ -39,8 +39,6 @@ open class ScanViewController: BaseViewController<ScanView> {
   open override func viewDidLoad() {
     super.viewDidLoad()
     setupBinds()
-    
-    viewModel.getSession()
   }
   
   open override func didReceiveMemoryWarning() {
@@ -93,7 +91,7 @@ extension ScanViewController {
       self.setupOutput()
       
       let photoOutput = AVCapturePhotoOutput()
-      captureSession.addOutput(photoOutput)
+      self.captureSession.addOutput(photoOutput)
       
       self.captureSession.commitConfiguration()
       self.captureSession.startRunning()
@@ -125,16 +123,18 @@ extension ScanViewController {
       captureSession.addOutput(photoOutput)
     }
     
-    photoSettings()
+    stabilizingPhotoSettings()
     
     photoOutput.connections.first?.videoOrientation = .portrait
   }
   
-  func photoSettings() {
-    if photoOutput.availablePhotoCodecTypes.contains(.base64) {
-      photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-    } else {
-      photoSettings = AVCapturePhotoSettings()
+  func stabilizingPhotoSettings() {
+    if #available(iOS 11.0, *) {
+      if photoOutput.availablePhotoCodecTypes.contains(.jpeg) {
+        photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+      } else {
+        photoSettings = AVCapturePhotoSettings()
+      }
     }
     
     photoSettings.flashMode = .off
@@ -197,24 +197,10 @@ extension ScanViewController {
     baseView.viewTitle.text = viewTitle
     viewModel.sideTitle = viewTitle
     
-    viewModel.didTapOpenFaceTec = { [weak self] in
-      guard let self = self else { return }
-      
-    }
-    
-    viewModel.didOpenStatusView = { [weak self] in
-      guard let self = self else { return }
-      PartnerHelper().openViewAfter(self)
-    }
-    
     baseView.didTapTakePicture = { [weak self] in
       guard let self = self else { return }
       if #available(iOS 11.0, *) {
         self.takePicure()
-      }
-      
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-        self.viewModel.navigateToNextView(self)
       }
     }
     
