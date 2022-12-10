@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var transactionID: String = helper.transactionID
     
     let worker = PartnerOneWorker()
-    let viewModel = ScanViewModel(worker: worker)
+    let viewModel = ScanViewModel(helper: helper)
     viewModel.transactionID = transactionID
     let rootViewController = ScanViewController(viewModel: viewModel, viewTitle: "Frente")
     let navigationController = UINavigationController(rootViewController: rootViewController)

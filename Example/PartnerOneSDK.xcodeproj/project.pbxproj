@@ -169,10 +169,10 @@
 		607FACD21AFB9204008FA782 /* Example for PartnerOneSDK */ = {
 			isa = PBXGroup;
 			children = (
+				EF073A84293FA7B400A31D9A /* Commmon */,
 				EF5BFD3429405F7A00F1955E /* Models */,
 				EF5BFD2329405DF700F1955E /* Networking */,
 				EF073A86293FA7DE00A31D9A /* FaceTecFiles */,
-				EF073A84293FA7B400A31D9A /* Commmon */,
 				EF073A85293FA7C500A31D9A /* Extension */,
 				EF5BFD1E29405C7300F1955E /* Helper.swift */,
 				EFEFAB86293FBCAD00ED8C9D /* ScanView.swift */,

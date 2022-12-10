@@ -7,9 +7,13 @@ enum PictureView {
 
 open class ScanViewModel {
   
-  let helper = PartnerHelper()
+  var helper: PartnerHelper?
   var sideTitle: String = ""
   var transactionID: String = ""
+  
+  init(helper: PartnerHelper?) {
+    self.helper = helper
+  }
   
   func setPhotoSide(_ cases: PictureView) -> String {
     switch cases {
@@ -26,7 +30,7 @@ open class ScanViewModel {
   }
   
   func sendPicture() {
-    helper.sendDocumentPicture?()
+    helper?.sendDocumentPicture?()
     print("@! >>> Enviando imagens dos documentos...")
   }
 }
