@@ -64,6 +64,7 @@ class AuthenticateProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelega
         //
         // Part 4:  Get essential data off the FaceTecSessionResult
         //
+        let BaseURL = "https://digital-id.webdatadome.com/api"
         var parameters: [String : Any] = [:]
         parameters["faceScan"] = sessionResult.faceScanBase64
         parameters["auditTrailImage"] = sessionResult.auditTrailCompressedBase64![0]
@@ -73,7 +74,7 @@ class AuthenticateProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelega
         //
         // Part 5:  Make the Networking Call to Your Servers.  Below is just example code, you are free to customize based on how your own API works.
         //
-        let request = NSMutableURLRequest(url: NSURL(string: Config.BaseURL + "/match-3d-3d")! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: BaseURL + "/match-3d-3d")! as URL)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try! JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions(rawValue: 0))
