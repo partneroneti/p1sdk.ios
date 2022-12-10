@@ -6,8 +6,9 @@ open class PartnerHelper {
   //MARK: - Public Properties
   
   private let mainWorker = PartnerOneWorker()
-  private let mainViewModel = ScanViewModel(worker: PartnerHelper().mainWorker)
+  private let mainViewModel = ScanViewModel()
   
+  public var sendDocumentPicture: (() -> Void)?
   public var getSessionToken: (() -> Void)?
   public var transactionID: String = ""
   
@@ -31,8 +32,12 @@ open class PartnerHelper {
     return FacialScanViewController(viewModel: mainViewModel)
   }
   
+  public func sessionToken(_ token: String) -> String {
+    return token
+  }
+  
   public func createUserAgentForNewSession() -> String {
-    return ""
+    return FaceTec.sdk.createFaceTecAPIUserAgentString("")
   }
   
   public func createUserAgentForSession(_ sessionId: String) -> String {
@@ -41,10 +46,6 @@ open class PartnerHelper {
   
   public func faceTecDeviceKeyIdentifier(_ clientKey: String = "") -> String {
     return clientKey
-  }
-  
-  public func faceTecBaseURL(_ url: String = "") -> String {
-    return url
   }
   
   public func faceTecPublicFaceScanEncryptionKey(_ key: String = "") -> String {

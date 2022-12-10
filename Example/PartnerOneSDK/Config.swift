@@ -10,14 +10,11 @@ class Config {
   
   static let DeviceKeyIdentifier = PartnerHelper().faceTecDeviceKeyIdentifier()
   
-  static let BaseURL = PartnerHelper().faceTecBaseURL()
-  
   static let PublicFaceScanEncryptionKey = PartnerHelper().faceTecPublicFaceScanEncryptionKey()
   
   static let ProductionKeyText = PartnerHelper().faceTecProductionKeyText()
   
   static func displayLogs() {
-    print("@! >>> FaceTec_BaseURL: ", Config.BaseURL)
     print("@! >>> FaceTec_DeviceKeyIdentifier: ", Config.DeviceKeyIdentifier)
     print("@! >>> FaceTec_PublicFaceScanEncryptionKey: ", Config.PublicFaceScanEncryptionKey)
     print("@! >>> FaceTec_ProductionKeyText: ", Config.ProductionKeyText)
@@ -25,7 +22,7 @@ class Config {
   
   //    static let DeviceKeyIdentifier = "dioxhbQHfJHmnHTzJ40hCiUm3FR0IkXY"
   
-  //    static let BaseURL = "https://digital-id.webdatadome.com/api"
+  //  static let BaseURL = "https://digital-id.webdatadome.com/api"
   
   //    static let PublicFaceScanEncryptionKey =
   //        "-----BEGIN PUBLIC KEY-----\n" +

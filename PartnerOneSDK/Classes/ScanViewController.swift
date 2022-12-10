@@ -14,6 +14,7 @@ open class ScanViewController: BaseViewController<ScanView> {
   private var backCamera: AVCaptureDevice!
   private var backInput: AVCaptureInput!
   private var captureConnection: AVCaptureConnection?
+  private let photoSettings: AVCapturePhotoSettings!
   private var photoOutput = AVCapturePhotoOutput()
   
   //MARK: - init
@@ -91,6 +92,9 @@ extension ScanViewController {
       
       self.setupOutput()
       
+      let photoOutput = AVCapturePhotoOutput()
+      captureSession.addOutput(photoOutput)
+      
       self.captureSession.commitConfiguration()
       self.captureSession.startRunning()
     }
@@ -121,7 +125,22 @@ extension ScanViewController {
       captureSession.addOutput(photoOutput)
     }
     
+    photoSettings()
+    
     photoOutput.connections.first?.videoOrientation = .portrait
+  }
+  
+  func photoSettings() {
+    if photoOutput.availablePhotoCodecTypes.contains(.base64) {
+      photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+    } else {
+      photoSettings = AVCapturePhotoSettings()
+    }
+    
+    photoSettings.flashMode = .off
+    photoSettings.isAutoStillImageStabilizationEnabled = self.photoOutput.isStillImageStabilizationSupported
+    
+    photoOutput.capturePhoto(with: photoSettings, delegate: self)
   }
   
   func setupPreviewLayer(){

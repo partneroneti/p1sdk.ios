@@ -74,10 +74,10 @@ extension FacialScanViewController {
   }
   
   public func createUserAgentForNewSession() -> String {
-    return ""
+    return FaceTec.sdk.createUserAgentForNewSession()
   }
   
   public func createUserAgentForSession(_ sessionId: String) -> String {
-    return FaceTecSDK.createFaceTecAPIUserAgentString(sessionId)
+    return FaceTecSDK.sdk.createFaceTecAPIUserAgentString(sessionId)
   }
 }

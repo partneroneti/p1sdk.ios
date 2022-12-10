@@ -8,17 +8,12 @@ enum PictureView {
 
 open class ScanViewModel {
   
-  var worker: PartnerOneWorker
   var sideTitle: String = ""
   var transactionID: String = ""
   private var latestProcessor: Processor!
   
   var didTapOpenFaceTec: (() -> Void)?
   var didOpenStatusView: (() -> Void)?
-  
-  init(worker: PartnerOneWorker) {
-    self.worker = worker
-  }
   
   func setPhotoSide(_ cases: PictureView) -> String {
     switch cases {
@@ -45,24 +40,8 @@ open class ScanViewModel {
     }
   }
   
-  func getSession() {
-    worker.getSession { (response) in
-      switch response {
-      case .success(let model):
-        print(model)
-      case .noConnection(let description):
-        print("Server error timeOut: \(description) \n")
-      case .serverError(let error):
-        let errorData = "\(error.statusCode), -, \(error.msgError)"
-        print("Server error: \(errorData) \n")
-        break
-      case .timeOut(let description):
-        print("Server error noConnection: \(description) \n")
-      }
-    }
-  }
-  
   func sendPicture() {
-    print("Foto enviada.")
+    helper.sendDocumentPicture?()
+    print("@! >>> Enviando imagens dos documentos...")
   }
 }

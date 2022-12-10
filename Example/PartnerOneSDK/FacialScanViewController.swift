@@ -47,6 +47,10 @@ extension FacialScanViewController {
       Config.displayLogs()
       self.initializeProcessor()
     })
+    
+    helper.sendDocumentPicture = { (picture)
+      self.viewModel.sendPicture()
+    }
   }
   
   func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSessionResult,
@@ -74,10 +78,10 @@ extension FacialScanViewController {
   }
   
   public func createUserAgentForNewSession() -> String {
-    return ""
+    return FaceTec.sdk.createUserAgentForNewSession()
   }
   
   public func createUserAgentForSession(_ sessionId: String) -> String {
-    return FaceTecSDK.createFaceTecAPIUserAgentString(sessionId)
+    return FaceTecSDK.sdk.createFaceTecAPIUserAgentString(sessionId)
   }
 }
