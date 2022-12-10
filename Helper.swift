@@ -36,12 +36,12 @@ open class PartnerHelper {
     return token
   }
   
-  public func createUserAgentForNewSession() {
-    FaceTec.sdk.createFaceTecAPIUserAgentString("")
+  public func createUserAgentForNewSession() -> String {
+    return FaceTec.sdk.createFaceTecAPIUserAgentString("")
   }
   
-  public func createUserAgentForSession(_ sessionToken: String) {
-    FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
+  public func createUserAgentForSession(_ sessionToken: String = "") -> String {
+    return FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
   }
   
   public func faceTecDeviceKeyIdentifier(_ clientKey: String = "") -> String {
