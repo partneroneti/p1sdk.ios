@@ -56,7 +56,7 @@ extension FacialScanViewController {
   
   func onComplete() {
     print("Escaneamento Completo. Navegando para Status!")
-    viewModel.navigateStatusView()
+    PartnerHelper().navigateToStatus?()
   }
   
   func getLatestExternalDatabaseRefID() -> String {

@@ -10,6 +10,7 @@ open class PartnerHelper {
   
   public var sendDocumentPicture: (() -> Void)?
   public var getSessionToken: (() -> Void)?
+  public var navigateToStatus: (() -> Void)?
   public var transactionID: String = ""
   
   //MARK: - init
