@@ -10,11 +10,11 @@ class Config {
   
   static let helper = PartnerHelper()
   
-  static let DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
+  static var DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
   
-  static let PublicFaceScanEncryptionKey = helper.faceTecPublicFaceScanEncryptionKey
+  static var PublicFaceScanEncryptionKey = helper.faceTecPublicFaceScanEncryptionKey
   
-  static let ProductionKeyText = helper.faceTecProductionKeyText
+  static var ProductionKeyText = helper.faceTecProductionKeyText
   
   static func displayLogs() {
     print("@! >>> FaceTec_DeviceKeyIdentifier: ", Config.DeviceKeyIdentifier)

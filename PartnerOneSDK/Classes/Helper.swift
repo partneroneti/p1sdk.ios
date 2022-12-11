@@ -39,10 +39,6 @@ open class PartnerHelper {
     return ScanViewController(viewModel: mainViewModel, viewTitle: "Frente")
   }
   
-  public func config() -> AnyObject {
-    return Config()
-  }
-  
   public func sessionToken(_ token: String = "") -> String {
     return token
   }
