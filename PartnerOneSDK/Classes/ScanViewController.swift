@@ -90,9 +90,6 @@ extension ScanViewController {
       
       self.setupOutput()
       
-      let photoOutput = AVCapturePhotoOutput()
-      self.captureSession.addOutput(photoOutput)
-      
       self.captureSession.commitConfiguration()
       self.captureSession.startRunning()
     }
@@ -124,20 +121,6 @@ extension ScanViewController {
     }
     
     photoOutput.connections.first?.videoOrientation = .portrait
-  }
-  
-  func stabilizingPhotoSettings() {
-    if #available(iOS 11.0, *) {
-      if photoOutput.availablePhotoCodecTypes.contains(.jpeg) {
-        photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-      } else {
-        photoSettings = AVCapturePhotoSettings()
-      }
-    }
-    
-    photoSettings.flashMode = .off
-    
-    photoOutput.capturePhoto(with: photoSettings, delegate: self)
   }
   
   func setupPreviewLayer(){
