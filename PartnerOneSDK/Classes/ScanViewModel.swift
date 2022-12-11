@@ -29,6 +29,12 @@ open class ScanViewModel {
     }
   }
   
+  func navigateToPreviewView(_ viewController: UIViewController) {
+    if sideTitle == setPhotoSide(.backView) {
+      viewController.navigationController?.popViewController(animated: true)
+    }
+  }
+  
   func sendPicture() {
     helper?.sendDocumentPicture?()
     print("@! >>> Enviando imagens dos documentos...")

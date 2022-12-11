@@ -181,6 +181,7 @@ extension ScanViewController {
       guard let self = self else { return }
       if #available(iOS 11.0, *) {
         self.takePicure()
+        self.viewModel.navigateToNextView(self)
       }
     }
     
