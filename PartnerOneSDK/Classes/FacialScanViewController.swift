@@ -30,6 +30,7 @@ final class FacialScanViewController: UIViewController, FaceTecFaceScanProcessor
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navigationItem.hidesBackButton = true
     view.backgroundColor = .white
     
     FaceTec.initialize()
