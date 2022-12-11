@@ -29,7 +29,7 @@ open class PartnerHelper {
   
   public func startDocumentCapture() -> UIViewController {
     let mainViewModel = ScanViewModel(helper: self)
-    return ScanViewController(viewModel: mainViewModel)
+    return ScanViewController(viewModel: mainViewModel, viewTitle: "Frente")
   }
   
   public func sessionToken(_ token: String = "") -> String {
