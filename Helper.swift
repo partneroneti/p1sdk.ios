@@ -8,6 +8,9 @@ open class PartnerHelper {
   public var sendDocumentPicture: (() -> Void)?
   public var navigateToStatus: (() -> Void)?
   public var transactionID: String = ""
+  public var getFaceScan: String = ""
+  public var getAuditTrailImage: String = ""
+  public var getLowQualityAuditTrailImage: String = ""
   
   //MARK: - init
 
