@@ -8,6 +8,10 @@ open class PartnerHelper {
   public var sendDocumentPicture: (() -> Void)?
   public var navigateToStatus: (() -> Void)?
   public var transactionID: String = ""
+  
+  public var faceTecDeviceKeyIdentifier: String = ""
+  public var faceTecPublicFaceScanEncryptionKey: String = ""
+  public var faceTecProductionKeyText: String = ""
   public var getFaceScan: String = ""
   public var getAuditTrailImage: String = ""
   public var getLowQualityAuditTrailImage: String = ""
@@ -45,17 +49,5 @@ open class PartnerHelper {
   
   public func createUserAgentForSession(_ sessionToken: String = "") -> String {
     return FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
-  }
-  
-  public func faceTecDeviceKeyIdentifier(_ clientKey: String = "") -> String {
-    return clientKey
-  }
-  
-  public func faceTecPublicFaceScanEncryptionKey(_ key: String = "") -> String {
-    return key
-  }
-  
-  public func faceTecProductionKeyText(_ key: String = "") -> String {
-    return key
   }
 }

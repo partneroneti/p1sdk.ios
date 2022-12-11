@@ -8,11 +8,13 @@ import FaceTecSDK
 
 class Config {
   
-  static let DeviceKeyIdentifier = PartnerHelper().faceTecDeviceKeyIdentifier()
+  static let helper = PartnerHelper()
   
-  static let PublicFaceScanEncryptionKey = PartnerHelper().faceTecPublicFaceScanEncryptionKey()
+  static let DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
   
-  static let ProductionKeyText = PartnerHelper().faceTecProductionKeyText()
+  static let PublicFaceScanEncryptionKey = helper.faceTecPublicFaceScanEncryptionKey
+  
+  static let ProductionKeyText = helper.faceTecProductionKeyText
   
   static func displayLogs() {
     print("@! >>> FaceTec_DeviceKeyIdentifier: ", Config.DeviceKeyIdentifier)
