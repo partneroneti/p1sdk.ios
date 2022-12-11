@@ -5,7 +5,7 @@ import PartnerOneSDK
 open class ScanViewController: BaseViewController<ScanView> {
   
   private var viewModel: ScanViewModel
-  private var viewTitle: String
+  var viewTitle: String
   
   /// Camera Setup Variables
   ///
