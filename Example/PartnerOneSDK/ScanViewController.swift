@@ -123,8 +123,6 @@ extension ScanViewController {
       captureSession.addOutput(photoOutput)
     }
     
-    stabilizingPhotoSettings()
-    
     photoOutput.connections.first?.videoOrientation = .portrait
   }
   
@@ -138,7 +136,6 @@ extension ScanViewController {
     }
     
     photoSettings.flashMode = .off
-    photoSettings.isAutoStillImageStabilizationEnabled = self.photoOutput.isStillImageStabilizationSupported
     
     photoOutput.capturePhoto(with: photoSettings, delegate: self)
   }

@@ -43,6 +43,7 @@
 		EC5661884EDC63077451C8C6B6765463 /* ProcesingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4783FAAB2F775F83D76007B18C1D1F /* ProcesingDelegate.swift */; };
 		EF0886072942985F001E8EB4 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0886062942985F001E8EB4 /* FaceTecSDK.xcframework */; };
 		EF9202E12943743400302029 /* FacialScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9202E02943743400302029 /* FacialScanViewController.swift */; };
+		EFDBA2C82946685C0040268E /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDBA2C72946685C0040268E /* FaceTecSDK.xcframework */; };
 		F67C9230A4190966A3C7172B16F4CA20 /* Pods-PartnerOneSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE3595BB2FB7127C4BF22712D373EC /* Pods-PartnerOneSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F80FE6BB4722767D0F85DB8F3D8DF5D0 /* AuthenticateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A6CEA2C5E2E13A17AFD462B9E1458 /* AuthenticateProcessor.swift */; };
 		F8874640A09194B32163177ADDE6784A /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7CBAFD41B5496401762079C818BC6 /* SampleAppUtilities.swift */; };
@@ -124,6 +125,7 @@
 		ECFA323EB7175AE292A6D8F949668531 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0886062942985F001E8EB4 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		EF9202E02943743400302029 /* FacialScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacialScanViewController.swift; path = PartnerOneSDK/Classes/FacialScanViewController.swift; sourceTree = "<group>"; };
+		EFDBA2C72946685C0040268E /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		F14D1B5728DAF680AABB3B86BFC8318E /* PartnerOneSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PartnerOneSDK.debug.xcconfig; sourceTree = "<group>"; };
 		F3A7CBAFD41B5496401762079C818BC6 /* SampleAppUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
 		F518120D640D4A04D3B0365F4C2C733D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			files = (
 				EF0886072942985F001E8EB4 /* FaceTecSDK.xcframework in Frameworks */,
 				EBDCD829DE9F09D97C1202933BA56C31 /* FaceTecSDK.framework in Frameworks */,
+				EFDBA2C82946685C0040268E /* FaceTecSDK.xcframework in Frameworks */,
 				9624376F5D63BEA7DF2D6BED8BBF240B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +279,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				EFDBA2C72946685C0040268E /* FaceTecSDK.xcframework */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				EC75AA803004F0D525360E67F28137B8 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,

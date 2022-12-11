@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,7 @@
 		EF5BFD8D29418D9100F1955E /* DocumentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD8C29418D9100F1955E /* DocumentDataModel.swift */; };
 		EF5BFD8F2941921800F1955E /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD8E2941921800F1955E /* SessionModel.swift */; };
 		EF6ADDD8294219370018F3C5 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ADDD7294219370018F3C5 /* DataParser.swift */; };
+		EF81543D29466833009E9895 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF81543C29466833009E9895 /* FaceTecSDK.xcframework */; };
 		EF9202DF294367E700302029 /* FacialScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9202DE294367E700302029 /* FacialScanViewController.swift */; };
 		EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */; };
 		EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB82293FBC9800ED8C9D /* BaseView.swift */; };
@@ -113,6 +114,7 @@
 		EF5BFD8C29418D9100F1955E /* DocumentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DocumentDataModel.swift; path = ../../DocumentDataModel.swift; sourceTree = "<group>"; };
 		EF5BFD8E2941921800F1955E /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionModel.swift; path = ../../SessionModel.swift; sourceTree = "<group>"; };
 		EF6ADDD7294219370018F3C5 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataParser.swift; path = ../../DataParser.swift; sourceTree = "<group>"; };
+		EF81543C29466833009E9895 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
 		EF9202DE294367E700302029 /* FacialScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialScanViewController.swift; sourceTree = "<group>"; };
 		EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		EFEFAB82293FBC9800ED8C9D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF81543D29466833009E9895 /* FaceTecSDK.xcframework in Frameworks */,
 				EFEFABE0293FE1F000ED8C9D /* FaceTecSDK.framework in Frameworks */,
 				DDD337FD64C7247494D7736A /* Pods_PartnerOneSDK_Example.framework in Frameworks */,
 			);
@@ -148,6 +151,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				EF81543C29466833009E9895 /* FaceTecSDK.xcframework */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PartnerOneSDK */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -662,7 +666,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -678,7 +683,10 @@
 					"$(LD_RUNPATH_SEARCH_PATHS)",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -699,7 +707,10 @@
 					"${LD_RUNPATH_SEARCH_PATHS}",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -723,7 +734,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -743,7 +758,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
