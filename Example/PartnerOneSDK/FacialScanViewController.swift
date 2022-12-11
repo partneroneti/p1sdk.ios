@@ -47,16 +47,6 @@ extension FacialScanViewController {
       Config.displayLogs()
       self.initializeProcessor()
     })
-    
-    guard let faceTecDeviceKeyIdentifier = helper?.faceTecDeviceKeyIdentifier,
-          let faceTecProductionKeyText = helper?.faceTecProductionKeyText,
-          let faceTecPublicFaceScanEncryptionKey = helper?.faceTecPublicFaceScanEncryptionKey else {
-      return
-    }
-    
-    Config.DeviceKeyIdentifier = faceTecDeviceKeyIdentifier
-    Config.ProductionKeyText = faceTecProductionKeyText
-    Config.PublicFaceScanEncryptionKey = faceTecPublicFaceScanEncryptionKey
   }
   
   func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSessionResult,

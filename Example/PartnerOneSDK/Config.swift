@@ -6,15 +6,15 @@ import UIKit
 import Foundation
 import FaceTecSDK
 
-class Config {
+open class Config {
   
   static let helper = PartnerHelper()
   
-  static var DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
+  public static var DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
   
-  static var PublicFaceScanEncryptionKey = helper.faceTecPublicFaceScanEncryptionKey
+  public static var PublicFaceScanEncryptionKey = helper.faceTecPublicFaceScanEncryptionKey
   
-  static var ProductionKeyText = helper.faceTecProductionKeyText
+  public static var ProductionKeyText = helper.faceTecProductionKeyText
   
   static func displayLogs() {
     print("@! >>> FaceTec_DeviceKeyIdentifier: ", Config.DeviceKeyIdentifier)
