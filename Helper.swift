@@ -5,22 +5,29 @@ open class PartnerHelper {
   
   //MARK: - Public Properties
   
-  public var sendDocumentPicture: (() -> Void)?
-  public var navigateToStatus: (() -> Void)?
-  public var transactionID: String = ""
+  private var processor: LivenessCheckProcessor?
   
+  public var sendDocumentPicture: (() -> Void)?
+  public var onNavigateToFaceCapture: (() -> Void)?
+  public var waitingFaceTecResponse: (() -> Void)?
+  public var navigateToStatus: (() -> Void)?
+  public var onSuccessFaceTec: (() -> Void)?
+  
+  public var transaction: String = ""
+  public var sessionToken: String = ""
   public var faceTecDeviceKeyIdentifier: String = ""
   public var faceTecPublicFaceScanEncryptionKey: String = ""
   public var faceTecProductionKeyText: String = ""
+  
   public var getFaceScan: String = ""
   public var getAuditTrailImage: String = ""
   public var getLowQualityAuditTrailImage: String = ""
   
+  public var faceScanResultCallback: FaceTecFaceScanResultCallback?
+  
   //MARK: - init
 
-  public init(transactionID: String = "") {
-    self.transactionID = transactionID
-  }
+  public init() {}
   
   //MARK: - Public Functions
   
@@ -31,7 +38,11 @@ open class PartnerHelper {
   
   public func startFaceCapture() -> UIViewController {
     let mainViewModel = ScanViewModel(helper: self)
-    return FacialScanViewController(viewModel: mainViewModel)
+    let viewController = FacialScanViewController(viewModel: mainViewModel)
+    
+    processor?.helper = self
+    
+    return viewController
   }
   
   public func startDocumentCapture() -> UIViewController {
@@ -39,8 +50,8 @@ open class PartnerHelper {
     return ScanViewController(viewModel: mainViewModel, viewTitle: "Frente")
   }
   
-  public func config() -> AnyObject {
-    return Config()
+  public func transactionId(_ id: String = "") -> String {
+    return id
   }
   
   public func sessionToken(_ token: String = "") -> String {
@@ -54,4 +65,10 @@ open class PartnerHelper {
   public func createUserAgentForSession(_ sessionToken: String = "") -> String {
     return FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
   }
+  
+  public func lastViewController(_ viewController: UIViewController = UIViewController()) -> UIViewController {
+    return viewController
+  }
+  
+  
 }
