@@ -34,9 +34,9 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
             return
           }
     
-      self.helper.f(sessionResult.faceScanBase64 ?? "")
-    self.helper.getAuditTrailImage(sessionResult.auditTrailCompressedBase64?[0] ?? "")
-    self.helper.getLowQualityAuditTrailImage(sessionResult.lowQualityAuditTrailCompressedBase64?[0] ?? "")
+      self.helper.faceScan=(sessionResult.faceScanBase64 ?? "")
+    self.helper.auditTrailImage=(sessionResult.auditTrailCompressedBase64?[0] ?? "")
+    self.helper.lowQualityAuditTrailImage=(sessionResult.lowQualityAuditTrailCompressedBase64?[0] ?? "")
     
     self.fromViewController.faceTecLivenessData(faceScanBase: sessionResult.faceScanBase64 ?? "",
                                                 auditTrailImage: sessionResult.auditTrailCompressedBase64?[0] ?? "",
