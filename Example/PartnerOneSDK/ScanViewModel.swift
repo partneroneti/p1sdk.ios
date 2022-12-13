@@ -29,10 +29,9 @@ open class ScanViewModel {
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
-//    if sideTitle == setPhotoSide(.backView) {
-//      let nextViewController = FacialScanViewController(viewModel: self)
-//      viewController.navigationController?.pushViewController(nextViewController, animated: true)
-//    }
+    if sideTitle == setPhotoSide(.backView) {
+      sendPicture()
+    }
   }
   
   func navigateToPreviewView(_ viewController: UIViewController) {
