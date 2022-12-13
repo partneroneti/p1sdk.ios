@@ -10,6 +10,7 @@ open class ScanViewModel {
   var helper: PartnerHelper?
   var sideTitle: String = ""
   var transactionID: String = ""
+  var documents = [AnyObject]()
   
   init(helper: PartnerHelper?) {
     self.helper = helper
@@ -38,14 +39,6 @@ open class ScanViewModel {
     if sideTitle == setPhotoSide(.backView) {
       viewController.navigationController?.popViewController(animated: true)
     }
-  }
-  
-  func setImageType(_ type: String) {
-    helper?.getDocumentImageType(type)
-  }
-  
-  func setImageSize(_ size: String) {
-    helper?.getDocumentImageSize(size)
   }
   
   func sendPicture() {
