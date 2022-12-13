@@ -20,6 +20,12 @@ open class PartnerHelper {
   public var faceTecDeviceKeyIdentifier: String = ""
   public var faceTecPublicFaceScanEncryptionKey: String = ""
   public var faceTecProductionKeyText: String = ""
+    
+    public var faceScan: String = ""
+    public var auditTrailImage: String = ""
+    public var lowQualityAuditTrailImage: String = ""
+    
+    
   
 //  public var getFaceScan: String = ""
 //  public var getAuditTrailImage: String = ""
@@ -89,14 +95,14 @@ open class PartnerHelper {
   }
   
   public func getFaceScan(_ string: String = "") -> String {
-    return string
+    return faceScan
   }
   
   public func getAuditTrailImage(_ string: String = "") -> String {
-    return string
+    return auditTrailImage
   }
   
   public func getLowQualityAuditTrailImage(_ string: String = "") -> String {
-    return string
+    return lowQualityAuditTrailImage
   }
 }
