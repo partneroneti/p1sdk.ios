@@ -27,18 +27,25 @@ open class ScanViewModel {
       let nextViewController = ScanViewController(viewModel: self, viewTitle: "Verso")
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
-    /*
-    if sideTitle == setPhotoSide(.backView) {
-      let nextViewController = FacialScanViewController(viewModel: self)
-      viewController.navigationController?.pushViewController(nextViewController, animated: true)
-    }
-     */
+    
+//    if sideTitle == setPhotoSide(.backView) {
+//      let nextViewController = FacialScanViewController(viewModel: self)
+//      viewController.navigationController?.pushViewController(nextViewController, animated: true)
+//    }
   }
   
   func navigateToPreviewView(_ viewController: UIViewController) {
     if sideTitle == setPhotoSide(.backView) {
       viewController.navigationController?.popViewController(animated: true)
     }
+  }
+  
+  func setImageType(_ type: String) {
+    helper?.getDocumentImageType(type)
+  }
+  
+  func setImageSize(_ size: String) {
+    helper?.getDocumentImageSize(size)
   }
   
   func sendPicture() {

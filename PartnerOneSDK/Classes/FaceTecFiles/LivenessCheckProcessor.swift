@@ -24,7 +24,15 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
   }
   
   public func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSessionResult, faceScanResultCallback: FaceTecFaceScanResultCallback) {
-    fromViewController.setLatestSessionResult(sessionResult: sessionResult)
+    
+          if sessionResult.status != FaceTecSessionStatus.sessionCompletedSuccessfully {
+            if latestNetworkRequest != nil {
+              latestNetworkRequest.cancel()
+        }
+      
+            faceScanResultCallback.onFaceScanResultCancel()
+            return
+          }
     
     self.helper.getFaceScan(sessionResult.faceScanBase64 ?? "")
     self.helper.getAuditTrailImage(sessionResult.auditTrailCompressedBase64?[0] ?? "")
