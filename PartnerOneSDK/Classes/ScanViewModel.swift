@@ -27,11 +27,12 @@ open class ScanViewModel {
       let nextViewController = ScanViewController(viewModel: self, viewTitle: "Verso")
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
-    
+    /*
     if sideTitle == setPhotoSide(.backView) {
       let nextViewController = FacialScanViewController(viewModel: self)
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
+     */
   }
   
   func navigateToPreviewView(_ viewController: UIViewController) {
