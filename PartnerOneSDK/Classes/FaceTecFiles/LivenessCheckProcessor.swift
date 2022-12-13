@@ -46,11 +46,6 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
     
     print("@! >>> Escaneamento facial feito. Fazendo checagem...")
       
-        guard let scanResultBlob = responseJSON["scanResultBlob"] as? String,
-              let wasProcessed = responseJSON["wasProcessed"] as? Bool else {
-          faceScanResultCallback.onFaceScanResultCancel()
-          return;
-    }
     
 //    if sessionResult.status != FaceTecSessionStatus.sessionCompletedSuccessfully {
 //      if latestNetworkRequest != nil {
