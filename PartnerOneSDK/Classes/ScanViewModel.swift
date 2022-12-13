@@ -41,7 +41,7 @@ open class ScanViewModel {
   }
   
   func setImageType(_ type: String) {
-    helper?.getDocumentImageType(type)
+    helper?.setDocumentImageType(type)
   }
   
   func setImageSize(_ size: String) {

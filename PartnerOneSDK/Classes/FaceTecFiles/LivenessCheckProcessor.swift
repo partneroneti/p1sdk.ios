@@ -51,14 +51,6 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
           faceScanResultCallback.onFaceScanResultCancel()
           return;
     }
-  
-        if wasProcessed == true {
-          FaceTecCustomization.setOverrideResultScreenSuccessMessage("Liveness\nConfirmed")
-          self.success = faceScanResultCallback.onFaceScanGoToNextStep(scanResultBlob: scanResultBlob)
-        } else {
-          faceScanResultCallback.onFaceScanResultCancel()
-          return;
-        }
     
 //    if sessionResult.status != FaceTecSessionStatus.sessionCompletedSuccessfully {
 //      if latestNetworkRequest != nil {
