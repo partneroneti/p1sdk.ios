@@ -45,6 +45,9 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
     self.fromViewController.processorResponse?()
     
     print("@! >>> Escaneamento facial feito. Fazendo checagem...")
+      
+              FaceTecCustomization.setOverrideResultScreenSuccessMessage("Liveness\nConfirmed")
+    self.success = faceScanResultCallback.onFaceScanGoToNextStep(scanResultBlob: scanResultBlob)
     
 //    if sessionResult.status != FaceTecSessionStatus.sessionCompletedSuccessfully {
 //      if latestNetworkRequest != nil {
