@@ -79,7 +79,7 @@ open class PartnerHelper {
   public func getDocumentImageType() -> String {
       return documentImageType
   }
-    public func setDocumentImageType(_ type: String = "") -> String {
+    public func setDocumentImageType(_ type: String = "") -> Void {
     documentImageType = type
     }
   
