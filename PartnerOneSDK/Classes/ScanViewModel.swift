@@ -41,7 +41,12 @@ open class ScanViewModel {
   }
   
   func setImageType(_ type: String) {
-    helper?.setDocumentImageType(type)
+      if sideTitle == setPhotoSide(.backView) {
+          helper?.setDocumentImageTypeBack(type)
+      }else{
+          helper?.setDocumentImageTypeFront(type)
+      }
+   
   }
   
   func setImageSize(_ size: String) {
@@ -49,7 +54,9 @@ open class ScanViewModel {
   }
   
   func sendPicture() {
-    helper?.sendDocumentPicture?()
-    print("@! >>> Enviando imagens dos documentos...")
+      if sideTitle == setPhotoSide(.backView) {
+          helper?.sendDocumentPicture?()
+          print("@! >>> Enviando imagens dos documentos...")
+      }
   }
 }

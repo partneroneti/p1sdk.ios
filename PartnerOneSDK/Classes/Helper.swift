@@ -25,7 +25,8 @@ open class PartnerHelper {
     public var auditTrailImage: String = ""
     public var lowQualityAuditTrailImage: String = ""
     
-    private var documentImageType: String = ""
+    private var documentImageTypeFront: String = ""
+    private var documentImageTypeBack: String = ""
     
     
   
@@ -76,11 +77,18 @@ open class PartnerHelper {
     return FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
   }
   
-  public func getDocumentImageType() -> String {
-      return documentImageType
+  public func getDocumentImageTypeFront() -> String {
+      return documentImageTypeFront
   }
-    public func setDocumentImageType(_ type: String = "") -> Void {
-    documentImageType = type
+    public func setDocumentImageTypeFront(_ type: String = "") -> Void {
+    documentImageTypeFront = type
+    }
+    
+    public func getDocumentImageTypeBack() -> String {
+        return documentImageTypeBack
+    }
+    public func setDocumentImageTypeBack(_ type: String = "") -> Void {
+      documentImageTypeBack = type
     }
   
   public func getDocumentImageSize(_ size: String = "") -> String {
