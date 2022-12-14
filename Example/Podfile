@@ -10,3 +10,13 @@ target 'PartnerOneSDK_Example' do
     inherit! :search_paths
   end
 end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == "ObjectMapper"
+            target.build_configurations.each do |config|
+                config.build_settings['FRAMEWORK_SEARCH_PATHS'] = '${PODS_ROOT}/**'
+            end
+        end
+    end
+end

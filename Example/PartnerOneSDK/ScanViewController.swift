@@ -185,13 +185,13 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     let photoPreviewContainer = baseView.photoPreviewContainer
     photoPreviewContainer.imageView.image = previewImage
     
-    helper.documentType = imageData.base64EncodedString()
+    helper.documentType = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
+    helper.documentByte = imageData.base64EncodedString()
     
-    let documentType = imageData.base64EncodedString()
-    helper.setDocumentType(documentType)
-    
-    let document = DocumentDataModel(type: imageData.base64EncodedString(),
-                                     byte: "\(imageData.map({ $0.byteSwapped }))")
+    var document: [String:Any] = [
+      "type": helper.documentType,
+      "byte": helper.documentByte
+    ]
     
     helper.documentsImages.append(document)
     

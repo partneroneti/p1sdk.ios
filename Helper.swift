@@ -21,8 +21,9 @@ open class PartnerHelper {
   public var faceTecPublicFaceScanEncryptionKey: String = ""
   public var faceTecProductionKeyText: String = ""
   
-  public var documentsImages: [DocumentDataModel] = []
+  public var documentsImages: [Any] = []
   public var documentType: String = ""
+  public var documentByte: String = ""
   
   public var getFaceScan: String = ""
   public var getAuditTrailImage: String = ""
@@ -94,16 +95,4 @@ open class PartnerHelper {
       return false
     }
   }
-  
-//  public func getFaceScan(_ string: String = "") -> String {
-//    return string
-//  }
-  
-//  public func getAuditTrailImage(_ string: String = "") -> String {
-//    return string
-//  }
-//
-//  public func getLowQualityAuditTrailImage(_ string: String = "") -> String {
-//    return string
-//  }
 }
