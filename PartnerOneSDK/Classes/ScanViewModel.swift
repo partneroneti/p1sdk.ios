@@ -30,7 +30,9 @@ open class ScanViewModel {
     }
     
     if sideTitle == setPhotoSide(.backView) {
-      sendPicture()
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        self.sendPicture()
+      }
     }
   }
   
@@ -39,7 +41,6 @@ open class ScanViewModel {
       "type": type,
       "byte": byte
     ]
-    
     helper.documentsImages.append(documentImage)
   }
   
