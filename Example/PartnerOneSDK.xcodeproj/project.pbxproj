@@ -15,11 +15,9 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		CC6E38D215F4567F0548FDDE /* Pods_PartnerOneSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6293320C3CA60BB2D9C3D45D /* Pods_PartnerOneSDK_Tests.framework */; };
 		DDD337FD64C7247494D7736A /* Pods_PartnerOneSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBECA43F87C92866954735CA /* Pods_PartnerOneSDK_Example.framework */; };
-		EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A75293FA7A600A31D9A /* EnrollmentProcessor.swift */; };
 		EF073A80293FA7A900A31D9A /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A79293FA7A700A31D9A /* ThemeHelpers.swift */; };
 		EF073A81293FA7A900A31D9A /* LivenessCheckProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A7A293FA7A800A31D9A /* LivenessCheckProcessor.swift */; };
 		EF073A82293FA7A900A31D9A /* ProcesingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A7B293FA7A800A31D9A /* ProcesingDelegate.swift */; };
-		EF073A83293FA7A900A31D9A /* AuthenticateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A7C293FA7A900A31D9A /* AuthenticateProcessor.swift */; };
 		EF073A88293FA7ED00A31D9A /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */; };
 		EF073ADB293FA8F400A31D9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073ADA293FA8F400A31D9A /* Config.swift */; };
 		EF073AE0293FAD1400A31D9A /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF073ADD293FAD1300A31D9A /* FaceTec.strings */; };
@@ -93,11 +91,9 @@
 		B8CA0CFFCA13431C93D72BD7 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3710A2E7570CE9EDF193F40 /* Pods-PartnerOneSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartnerOneSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-PartnerOneSDK_Tests/Pods-PartnerOneSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EBECA43F87C92866954735CA /* Pods_PartnerOneSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartnerOneSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF073A75293FA7A600A31D9A /* EnrollmentProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentProcessor.swift; sourceTree = "<group>"; };
 		EF073A79293FA7A700A31D9A /* ThemeHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeHelpers.swift; sourceTree = "<group>"; };
 		EF073A7A293FA7A800A31D9A /* LivenessCheckProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessCheckProcessor.swift; sourceTree = "<group>"; };
 		EF073A7B293FA7A800A31D9A /* ProcesingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcesingDelegate.swift; sourceTree = "<group>"; };
-		EF073A7C293FA7A900A31D9A /* AuthenticateProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateProcessor.swift; sourceTree = "<group>"; };
 		EF073A87293FA7ED00A31D9A /* SampleAppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
 		EF073ADA293FA8F400A31D9A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EF073ADD293FAD1300A31D9A /* FaceTec.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
@@ -250,8 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				EF073A78293FA7A700A31D9A /* Helpers */,
-				EF073A7C293FA7A900A31D9A /* AuthenticateProcessor.swift */,
-				EF073A75293FA7A600A31D9A /* EnrollmentProcessor.swift */,
 				EF073A7A293FA7A800A31D9A /* LivenessCheckProcessor.swift */,
 				EF073A7B293FA7A800A31D9A /* ProcesingDelegate.swift */,
 			);
@@ -504,7 +498,6 @@
 				EF5BFD2B29405E0500F1955E /* Result.swift in Sources */,
 				EFEFAB8B293FBCC800ED8C9D /* CroppingView.swift in Sources */,
 				EF073ADB293FA8F400A31D9A /* Config.swift in Sources */,
-				EF073A83293FA7A900A31D9A /* AuthenticateProcessor.swift in Sources */,
 				EF5BFD2D29405E0500F1955E /* Response.swift in Sources */,
 				EF5BFD3A29405F9600F1955E /* LivenessModel.swift in Sources */,
 				EF5BFD3829405F9600F1955E /* CredentialsModel.swift in Sources */,
@@ -513,7 +506,6 @@
 				EF5BFD8D29418D9100F1955E /* DocumentDataModel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ScanViewController.swift in Sources */,
 				EF073A80293FA7A900A31D9A /* ThemeHelpers.swift in Sources */,
-				EF073A7D293FA7A900A31D9A /* EnrollmentProcessor.swift in Sources */,
 				EF5BFD8F2941921800F1955E /* SessionModel.swift in Sources */,
 				EF5BFD3929405F9600F1955E /* DocumentModel.swift in Sources */,
 				EFEFAB87293FBCAD00ED8C9D /* ScanView.swift in Sources */,

@@ -25,7 +25,6 @@
 		804C5F363BBC96633D1CF6763DAE4EE4 /* CroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411C41E2BD767E6DA29B75C0F82A1F5 /* CroppingView.swift */; };
 		8988DB367CD818A99F5E2F38C6E029D0 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549317F01D194743694E445BD33AAEB9 /* CapturedImageView.swift */; };
 		8CEEB2E6874514C3921CF21C2F7172E6 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501D86E66E65F13117A6B46AEF1AFB2 /* SessionModel.swift */; };
-		916CFF8D313EBE6E57448EAA7A21CB0D /* EnrollmentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468C77EF75BC8CB5E69891CCC4D2229 /* EnrollmentProcessor.swift */; };
 		9624376F5D63BEA7DF2D6BED8BBF240B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */; };
 		A28C438CF0FA0E39588F0B7494A298D5 /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC5787703A4D949DE4AF38BE006829 /* DocumentModel.swift */; };
 		A3A8FEBB08BEE81D5DCED780E5DB106B /* Pods-PartnerOneSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0324F94612FB38E4F9449689DF40 /* Pods-PartnerOneSDK_Example-dummy.m */; };
@@ -45,7 +44,6 @@
 		EF9202E12943743400302029 /* FacialScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9202E02943743400302029 /* FacialScanViewController.swift */; };
 		EFDBA2C82946685C0040268E /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDBA2C72946685C0040268E /* FaceTecSDK.xcframework */; };
 		F67C9230A4190966A3C7172B16F4CA20 /* Pods-PartnerOneSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE3595BB2FB7127C4BF22712D373EC /* Pods-PartnerOneSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F80FE6BB4722767D0F85DB8F3D8DF5D0 /* AuthenticateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A6CEA2C5E2E13A17AFD462B9E1458 /* AuthenticateProcessor.swift */; };
 		F8874640A09194B32163177ADDE6784A /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7CBAFD41B5496401762079C818BC6 /* SampleAppUtilities.swift */; };
 		F96BE2579C7DA969F2A0C0FE5E9BB56C /* Pods-PartnerOneSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 058203571A0C7C4230713DF83B2CC184 /* Pods-PartnerOneSDK_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -75,7 +73,6 @@
 		194D9590D1637B4AE85144DFDAEA8A4F /* Pods-PartnerOneSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartnerOneSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		197318C6A76638905DC535B9AB4E0542 /* PartnerOneSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PartnerOneSDK.release.xcconfig; sourceTree = "<group>"; };
 		2225F2C0BC9C9731B40B5BB3BE1E9220 /* PartnerOneSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-prefix.pch"; sourceTree = "<group>"; };
-		257A6CEA2C5E2E13A17AFD462B9E1458 /* AuthenticateProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticateProcessor.swift; sourceTree = "<group>"; };
 		2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PartnerOneSDK; path = PartnerOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C992AA7CE070D2918E528B6C2D3634 /* Pods-PartnerOneSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3501D86E66E65F13117A6B46AEF1AFB2 /* SessionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionModel.swift; path = PartnerOneSDK/Classes/SessionModel.swift; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E4783FAAB2F775F83D76007B18C1D1F /* ProcesingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProcesingDelegate.swift; sourceTree = "<group>"; };
 		A4FF7443A6E9C5B670EC869509BFC812 /* BaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = PartnerOneSDK/Classes/BaseView.swift; sourceTree = "<group>"; };
-		B468C77EF75BC8CB5E69891CCC4D2229 /* EnrollmentProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnrollmentProcessor.swift; sourceTree = "<group>"; };
 		B5BAC4552DF9CE04E490EBA0E39629E9 /* PartnerOneSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PartnerOneSDK.modulemap; sourceTree = "<group>"; };
 		B8A184180765C6EB274BD6AD1E5EEB0C /* Pods-PartnerOneSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BC44D4DD21D15CCF225C27355D98738B /* ErrorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorType.swift; path = PartnerOneSDK/Classes/ErrorType.swift; sourceTree = "<group>"; };
@@ -299,9 +295,7 @@
 		F3922984EFC7BCA096E939BC587E8653 /* FaceTecFiles */ = {
 			isa = PBXGroup;
 			children = (
-				257A6CEA2C5E2E13A17AFD462B9E1458 /* AuthenticateProcessor.swift */,
 				EB1A603323ED765B56642E0EEC3EBE56 /* Config.swift */,
-				B468C77EF75BC8CB5E69891CCC4D2229 /* EnrollmentProcessor.swift */,
 				62A51891E777B20CAC822DB1B3D33362 /* FaceTec.strings */,
 				F6D037C9426DFA73F195FC39383265B7 /* LivenessCheckProcessor.swift */,
 				9E4783FAAB2F775F83D76007B18C1D1F /* ProcesingDelegate.swift */,
@@ -480,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80FE6BB4722767D0F85DB8F3D8DF5D0 /* AuthenticateProcessor.swift in Sources */,
 				BDEE46F501DAF9F6522AF384FC09DF64 /* BaseView.swift in Sources */,
 				E6B94893B72CF44BBE6E19E10659DDF9 /* BaseViewController.swift in Sources */,
 				8988DB367CD818A99F5E2F38C6E029D0 /* CapturedImageView.swift in Sources */,
@@ -490,7 +483,6 @@
 				002B7A141A5E2C9F824BDB7B8DA0FF55 /* DataParser.swift in Sources */,
 				BC6D8FBCB43608D489821F6A54C02B0F /* DocumentDataModel.swift in Sources */,
 				A28C438CF0FA0E39588F0B7494A298D5 /* DocumentModel.swift in Sources */,
-				916CFF8D313EBE6E57448EAA7A21CB0D /* EnrollmentProcessor.swift in Sources */,
 				EF9202E12943743400302029 /* FacialScanViewController.swift in Sources */,
 				095A9E0CECED9F2077DDB030D9F631DF /* ErrorResponse.swift in Sources */,
 				44C05E76C873E97B4F59937A054FBE17 /* ErrorType.swift in Sources */,

@@ -1,6 +1,6 @@
 import Foundation
 
-struct DocumentDataModel: Codable {
+public struct DocumentDataModel: Codable {
   var type: String?
   var byte: String?
 }

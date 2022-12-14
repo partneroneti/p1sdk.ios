@@ -23,6 +23,7 @@ open class ScanViewController: BaseViewController<ScanView> {
               helper: PartnerHelper,
               viewTitle: String = "") {
     self.viewModel = viewModel
+    self.helper = helper
     self.viewTitle = viewTitle
     super.init()
   }
@@ -184,10 +185,15 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     let photoPreviewContainer = baseView.photoPreviewContainer
     photoPreviewContainer.imageView.image = previewImage
     
+    helper.documentType = imageData.base64EncodedString()
+    
+    let documentType = imageData.base64EncodedString()
+    helper.setDocumentType(documentType)
+    
     let document = DocumentDataModel(type: imageData.base64EncodedString(),
                                      byte: "\(imageData.map({ $0.byteSwapped }))")
     
-    helper.documentsImages?.append(document)
+    helper.documentsImages.append(document)
     
     captureSession.stopRunning()
   }

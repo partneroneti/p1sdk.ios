@@ -42,6 +42,7 @@ open class ScanViewModel {
   
   func sendPicture() {
     helper.sendDocumentPicture?()
+    print(helper.documentsImages.count)
     print("@! >>> Enviando imagens dos documentos...")
   }
 }
