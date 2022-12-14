@@ -34,6 +34,15 @@ open class ScanViewModel {
     }
   }
   
+  func appendDocumentPicture(type: String, byte: String) {
+    let documentImage: [String:Any] = [
+      "type": type,
+      "byte": byte
+    ]
+    
+    helper.documentsImages.append(documentImage)
+  }
+  
   func navigateToPreviewView(_ viewController: UIViewController) {
     if sideTitle == setPhotoSide(.backView) {
       viewController.navigationController?.popViewController(animated: true)
