@@ -20,8 +20,5 @@
   },
   "source_files": "PartnerOneSDK/Classes/**/*",
   "public_header_files": "Pods/Classes/**/*.h",
-  "frameworks": [
-    "FaceTecSDK",
-    "ObjectMapper"
-  ]
+  "frameworks": "FaceTecSDK"
 }

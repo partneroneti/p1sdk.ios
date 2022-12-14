@@ -35,6 +35,6 @@ Pod::Spec.new do |s|
   # }
   
    s.public_header_files = 'Pods/Classes/**/*.h'
-   s.frameworks = 'FaceTecSDK', 'ObjectMapper'
+   s.frameworks = 'FaceTecSDK'
 #   s.dependency 'FaceTecSDK'
 end
