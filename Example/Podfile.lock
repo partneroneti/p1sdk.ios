@@ -1,16 +1,23 @@
 PODS:
+  - ObjectMapper (3.5.3)
   - PartnerOneSDK (0.1.0)
 
 DEPENDENCIES:
+  - ObjectMapper (~> 3.5)
   - PartnerOneSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - ObjectMapper
 
 EXTERNAL SOURCES:
   PartnerOneSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PartnerOneSDK: 3cda736d817e85daef32afccfb438d8323fd8e12
 
-PODFILE CHECKSUM: 44644c36600bae87d0d2967cda9ba02899487b5d
+PODFILE CHECKSUM: f841ec1f4119a4fb9a3c048e11eda67608d17948
 
 COCOAPODS: 1.11.3

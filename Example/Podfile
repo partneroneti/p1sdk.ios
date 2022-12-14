@@ -4,7 +4,8 @@ platform :ios, '10.0'
 
 target 'PartnerOneSDK_Example' do
   pod 'PartnerOneSDK', :path => '../'
-
+  pod 'ObjectMapper', '~> 3.5'
+  
   target 'PartnerOneSDK_Tests' do
     inherit! :search_paths
   end
