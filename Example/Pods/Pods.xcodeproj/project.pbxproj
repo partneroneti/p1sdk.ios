@@ -12,11 +12,13 @@
 		13C19DC46445E9020BE12E12F4A35793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */; };
 		19480707C9F816684788CD8573F59980 /* Pods-PartnerOneSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 194D9590D1637B4AE85144DFDAEA8A4F /* Pods-PartnerOneSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1969555B897ECF46DB55636925ECA0EC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBD65039AE99A701E3F3B1E84F26A5 /* Helper.swift */; };
-		24BA0482D19EE7FDFAE455085FB67B90 /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */; };
 		2522023283B68BC0E507764AF08E76C1 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37777968EC7E8F36AAE07C1E3E2C5EA7 /* ScanView.swift */; };
 		336949F4C875A4957267B04B83F636B1 /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373F65412EA396877B2D084AB773E5B /* SampleAppUtilities.swift */; };
 		40CEBBF806B5992BB6A770A137EF6227 /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */; };
 		43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E2B308294B585F009F86D0 /* LivenessResult.swift */; };
+		43E2B313294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */; };
+		43E2B314294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */; };
+		43E2B315294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */; };
 		5BD88AD58DA2E8D2A1A29F7CECFC6A75 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734F4E4CCB358CDC93132F26F9C68FF2 /* DataParser.swift */; };
 		5E050A400BD9BE9DCB77C5E16EC59D45 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */; };
 		651782323256A6BF771CE5DA86BF4528 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C88F50F5358729EC81BC787D9EFEC /* ErrorResponse.swift */; };
@@ -84,6 +86,7 @@
 		3FF20051FDBB89497532D260EB5CFFF1 /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		43E2B308294B585F009F86D0 /* LivenessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessResult.swift; sourceTree = "<group>"; };
+		43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		51B803D7131941DD35B19E4FBECD8C25 /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = PartnerOneSDK/Classes/ScanViewController.swift; sourceTree = "<group>"; };
 		575DDBB3CA797C44721EC701CC5DF372 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		59C296938E38BA08287CBF3723EFCEAE /* Pods-PartnerOneSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Tests.modulemap"; sourceTree = "<group>"; };
@@ -108,7 +111,6 @@
 		BE57555373C5CB1AE7E11C6B1E2107DE /* Pods-PartnerOneSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C050DDCA748818FE3FCCDD97462D3559 /* LivenessModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LivenessModel.swift; path = PartnerOneSDK/Classes/LivenessModel.swift; sourceTree = "<group>"; };
 		C5981FBA1F38A87788AD2134F5F9BF50 /* ScanViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewModel.swift; path = PartnerOneSDK/Classes/ScanViewModel.swift; sourceTree = "<group>"; };
-		C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceTecSDK.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/FaceTecSDK.framework; sourceTree = DEVELOPER_DIR; };
 		C6A86D1543851C6D239FAD9DB0BE0D50 /* PartnerOneSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PartnerOneSDK-Info.plist"; sourceTree = "<group>"; };
 		C9EA76696CD277AE7DAFCB00F8C34BE9 /* SessionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionModel.swift; path = PartnerOneSDK/Classes/SessionModel.swift; sourceTree = "<group>"; };
 		CEE0193BD0245115A5000958589D5E88 /* PartnerOneWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartnerOneWorker.swift; path = PartnerOneSDK/Classes/PartnerOneWorker.swift; sourceTree = "<group>"; };
@@ -133,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24BA0482D19EE7FDFAE455085FB67B90 /* FaceTecSDK.framework in Frameworks */,
+				43E2B313294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */,
 				A27E85CBC66FF0674315EAC4E776CBD6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E2B314294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */,
 				780D064624BF3805270E5719DDAC6AC0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E2B315294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */,
 				13C19DC46445E9020BE12E12F4A35793 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +288,7 @@
 		C113A1B6789FF094537BD5211B183964 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C69D3C9004DBF9003187F350F291B815 /* FaceTecSDK.framework */,
+				43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */,
 				DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */,
 			);
 			name = iOS;
