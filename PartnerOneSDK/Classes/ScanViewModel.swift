@@ -52,16 +52,16 @@ open class ScanViewModel {
   
   func setImageType(_ type: String) {
       if sideTitle == setPhotoSide(.frontView) {
-          helper?.setDocumentImageTypeFront(type)
+          helper.setDocumentImageTypeFront(type)
       }else{
-          helper?.setDocumentImageTypeBack(type)
+          helper.setDocumentImageTypeBack(type)
 
       }
    
   }
   
   func setImageSize(_ size: String) {
-    helper?.getDocumentImageSize(size)
+    helper.getDocumentImageSize(size)
   }
   
   func sendPicture() {
