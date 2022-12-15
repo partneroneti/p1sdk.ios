@@ -30,7 +30,7 @@ open class ScanViewModel {
     }
     
     if sideTitle == setPhotoSide(.backView) {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
         self.sendPicture()
       }
     }
@@ -51,8 +51,11 @@ open class ScanViewModel {
   }
   
   func sendPicture() {
-    helper.sendDocumentPicture?()
-    print(helper.documentsImages.count)
-    print("@! >>> Enviando imagens dos documentos...")
+    if helper.documentsImages.count == 2 {
+      helper.sendDocumentPicture?()
+      print(helper.documentsImages.count)
+      print("@! >>> Enviando imagens dos documentos...")
+      print("@! >>> Numero final de itens: \(helper.documentsImages.count)")
+    }
   }
 }
