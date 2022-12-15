@@ -10,6 +10,7 @@ open class PartnerHelper {
   public var sendDocumentPicture: (() -> Void)?
   public var onNavigateToFaceCapture: (() -> Void)?
   public var waitingFaceTecResponse: (() -> Void)?
+  public var livenessCallBack: (() -> LivenessResult)?
   public var navigateToStatus: (() -> Void)?
   public var onSuccessFaceTec: (() -> Void)?
   

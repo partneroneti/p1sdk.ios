@@ -16,6 +16,7 @@
 		2522023283B68BC0E507764AF08E76C1 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37777968EC7E8F36AAE07C1E3E2C5EA7 /* ScanView.swift */; };
 		336949F4C875A4957267B04B83F636B1 /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373F65412EA396877B2D084AB773E5B /* SampleAppUtilities.swift */; };
 		40CEBBF806B5992BB6A770A137EF6227 /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */; };
+		43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E2B308294B585F009F86D0 /* LivenessResult.swift */; };
 		5BD88AD58DA2E8D2A1A29F7CECFC6A75 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734F4E4CCB358CDC93132F26F9C68FF2 /* DataParser.swift */; };
 		5E050A400BD9BE9DCB77C5E16EC59D45 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */; };
 		651782323256A6BF771CE5DA86BF4528 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C88F50F5358729EC81BC787D9EFEC /* ErrorResponse.swift */; };
@@ -72,7 +73,7 @@
 		20C505C3EC001D274FD72ACBA393B2AF /* DocumentModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentModel.swift; path = PartnerOneSDK/Classes/DocumentModel.swift; sourceTree = "<group>"; };
 		248E35046236149CDF2DFCE07BF52E74 /* FacialScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FacialScanViewController.swift; path = PartnerOneSDK/Classes/FacialScanViewController.swift; sourceTree = "<group>"; };
 		27F2FC3BBB64E824CD76922A13C2ACF2 /* PartnerOneSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PartnerOneSDK.release.xcconfig; sourceTree = "<group>"; };
-		2A59F82FF5F5B189CCD1AD5B10971F17 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2A59F82FF5F5B189CCD1AD5B10971F17 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2D3C4C70F9B3B870487F0ED16B01CFBA /* ServerError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerError.swift; path = PartnerOneSDK/Classes/ServerError.swift; sourceTree = "<group>"; };
 		2E2D211A6C9A04FD020538A1FE34223F /* PartnerOneSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PartnerOneSDK; path = PartnerOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C992AA7CE070D2918E528B6C2D3634 /* Pods-PartnerOneSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,12 +83,13 @@
 		3C3ADA302E50424D4D24DACED635F681 /* Pods-PartnerOneSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Example.modulemap"; sourceTree = "<group>"; };
 		3FF20051FDBB89497532D260EB5CFFF1 /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
+		43E2B308294B585F009F86D0 /* LivenessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessResult.swift; sourceTree = "<group>"; };
 		51B803D7131941DD35B19E4FBECD8C25 /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = PartnerOneSDK/Classes/ScanViewController.swift; sourceTree = "<group>"; };
-		575DDBB3CA797C44721EC701CC5DF372 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		575DDBB3CA797C44721EC701CC5DF372 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		59C296938E38BA08287CBF3723EFCEAE /* Pods-PartnerOneSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		5BF2E243A14ABB0184A2CC074C12AF13 /* FaceTec.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
 		65088DB7960764893FCDDAD644D98C44 /* ProcesingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProcesingDelegate.swift; sourceTree = "<group>"; };
-		6657652535BD5BA0B962C0BDC62ACF60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6657652535BD5BA0B962C0BDC62ACF60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6B922A75D831A16A82EA704A68E7F0E0 /* PartnerOneSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-prefix.pch"; sourceTree = "<group>"; };
 		734F4E4CCB358CDC93132F26F9C68FF2 /* DataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataParser.swift; path = PartnerOneSDK/Classes/DataParser.swift; sourceTree = "<group>"; };
 		7D190873CBD00F6AE14BDF0B0168633D /* Pods-PartnerOneSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 		8F71AA1588A2B19314467BB51B469689 /* Pods-PartnerOneSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PartnerOneSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		994802E833404BA63345F1B0C48E61C0 /* Pods-PartnerOneSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		99EB0324F94612FB38E4F9449689DF40 /* Pods-PartnerOneSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E48FFC58A42943B477D41E614C67B87 /* PartnerOneSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-umbrella.h"; sourceTree = "<group>"; };
 		A3BBD65039AE99A701E3F3B1E84F26A5 /* Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = PartnerOneSDK/Classes/Helper.swift; sourceTree = "<group>"; };
 		A9AA3DE9DFE47CDD9B694682EB56909C /* PartnerOneSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PartnerOneSDK-dummy.m"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				89E75562846050982C63E60FAA80DC43 /* FaceTecFiles */,
 				9F6A40E69035BD2E14EBD5366BE3D66C /* Pod */,
 				26C98631D3C0B533F7D2A3755A7BC7A5 /* Support Files */,
+				43E2B308294B585F009F86D0 /* LivenessResult.swift */,
 			);
 			name = PartnerOneSDK;
 			path = ../..;
@@ -488,6 +491,7 @@
 				845252CD0CEECB30B4EC5D7A3FC9C3E5 /* Response.swift in Sources */,
 				336949F4C875A4957267B04B83F636B1 /* SampleAppUtilities.swift in Sources */,
 				2522023283B68BC0E507764AF08E76C1 /* ScanView.swift in Sources */,
+				43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */,
 				9C6929EC5A6B656B9E99EAB71200FAFB /* ScanViewController.swift in Sources */,
 				CA93F27428567B01F03B0E9EBD7F2054 /* ScanViewModel.swift in Sources */,
 				F1440EC05B0DE8BED6C0CC34371887BC /* ServerError.swift in Sources */,
