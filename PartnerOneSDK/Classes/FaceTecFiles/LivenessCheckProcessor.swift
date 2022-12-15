@@ -34,7 +34,7 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
         return
     }
     
-      self.helper.livenessCallBack!(sessionResult.faceScanBase64 ?? "" ,
+      PartnerHelper.livenessCallBack!(sessionResult.faceScanBase64 ?? "" ,
                                 sessionResult.auditTrailCompressedBase64?[0] ?? "", sessionResult.lowQualityAuditTrailCompressedBase64?[0] ?? "")
       faceScanResultCallback.onFaceScanResultCancel()
       
