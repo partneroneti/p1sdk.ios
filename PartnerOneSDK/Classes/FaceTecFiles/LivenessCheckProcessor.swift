@@ -1,7 +1,3 @@
-//
-// Welcome to the annotated FaceTec Device SDK core code for performing secure Liveness Checks!
-//
-
 import UIKit
 import Foundation
 import FaceTecSDK
@@ -24,7 +20,7 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
   }
   
   public func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSessionResult, faceScanResultCallback: FaceTecFaceScanResultCallback) {
-    
+
           if sessionResult.status != FaceTecSessionStatus.sessionCompletedSuccessfully {
             if latestNetworkRequest != nil {
               latestNetworkRequest.cancel()
@@ -38,10 +34,9 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
     self.helper.auditTrailImage=(sessionResult.auditTrailCompressedBase64?[0] ?? "")
     self.helper.lowQualityAuditTrailImage=(sessionResult.lowQualityAuditTrailCompressedBase64?[0] ?? "")
     
-    self.fromViewController.faceTecLivenessData(faceScanBase: sessionResult.faceScanBase64 ?? "",
-                                                auditTrailImage: sessionResult.auditTrailCompressedBase64?[0] ?? "",
-                                                lowQualityAuditTrailImage: sessionResult.lowQualityAuditTrailCompressedBase64?[0] ?? "")
+    fromViewController.setLatestSessionResult(sessionResult: sessionResult)
     
+    self.faceScanResultCallback = faceScanResultCallback
     self.fromViewController.processorResponse?()
     
     print("@! >>> Escaneamento facial feito. Fazendo checagem...")
@@ -107,6 +102,12 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
 //      let uploadMessage: NSMutableAttributedString = NSMutableAttributedString.init(string: "Still Uploading...")
 //      faceScanResultCallback.onFaceScanUploadMessageOverride(uploadMessageOverride: uploadMessage)
 //    }
+    
+      PartnerHelper.livenessCallBack!(sessionResult.faceScanBase64 ?? "" ,
+                                sessionResult.auditTrailCompressedBase64?[0] ?? "", sessionResult.lowQualityAuditTrailCompressedBase64?[0] ?? "")
+      faceScanResultCallback.onFaceScanResultCancel()
+      
+      
   }
   
   public func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {

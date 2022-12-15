@@ -5,6 +5,7 @@ import PartnerOneSDK
 open class ScanViewController: BaseViewController<ScanView> {
   
   private var viewModel: ScanViewModel
+  private var helper: PartnerHelper
   var viewTitle: String
   
   /// Camera Setup Variables
@@ -19,8 +20,10 @@ open class ScanViewController: BaseViewController<ScanView> {
   
   //MARK: - init
   public init(viewModel: ScanViewModel,
+              helper: PartnerHelper,
               viewTitle: String = "") {
     self.viewModel = viewModel
+    self.helper = helper
     self.viewTitle = viewTitle
     super.init()
   }
@@ -38,7 +41,9 @@ open class ScanViewController: BaseViewController<ScanView> {
   
   open override func viewDidLoad() {
     super.viewDidLoad()
-    setupBinds()
+    if #available(iOS 11.0, *) {
+      setupBinds()
+    }
   }
   
   open override func didReceiveMemoryWarning() {
@@ -161,6 +166,28 @@ extension ScanViewController {
 @available(iOS 11.0, *)
 extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
   
+  public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+    
+    guard let imageData = photo.fileDataRepresentation() else {
+      return
+    }
+    
+    let previewImage = UIImage(data: imageData)
+    
+    let photoPreviewContainer = baseView.photoPreviewContainer
+    photoPreviewContainer.imageView.image = previewImage
+    
+    let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
+    
+    viewModel.appendDocumentPicture(type: type,
+                                    byte: imageData.base64EncodedString())
+    
+    print("@! >>> Documento da \(viewTitle) adicionado.")
+    print("@! >>> Numero de itens: \(helper.documentsImages.count)")
+    
+    captureSession.stopRunning()
+  }
+  
   @objc
   func takePicure() {
     let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
@@ -170,27 +197,10 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
       photoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
   }
-  
-  public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-    
-    guard let imageData = photo.fileDataRepresentation() else { return }
-    
-    viewModel.setImageType(imageData.base64EncodedString())
-    viewModel.setImageSize("\(imageData.map({ $0.byteSwapped }))")
-    
-    let previewImage = UIImage(data: imageData)
-    
-    let photoPreviewContainer = baseView.photoPreviewContainer
-    photoPreviewContainer.imageView.image = previewImage
-    
-    viewModel.sendPicture()
-    
-    captureSession.stopRunning()
-    baseView.photoPreviewContainer.isHidden = false
-  }
 }
 
 extension ScanViewController {
+  
   func setupBinds() {
     /// Setup View Title
     /// * Return from viewModel as (.front)*
@@ -200,11 +210,18 @@ extension ScanViewController {
     viewModel.sideTitle = viewTitle
     
     baseView.didTapTakePicture = { [weak self] in
-      guard let self = self else { return }
+      guard let self = self else {
+        return
+      }
+      
+      if self.viewTitle == self.viewModel.setPhotoSide(.backView) {
+        self.baseView.takePicBtn.isUserInteractionEnabled = false
+      }
+      
       if #available(iOS 11.0, *) {
         self.takePicure()
-        self.viewModel.navigateToNextView(self)
       }
+      self.viewModel.navigateToNextView(self)
     }
     
     baseView.didTapBack = { [weak self] in

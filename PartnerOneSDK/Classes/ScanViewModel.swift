@@ -7,11 +7,12 @@ enum PictureView {
 
 open class ScanViewModel {
   
-  var helper: PartnerHelper?
+  var helper: PartnerHelper
   var sideTitle: String = ""
   var transactionID: String = ""
+  var documents = [AnyObject]()
   
-  init(helper: PartnerHelper?) {
+  init(helper: PartnerHelper) {
     self.helper = helper
   }
   
@@ -24,14 +25,23 @@ open class ScanViewModel {
   
   func navigateToNextView(_ viewController: UIViewController) {
     if sideTitle == setPhotoSide(.frontView) {
-      let nextViewController = ScanViewController(viewModel: self, viewTitle: "Verso")
+      let nextViewController = ScanViewController(viewModel: self, helper: self.helper, viewTitle: "Verso")
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
-//    if sideTitle == setPhotoSide(.backView) {
-//      let nextViewController = FacialScanViewController(viewModel: self)
-//      viewController.navigationController?.pushViewController(nextViewController, animated: true)
-//    }
+    if sideTitle == setPhotoSide(.backView) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        self.sendPicture()
+      }
+    }
+  }
+  
+  func appendDocumentPicture(type: String, byte: String) {
+    let documentImage: [String:Any] = [
+      "type": type,
+      "byte": byte
+    ]
+    helper.documentsImages.append(documentImage)
   }
   
   func navigateToPreviewView(_ viewController: UIViewController) {
@@ -55,9 +65,11 @@ open class ScanViewModel {
   }
   
   func sendPicture() {
-      if sideTitle != setPhotoSide(.frontView) {
-          helper?.sendDocumentPicture?()
-          print("@! >>> Enviando imagens dos documentos...")
-      }
+    if helper.documentsImages.count == 2 {
+      helper.sendDocumentPicture?()
+      print(helper.documentsImages.count)
+      print("@! >>> Enviando imagens dos documentos...")
+      print("@! >>> Numero final de itens: \(helper.documentsImages.count)")
+    }
   }
 }

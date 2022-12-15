@@ -9,7 +9,7 @@ open class PartnerHelper {
   
   public var sendDocumentPicture: (() -> Void)?
   public var onNavigateToFaceCapture: (() -> Void)?
-  public var waitingFaceTecResponse: ((_ faceScan: String, _ auditTrailImage: String, _ lowQualityAuditTrailImage: String) -> Void)?
+  public var waitingFaceTecResponse: (() -> Void)?
   public var navigateToStatus: (() -> Void)?
   public var onSuccessFaceTec: (() -> Void)?
   
@@ -21,10 +21,15 @@ open class PartnerHelper {
   public var faceTecPublicFaceScanEncryptionKey: String = ""
   public var faceTecProductionKeyText: String = ""
   
-//  public var getFaceScan: String = ""
-//  public var getAuditTrailImage: String = ""
-//  public var getLowQualityAuditTrailImage: String = ""
+  public var documentsImages = [[String:Any]]()
+  public var documentType: String = ""
+  public var documentByte: String = ""
   
+  public var getFaceScan: String = ""
+  public var getAuditTrailImage: String = ""
+  public var getLowQualityAuditTrailImage: String = ""
+  
+  public var wasProcessed: Bool = false
   public var faceScanResultCallback: FaceTecFaceScanResultCallback?
   
   //MARK: - init
@@ -35,21 +40,19 @@ open class PartnerHelper {
   
   public func initializeSDK(_ viewController: UIViewController) {
     let mainViewModel = ScanViewModel(helper: self)
-    viewController.navigationController?.pushViewController(ScanViewController(viewModel: mainViewModel), animated: true)
+    viewController.navigationController?.pushViewController(ScanViewController(viewModel: mainViewModel, helper: self), animated: true)
   }
   
   public func startFaceCapture() -> UIViewController {
     let mainViewModel = ScanViewModel(helper: self)
-    let viewController = FacialScanViewController(viewModel: mainViewModel)
-    
+    let viewController = FacialScanViewController(viewModel: mainViewModel, helper: self)
     processor?.helper = self
-    
     return viewController
   }
   
   public func startDocumentCapture() -> UIViewController {
     let mainViewModel = ScanViewModel(helper: self)
-    return ScanViewController(viewModel: mainViewModel, viewTitle: "Frente")
+    return ScanViewController(viewModel: mainViewModel, helper: self, viewTitle: "Frente")
   }
   
   public func transactionId(_ id: String = "") -> String {
@@ -68,8 +71,12 @@ open class PartnerHelper {
     return FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
   }
   
-  public func getDocumentImageType(_ type: String = "") -> String {
-    return type
+  public func setDocumentType(_ type: String) {
+    documentType = type
+  }
+  
+  public func getDocumentImageType() -> String {
+    return documentType
   }
   
   public func getDocumentImageSize(_ size: String = "") -> String {
@@ -80,23 +87,9 @@ open class PartnerHelper {
     return viewController
   }
   
-  public func faceTecAnalisys(_ viewController: UIViewController = UIViewController()) -> Bool {
-    if currentViewController == viewController {
-      return true
-    } else {
-      return false
-    }
-  }
-  
-  public func getFaceScan(_ string: String = "") -> String {
-    return string
-  }
-  
-  public func getAuditTrailImage(_ string: String = "") -> String {
-    return string
-  }
-  
-  public func getLowQualityAuditTrailImage(_ string: String = "") -> String {
-    return string
+  public func faceScanBase64() -> String {
+    let mainViewModel = ScanViewModel(helper: self)
+    let viewController = FacialScanViewController(viewModel: mainViewModel, helper: self)
+    return viewController.faceScanBase64
   }
 }
