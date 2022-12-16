@@ -78,6 +78,8 @@ extension FacialScanViewController {
       guard let self = self else {
         return
       }
+        
+        ThemeHelpers.setAppTheme(theme: "")
       
       Config.displayLogs()
       
