@@ -73,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		2C591C163748FE72C703965C /* Pods-PartnerOneSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartnerOneSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		43D9390A294CB5A600B82C27 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		55FA8584A5B53A5DBB6FC886 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PartnerOneSDK.podspec; path = ../PartnerOneSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* PartnerOneSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartnerOneSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		607FACD21AFB9204008FA782 /* Example for PartnerOneSDK */ = {
 			isa = PBXGroup;
 			children = (
+				43D9390A294CB5A600B82C27 /* SFProDisplay-Regular.ttf */,
 				EF073A84293FA7B400A31D9A /* Commmon */,
 				EF5BFD3429405F7A00F1955E /* Models */,
 				EF5BFD2329405DF700F1955E /* Networking */,

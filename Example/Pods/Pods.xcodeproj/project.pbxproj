@@ -85,6 +85,7 @@
 		3C3ADA302E50424D4D24DACED635F681 /* Pods-PartnerOneSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Example.modulemap"; sourceTree = "<group>"; };
 		3FF20051FDBB89497532D260EB5CFFF1 /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
+		43D9390B294CBB1E00B82C27 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		43E2B308294B585F009F86D0 /* LivenessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessResult.swift; sourceTree = "<group>"; };
 		43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		51B803D7131941DD35B19E4FBECD8C25 /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = PartnerOneSDK/Classes/ScanViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 		9BA756909E0CB0555882AB385762E7CB /* PartnerOneSDK */ = {
 			isa = PBXGroup;
 			children = (
+				43D9390B294CBB1E00B82C27 /* SFProDisplay-Regular.ttf */,
 				85C7E902EBCB22CD17669DBA2E68FD7D /* BaseView.swift */,
 				42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */,
 				8933DE24A1A936E47D552B381E05F798 /* CapturedImageView.swift */,
