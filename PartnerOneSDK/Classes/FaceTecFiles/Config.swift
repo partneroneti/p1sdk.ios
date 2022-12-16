@@ -105,13 +105,13 @@ open class Config {
           defaultCustomization.guidanceCustomization.foregroundColor = textColor
           
           // customizar as fontes
-          defaultCustomization.guidanceCustomization.buttonFont = font ?? <#default value#>
-          defaultCustomization.guidanceCustomization.headerFont = font ?? <#default value#>
-          defaultCustomization.guidanceCustomization.subtextFont = font ?? <#default value#>
-          defaultCustomization.guidanceCustomization.readyScreenHeaderFont = font ?? <#default value#>
-          defaultCustomization.guidanceCustomization.readyScreenSubtextFont = font ?? <#default value#>
-          defaultCustomization.guidanceCustomization.retryScreenHeaderFont = font ?? <#default value#>
-          defaultCustomization.guidanceCustomization.retryScreenSubtextFont = font ?? <#default value#>
+          defaultCustomization.guidanceCustomization.buttonFont = font!
+          defaultCustomization.guidanceCustomization.headerFont = font!
+          defaultCustomization.guidanceCustomization.subtextFont = font!
+          defaultCustomization.guidanceCustomization.readyScreenHeaderFont = font!
+          defaultCustomization.guidanceCustomization.readyScreenSubtextFont = font!
+          defaultCustomization.guidanceCustomization.retryScreenHeaderFont = font!
+          defaultCustomization.guidanceCustomization.retryScreenSubtextFont = font!
     
           
           
@@ -132,7 +132,7 @@ open class Config {
           // Set Feedback Customization
           defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
           defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-          defaultCustomization.feedbackCustomization.textFont = font ?? <#default value#>
+          defaultCustomization.feedbackCustomization.textFont = font!
 
           // Set Cancel Customization
           defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -145,7 +145,7 @@ open class Config {
           defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
           defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
           defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-          defaultCustomization.resultScreenCustomization.messageFont = font ?? <#default value#>
+          defaultCustomization.resultScreenCustomization.messageFont = font!
           
           // Set Security Watermark Customization
           defaultCustomization.securityWatermarkImage = .faceTec
@@ -219,13 +219,13 @@ open class Config {
       defaultCustomization.guidanceCustomization.foregroundColor = textColor
       
       // customizar as fontes
-      defaultCustomization.guidanceCustomization.buttonFont = font ?? <#default value#>
-      defaultCustomization.guidanceCustomization.headerFont = font ?? <#default value#>
-      defaultCustomization.guidanceCustomization.subtextFont = font ?? <#default value#>
-      defaultCustomization.guidanceCustomization.readyScreenHeaderFont = font ?? <#default value#>
-      defaultCustomization.guidanceCustomization.readyScreenSubtextFont = font ?? <#default value#>
-      defaultCustomization.guidanceCustomization.retryScreenHeaderFont = font ?? <#default value#>
-      defaultCustomization.guidanceCustomization.retryScreenSubtextFont = font ?? <#default value#>
+      defaultCustomization.guidanceCustomization.buttonFont = font!
+      defaultCustomization.guidanceCustomization.headerFont = font!
+      defaultCustomization.guidanceCustomization.subtextFont = font!
+      defaultCustomization.guidanceCustomization.readyScreenHeaderFont = font!
+      defaultCustomization.guidanceCustomization.readyScreenSubtextFont = font!
+      defaultCustomization.guidanceCustomization.retryScreenHeaderFont = font!
+      defaultCustomization.guidanceCustomization.retryScreenSubtextFont = font!
 
       
       
@@ -246,7 +246,7 @@ open class Config {
       // Set Feedback Customization
       defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
       defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-      defaultCustomization.feedbackCustomization.textFont = font ?? <#default value#>
+      defaultCustomization.feedbackCustomization.textFont = font!
 
       // Set Cancel Customization
       defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -259,7 +259,7 @@ open class Config {
       defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
       defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
       defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-      defaultCustomization.resultScreenCustomization.messageFont = font ?? <#default value#>
+      defaultCustomization.resultScreenCustomization.messageFont = font!
       
       // Set Security Watermark Customization
       defaultCustomization.securityWatermarkImage = .faceTec

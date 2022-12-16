@@ -41,6 +41,13 @@ class ThemeHelpers {
             
         return currentCustomization
     }
+    
+    // Configure UX Color Scheme For Low Light Mode
+    class func getDynamicDimmingCustomizationForTheme(theme: String) -> FaceTecCustomization {
+        var currentDynamicDimmingCustomization: FaceTecCustomization = getCustomizationForTheme(theme: theme)
+        
+        return currentDynamicDimmingCustomization
+    }
 }
 
 extension UIColor {
