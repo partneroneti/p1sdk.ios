@@ -96,7 +96,7 @@ open class Config {
           defaultCustomization.frameCustomization.borderColor = borderColor
 
           // Set Overlay Customization
-//          defaultCustomization.overlayCustomization.brandingImage = yourAppLogoImage
+          defaultCustomization.overlayCustomization.brandingImage = nil
           defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
           // Set Guidance Customization
