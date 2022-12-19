@@ -22,11 +22,9 @@ class ThemeHelpers {
     class func getCustomizationForTheme(theme: String) -> FaceTecCustomization {
         var currentCustomization = FaceTecCustomization()
         
-        let retryScreenSlideshowImages = [UIImage(named: "FaceTec_ideal_1")!, UIImage(named: "FaceTec_ideal_2")!, UIImage(named: "FaceTec_ideal_3")!, UIImage(named: "FaceTec_ideal_4")!, UIImage(named: "FaceTec_ideal_5")!]
-        
 
             currentCustomization = Config.retrieveConfigurationWizardCustomization()
-            
+        currentCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offred")
         return currentCustomization
     }
     
@@ -34,18 +32,17 @@ class ThemeHelpers {
     class func getLowLightCustomizationForTheme(theme: String) -> FaceTecCustomization {
         var currentCustomization = FaceTecCustomization()
         
-        let retryScreenSlideshowImages = [UIImage(named: "FaceTec_ideal_1")!, UIImage(named: "FaceTec_ideal_2")!, UIImage(named: "FaceTec_ideal_3")!, UIImage(named: "FaceTec_ideal_4")!, UIImage(named: "FaceTec_ideal_5")!]
         
 
             currentCustomization = Config.retrieveConfigurationWizardCustomization()
-            
+        currentCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offred")
         return currentCustomization
     }
     
     // Configure UX Color Scheme For Low Light Mode
     class func getDynamicDimmingCustomizationForTheme(theme: String) -> FaceTecCustomization {
         var currentDynamicDimmingCustomization: FaceTecCustomization = getCustomizationForTheme(theme: theme)
-        
+        currentDynamicDimmingCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offred")
         return currentDynamicDimmingCustomization
     }
 }
