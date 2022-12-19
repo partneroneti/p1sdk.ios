@@ -9,7 +9,7 @@ import FaceTecSDK
 open class Config {
   
   static let helper = PartnerHelper()
-    static var font = UIFont.init(name: "SFProDisplay-Regular", size: 10)
+  static let font = UIFont.init(name: "SFProDisplay-Regular", size: UIFont.labelFontSize)
   
   public static var DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
   
@@ -97,7 +97,7 @@ open class Config {
 
           // Set Overlay Customization
 //          defaultCustomization.overlayCustomization.brandingImage = yourAppLogoImage
-//          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
+          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
           // Set Guidance Customization
           defaultCustomization.guidanceCustomization.buttonCornerRadius = 30
@@ -105,13 +105,13 @@ open class Config {
           defaultCustomization.guidanceCustomization.foregroundColor = textColor
           
           // customizar as fontes
-//          defaultCustomization.guidanceCustomization.buttonFont = Config.font!
-//          defaultCustomization.guidanceCustomization.headerFont = Config.font!
-//          defaultCustomization.guidanceCustomization.subtextFont = Config.font!
-//          defaultCustomization.guidanceCustomization.readyScreenHeaderFont = Config.font!
-//          defaultCustomization.guidanceCustomization.readyScreenSubtextFont = Config.font!
-//          defaultCustomization.guidanceCustomization.retryScreenHeaderFont = Config.font!
-//          defaultCustomization.guidanceCustomization.retryScreenSubtextFont = Config.font!
+            defaultCustomization.guidanceCustomization.buttonFont = Config.font!
+          defaultCustomization.guidanceCustomization.headerFont = Config.font!
+          defaultCustomization.guidanceCustomization.subtextFont = Config.font!
+          defaultCustomization.guidanceCustomization.readyScreenHeaderFont = Config.font!
+          defaultCustomization.guidanceCustomization.readyScreenSubtextFont = Config.font!
+          defaultCustomization.guidanceCustomization.retryScreenHeaderFont = Config.font!
+          defaultCustomization.guidanceCustomization.retryScreenSubtextFont = Config.font!
     
           
           
@@ -132,7 +132,7 @@ open class Config {
           // Set Feedback Customization
           defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
           defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-//          defaultCustomization.feedbackCustomization.textFont = Config.font!
+          defaultCustomization.feedbackCustomization.textFont = Config.font!
 
           // Set Cancel Customization
           defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -210,7 +210,7 @@ open class Config {
       defaultCustomization.frameCustomization.borderColor = borderColor
 
       // Set Overlay Customization
-//          defaultCustomization.overlayCustomization.brandingImage = yourAppLogoImage
+      defaultCustomization.overlayCustomization.brandingImage = nil
 //          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
       // Set Guidance Customization
@@ -219,13 +219,13 @@ open class Config {
       defaultCustomization.guidanceCustomization.foregroundColor = textColor
       
       // customizar as fontes
-//      defaultCustomization.guidanceCustomization.buttonFont = Config.font!
-//      defaultCustomization.guidanceCustomization.headerFont = Config.font!
-//      defaultCustomization.guidanceCustomization.subtextFont = Config.font!
-//      defaultCustomization.guidanceCustomization.readyScreenHeaderFont = Config.font!
-//      defaultCustomization.guidanceCustomization.readyScreenSubtextFont = Config.font!
-//      defaultCustomization.guidanceCustomization.retryScreenHeaderFont = Config.font!
-//      defaultCustomization.guidanceCustomization.retryScreenSubtextFont = Config.font!
+      defaultCustomization.guidanceCustomization.buttonFont = Config.font!
+      defaultCustomization.guidanceCustomization.headerFont = Config.font!
+      defaultCustomization.guidanceCustomization.subtextFont = Config.font!
+      defaultCustomization.guidanceCustomization.readyScreenHeaderFont = Config.font!
+      defaultCustomization.guidanceCustomization.readyScreenSubtextFont = Config.font!
+      defaultCustomization.guidanceCustomization.retryScreenHeaderFont = Config.font!
+      defaultCustomization.guidanceCustomization.retryScreenSubtextFont = Config.font!
 
       
       
@@ -246,7 +246,7 @@ open class Config {
       // Set Feedback Customization
       defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
       defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-//      defaultCustomization.feedbackCustomization.textFont = Config.font!
+      defaultCustomization.feedbackCustomization.textFont = Config.font!
 
       // Set Cancel Customization
       defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -259,7 +259,7 @@ open class Config {
       defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
       defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
       defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-//      defaultCustomization.resultScreenCustomization.messageFont = Config.font
+      defaultCustomization.resultScreenCustomization.messageFont = Config.font
       
       // Set Security Watermark Customization
       defaultCustomization.securityWatermarkImage = .faceTec
