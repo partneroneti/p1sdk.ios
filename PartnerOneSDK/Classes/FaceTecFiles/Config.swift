@@ -9,7 +9,7 @@ import FaceTecSDK
 open class Config {
   
   static let helper = PartnerHelper()
-    static var font = UIFont.init(name: "SFProDisplay-Regular", size: 10)
+  static let font = UIFont.init(name: "SFProDisplay-Regular", size: 10)
   
   public static var DeviceKeyIdentifier = helper.faceTecDeviceKeyIdentifier
   

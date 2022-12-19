@@ -99,7 +99,7 @@
 "FaceTec_retry_subheader_message" = "Precisamos de uma selfie de vídeo mais nítida";
 "FaceTec_retry_instruction_message_1" = "Expressão neutra, sem sorriso";
 "FaceTec_retry_instruction_message_2" = "Sem brilho ou iluminação extrema";
-"FaceTec_retry_instruction_message_3" = "uito embaçada, limpe sua câmera";
+"FaceTec_retry_instruction_message_3" = "Muito embaçada, limpe sua câmera";
 "FaceTec_retry_your_image_label" = "Sua Selfie";
 "FaceTec_retry_ideal_image_label" = "Pose Ideal";
 
