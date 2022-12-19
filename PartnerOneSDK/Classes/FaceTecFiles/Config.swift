@@ -97,7 +97,7 @@ open class Config {
 
           // Set Overlay Customization
 //          defaultCustomization.overlayCustomization.brandingImage = yourAppLogoImage
-//          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
+          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
           // Set Guidance Customization
           defaultCustomization.guidanceCustomization.buttonCornerRadius = 30
@@ -210,7 +210,7 @@ open class Config {
       defaultCustomization.frameCustomization.borderColor = borderColor
 
       // Set Overlay Customization
-//          defaultCustomization.overlayCustomization.brandingImage = yourAppLogoImage
+      defaultCustomization.overlayCustomization.brandingImage = nil
 //          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
       // Set Guidance Customization
