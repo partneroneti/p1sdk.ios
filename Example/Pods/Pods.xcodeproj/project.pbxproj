@@ -15,6 +15,7 @@
 		2522023283B68BC0E507764AF08E76C1 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37777968EC7E8F36AAE07C1E3E2C5EA7 /* ScanView.swift */; };
 		336949F4C875A4957267B04B83F636B1 /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373F65412EA396877B2D084AB773E5B /* SampleAppUtilities.swift */; };
 		40CEBBF806B5992BB6A770A137EF6227 /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */; };
+		43351E1D295083520014D1F4 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390B294CBB1E00B82C27 /* SFProDisplay-Regular.ttf */; };
 		43D9390D294CFFBC00B82C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390C294CFFBC00B82C27 /* Assets.xcassets */; };
 		43D9390E294CFFBC00B82C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390C294CFFBC00B82C27 /* Assets.xcassets */; };
 		43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E2B308294B585F009F86D0 /* LivenessResult.swift */; };
@@ -462,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43351E1D295083520014D1F4 /* SFProDisplay-Regular.ttf in Resources */,
 				43D9390D294CFFBC00B82C27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
