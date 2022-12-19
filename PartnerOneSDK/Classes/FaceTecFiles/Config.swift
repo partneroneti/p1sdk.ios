@@ -259,7 +259,7 @@ open class Config {
       defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
       defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
       defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-      defaultCustomization.resultScreenCustomization.messageFont = Config.font
+      defaultCustomization.resultScreenCustomization.messageFont = Config.font!
       
       // Set Security Watermark Customization
       defaultCustomization.securityWatermarkImage = .faceTec
