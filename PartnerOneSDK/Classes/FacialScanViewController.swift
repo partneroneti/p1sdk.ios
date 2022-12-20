@@ -47,6 +47,7 @@ final class FacialScanViewController: UIViewController, FaceTecFaceScanProcessor
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     navigationItem.hidesBackButton = true
     view.backgroundColor = .white
     view.addSubview(activity)
@@ -77,8 +78,6 @@ extension FacialScanViewController {
       guard let self = self else {
         return
       }
-        
-        ThemeHelpers.setAppTheme(theme: "")
       
       Config.displayLogs()
       
@@ -86,7 +85,7 @@ extension FacialScanViewController {
       Config.DeviceKeyIdentifier = self.helper.faceTecDeviceKeyIdentifier
       Config.PublicFaceScanEncryptionKey = self.helper.faceTecPublicFaceScanEncryptionKey
       
-      LivenessCheckProcessor(sessionToken: self.helper.createUserAgentForSession(),
+      LivenessCheckProcessor(sessionToken: self.sessionId ?? "",
                              fromViewController: self)
       
       self.faceTecLivenessData(completion: {})
@@ -127,7 +126,7 @@ extension FacialScanViewController {
   }
   
   func initializeProcessor() -> Processor {
-    return LivenessCheckProcessor(sessionToken: helper.createUserAgentForSession(), fromViewController: self)
+    return LivenessCheckProcessor(sessionToken: self.sessionId ?? "", fromViewController: self)
   }
   
   public func createUserAgentForNewSession() -> String {
@@ -156,7 +155,7 @@ extension FacialScanViewController {
     
     print("@! >>> Processamento finalizado.")
     
-    let livenessProcessor = LivenessCheckProcessor(sessionToken: self.helper.createUserAgentForSession(),
+    let livenessProcessor = LivenessCheckProcessor(sessionToken: self.sessionId ?? "",
                                                    fromViewController: self)
     livenessProcessor.success = true
     livenessProcessor.faceScanResultCallback = resultCallback
