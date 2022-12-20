@@ -85,7 +85,7 @@ extension FacialScanViewController {
       Config.DeviceKeyIdentifier = self.helper.faceTecDeviceKeyIdentifier
       Config.PublicFaceScanEncryptionKey = self.helper.faceTecPublicFaceScanEncryptionKey
       
-      LivenessCheckProcessor(sessionToken: self.helper.createUserAgentForSession(),
+      LivenessCheckProcessor(sessionToken: self.helper.sessionToken,
                              fromViewController: self)
       
       self.faceTecLivenessData(completion: {})
@@ -126,7 +126,7 @@ extension FacialScanViewController {
   }
   
   func initializeProcessor() -> Processor {
-    return LivenessCheckProcessor(sessionToken: helper.createUserAgentForSession(), fromViewController: self)
+    return LivenessCheckProcessor(sessionToken: helper.sessionToken, fromViewController: self)
   }
   
   public func createUserAgentForNewSession() -> String {
@@ -155,7 +155,7 @@ extension FacialScanViewController {
     
     print("@! >>> Processamento finalizado.")
     
-    let livenessProcessor = LivenessCheckProcessor(sessionToken: self.helper.createUserAgentForSession(),
+    let livenessProcessor = LivenessCheckProcessor(sessionToken: self.helper.sessionToken,
                                                    fromViewController: self)
     livenessProcessor.success = true
     livenessProcessor.faceScanResultCallback = resultCallback
