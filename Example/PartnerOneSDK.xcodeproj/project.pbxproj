@@ -677,7 +677,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LD_RUNPATH_SEARCH_PATHS)",
-					"./**",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -703,7 +703,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${LD_RUNPATH_SEARCH_PATHS}",
-					"./**",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
