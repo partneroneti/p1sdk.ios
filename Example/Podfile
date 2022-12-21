@@ -14,7 +14,7 @@ post_install do |installer|
     installer.pods_project.targets.each do |target|
         if target.name == "FaceTecSDK"
             target.build_configurations.each do |config|
-                config.build_settings['FRAMEWORK_SEARCH_PATHS'] = '${SRCROOT}/**'
+                config.build_settings['FRAMEWORK_SEARCH_PATHS'] = './**'
             end
         end
     end
