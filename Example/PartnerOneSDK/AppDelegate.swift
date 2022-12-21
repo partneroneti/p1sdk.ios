@@ -8,12 +8,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     let helper = PartnerHelper()
-    var transactionID: String = helper.transactionID
+      var transactionID: String = helper.transaction
     
     let worker = PartnerOneWorker()
     let viewModel = ScanViewModel(helper: helper)
     viewModel.transactionID = transactionID
-    let rootViewController = ScanViewController(viewModel: viewModel, viewTitle: "Frente")
+      let rootViewController = ScanViewController(viewModel: viewModel, helper: helper  ,viewTitle: "Frente")
     let navigationController = UINavigationController(rootViewController: rootViewController)
     navigationController.setNavigationBarHidden(true, animated: false)
     

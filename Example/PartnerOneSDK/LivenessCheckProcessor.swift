@@ -77,8 +77,8 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
             return
         }
         
-        guard let scanResultBlob = responseJSON["scanResultBlob"] as? String,
-              let wasProcessed = responseJSON["wasProcessed"] as? Bool else {
+        guard let scanResultBlob = responseJSON?["scanResultBlob"] as? String,
+              let wasProcessed = responseJSON?["wasProcessed"] as? Bool else {
             faceScanResultCallback.onFaceScanResultCancel()
             return;
         }

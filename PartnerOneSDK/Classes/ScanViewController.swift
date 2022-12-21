@@ -157,7 +157,7 @@ extension ScanViewController {
     previewLayer.connection?.videoOrientation = .portrait
     
     baseView.cameraContainer.addSubview(baseView.background)
-    baseView.sendSubviewToBack(baseView.cameraContainer)
+    baseView.sendSubview(toBack: baseView.cameraContainer)
   }
 }
 

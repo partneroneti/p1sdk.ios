@@ -17,11 +17,9 @@
 		40CEBBF806B5992BB6A770A137EF6227 /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */; };
 		43D92E1C2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D92E1B2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift */; };
 		43D92E1D2950ED6200BBD458 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390B294CBB1E00B82C27 /* SFProDisplay-Regular.ttf */; };
+		43D92E3929534EC900BBD458 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D92E3829534EC900BBD458 /* FaceTecSDK.xcframework */; };
 		43D9390E294CFFBC00B82C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390C294CFFBC00B82C27 /* Assets.xcassets */; };
 		43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E2B308294B585F009F86D0 /* LivenessResult.swift */; };
-		43E2B313294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */; };
-		43E2B314294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */; };
-		43E2B315294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */; };
 		5BD88AD58DA2E8D2A1A29F7CECFC6A75 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734F4E4CCB358CDC93132F26F9C68FF2 /* DataParser.swift */; };
 		5E050A400BD9BE9DCB77C5E16EC59D45 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */; };
 		651782323256A6BF771CE5DA86BF4528 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C88F50F5358729EC81BC787D9EFEC /* ErrorResponse.swift */; };
@@ -89,10 +87,10 @@
 		3FF20051FDBB89497532D260EB5CFFF1 /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		43D92E1B2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenActivityIndicatorView.swift; sourceTree = "<group>"; };
+		43D92E3829534EC900BBD458 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		43D9390B294CBB1E00B82C27 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		43D9390C294CFFBC00B82C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E2B308294B585F009F86D0 /* LivenessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessResult.swift; sourceTree = "<group>"; };
-		43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		51B803D7131941DD35B19E4FBECD8C25 /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = PartnerOneSDK/Classes/ScanViewController.swift; sourceTree = "<group>"; };
 		575DDBB3CA797C44721EC701CC5DF372 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		59C296938E38BA08287CBF3723EFCEAE /* Pods-PartnerOneSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Tests.modulemap"; sourceTree = "<group>"; };
@@ -141,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E2B313294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */,
+				43D92E3929534EC900BBD458 /* FaceTecSDK.xcframework in Frameworks */,
 				A27E85CBC66FF0674315EAC4E776CBD6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +148,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E2B314294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */,
 				780D064624BF3805270E5719DDAC6AC0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,7 +156,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E2B315294BAC12009F86D0 /* FaceTecSDK.xcframework in Frameworks */,
 				13C19DC46445E9020BE12E12F4A35793 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +293,7 @@
 		C113A1B6789FF094537BD5211B183964 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				43E2B312294BAC12009F86D0 /* FaceTecSDK.xcframework */,
+				43D92E3829534EC900BBD458 /* FaceTecSDK.xcframework */,
 				DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */,
 			);
 			name = iOS;
