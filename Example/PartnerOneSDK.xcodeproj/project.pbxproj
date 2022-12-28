@@ -37,6 +37,7 @@
 		EF5BFD8F2941921800F1955E /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BFD8E2941921800F1955E /* SessionModel.swift */; };
 		EF6ADDD8294219370018F3C5 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ADDD7294219370018F3C5 /* DataParser.swift */; };
 		EF9202DF294367E700302029 /* FacialScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9202DE294367E700302029 /* FacialScanViewController.swift */; };
+		EFB2D3DA295BD80800A36967 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB2D3D9295BD80800A36967 /* FaceTecSDK.xcframework */; };
 		EFEFAB81293FBC0E00ED8C9D /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */; };
 		EFEFAB84293FBC9800ED8C9D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB82293FBC9800ED8C9D /* BaseView.swift */; };
 		EFEFAB85293FBC9800ED8C9D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */; };
@@ -111,6 +112,7 @@
 		EF5BFD8E2941921800F1955E /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionModel.swift; path = ../../SessionModel.swift; sourceTree = "<group>"; };
 		EF6ADDD7294219370018F3C5 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataParser.swift; path = ../../DataParser.swift; sourceTree = "<group>"; };
 		EF9202DE294367E700302029 /* FacialScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialScanViewController.swift; sourceTree = "<group>"; };
+		EFB2D3D9295BD80800A36967 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		EFEFAB80293FBC0E00ED8C9D /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		EFEFAB82293FBC9800ED8C9D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EFEFAB83293FBC9800ED8C9D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB2D3DA295BD80800A36967 /* FaceTecSDK.xcframework in Frameworks */,
 				43D92E3B29534EE200BBD458 /* FaceTecSDK.xcframework in Frameworks */,
 				DDD337FD64C7247494D7736A /* Pods_PartnerOneSDK_Example.framework in Frameworks */,
 			);
@@ -144,6 +147,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				EFB2D3D9295BD80800A36967 /* FaceTecSDK.xcframework */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PartnerOneSDK */,
 				607FACE81AFB9204008FA782 /* Tests */,
