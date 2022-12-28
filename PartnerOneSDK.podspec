@@ -27,9 +27,9 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
   
-  s.source = { :http => 'https://github.com/partneroneti/p1sdk.ios/tree/fix/code-cleaning/FaceTecSDK.xcframework' }
+#  s.source = { :http => 'https://github.com/partneroneti/p1sdk.ios/tree/fix/code-cleaning/FaceTecSDK.xcframework' }
   s.ios.deployment_target = '10.0'
-  s.ios.vendored_frameworks = 'FaceTecSDK.xcframework'
+#  s.ios.vendored_frameworks = 'FaceTecSDK.xcframework'
 
   s.source_files = 'PartnerOneSDK/Classes/**/*'
   
@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
   # }
   
    s.public_header_files = 'Pods/Classes/**/*.h'
-   s.frameworks = 'FaceTecSDK'
+#   s.frameworks = 'FaceTecSDK'
 #   s.dependency 'FaceTecSDK'
 end
