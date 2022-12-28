@@ -23,27 +23,6 @@ open class Config {
     print("@! >>> FaceTec_ProductionKeyText: ", Config.ProductionKeyText)
   }
   
-  //    static let DeviceKeyIdentifier = "dioxhbQHfJHmnHTzJ40hCiUm3FR0IkXY"
-  
-  //  static let BaseURL = "https://digital-id.webdatadome.com/api"
-  
-  //    static let PublicFaceScanEncryptionKey =
-  //        "-----BEGIN PUBLIC KEY-----\n" +
-  //        "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5PxZ3DLj+zP6T6HFgzzk\n" +
-  //        "M77LdzP3fojBoLasw7EfzvLMnJNUlyRb5m8e5QyyJxI+wRjsALHvFgLzGwxM8ehz\n" +
-  //        "DqqBZed+f4w33GgQXFZOS4AOvyPbALgCYoLehigLAbbCNTkeY5RDcmmSI/sbp+s6\n" +
-  //        "mAiAKKvCdIqe17bltZ/rfEoL3gPKEfLXeN549LTj3XBp0hvG4loQ6eC1E1tRzSkf\n" +
-  //        "GJD4GIVvR+j12gXAaftj3ahfYxioBH7F7HQxzmWkwDyn3bqU54eaiB7f0ftsPpWM\n" +
-  //        "ceUaqkL2DZUvgN0efEJjnWy5y1/Gkq5GGWCROI9XG/SwXJ30BbVUehTbVcD70+ZF\n" +
-  //        "8QIDAQAB\n" +
-  //        "-----END PUBLIC KEY-----"
-  
-  //    static let ProductionKeyText = "appId      = *\n" +
-  //    "expiryDate = 2023-02-10\n" +
-  //    "key        = 003045022064245be6a70ccac99d3f744cbafdb8fdf416aafa45fb42f90d907465852246ef022100922a1b802481c572d4b1bef5d86d8dd70055d16164fff61a486796e7e7a68fed\n"
-  
-  
-  
   // -------------------------------------
   // Convenience method to initialize the FaceTec SDK.
   // NOTE: This function is auto-populated by the FaceTec SDK Configuration Wizard based on the Keys issued to your Apps.
@@ -58,7 +37,6 @@ open class Config {
   // NOTE: This function is auto-populated by the FaceTec SDK Configuration Wizard based on your UI Customizations you picked in the Configuration Wizard GUI.
   public static func retrieveConfigurationWizardCustomization() ->
       FaceTecCustomization {
-          
           
           // For Color Customization
           let outerBackgroundColor = UIColor(hexString: "#283897")
@@ -79,11 +57,9 @@ open class Config {
           
           // For Frame Corner Radius Customization
           let frameCornerRadius: Int32 = 20
-
           let cancelImage = UIImage(named: "FaceTec_cancel")
           let cancelButtonLocation: FaceTecCancelButtonLocation = .topLeft
 
-          
           // Set a default customization
           let defaultCustomization = FaceTecCustomization()
             
@@ -113,8 +89,6 @@ open class Config {
 //          defaultCustomization.guidanceCustomization.retryScreenHeaderFont = Config.font!
 //          defaultCustomization.guidanceCustomization.retryScreenSubtextFont = Config.font!
     
-          
-          
           defaultCustomization.guidanceCustomization.buttonBackgroundNormalColor = buttonAndFeedbackBarColor
           defaultCustomization.guidanceCustomization.buttonBackgroundDisabledColor = buttonColorDisabled
           defaultCustomization.guidanceCustomization.buttonBackgroundHighlightColor = buttonColorHighlight
@@ -167,12 +141,10 @@ open class Config {
           defaultCustomization.idScanCustomization.captureScreenBackgroundColor = frameColor
           defaultCustomization.idScanCustomization.captureFrameStrokeColor = borderColor
 
-          
           return defaultCustomization
   }
   
   public static func retrieveLowLightConfigurationWizardCustomization() -> FaceTecCustomization {
-      
       
       // For Color Customization
       let outerBackgroundColor = UIColor(hexString: "#ffffff")
@@ -193,11 +165,9 @@ open class Config {
       
       // For Frame Corner Radius Customization
       let frameCornerRadius: Int32 = 20
-
       let cancelImage = UIImage(named: "FaceTec_cancel")
       let cancelButtonLocation: FaceTecCancelButtonLocation = .topLeft
 
-      
       // Set a default customization
       let defaultCustomization = FaceTecCustomization()
         
@@ -227,8 +197,6 @@ open class Config {
 //      defaultCustomization.guidanceCustomization.retryScreenHeaderFont = Config.font!
 //      defaultCustomization.guidanceCustomization.retryScreenSubtextFont = Config.font!
 
-      
-      
       defaultCustomization.guidanceCustomization.buttonBackgroundNormalColor = buttonAndFeedbackBarColor
       defaultCustomization.guidanceCustomization.buttonBackgroundDisabledColor = buttonColorDisabled
       defaultCustomization.guidanceCustomization.buttonBackgroundHighlightColor = buttonColorHighlight
@@ -281,7 +249,6 @@ open class Config {
       defaultCustomization.idScanCustomization.captureScreenBackgroundColor = frameColor
       defaultCustomization.idScanCustomization.captureFrameStrokeColor = borderColor
 
-      
       return defaultCustomization
   }
   

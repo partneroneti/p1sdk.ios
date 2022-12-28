@@ -44,6 +44,7 @@
 		DB99953743BB489DF8FF438C0D833743 /* FacialScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E35046236149CDF2DFCE07BF52E74 /* FacialScanViewController.swift */; };
 		E19C78CC74F257025C2867AB5DDE66A5 /* PartnerOneSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3DE9DFE47CDD9B694682EB56909C /* PartnerOneSDK-dummy.m */; };
 		EC959B7F598E6453E9A951EC9BC4E2D1 /* PartnerOneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0193BD0245115A5000958589D5E88 /* PartnerOneWorker.swift */; };
+		EFB2D3CD295BB1C300A36967 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB2D3CC295BB1C300A36967 /* FaceTecSDK.xcframework */; };
 		F1440EC05B0DE8BED6C0CC34371887BC /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C4C70F9B3B870487F0ED16B01CFBA /* ServerError.swift */; };
 		F67C9230A4190966A3C7172B16F4CA20 /* Pods-PartnerOneSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE3595BB2FB7127C4BF22712D373EC /* Pods-PartnerOneSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F96BE2579C7DA969F2A0C0FE5E9BB56C /* Pods-PartnerOneSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 058203571A0C7C4230713DF83B2CC184 /* Pods-PartnerOneSDK_Tests-dummy.m */; };
@@ -126,6 +127,7 @@
 		E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorType.swift; path = PartnerOneSDK/Classes/ErrorType.swift; sourceTree = "<group>"; };
 		EA7E6C7508199FC307D2236C8DEDC8F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "PartnerOneSDK/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
 		ECFA323EB7175AE292A6D8F949668531 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB2D3CC295BB1C300A36967 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeHelpers.swift; sourceTree = "<group>"; };
 		F373F65412EA396877B2D084AB773E5B /* SampleAppUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
 		F73F43609D6CB51FFF75B1550A8AF50F /* Pods-PartnerOneSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartnerOneSDK_Example"; path = Pods_PartnerOneSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB2D3CD295BB1C300A36967 /* FaceTecSDK.xcframework in Frameworks */,
 				43D92E3929534EC900BBD458 /* FaceTecSDK.xcframework in Frameworks */,
 				A27E85CBC66FF0674315EAC4E776CBD6 /* Foundation.framework in Frameworks */,
 			);
@@ -174,6 +177,7 @@
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFB2D3CC295BB1C300A36967 /* FaceTecSDK.xcframework */,
 				C113A1B6789FF094537BD5211B183964 /* iOS */,
 			);
 			name = Frameworks;
