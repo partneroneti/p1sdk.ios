@@ -255,9 +255,10 @@ extension ScanViewController {
     baseView.didTapBack = { [weak self] in
       guard let self = self else { return }
       
+      self.captureSession.stopRunning()
       self.navigationController?.popViewController(animated: true)
       
-      DispatchQueue.global(qos: .userInitiated).async {
+      DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 0.3) {
         self.captureSession.startRunning()
       }
     }

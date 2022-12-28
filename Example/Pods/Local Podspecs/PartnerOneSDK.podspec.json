@@ -12,11 +12,13 @@
     "Thiago Silva": "thyago_casablancas@hotmail.com"
   },
   "source": {
-    "git": "https://github.com/partneroneti/p1sdk.ios/PartnerOneSDK.git",
-    "tag": "0.1.0"
+    "http": "https://github.com/partneroneti/p1sdk.ios/tree/fix/code-cleaning/FaceTecSDK.xcframework"
   },
   "platforms": {
     "ios": "10.0"
+  },
+  "ios": {
+    "vendored_frameworks": "FaceTecSDK.xcframework"
   },
   "source_files": "PartnerOneSDK/Classes/**/*",
   "public_header_files": "Pods/Classes/**/*.h",

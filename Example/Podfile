@@ -4,6 +4,7 @@ platform :ios, '12.1'
 
 target 'PartnerOneSDK_Example' do
   pod 'PartnerOneSDK', :path => '../'
+  pod 'FaceTecSDK', :http => 'https://github.com/partneroneti/p1sdk.ios/tree/fix/code-cleaning/FaceTecSDK.xcframework'
   
   target 'PartnerOneSDK_Tests' do
     inherit! :search_paths

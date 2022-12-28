@@ -18,6 +18,7 @@ open class ScanView: BaseView {
   
   let cameraContainer: UIView = {
     let view = UIView()
+    view.clipsToBounds = true
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
@@ -79,10 +80,10 @@ open class ScanView: BaseView {
         takePicBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
         takePicBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
         takePicBtn.heightAnchor.constraint(equalToConstant: 50),
-        takePicBtn.bottomAnchor.constraint(equalTo: returnBtn.topAnchor, constant: -50),
+        takePicBtn.bottomAnchor.constraint(equalTo: returnBtn.topAnchor, constant: -30),
         
         returnBtn.heightAnchor.constraint(equalToConstant: 30),
-        returnBtn.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+        returnBtn.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -40),
         returnBtn.widthAnchor.constraint(equalTo: widthAnchor)
       ])
     }
