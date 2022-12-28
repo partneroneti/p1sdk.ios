@@ -25,8 +25,11 @@ Pod::Spec.new do |s|
   s.author           = { 'Thiago Silva' => 'thyago_casablancas@hotmail.com' }
   s.source           = { :git => 'https://github.com/partneroneti/p1sdk.ios/PartnerOneSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  
+  
+  s.source = { :http => 'http://localhost:8080/XCFrameworkTest.zip' }
   s.ios.deployment_target = '10.0'
+  s.ios.vendored_frameworks = 'XCFrameworkTest.xcframework'
 
   s.source_files = 'PartnerOneSDK/Classes/**/*'
   

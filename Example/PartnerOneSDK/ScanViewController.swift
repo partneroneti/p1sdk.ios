@@ -173,11 +173,16 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     }
     
     let previewImage = UIImage(data: imageData)
+    var croppedImage = UIImage()
     
     let photoPreviewContainer = baseView.photoPreviewContainer
     photoPreviewContainer.imageView.image = previewImage
     
     let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
+    
+    cropImage(image: previewImage!, to: CGFloat(), completion: { image -> Void in
+      croppedImage = image
+    })
     
     viewModel.appendDocumentPicture(type: type,
                                     byte: imageData.base64EncodedString())
@@ -195,6 +200,29 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     if let photoPreviewType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
       photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoPreviewType]
       photoOutput.capturePhoto(with: photoSettings, delegate: self)
+    }
+  }
+  
+  func cropImage(image: UIImage, to aspectRatio: CGFloat, completion: @escaping (UIImage) -> ()) {
+    DispatchQueue.global(qos: .background).async {
+      
+      let imageAspectRatio = image.size.height/image.size.width
+      var newSize = image.size
+      
+      if imageAspectRatio > aspectRatio {
+        newSize.height = image.size.width * aspectRatio
+      } else if imageAspectRatio < aspectRatio {
+        newSize.width = image.size.height / aspectRatio
+      } else {
+        completion (image)
+      }
+      
+      let center = CGPoint(x: image.size.width/2, y: image.size.height/2)
+      let origin = CGPoint(x: center.x - newSize.width/2, y: center.y - newSize.height/2)
+      let cgCroppedImage = image.cgImage!.cropping(to: CGRect(origin: origin, size: CGSize(width: newSize.width, height: newSize.height)))!
+      let croppedImage = UIImage(cgImage: cgCroppedImage, scale: image.scale, orientation: image.imageOrientation)
+      
+      completion(croppedImage)
     }
   }
 }
