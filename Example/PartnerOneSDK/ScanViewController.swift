@@ -157,7 +157,7 @@ extension ScanViewController {
     previewLayer.connection?.videoOrientation = .portrait
     
     baseView.cameraContainer.addSubview(baseView.background)
-    baseView.sendSubview(toBack: baseView.cameraContainer)
+      baseView.sendSubviewToBack(baseView.cameraContainer)
   }
 }
 
@@ -173,6 +173,37 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     }
     
     let previewImage = UIImage(data: imageData)
+
+      let xRatio = previewImage!.size.width / baseView.background.overlayView.bounds.maxX
+      let yRatio = previewImage!.size.height / baseView.background.overlayView.bounds.maxY
+      
+      let xOffSet = xRatio * ((baseView.background.overlayView.bounds.maxX  - baseView.background.cropReferenceView.bounds.maxX) / 2.0) * 1.4 // corrigir aqui
+      let yOffSet = yRatio * ((baseView.background.overlayView.bounds.maxY  - baseView.background.cropReferenceView.bounds.maxY) / 2.0)
+      let width = baseView.background.cropReferenceView.bounds.maxX * xRatio
+      let heigth = baseView.background.cropReferenceView.bounds.maxY * yRatio * 0.6 //corrigir aqui
+ 
+      
+  let cropRect = CGRect(
+    x: xOffSet,
+    y: yOffSet,
+        width: width,
+        height: heigth
+    )
+      
+
+      
+  // Center crop the image
+  let sourceCGImage = previewImage?.cgImage!
+  let croppedCGImage = sourceCGImage?.cropping(
+      to: cropRect
+  )!
+      
+      let croppedImage = UIImage(
+        cgImage: croppedCGImage!
+        //scale: (previewImage?.imageRendererFormat.scale)!,
+        //orientation: previewImage?.imageOrientation ?? UIImage.Orientation.up
+      )
+      
     
     let photoPreviewContainer = baseView.photoPreviewContainer
     photoPreviewContainer.imageView.image = previewImage
@@ -180,13 +211,17 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
     
     viewModel.appendDocumentPicture(type: type,
-                                    byte: imageData.base64EncodedString())
+                                    byte: self.convertImageToBase64String(img:croppedImage))
     
     print("@! >>> Documento da \(viewTitle) adicionado.")
     print("@! >>> Numero de itens: \(helper.documentsImages.count)")
     
     captureSession.stopRunning()
   }
+    
+    private func convertImageToBase64String (img: UIImage) -> String {
+        return img.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
+    }
   
   @objc
   func takePicure() {

@@ -2,7 +2,7 @@ import UIKit
 
 final class CroppingView: BaseView {
   
-  private var overlayView: UIView = {
+var overlayView: UIView = {
     let view = UIView()
     view.backgroundColor = .black.withAlphaComponent(0.75)
     view.translatesAutoresizingMaskIntoConstraints = false
