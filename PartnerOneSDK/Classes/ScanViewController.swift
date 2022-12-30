@@ -178,11 +178,11 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
                                height: baseView.background.cropReferenceView.frame.height
         )
         
-        guard let croppedImage = cropImage(
+        guard let croppedImage = ImageHelper.cropImage(
             previewImage,
             toRect: cropRect,
-            imageViewWidth: baseView.background.cropReferenceView.frame.width,
-            imageViewHeight: baseView.background.cropReferenceView.frame.height
+            imageViewWidth: view.frame.width,
+            imageViewHeight: view.frame.height
         ) else {
             return
         }
@@ -252,27 +252,6 @@ extension ScanViewController {
       }
     }
   }
-    
-    func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, imageViewWidth: CGFloat, imageViewHeight: CGFloat) -> UIImage? {
-        let imageViewScaleX = inputImage.size.width / imageViewWidth
-        let imageViewScaleY = inputImage.size.height / imageViewHeight
-        
-        // Scale cropRect to handle images larger than shown-on-screen size
-        let cropZone = CGRect(x: cropRect.origin.x * imageViewScaleX,
-                              y: cropRect.origin.y * imageViewScaleY,
-                              width: cropRect.size.width * imageViewScaleY,
-                              height: cropRect.size.height * imageViewScaleX)
-        
-        // Perform cropping in Core Graphics
-        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to: cropZone)
-            else {
-                return nil
-        }
-        
-        // Return image to UIImage
-        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
-        return croppedImage
-    }
 }
 
 extension UIImage {
