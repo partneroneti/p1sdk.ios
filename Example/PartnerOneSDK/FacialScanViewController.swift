@@ -25,7 +25,7 @@ final class FacialScanViewController: UIViewController, FaceTecFaceScanProcessor
   
   private let activity: UIActivityIndicatorView = {
     let activity = UIActivityIndicatorView()
-    activity.activityIndicatorViewStyle = .whiteLarge
+    activity.style = .whiteLarge
     activity.startAnimating()
     activity.translatesAutoresizingMaskIntoConstraints = false
     return activity
