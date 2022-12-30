@@ -23,13 +23,13 @@ final class FacialScanViewController: UIViewController, FaceTecFaceScanProcessor
   var transactionId: String?
   var processorResponse: (() -> Void)?
   
-  private let activity: UIActivityIndicatorView = {
-    let activity = UIActivityIndicatorView()
-    activity.activityIndicatorViewStyle = .whiteLarge
-    activity.startAnimating()
-    activity.translatesAutoresizingMaskIntoConstraints = false
-    return activity
-  }()
+      private let activity: UIActivityIndicatorView = {
+        let activity = UIActivityIndicatorView()
+            activity.style = .whiteLarge
+            activity.startAnimating()
+            activity.translatesAutoresizingMaskIntoConstraints = false
+            return activity
+        }()
   
   //MARK: - init
   
