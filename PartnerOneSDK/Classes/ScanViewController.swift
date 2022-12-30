@@ -145,13 +145,9 @@ extension ScanViewController {
   }
   
   func setupPreviewLayer(){
-    let width = baseView.frame.width// * 2
-    let height = baseView.frame.height// * 2
-    
     previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-    baseView.cameraContainer.layer.insertSublayer(previewLayer,
-                                                  below: baseView.background.cropReferenceView.layer)
-    previewLayer.frame.size = CGSize(width: width, height: height)
+    baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
+    previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
     previewLayer.position = self.view.center
     previewLayer.videoGravity = .resizeAspect
     previewLayer.connection?.videoOrientation = .portrait
@@ -258,8 +254,8 @@ extension ScanViewController {
   }
     
     func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, imageViewWidth: CGFloat, imageViewHeight: CGFloat) -> UIImage? {
-        let imageViewScaleX = max(inputImage.size.width / imageViewWidth, 0)
-        let imageViewScaleY = max(inputImage.size.height / imageViewHeight, 0)
+        let imageViewScaleX = inputImage.size.width / imageViewWidth
+        let imageViewScaleY = inputImage.size.height / imageViewHeight
         
         // Scale cropRect to handle images larger than shown-on-screen size
         let cropZone = CGRect(x: cropRect.origin.x * imageViewScaleX,
