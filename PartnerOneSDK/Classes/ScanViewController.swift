@@ -3,6 +3,8 @@ import AVFoundation
 import PartnerOneSDK
 
 open class ScanViewController: BaseViewController<ScanView> {
+    
+    private let MAX_SIZE_IMEGE: CGFloat = 800
   
   private var viewModel: ScanViewModel
   private var helper: PartnerHelper
@@ -149,7 +151,7 @@ extension ScanViewController {
     baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
     previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
     previewLayer.position = self.view.center
-    previewLayer.videoGravity = .resizeAspect
+    previewLayer.videoGravity = .resizeAspectFill
     previewLayer.connection?.videoOrientation = .portrait
     
     baseView.cameraContainer.addSubview(baseView.background)
@@ -164,21 +166,21 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
   
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         captureSession.stopRunning()
-                
-        let cgImage = photo.cgImageRepresentation()
-        var previewImage = UIImage(cgImage: cgImage!)
+        
+        guard let cgImage = photo.cgImageRepresentation() else { return }
+        var previewImage = UIImage(cgImage: cgImage)
         
         if(previewImage.size.width > previewImage.size.height) {
             previewImage = previewImage.rotate(degrees: 90)!
         }
-               
+        
         let cropRect = CGRect(x: baseView.background.cropReferenceView.frame.origin.x,
-                               y: baseView.background.cropReferenceView.frame.origin.y,
-                               width: baseView.background.cropReferenceView.frame.width,
-                               height: baseView.background.cropReferenceView.frame.height
+                              y: baseView.background.cropReferenceView.frame.origin.y,
+                              width: baseView.background.cropReferenceView.frame.width,
+                              height: baseView.background.cropReferenceView.frame.height
         )
         
-        guard let croppedImage = ImageHelper.cropImage(
+        guard var croppedImage = ImageHelper.cropImage(
             previewImage,
             toRect: cropRect,
             imageViewWidth: view.frame.width,
@@ -186,24 +188,27 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         ) else {
             return
         }
-      
-    
-    let photoPreviewContainer = baseView.photoPreviewContainer
-    photoPreviewContainer.imageView.image = previewImage
-    
-    let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
-    
-    viewModel.appendDocumentPicture(type: type,
-                                    byte: self.convertImageToBase64String(img:croppedImage))
-    
-    print("@! >>> Documento da \(viewTitle) adicionado.")
-    print("@! >>> Numero de itens: \(helper.documentsImages.count)")
-    
-    
+        
+        let max = max(croppedImage.size.width, croppedImage.size.height)
+        if(max > MAX_SIZE_IMEGE) {
+            let percents = max / MAX_SIZE_IMEGE
+            croppedImage = croppedImage.imageResized(to: CGSize(width: croppedImage.size.width / percents, height: croppedImage.size.height / percents))
+        }
+          
+        let photoPreviewContainer = baseView.photoPreviewContainer
+        photoPreviewContainer.imageView.image = previewImage
+        
+        let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
+        
+        viewModel.appendDocumentPicture(type: type,
+                                        byte: self.convertImageToBase64String(img:croppedImage))
+        
+        print("@! >>> Documento da \(viewTitle) adicionado.")
+        print("@! >>> Numero de itens: \(helper.documentsImages.count)")
   }
     
     private func convertImageToBase64String (img: UIImage) -> String {
-        return img.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
+        return img.compress(.medium)?.base64EncodedString() ?? ""
     }
   
   @objc
@@ -255,6 +260,24 @@ extension ScanViewController {
 }
 
 extension UIImage {
+    func imageResized(to size: CGSize) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { _ in
+            draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+    
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+
+    func compress(_ jpegQuality: JPEGQuality) -> Data? {
+        return self.jpegData(compressionQuality: jpegQuality.rawValue)
+    }
+    
     func rotate(degrees: CGFloat)-> UIImage? {
         let degreesToRadians: (CGFloat) -> CGFloat = { (degrees: CGFloat) in
               return degrees / 180.0 * CGFloat.pi
