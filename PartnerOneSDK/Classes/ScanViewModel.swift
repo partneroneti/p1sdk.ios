@@ -43,12 +43,11 @@ open class ScanViewModel {
     ]
       if(type=="FRENTE"){
           helper.documentsImages.removeAll()
-      }else if (helper.documentsImages.count>1) {
+      } else if (helper.documentsImages.count>1) {
           for index in 1...helper.documentsImages.count-1 {
               helper.documentsImages.remove(at: index)
           }
       }
-        
       
     helper.documentsImages.append(documentImage)
   }

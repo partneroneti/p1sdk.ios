@@ -13,7 +13,7 @@ open class ScanViewController: BaseViewController<ScanView> {
   /// Camera Setup Variables
   ///
   private var previewLayer: AVCaptureVideoPreviewLayer!
-  private var captureSession: AVCaptureSession!
+  private var captureSession: AVCaptureSession?
   private var backCamera: AVCaptureDevice!
   private var backInput: AVCaptureInput!
   private var captureConnection: AVCaptureConnection?
@@ -33,8 +33,16 @@ open class ScanViewController: BaseViewController<ScanView> {
   //MARK: - ViewController Lifecycle
   open override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    checkPermissions()
+      
+      viewModel.sideTitle = viewTitle
+      checkPermissions()
   }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.captureSession?.stopRunning()
+    }
   
   open override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
@@ -84,17 +92,25 @@ extension ScanViewController {
   
   func prepareCamera() {
     
-    self.captureSession = AVCaptureSession()
-    self.captureSession.beginConfiguration()
-    
-    if captureSession.canSetSessionPreset(.photo) {
-      captureSession.sessionPreset = AVCaptureSession.Preset.photo
-    }
-    
-    let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera],
-                                                            mediaType: .video, position: .back).devices
-    backCamera = availableDevices.first
-    startCaptureSession()
+      if(self.captureSession == nil) {
+          self.captureSession = AVCaptureSession()
+          self.captureSession?.beginConfiguration()
+          
+            if ((captureSession?.canSetSessionPreset(.photo)) != nil) {
+            captureSession?.sessionPreset = AVCaptureSession.Preset.photo
+          }
+          
+          let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera],
+                                                                  mediaType: .video, position: .back).devices
+          backCamera = availableDevices.first
+          startCaptureSession()
+      } else {
+          DispatchQueue.global(qos: .default).async {
+              [weak self] in
+              
+              self?.captureSession?.startRunning()
+          }
+      }
   }
   
   func startCaptureSession() {
@@ -102,7 +118,7 @@ extension ScanViewController {
       guard let self = self else { return }
       
       if #available(iOS 10.0, *) {
-        self.captureSession.automaticallyConfiguresCaptureDeviceForWideColor = true
+        self.captureSession?.automaticallyConfiguresCaptureDeviceForWideColor = true
       }
       
       self.setupInputs()
@@ -113,8 +129,8 @@ extension ScanViewController {
       
       self.setupOutput()
       
-      self.captureSession.commitConfiguration()
-      self.captureSession.startRunning()
+      self.captureSession?.commitConfiguration()
+      self.captureSession?.startRunning()
     }
   }
   
@@ -131,23 +147,23 @@ extension ScanViewController {
       fatalError("could not create input device from back camera")
     }
     backInput = bInput
-    if !captureSession.canAddInput(backInput) {
+      if !(captureSession?.canAddInput(backInput))! {
       fatalError("could not add back camera input to capture session")
     }
     
-    captureSession.addInput(backInput)
+    captureSession?.addInput(backInput)
   }
   
   func setupOutput() {
-    if captureSession.canAddOutput(photoOutput) {
-      captureSession.addOutput(photoOutput)
+      if ((captureSession?.canAddOutput(photoOutput)) != nil) {
+      captureSession?.addOutput(photoOutput)
     }
     
     photoOutput.connections.first?.videoOrientation = .portrait
   }
   
   func setupPreviewLayer(){
-    previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+      previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
     baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
     previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
     previewLayer.position = self.view.center
@@ -165,7 +181,7 @@ extension ScanViewController {
 extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
   
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        captureSession.stopRunning()
+        captureSession?.stopRunning()
         
         guard let cgImage = photo.cgImageRepresentation() else { return }
         var previewImage = UIImage(cgImage: cgImage)
@@ -200,8 +216,12 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         
         let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
         
-        viewModel.appendDocumentPicture(type: type,
-                                        byte: self.convertImageToBase64String(img:croppedImage))
+        DispatchQueue.main.async {
+            self.viewModel.appendDocumentPicture(
+                type: type,
+                byte: self.convertImageToBase64String(img:croppedImage)
+            )
+        }
         
         print("@! >>> Documento da \(viewTitle) adicionado.")
         print("@! >>> Numero de itens: \(helper.documentsImages.count)")
@@ -230,7 +250,6 @@ extension ScanViewController {
     ///
     navigationItem.hidesBackButton = true
     baseView.viewTitle.text = viewTitle
-    viewModel.sideTitle = viewTitle
     
     baseView.didTapTakePicture = { [weak self] in
       guard let self = self else {
@@ -253,7 +272,7 @@ extension ScanViewController {
       self.navigationController?.popViewController(animated: true)
       
       DispatchQueue.global(qos: .userInitiated).async {
-        self.captureSession.startRunning()
+        self.captureSession?.startRunning()
       }
     }
   }
