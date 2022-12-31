@@ -79,10 +79,10 @@ open class ScanView: BaseView {
         takePicBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
         takePicBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
         takePicBtn.heightAnchor.constraint(equalToConstant: 50),
-        takePicBtn.bottomAnchor.constraint(equalTo: returnBtn.topAnchor, constant: -50),
+        takePicBtn.bottomAnchor.constraint(equalTo: returnBtn.topAnchor, constant: -20),
         
         returnBtn.heightAnchor.constraint(equalToConstant: 30),
-        returnBtn.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+        returnBtn.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
         returnBtn.widthAnchor.constraint(equalTo: widthAnchor)
       ])
     }
