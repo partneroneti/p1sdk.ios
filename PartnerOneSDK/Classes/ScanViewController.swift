@@ -145,8 +145,8 @@ extension ScanViewController {
   }
   
   func setupPreviewLayer(){
-    let width = baseView.frame.width * 2
-    let height = baseView.frame.height * 2
+    let width = baseView.frame.width
+    let height = baseView.frame.height
     
     previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
     baseView.cameraContainer.layer.insertSublayer(previewLayer,
@@ -261,12 +261,12 @@ extension ScanViewController {
     
     baseView.didTapBack = { [weak self] in
       guard let self = self else { return }
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+          self.captureSession.stopRunning()
+        }
       
-      self.navigationController?.popViewController(animated: true)
-      
-      DispatchQueue.global(qos: .userInitiated).async {
-        self.captureSession.startRunning()
-      }
+        self.navigationController?.popViewController(animated: true)
     }
   }
 }
