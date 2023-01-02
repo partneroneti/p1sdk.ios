@@ -41,7 +41,9 @@ open class ScanViewController: BaseViewController<ScanView> {
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        self.captureSession?.stopRunning()
+        if(self.captureSession?.isRunning == true) {
+            self.captureSession?.stopRunning()
+        }
     }
   
   open override func viewDidLayoutSubviews() {
@@ -221,7 +223,11 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
                 type: type,
                 byte: self.convertImageToBase64String(img:croppedImage)
             )
+            
+            self.viewModel.navigateToNextView(self)
         }
+        
+        
         
         print("@! >>> Documento da \(viewTitle) adicionado.")
         print("@! >>> Numero de itens: \(helper.documentsImages.count)")
@@ -263,7 +269,7 @@ extension ScanViewController {
       if #available(iOS 11.0, *) {
         self.takePicure()
       }
-      self.viewModel.navigateToNextView(self)
+      
     }
     
     baseView.didTapBack = { [weak self] in
