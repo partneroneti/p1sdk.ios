@@ -218,16 +218,12 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         
         let type = viewTitle == viewModel.setPhotoSide(.frontView) ? "FRENTE" : "VERSO"
         
-        DispatchQueue.main.async {
-            self.viewModel.appendDocumentPicture(
-                type: type,
-                byte: self.convertImageToBase64String(img:croppedImage)
-            )
-            
-            self.viewModel.navigateToNextView(self)
-        }
+        self.viewModel.appendDocumentPicture(
+            type: type,
+            byte: self.convertImageToBase64String(img:croppedImage)
+        )
         
-        
+        self.viewModel.navigateToNextView(self)
         
         print("@! >>> Documento da \(viewTitle) adicionado.")
         print("@! >>> Numero de itens: \(helper.documentsImages.count)")
