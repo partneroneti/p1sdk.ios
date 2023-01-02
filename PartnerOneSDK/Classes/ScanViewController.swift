@@ -173,7 +173,7 @@ extension ScanViewController {
     previewLayer.connection?.videoOrientation = .portrait
     
     baseView.cameraContainer.addSubview(baseView.background)
-      baseView.sendSubviewToBack(baseView.cameraContainer)
+      baseView.sendSubview(toBack: baseView.cameraContainer)
   }
 }
 
@@ -297,7 +297,7 @@ extension UIImage {
     }
 
     func compress(_ jpegQuality: JPEGQuality) -> Data? {
-        return self.jpegData(compressionQuality: jpegQuality.rawValue)
+        return UIImageJPEGRepresentation(self, jpegQuality.rawValue)
     }
     
     func rotate(degrees: CGFloat)-> UIImage? {
