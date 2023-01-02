@@ -174,7 +174,6 @@ open class Config {
   public static func retrieveLowLightConfigurationWizardCustomization() -> FaceTecCustomization {
       
       let font = UIFont.init(name: "SFProDisplay-Regular", size: UIFont.labelFontSize)
-      print("font \(font)")
       
       // For Color Customization
       let outerBackgroundColor = UIColor(hexString: "#ffffff")
