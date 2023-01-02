@@ -30,9 +30,14 @@ Pod::Spec.new do |s|
 
   s.source_files = 'PartnerOneSDK/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'PartnerOneSDK' => ['PartnerOneSDK/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'PartnerOneSDK' => [
+        'PartnerOneSDK/Assets/*.png',
+        'PartnerOneSDK/Assets/Fonts/*.{ttf}'
+     ]
+   }
+  
+  s.resources = "PartnerOneSDK/**/*.{ttf}"
   
    s.public_header_files = 'Pods/Classes/**/*.h'
    s.frameworks = 'FaceTecSDK'
