@@ -29,12 +29,16 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'PartnerOneSDK/Classes/**/*'
+  s.vendored_frameworks = 'PartnerOneSDK/Frameworks/*.framework', 'PartnerOneSDK/Frameworks/*.xcframework'
   
-  # s.resource_bundles = {
-  #   'PartnerOneSDK' => ['PartnerOneSDK/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'PartnerOneSDK' => [
+        'PartnerOneSDK/Assets/*.png',
+        'PartnerOneSDK/Assets/Fonts/*.{ttf}'
+     ]
+   }
   
    s.public_header_files = 'Pods/Classes/**/*.h'
-   s.frameworks = 'FaceTecSDK'
+#   s.frameworks = 'FaceTecSDK'
 #   s.dependency 'FaceTecSDK'
 end

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43351E1C2950833A0014D1F4 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390A294CB5A600B82C27 /* SFProDisplay-Regular.ttf */; };
-		43D92E4329538B5E00BBD458 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D92E4229538B5E00BBD458 /* FaceTecSDK.xcframework */; };
+		43D92E3B29534EE200BBD458 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D92E3A29534EE200BBD458 /* FaceTecSDK.xcframework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ScanViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -44,8 +44,6 @@
 		EFEFAB8A293FBCC800ED8C9D /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB88293FBCC700ED8C9D /* CapturedImageView.swift */; };
 		EFEFAB8B293FBCC800ED8C9D /* CroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB89293FBCC800ED8C9D /* CroppingView.swift */; };
 		EFEFAB8D293FBD7900ED8C9D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFAB8C293FBD7900ED8C9D /* UIView+Extension.swift */; };
-		EFEFABE0293FE1F000ED8C9D /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */; };
-		EFEFABE1293FE1F000ED8C9D /* FaceTecSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EFEFABE1293FE1F000ED8C9D /* FaceTecSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +71,7 @@
 
 /* Begin PBXFileReference section */
 		2C591C163748FE72C703965C /* Pods-PartnerOneSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartnerOneSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		43D92E4229538B5E00BBD458 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = SOURCE_ROOT; };
+		43D92E3A29534EE200BBD458 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		43D9390A294CB5A600B82C27 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		55FA8584A5B53A5DBB6FC886 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PartnerOneSDK.podspec; path = ../PartnerOneSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* PartnerOneSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartnerOneSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +118,6 @@
 		EFEFAB88293FBCC700ED8C9D /* CapturedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		EFEFAB89293FBCC800ED8C9D /* CroppingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppingView.swift; sourceTree = "<group>"; };
 		EFEFAB8C293FBD7900ED8C9D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceTecSDK.framework; path = "../../../../Downloads/FaceTecSDK-ios-9.6.7/FaceTecSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43D92E4329538B5E00BBD458 /* FaceTecSDK.xcframework in Frameworks */,
-				EFEFABE0293FE1F000ED8C9D /* FaceTecSDK.framework in Frameworks */,
+				43D92E3B29534EE200BBD458 /* FaceTecSDK.xcframework in Frameworks */,
 				DDD337FD64C7247494D7736A /* Pods_PartnerOneSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,7 +144,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				43D92E4229538B5E00BBD458 /* FaceTecSDK.xcframework */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PartnerOneSDK */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -238,7 +232,7 @@
 		C140B6AACA133E3F47ACA21C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFEFABDE293FE1A900ED8C9D /* FaceTecSDK.framework */,
+				43D92E3A29534EE200BBD458 /* FaceTecSDK.xcframework */,
 				EBECA43F87C92866954735CA /* Pods_PartnerOneSDK_Example.framework */,
 				6293320C3CA60BB2D9C3D45D /* Pods_PartnerOneSDK_Tests.framework */,
 			);
@@ -376,12 +370,10 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = F48MGZ2AUR;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = F48MGZ2AUR;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -673,11 +665,11 @@
 			baseConfigurationReference = 9FBE415EC065FE1A6DE8F7EC /* Pods-PartnerOneSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F48MGZ2AUR;
+				DEVELOPMENT_TEAM = 93Z4LTM66K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LD_RUNPATH_SEARCH_PATHS)",
-					"$(SRCROOT)/**",
+					"./**",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -699,11 +691,11 @@
 			baseConfigurationReference = 2C591C163748FE72C703965C /* Pods-PartnerOneSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F48MGZ2AUR;
+				DEVELOPMENT_TEAM = 93Z4LTM66K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${LD_RUNPATH_SEARCH_PATHS}",
-					"$(SRCROOT)/**",
+					"./**",
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -723,7 +715,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8CA0CFFCA13431C93D72BD7 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = F48MGZ2AUR;
+				DEVELOPMENT_TEAM = 93Z4LTM66K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -733,13 +725,13 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.partner1.PartnerOneSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -751,19 +743,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3710A2E7570CE9EDF193F40 /* Pods-PartnerOneSDK_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = F48MGZ2AUR;
+				DEVELOPMENT_TEAM = 93Z4LTM66K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.partner1.PartnerOneSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

@@ -65,25 +65,27 @@ open class ScanView: BaseView {
   }
   
   open override func installConstraints() {
-    NSLayoutConstraint.activate([
-      cameraContainer.widthAnchor.constraint(equalTo: widthAnchor),
-      cameraContainer.heightAnchor.constraint(equalTo: heightAnchor),
-      
-      background.widthAnchor.constraint(equalTo: cameraContainer.widthAnchor),
-      background.heightAnchor.constraint(equalTo: cameraContainer.heightAnchor),
-      
-      viewTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-      viewTitle.widthAnchor.constraint(equalTo: widthAnchor),
-      
-      takePicBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
-      takePicBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
-      takePicBtn.heightAnchor.constraint(equalToConstant: 50),
-      takePicBtn.bottomAnchor.constraint(equalTo: returnBtn.topAnchor, constant: -50),
-      
-      returnBtn.heightAnchor.constraint(equalToConstant: 30),
-      returnBtn.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
-      returnBtn.widthAnchor.constraint(equalTo: widthAnchor)
-    ])
+    if #available(iOS 11.0, *) {
+      NSLayoutConstraint.activate([
+        cameraContainer.widthAnchor.constraint(equalTo: widthAnchor),
+        cameraContainer.heightAnchor.constraint(equalTo: heightAnchor),
+        
+        background.widthAnchor.constraint(equalTo: cameraContainer.widthAnchor),
+        background.heightAnchor.constraint(equalTo: cameraContainer.heightAnchor),
+        
+        viewTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+        viewTitle.widthAnchor.constraint(equalTo: widthAnchor),
+        
+        takePicBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+        takePicBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+        takePicBtn.heightAnchor.constraint(equalToConstant: 50),
+        takePicBtn.bottomAnchor.constraint(equalTo: returnBtn.topAnchor, constant: -20),
+        
+        returnBtn.heightAnchor.constraint(equalToConstant: 30),
+        returnBtn.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
+        returnBtn.widthAnchor.constraint(equalTo: widthAnchor)
+      ])
+    }
   }
   
   func setupMaskLayer() {
@@ -95,7 +97,7 @@ open class ScanView: BaseView {
     let path = UIBezierPath(roundedRect: background.bounds,
                             byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight],
                             cornerRadii: CGSize(width: 20, height: 20))
-    maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
+      maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
     
     background.cropReferenceView.addDashedBorder(radius: 10, pattern: [4,4], color: UIColor.white.cgColor)
     background.cropReferenceView.layer.borderWidth = 10

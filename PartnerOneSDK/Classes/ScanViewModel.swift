@@ -30,9 +30,7 @@ open class ScanViewModel {
     }
     
     if sideTitle == setPhotoSide(.backView) {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
         self.sendPicture()
-      }
     }
   }
   
@@ -41,6 +39,14 @@ open class ScanViewModel {
       "type": type,
       "byte": byte
     ]
+      if(type=="FRENTE"){
+          helper.documentsImages.removeAll()
+      } else if (helper.documentsImages.count>1) {
+          for index in 1...helper.documentsImages.count-1 {
+              helper.documentsImages.remove(at: index)
+          }
+      }
+      
     helper.documentsImages.append(documentImage)
   }
   
@@ -48,20 +54,6 @@ open class ScanViewModel {
     if sideTitle == setPhotoSide(.backView) {
       viewController.navigationController?.popViewController(animated: true)
     }
-  }
-  
-  func setImageType(_ type: String) {
-      if sideTitle == setPhotoSide(.frontView) {
-          helper.setDocumentImageTypeFront(type)
-      }else{
-          helper.setDocumentImageTypeBack(type)
-
-      }
-   
-  }
-  
-  func setImageSize(_ size: String) {
-    helper.getDocumentImageSize(size)
   }
   
   func sendPicture() {
