@@ -101,7 +101,7 @@ open class Config {
           defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
           // Set Guidance Customization
-          defaultCustomization.guidanceCustomization.buttonCornerRadius = 30
+          defaultCustomization.guidanceCustomization.buttonCornerRadius = 20
           defaultCustomization.guidanceCustomization.backgroundColors = [frameColor, frameColor]
           defaultCustomization.guidanceCustomization.foregroundColor = textColor
           
@@ -215,7 +215,7 @@ open class Config {
 //          defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor
 
       // Set Guidance Customization
-      defaultCustomization.guidanceCustomization.buttonCornerRadius = 30
+      defaultCustomization.guidanceCustomization.buttonCornerRadius = 20
       defaultCustomization.guidanceCustomization.backgroundColors = [frameColor, frameColor]
       defaultCustomization.guidanceCustomization.foregroundColor = textColor
       
