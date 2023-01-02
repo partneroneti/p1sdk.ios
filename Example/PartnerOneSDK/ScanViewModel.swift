@@ -30,9 +30,7 @@ open class ScanViewModel {
     }
     
     if sideTitle == setPhotoSide(.backView) {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
         self.sendPicture()
-      }
     }
   }
   
