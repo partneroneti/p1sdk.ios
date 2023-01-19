@@ -21,9 +21,7 @@ open class ScanViewController: BaseViewController<ScanView> {
   private var photoOutput = AVCapturePhotoOutput()
   
   //MARK: - init
-  public init(viewModel: ScanViewModel,
-              helper: PartnerHelper,
-              viewTitle: String = "") {
+  public init(viewModel: ScanViewModel, helper: PartnerHelper, viewTitle: String = "") {
     self.viewModel = viewModel
     self.helper = helper
     self.viewTitle = viewTitle
@@ -165,16 +163,16 @@ extension ScanViewController {
   }
   
   func setupPreviewLayer(){
-      previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-    baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
-    previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
-    previewLayer.position = self.view.center
-    previewLayer.videoGravity = .resizeAspectFill
-    previewLayer.connection?.videoOrientation = .portrait
-    
-    baseView.cameraContainer.addSubview(baseView.background)
-      baseView.sendSubview(toBack: baseView.cameraContainer)
-  }
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+        baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
+        previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
+        previewLayer.position = self.view.center
+        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.connection?.videoOrientation = .portrait
+        
+        baseView.cameraContainer.addSubview(baseView.background)
+          baseView.sendSubview(toBack: baseView.cameraContainer)
+      }
 }
 
 //MARK: - Picture Actions Delegate
@@ -201,8 +199,8 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         guard var croppedImage = ImageHelper.cropImage(
             previewImage,
             toRect: cropRect,
-            imageViewWidth: view.frame.width,
-            imageViewHeight: view.frame.height
+            imageViewWidth: baseView.cameraContainer.frame.width,
+            imageViewHeight: baseView.cameraContainer.frame.height
         ) else {
             return
         }

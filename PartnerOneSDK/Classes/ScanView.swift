@@ -67,11 +67,20 @@ open class ScanView: BaseView {
   open override func installConstraints() {
     if #available(iOS 11.0, *) {
       NSLayoutConstraint.activate([
-        cameraContainer.widthAnchor.constraint(equalTo: widthAnchor),
-        cameraContainer.heightAnchor.constraint(equalTo: heightAnchor),
+        cameraContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
+        cameraContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+        cameraContainer.topAnchor.constraint(equalTo: topAnchor),
+        cameraContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
+//        cameraContainer.widthAnchor.constraint(equalTo: widthAnchor),
+//        cameraContainer.heightAnchor.constraint(equalTo: heightAnchor),
         
-        background.widthAnchor.constraint(equalTo: cameraContainer.widthAnchor),
-        background.heightAnchor.constraint(equalTo: cameraContainer.heightAnchor),
+        background.leadingAnchor.constraint(equalTo: cameraContainer.leadingAnchor),
+        background.trailingAnchor.constraint(equalTo: cameraContainer.trailingAnchor),
+        background.topAnchor.constraint(equalTo: cameraContainer.topAnchor),
+        background.bottomAnchor.constraint(equalTo: cameraContainer.bottomAnchor),
+        
+//        background.widthAnchor.constraint(equalTo: cameraContainer.widthAnchor),
+//        background.heightAnchor.constraint(equalTo: cameraContainer.heightAnchor),
         
         viewTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
         viewTitle.widthAnchor.constraint(equalTo: widthAnchor),
