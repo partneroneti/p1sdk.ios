@@ -55,7 +55,6 @@ open class ScanView: BaseView {
   
   open override func initialize() {
     backgroundColor = .black
-    clipsToBounds = false
     
     addSubview(viewTitle)
     addSubview(takePicBtn)
@@ -71,6 +70,8 @@ open class ScanView: BaseView {
         cameraContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
         cameraContainer.topAnchor.constraint(equalTo: topAnchor),
         cameraContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
+        
+        
 //        cameraContainer.widthAnchor.constraint(equalTo: widthAnchor),
 //        cameraContainer.heightAnchor.constraint(equalTo: heightAnchor),
         

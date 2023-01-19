@@ -39,6 +39,8 @@ open class ScanViewController: BaseViewController<ScanView> {
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         if(self.captureSession?.isRunning == true) {
             self.captureSession?.stopRunning()
         }
@@ -164,15 +166,14 @@ extension ScanViewController {
   
   func setupPreviewLayer(){
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-        baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
         previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
-        previewLayer.position = self.view.center
         previewLayer.videoGravity = .resizeAspectFill
         previewLayer.connection?.videoOrientation = .portrait
         
+        baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
         baseView.cameraContainer.addSubview(baseView.background)
-          baseView.sendSubview(toBack: baseView.cameraContainer)
-      }
+        baseView.sendSubview(toBack: baseView.cameraContainer)
+    }
 }
 
 //MARK: - Picture Actions Delegate
@@ -190,10 +191,11 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             previewImage = previewImage.rotate(degrees: 90)!
         }
         
-        let cropRect = CGRect(x: baseView.background.cropReferenceView.frame.origin.x,
-                              y: baseView.background.cropReferenceView.frame.origin.y,
-                              width: baseView.background.cropReferenceView.frame.width,
-                              height: baseView.background.cropReferenceView.frame.height
+        let cropRect = CGRect(
+              x: baseView.background.cropReferenceView.frame.origin.x,
+              y: baseView.background.cropReferenceView.frame.origin.y,
+              width: baseView.background.cropReferenceView.frame.width,
+              height: baseView.background.cropReferenceView.frame.height
         )
         
         guard var croppedImage = ImageHelper.cropImage(
@@ -220,6 +222,9 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             type: type,
             byte: self.convertImageToBase64String(img:croppedImage)
         )
+        
+        print("view \(self.view.frame)")
+        print("view 2 \(self.baseView.cameraContainer.frame)")
         
         self.viewModel.navigateToNextView(self)
         
