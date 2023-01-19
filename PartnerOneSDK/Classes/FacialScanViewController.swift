@@ -70,6 +70,10 @@ extension FacialScanViewController {
     self.deviceKey = helper.faceTecDeviceKeyIdentifier
       self.sessionId = helper.sessionToken
 
+      Config.ProductionKeyText = self.helper.faceTecProductionKeyText
+      Config.DeviceKeyIdentifier = self.helper.faceTecDeviceKeyIdentifier
+      Config.PublicFaceScanEncryptionKey = self.helper.faceTecPublicFaceScanEncryptionKey
+      
       Config.displayLogs()
       
       print("@! >>> Iniciando Facetec.")
@@ -82,10 +86,6 @@ extension FacialScanViewController {
         if initializationSuccessful {
             ThemeHelpers.setAppTheme(theme: "")
 
-            Config.ProductionKeyText = self.helper.faceTecProductionKeyText
-            Config.DeviceKeyIdentifier = self.helper.faceTecDeviceKeyIdentifier
-            Config.PublicFaceScanEncryptionKey = self.helper.faceTecPublicFaceScanEncryptionKey
-                
             self.faceTecLivenessData(completion: {})
 
             if self.helper.wasProcessed == true {
