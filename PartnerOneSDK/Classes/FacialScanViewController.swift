@@ -84,6 +84,7 @@ extension FacialScanViewController {
       }
         
         if initializationSuccessful {
+            print("@! >>> Facetec inicializado com sucesso")
             ThemeHelpers.setAppTheme(theme: "")
 
             self.faceTecLivenessData(completion: {})
