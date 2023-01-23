@@ -35,12 +35,15 @@ var overlayView: UIView = {
       overlayView.heightAnchor.constraint(equalTo: heightAnchor),
       overlayView.bottomAnchor.constraint(equalTo: bottomAnchor),
       
-      cropReferenceView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-      cropReferenceView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-      cropReferenceView.topAnchor.constraint(equalTo: topAnchor, constant: 160),
-      cropReferenceView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -240),
+      cropReferenceView.topAnchor.constraint(equalTo: topAnchor, constant: 100), //160
+      cropReferenceView.widthAnchor.constraint(equalTo: cropReferenceView.heightAnchor, multiplier: 0.8),
+//      cropReferenceView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+//      cropReferenceView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+      
+      cropReferenceView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -200), //240
+      
       cropReferenceView.centerXAnchor.constraint(equalTo: overlayView.centerXAnchor),
-      cropReferenceView.centerYAnchor.constraint(equalTo: overlayView.centerYAnchor),
+//      cropReferenceView.centerYAnchor.constraint(equalTo: overlayView.centerYAnchor),
     ])
   }
 }

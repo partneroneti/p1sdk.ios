@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
    s.resource_bundles = {
      'PartnerOneSDK' => [
         'PartnerOneSDK/Assets/*.png',
+        'PartnerOneSDK/Assets/Assets.xcassets',
         'PartnerOneSDK/Assets/Fonts/*.{ttf}'
      ]
    }
