@@ -25,9 +25,9 @@ final class CapturedImageView: BaseView {
   
   override func initialize() {
     backgroundColor = .red
-    clipsToBounds = false
+//    clipsToBounds = false
     translatesAutoresizingMaskIntoConstraints = false
-    layer.cornerRadius = 10
+//    layer.cornerRadius = 10
     addSubview(imageView)
   }
   

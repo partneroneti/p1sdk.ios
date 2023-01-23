@@ -1,34 +1,29 @@
 import UIKit
 import AVFoundation
-import PartnerOneSDK
 
 open class ScanViewController: BaseViewController<ScanView> {
-    
-    private let MAX_SIZE_IMEGE: CGFloat = 800
+      
+    private var viewModel: ScanViewModel
+    private var helper: PartnerHelper
+    var viewTitle: String
+
+    /// Camera Setup Variables
+    ///
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private var captureSession: AVCaptureSession?
+    private var backCamera: AVCaptureDevice!
+    private var backInput: AVCaptureInput!
+    private var captureConnection: AVCaptureConnection?
+    private var photoSettings: AVCapturePhotoSettings!
+    private var photoOutput = AVCapturePhotoOutput()
   
-  private var viewModel: ScanViewModel
-  private var helper: PartnerHelper
-  var viewTitle: String
-  
-  /// Camera Setup Variables
-  ///
-  private var previewLayer: AVCaptureVideoPreviewLayer!
-  private var captureSession: AVCaptureSession?
-  private var backCamera: AVCaptureDevice!
-  private var backInput: AVCaptureInput!
-  private var captureConnection: AVCaptureConnection?
-  private var photoSettings: AVCapturePhotoSettings!
-  private var photoOutput = AVCapturePhotoOutput()
-  
-  //MARK: - init
-  public init(viewModel: ScanViewModel,
-              helper: PartnerHelper,
-              viewTitle: String = "") {
-    self.viewModel = viewModel
-    self.helper = helper
-    self.viewTitle = viewTitle
-    super.init()
-  }
+    //MARK: - init
+    public init(viewModel: ScanViewModel, helper: PartnerHelper, viewTitle: String = "") {
+        self.viewModel = viewModel
+        self.helper = helper
+        self.viewTitle = viewTitle
+        super.init()
+    }
   
   //MARK: - ViewController Lifecycle
   open override func viewDidAppear(_ animated: Bool) {
@@ -41,27 +36,28 @@ open class ScanViewController: BaseViewController<ScanView> {
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         if(self.captureSession?.isRunning == true) {
             self.captureSession?.stopRunning()
         }
     }
   
-  open override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    baseView.setupMaskLayer()
-  }
-  
-  open override func viewDidLoad() {
-    super.viewDidLoad()
-    if #available(iOS 11.0, *) {
-      setupBinds()
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        baseView.setupMaskLayer()
     }
-  }
   
-  open override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+          setupBinds()
+        }
+    }
+
+    open override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
 
 //MARK: - Setup AV Foundation Camera Presets
@@ -165,16 +161,15 @@ extension ScanViewController {
   }
   
   func setupPreviewLayer(){
-      previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-    baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
-    previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
-    previewLayer.position = self.view.center
-    previewLayer.videoGravity = .resizeAspectFill
-    previewLayer.connection?.videoOrientation = .portrait
-    
-    baseView.cameraContainer.addSubview(baseView.background)
-      baseView.sendSubview(toBack: baseView.cameraContainer)
-  }
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+        previewLayer.frame.size = CGSize(width: baseView.frame.width, height: baseView.frame.height)
+        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.connection?.videoOrientation = .portrait
+        
+        baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
+        baseView.cameraContainer.addSubview(baseView.background)
+        baseView.sendSubview(toBack: baseView.cameraContainer)
+    }
 }
 
 //MARK: - Picture Actions Delegate
@@ -192,26 +187,23 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             previewImage = previewImage.rotate(degrees: 90)!
         }
         
-        let cropRect = CGRect(x: baseView.background.cropReferenceView.frame.origin.x,
-                              y: baseView.background.cropReferenceView.frame.origin.y,
-                              width: baseView.background.cropReferenceView.frame.width,
-                              height: baseView.background.cropReferenceView.frame.height
+        let cropRect = CGRect(
+              x: baseView.background.cropReferenceView.frame.origin.x,
+              y: baseView.background.cropReferenceView.frame.origin.y,
+              width: baseView.background.cropReferenceView.frame.width,
+              height: baseView.background.cropReferenceView.frame.height
         )
         
         guard var croppedImage = ImageHelper.cropImage(
             previewImage,
             toRect: cropRect,
-            imageViewWidth: view.frame.width,
-            imageViewHeight: view.frame.height
+            imageViewWidth: baseView.cameraContainer.frame.width,
+            imageViewHeight: baseView.cameraContainer.frame.height
         ) else {
             return
         }
-        
-        let max = max(croppedImage.size.width, croppedImage.size.height)
-        if(max > MAX_SIZE_IMEGE) {
-            let percents = max / MAX_SIZE_IMEGE
-            croppedImage = croppedImage.imageResized(to: CGSize(width: croppedImage.size.width / percents, height: croppedImage.size.height / percents))
-        }
+                
+        croppedImage = croppedImage.imageResizedIfNedd()
           
         let photoPreviewContainer = baseView.photoPreviewContainer
         photoPreviewContainer.imageView.image = previewImage
@@ -222,6 +214,9 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             type: type,
             byte: self.convertImageToBase64String(img:croppedImage)
         )
+        
+        print("view \(self.view.frame)")
+        print("view 2 \(self.baseView.cameraContainer.frame)")
         
         self.viewModel.navigateToNextView(self)
         
@@ -279,66 +274,4 @@ extension ScanViewController {
         
     }
   }
-}
-
-extension UIImage {
-    func imageResized(to size: CGSize) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { _ in
-            draw(in: CGRect(origin: .zero, size: size))
-        }
-    }
-    
-    enum JPEGQuality: CGFloat {
-        case lowest  = 0
-        case low     = 0.25
-        case medium  = 0.5
-        case high    = 0.75
-        case highest = 1
-    }
-
-    func compress(_ jpegQuality: JPEGQuality) -> Data? {
-        return UIImageJPEGRepresentation(self, jpegQuality.rawValue)
-    }
-    
-    func rotate(degrees: CGFloat)-> UIImage? {
-        let degreesToRadians: (CGFloat) -> CGFloat = { (degrees: CGFloat) in
-              return degrees / 180.0 * CGFloat.pi
-            }
-
-            // Calculate the size of the rotated view's containing box for our drawing space
-            let rotatedViewBox: UIView = UIView(frame: CGRect(origin: .zero, size: size))
-            rotatedViewBox.transform = CGAffineTransform(rotationAngle: degreesToRadians(degrees))
-            let rotatedSize: CGSize = rotatedViewBox.frame.size
-
-            // Create the bitmap context
-            UIGraphicsBeginImageContextWithOptions(rotatedSize, false, 0.0)
-
-            guard let bitmap: CGContext = UIGraphicsGetCurrentContext(), let unwrappedCgImage: CGImage = cgImage else {
-              return nil
-            }
-
-            // Move the origin to the middle of the image so we will rotate and scale around the center.
-            bitmap.translateBy(x: rotatedSize.width/2.0, y: rotatedSize.height/2.0)
-
-            // Rotate the image context
-            bitmap.rotate(by: degreesToRadians(degrees))
-
-            bitmap.scaleBy(x: CGFloat(1.0), y: -1.0)
-
-            let rect: CGRect = CGRect(
-                x: -size.width/2,
-                y: -size.height/2,
-                width: size.width,
-                height: size.height)
-
-            bitmap.draw(unwrappedCgImage, in: rect)
-
-            guard let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() else {
-              return nil
-            }
-
-            UIGraphicsEndImageContext()
-
-            return newImage
-    }
 }
