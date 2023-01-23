@@ -2,30 +2,28 @@ import UIKit
 import AVFoundation
 
 open class ScanViewController: BaseViewController<ScanView> {
-    
-    private let MAX_SIZE_IMEGE: CGFloat = 800
+      
+    private var viewModel: ScanViewModel
+    private var helper: PartnerHelper
+    var viewTitle: String
+
+    /// Camera Setup Variables
+    ///
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private var captureSession: AVCaptureSession?
+    private var backCamera: AVCaptureDevice!
+    private var backInput: AVCaptureInput!
+    private var captureConnection: AVCaptureConnection?
+    private var photoSettings: AVCapturePhotoSettings!
+    private var photoOutput = AVCapturePhotoOutput()
   
-  private var viewModel: ScanViewModel
-  private var helper: PartnerHelper
-  var viewTitle: String
-  
-  /// Camera Setup Variables
-  ///
-  private var previewLayer: AVCaptureVideoPreviewLayer!
-  private var captureSession: AVCaptureSession?
-  private var backCamera: AVCaptureDevice!
-  private var backInput: AVCaptureInput!
-  private var captureConnection: AVCaptureConnection?
-  private var photoSettings: AVCapturePhotoSettings!
-  private var photoOutput = AVCapturePhotoOutput()
-  
-  //MARK: - init
-  public init(viewModel: ScanViewModel, helper: PartnerHelper, viewTitle: String = "") {
-    self.viewModel = viewModel
-    self.helper = helper
-    self.viewTitle = viewTitle
-    super.init()
-  }
+    //MARK: - init
+    public init(viewModel: ScanViewModel, helper: PartnerHelper, viewTitle: String = "") {
+        self.viewModel = viewModel
+        self.helper = helper
+        self.viewTitle = viewTitle
+        super.init()
+    }
   
   //MARK: - ViewController Lifecycle
   open override func viewDidAppear(_ animated: Bool) {
@@ -45,22 +43,21 @@ open class ScanViewController: BaseViewController<ScanView> {
         }
     }
   
-  open override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    baseView.setupMaskLayer()
-  }
-  
-  open override func viewDidLoad() {
-    super.viewDidLoad()
-    if #available(iOS 11.0, *) {
-      setupBinds()
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        baseView.setupMaskLayer()
     }
-  }
   
-  open override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+          setupBinds()
+        }
+    }
+
+    open override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
 
 //MARK: - Setup AV Foundation Camera Presets
