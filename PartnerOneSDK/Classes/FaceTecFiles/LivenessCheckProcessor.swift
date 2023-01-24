@@ -11,6 +11,8 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
 
     public var faceScan: String = ""
     var partnerManager = PartnerManager()
+    
+    private var userCanceled = false
 
     init(sessionToken: String, fromViewController: FacialScanViewController) {
         self.sessionToken = sessionToken
@@ -64,7 +66,9 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
   }
   
   public func onFaceTecSDKCompletelyDone() {
-    self.fromViewController.onComplete();
+      if !userCanceled {
+          self.fromViewController.onComplete();
+      }
   }
   
   func isSuccess() -> Bool {
