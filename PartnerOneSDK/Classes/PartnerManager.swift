@@ -1,7 +1,7 @@
 import UIKit
 import FaceTecSDK
 
-open class PartnerHelper {
+open class PartnerManager {
   
   //MARK: - Public Properties
   
@@ -11,6 +11,9 @@ open class PartnerHelper {
   public var onNavigateToFaceCapture: (() -> Void)?
   public var waitingFaceTecResponse: (() -> Void)?
   public static var livenessCallBack: ((_ faceScan:String, _ auditTrailImage:String ,_ lowQualityAuditTrailImage:String) -> Void)?
+        
+    public static var livenessCancelCallBack: (()-> Void)?
+    
   public var navigateToStatus: (() -> Void)?
   public var onSuccessFaceTec: (() -> Void)?
   
@@ -49,20 +52,22 @@ open class PartnerHelper {
   //MARK: - Public Functions
   
   public func initializeSDK(_ viewController: UIViewController) {
-    let mainViewModel = ScanViewModel(helper: self)
-    viewController.navigationController?.pushViewController(ScanViewController(viewModel: mainViewModel, helper: self), animated: true)
+    let mainViewModel = ScanViewModel(partnerManager: self)
+    viewController.navigationController?.pushViewController(
+        ScanViewController(viewModel: mainViewModel, partnerManager: self), animated: true
+    )
   }
   
   public func startFaceCapture() -> UIViewController {
-    let mainViewModel = ScanViewModel(helper: self)
-    let viewController = FacialScanViewController(viewModel: mainViewModel, helper: self)
-    processor?.helper = self
+    let mainViewModel = ScanViewModel(partnerManager: self)
+    let viewController = FacialScanViewController(viewModel: mainViewModel, partnerManager: self)
+    processor?.partnerManager = self
     return viewController
   }
   
   public func startDocumentCapture() -> UIViewController {
-    let mainViewModel = ScanViewModel(helper: self)
-    return ScanViewController(viewModel: mainViewModel, helper: self, viewTitle: "Frente")
+    let mainViewModel = ScanViewModel(partnerManager: self)
+    return ScanViewController(viewModel: mainViewModel, partnerManager: self, viewTitle: "Frente")
   }
   
   public func transactionId(_ id: String = "") -> String {
@@ -108,8 +113,8 @@ open class PartnerHelper {
   }
   
   public func faceScanBase64() -> String {
-    let mainViewModel = ScanViewModel(helper: self)
-    let viewController = FacialScanViewController(viewModel: mainViewModel, helper: self)
+    let mainViewModel = ScanViewModel(partnerManager: self)
+    let viewController = FacialScanViewController(viewModel: mainViewModel, partnerManager: self)
     return viewController.faceScanBase64
   }
 }
