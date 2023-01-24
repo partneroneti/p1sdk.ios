@@ -4,7 +4,7 @@ import AVFoundation
 open class ScanViewController: BaseViewController<ScanView> {
       
     private var viewModel: ScanViewModel
-    private var helper: PartnerHelper
+    private var partnerManager: PartnerManager
     var viewTitle: String
 
     /// Camera Setup Variables
@@ -18,9 +18,9 @@ open class ScanViewController: BaseViewController<ScanView> {
     private var photoOutput = AVCapturePhotoOutput()
   
     //MARK: - init
-    public init(viewModel: ScanViewModel, helper: PartnerHelper, viewTitle: String = "") {
+    public init(viewModel: ScanViewModel, partnerManager: PartnerManager, viewTitle: String = "") {
         self.viewModel = viewModel
-        self.helper = helper
+        self.partnerManager = partnerManager
         self.viewTitle = viewTitle
         super.init()
     }
@@ -221,7 +221,7 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         self.viewModel.navigateToNextView(self)
         
         print("@! >>> Documento da \(viewTitle) adicionado.")
-        print("@! >>> Numero de itens: \(helper.documentsImages.count)")
+        print("@! >>> Numero de itens: \(partnerManager.documentsImages.count)")
   }
     
     private func convertImageToBase64String (img: UIImage) -> String {

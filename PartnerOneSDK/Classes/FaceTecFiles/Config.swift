@@ -8,7 +8,7 @@ import FaceTecSDK
 
 open class Config {
     
-  static let helper = PartnerHelper()
+  static let partnerManager = PartnerManager()
   
   //  static let BaseURL = "https://digital-id.webdatadome.com/api"
   

@@ -7,13 +7,13 @@ enum PictureView {
 
 open class ScanViewModel {
   
-  var helper: PartnerHelper
+  var partnerManager: PartnerManager
   var sideTitle: String = ""
   var transactionID: String = ""
   var documents = [AnyObject]()
   
-  init(helper: PartnerHelper) {
-    self.helper = helper
+  init(partnerManager: PartnerManager) {
+    self.partnerManager = partnerManager
   }
   
   func setPhotoSide(_ cases: PictureView) -> String {
@@ -25,7 +25,7 @@ open class ScanViewModel {
   
   func navigateToNextView(_ viewController: UIViewController) {
     if sideTitle == setPhotoSide(.frontView) {
-      let nextViewController = ScanViewController(viewModel: self, helper: self.helper, viewTitle: "Verso")
+      let nextViewController = ScanViewController(viewModel: self, partnerManager: self.partnerManager, viewTitle: "Verso")
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
@@ -40,14 +40,14 @@ open class ScanViewModel {
       "byte": byte
     ]
       if(type=="FRENTE"){
-          helper.documentsImages.removeAll()
-      } else if (helper.documentsImages.count>1) {
-          for index in 1...helper.documentsImages.count-1 {
-              helper.documentsImages.remove(at: index)
+          partnerManager.documentsImages.removeAll()
+      } else if (partnerManager.documentsImages.count>1) {
+          for index in 1...partnerManager.documentsImages.count-1 {
+              partnerManager.documentsImages.remove(at: index)
           }
       }
       
-    helper.documentsImages.append(documentImage)
+      partnerManager.documentsImages.append(documentImage)
   }
   
   func navigateToPreviewView(_ viewController: UIViewController) {
@@ -57,11 +57,11 @@ open class ScanViewModel {
   }
   
   func sendPicture() {
-    if helper.documentsImages.count == 2 {
-      helper.sendDocumentPicture?()
-      print(helper.documentsImages.count)
-      print("@! >>> Enviando imagens dos documentos...")
-      print("@! >>> Numero final de itens: \(helper.documentsImages.count)")
+    if partnerManager.documentsImages.count == 2 {
+        partnerManager.sendDocumentPicture?()
+        print(partnerManager.documentsImages.count)
+        print("@! >>> Enviando imagens dos documentos...")
+        print("@! >>> Numero final de itens: \(partnerManager.documentsImages.count)")
     }
   }
 }
