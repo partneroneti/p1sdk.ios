@@ -6,7 +6,7 @@ open class PartnerManager {
   //MARK: - Public Properties
   
   private var processor: LivenessCheckProcessor?
-  
+    private var facetecManeger : FacetecManager?
   public var sendDocumentPicture: (() -> Void)?
   public var onNavigateToFaceCapture: (() -> Void)?
   public var waitingFaceTecResponse: (() -> Void)?
@@ -47,7 +47,9 @@ open class PartnerManager {
   
   //MARK: - init
 
-  public init() {}
+  public init() {
+
+  }
   
   //MARK: - Public Functions
   
@@ -58,11 +60,12 @@ open class PartnerManager {
     )
   }
   
-  public func startFaceCapture() -> UIViewController {
-    let mainViewModel = ScanViewModel(partnerManager: self)
-    let viewController = FacialScanViewController(viewModel: mainViewModel, partnerManager: self)
-    processor?.partnerManager = self
-    return viewController
+    public func startFaceCapture(controller:UIViewController) {
+    //let mainViewModel = ScanViewModel(partnerManager: self)
+    //let viewController = FacialScanViewController(viewModel: mainViewModel, //partnerManager: self)
+    self.facetecManeger = FacetecManager(parameterspartnerManager: self)
+    self.facetecManeger?.setupFaceTec(controller: controller)
+   // return viewController
   }
   
   public func startDocumentCapture() -> UIViewController {
@@ -113,8 +116,8 @@ open class PartnerManager {
   }
   
   public func faceScanBase64() -> String {
-    let mainViewModel = ScanViewModel(partnerManager: self)
-    let viewController = FacialScanViewController(viewModel: mainViewModel, partnerManager: self)
-    return viewController.faceScanBase64
+    //let mainViewModel = ScanViewModel(partnerManager: self)
+    //let viewController = FacialScanViewController(viewModel: mainViewModel, partnerManager: self)
+      return ""//viewController.faceScanBase64
   }
 }

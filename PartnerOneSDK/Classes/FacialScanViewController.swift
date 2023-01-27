@@ -1,7 +1,7 @@
 import UIKit
 import FaceTecSDK
 
-final class FacialScanViewController: UIViewController, URLSessionDelegate {
+final class FacialScanViewControllerB: UIViewController, URLSessionDelegate {
   
   //MARK: - Properties
   
@@ -63,11 +63,12 @@ final class FacialScanViewController: UIViewController, URLSessionDelegate {
     FaceTec.initialize()
     setupFaceTec()
   }
+
 }
 
 //MARK: - Private Functions
 
-extension FacialScanViewController {
+extension FacialScanViewControllerB {
   func setupFaceTec() {
         self.transactionId = partnerManager.transaction
         self.deviceKey = partnerManager.faceTecDeviceKeyIdentifier

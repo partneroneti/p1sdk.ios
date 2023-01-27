@@ -11,15 +11,17 @@
 		115F68451BE7A0D4F832E2C330A8B14E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */; };
 		13C19DC46445E9020BE12E12F4A35793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDADE5FC484DADB14C602CA35E7F8200 /* Foundation.framework */; };
 		19480707C9F816684788CD8573F59980 /* Pods-PartnerOneSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 194D9590D1637B4AE85144DFDAEA8A4F /* Pods-PartnerOneSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1969555B897ECF46DB55636925ECA0EC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBD65039AE99A701E3F3B1E84F26A5 /* Helper.swift */; };
 		2522023283B68BC0E507764AF08E76C1 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37777968EC7E8F36AAE07C1E3E2C5EA7 /* ScanView.swift */; };
 		336949F4C875A4957267B04B83F636B1 /* SampleAppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373F65412EA396877B2D084AB773E5B /* SampleAppUtilities.swift */; };
 		40CEBBF806B5992BB6A770A137EF6227 /* ThemeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */; };
+		43B063EC29840043001B70F1 /* PartnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B063EB29840043001B70F1 /* PartnerManager.swift */; };
+		43B063EE29840059001B70F1 /* PartnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B063ED29840059001B70F1 /* PartnerManager.swift */; };
+		43B063F029840241001B70F1 /* FacetecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B063EF29840241001B70F1 /* FacetecManager.swift */; };
+		43B063F229840294001B70F1 /* FacetecUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B063F129840294001B70F1 /* FacetecUtils.swift */; };
 		43D658DE296355690034EDCB /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D658DD296355690034EDCB /* ImageHelper.swift */; };
 		43D92E1C2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D92E1B2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift */; };
 		43D92E3929534EC900BBD458 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D92E3829534EC900BBD458 /* FaceTecSDK.xcframework */; };
 		43D9390E294CFFBC00B82C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9390C294CFFBC00B82C27 /* Assets.xcassets */; };
-		43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E2B308294B585F009F86D0 /* LivenessResult.swift */; };
 		5BD88AD58DA2E8D2A1A29F7CECFC6A75 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734F4E4CCB358CDC93132F26F9C68FF2 /* DataParser.swift */; };
 		5E050A400BD9BE9DCB77C5E16EC59D45 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */; };
 		651782323256A6BF771CE5DA86BF4528 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C88F50F5358729EC81BC787D9EFEC /* ErrorResponse.swift */; };
@@ -47,7 +49,6 @@
 		F1440EC05B0DE8BED6C0CC34371887BC /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C4C70F9B3B870487F0ED16B01CFBA /* ServerError.swift */; };
 		F67C9230A4190966A3C7172B16F4CA20 /* Pods-PartnerOneSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE3595BB2FB7127C4BF22712D373EC /* Pods-PartnerOneSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F96BE2579C7DA969F2A0C0FE5E9BB56C /* Pods-PartnerOneSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 058203571A0C7C4230713DF83B2CC184 /* Pods-PartnerOneSDK_Tests-dummy.m */; };
-		FD46F05450A6F38D0FA0574D0F9451D8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E6C7508199FC307D2236C8DEDC8F6 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,11 +87,14 @@
 		3C3ADA302E50424D4D24DACED635F681 /* Pods-PartnerOneSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Example.modulemap"; sourceTree = "<group>"; };
 		3FF20051FDBB89497532D260EB5CFFF1 /* CroppingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CroppingView.swift; path = PartnerOneSDK/Classes/CroppingView.swift; sourceTree = "<group>"; };
 		42B0E05436B6424A829153826B1B691F /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PartnerOneSDK/Classes/BaseViewController.swift; sourceTree = "<group>"; };
+		43B063EB29840043001B70F1 /* PartnerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartnerManager.swift; path = PartnerOneSDK/Classes/PartnerManager.swift; sourceTree = "<group>"; };
+		43B063ED29840059001B70F1 /* PartnerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartnerManager.swift; path = PartnerOneSDK/Classes/PartnerManager.swift; sourceTree = "<group>"; };
+		43B063EF29840241001B70F1 /* FacetecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacetecManager.swift; sourceTree = "<group>"; };
+		43B063F129840294001B70F1 /* FacetecUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacetecUtils.swift; path = ../../../../PhotoFaceSample/Pods/PartnerOneSDK/PartnerOneSDK/Classes/FaceTecFiles/FacetecUtils.swift; sourceTree = "<group>"; };
 		43D658DD296355690034EDCB /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = PartnerOneSDK/Classes/ImageHelper.swift; sourceTree = "<group>"; };
 		43D92E1B2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenActivityIndicatorView.swift; sourceTree = "<group>"; };
 		43D92E3829534EC900BBD458 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "../../../../../Downloads/FaceTecSDK-ios-9.4.25/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
 		43D9390C294CFFBC00B82C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43E2B308294B585F009F86D0 /* LivenessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessResult.swift; sourceTree = "<group>"; };
 		51B803D7131941DD35B19E4FBECD8C25 /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = PartnerOneSDK/Classes/ScanViewController.swift; sourceTree = "<group>"; };
 		575DDBB3CA797C44721EC701CC5DF372 /* PartnerOneSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PartnerOneSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		59C296938E38BA08287CBF3723EFCEAE /* Pods-PartnerOneSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartnerOneSDK_Tests.modulemap"; sourceTree = "<group>"; };
@@ -109,7 +113,6 @@
 		99EB0324F94612FB38E4F9449689DF40 /* Pods-PartnerOneSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartnerOneSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E48FFC58A42943B477D41E614C67B87 /* PartnerOneSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PartnerOneSDK-umbrella.h"; sourceTree = "<group>"; };
-		A3BBD65039AE99A701E3F3B1E84F26A5 /* Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = PartnerOneSDK/Classes/Helper.swift; sourceTree = "<group>"; };
 		A9AA3DE9DFE47CDD9B694682EB56909C /* PartnerOneSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PartnerOneSDK-dummy.m"; sourceTree = "<group>"; };
 		B8A184180765C6EB274BD6AD1E5EEB0C /* Pods-PartnerOneSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartnerOneSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BE57555373C5CB1AE7E11C6B1E2107DE /* Pods-PartnerOneSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartnerOneSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -124,7 +127,6 @@
 		DE8C88F50F5358729EC81BC787D9EFEC /* ErrorResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorResponse.swift; path = PartnerOneSDK/Classes/ErrorResponse.swift; sourceTree = "<group>"; };
 		E4C9E7C8BF80ED9CB3C0A31ABDDCE280 /* Pods-PartnerOneSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartnerOneSDK_Tests"; path = Pods_PartnerOneSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorType.swift; path = PartnerOneSDK/Classes/ErrorType.swift; sourceTree = "<group>"; };
-		EA7E6C7508199FC307D2236C8DEDC8F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "PartnerOneSDK/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
 		ECFA323EB7175AE292A6D8F949668531 /* Pods-PartnerOneSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartnerOneSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F17895329E78E3CDE50A69AA0F3A6C18 /* ThemeHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeHelpers.swift; sourceTree = "<group>"; };
 		F373F65412EA396877B2D084AB773E5B /* SampleAppUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SampleAppUtilities.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		89E75562846050982C63E60FAA80DC43 /* FaceTecFiles */ = {
 			isa = PBXGroup;
 			children = (
+				43B063F129840294001B70F1 /* FacetecUtils.swift */,
 				06954A4B2E916EDFCD9925368E31FFCE /* Config.swift */,
 				5BF2E243A14ABB0184A2CC074C12AF13 /* FaceTec.strings */,
 				F762D52471FCC8432235885E4AF3EFF4 /* LivenessCheckProcessor.swift */,
@@ -245,27 +248,27 @@
 				8933DE24A1A936E47D552B381E05F798 /* CapturedImageView.swift */,
 				011EBCD3454B4EB6C2D462344F286BD6 /* CredentialsModel.swift */,
 				3FF20051FDBB89497532D260EB5CFFF1 /* CroppingView.swift */,
+				43B063ED29840059001B70F1 /* PartnerManager.swift */,
 				734F4E4CCB358CDC93132F26F9C68FF2 /* DataParser.swift */,
 				FFA1113908345F50FB8578EF0DA481B7 /* DocumentDataModel.swift */,
 				20C505C3EC001D274FD72ACBA393B2AF /* DocumentModel.swift */,
 				DE8C88F50F5358729EC81BC787D9EFEC /* ErrorResponse.swift */,
 				E4E10BD710C45C675FACA61BBB74BC42 /* ErrorType.swift */,
 				248E35046236149CDF2DFCE07BF52E74 /* FacialScanViewController.swift */,
-				A3BBD65039AE99A701E3F3B1E84F26A5 /* Helper.swift */,
 				C050DDCA748818FE3FCCDD97462D3559 /* LivenessModel.swift */,
 				CEE0193BD0245115A5000958589D5E88 /* PartnerOneWorker.swift */,
 				D0EC38E4F8FEEA94A4EB9358F18D2E26 /* Response.swift */,
 				37777968EC7E8F36AAE07C1E3E2C5EA7 /* ScanView.swift */,
+				43B063EB29840043001B70F1 /* PartnerManager.swift */,
 				51B803D7131941DD35B19E4FBECD8C25 /* ScanViewController.swift */,
 				C5981FBA1F38A87788AD2134F5F9BF50 /* ScanViewModel.swift */,
 				2D3C4C70F9B3B870487F0ED16B01CFBA /* ServerError.swift */,
 				C9EA76696CD277AE7DAFCB00F8C34BE9 /* SessionModel.swift */,
-				EA7E6C7508199FC307D2236C8DEDC8F6 /* UIView+Extension.swift */,
 				89E75562846050982C63E60FAA80DC43 /* FaceTecFiles */,
 				9F6A40E69035BD2E14EBD5366BE3D66C /* Pod */,
 				26C98631D3C0B533F7D2A3755A7BC7A5 /* Support Files */,
-				43E2B308294B585F009F86D0 /* LivenessResult.swift */,
 				43D9390C294CFFBC00B82C27 /* Assets.xcassets */,
+				43B063EF29840241001B70F1 /* FacetecManager.swift */,
 			);
 			name = PartnerOneSDK;
 			path = ../..;
@@ -485,14 +488,17 @@
 				934DE7FFF035909811E6026BBFFB24F4 /* Config.swift in Sources */,
 				0FCC822C03B6DA77B0A8B9B0DBDBDCA3 /* CredentialsModel.swift in Sources */,
 				87AB8D45BE27841F64E18072A18AE48D /* CroppingView.swift in Sources */,
+				43B063EE29840059001B70F1 /* PartnerManager.swift in Sources */,
+				43B063F029840241001B70F1 /* FacetecManager.swift in Sources */,
 				5BD88AD58DA2E8D2A1A29F7CECFC6A75 /* DataParser.swift in Sources */,
+				43B063F229840294001B70F1 /* FacetecUtils.swift in Sources */,
 				6AD53AABD7A2E892AAA4041049EF2102 /* DocumentDataModel.swift in Sources */,
 				66348C6F666D8449EDB2E98F228E576A /* DocumentModel.swift in Sources */,
 				651782323256A6BF771CE5DA86BF4528 /* ErrorResponse.swift in Sources */,
+				43B063EC29840043001B70F1 /* PartnerManager.swift in Sources */,
 				5E050A400BD9BE9DCB77C5E16EC59D45 /* ErrorType.swift in Sources */,
 				BAFEFAC55CD9C63A0F612D947489DFBD /* FaceTec.strings in Sources */,
 				DB99953743BB489DF8FF438C0D833743 /* FacialScanViewController.swift in Sources */,
-				1969555B897ECF46DB55636925ECA0EC /* Helper.swift in Sources */,
 				6AB679DE8192FC9BC5C67C18F1E13534 /* LivenessCheckProcessor.swift in Sources */,
 				B2674717EAF06085E4B84714977A3E47 /* LivenessModel.swift in Sources */,
 				E19C78CC74F257025C2867AB5DDE66A5 /* PartnerOneSDK-dummy.m in Sources */,
@@ -501,7 +507,6 @@
 				845252CD0CEECB30B4EC5D7A3FC9C3E5 /* Response.swift in Sources */,
 				336949F4C875A4957267B04B83F636B1 /* SampleAppUtilities.swift in Sources */,
 				2522023283B68BC0E507764AF08E76C1 /* ScanView.swift in Sources */,
-				43E2B309294B585F009F86D0 /* LivenessResult.swift in Sources */,
 				9C6929EC5A6B656B9E99EAB71200FAFB /* ScanViewController.swift in Sources */,
 				43D92E1C2950DEA800BBD458 /* PseudoFullscreenActivityIndicatorView.swift in Sources */,
 				CA93F27428567B01F03B0E9EBD7F2054 /* ScanViewModel.swift in Sources */,
@@ -509,7 +514,6 @@
 				F1440EC05B0DE8BED6C0CC34371887BC /* ServerError.swift in Sources */,
 				9BC092545A9BD6A12E97751A6205C24F /* SessionModel.swift in Sources */,
 				40CEBBF806B5992BB6A770A137EF6227 /* ThemeHelpers.swift in Sources */,
-				FD46F05450A6F38D0FA0574D0F9451D8 /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

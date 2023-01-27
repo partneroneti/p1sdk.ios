@@ -5,7 +5,7 @@ import FaceTecSDK
 open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessorDelegate, URLSessionTaskDelegate {
 //  var latestNetworkRequest: URLSessionTask!
     var success = false
-    var fromViewController: FacialScanViewController
+    var fromViewController: UIViewController
     var sessionToken: String
     var faceScanResultCallback: FaceTecFaceScanResultCallback!
 
@@ -14,7 +14,7 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
     
     private var userCanceled = false
 
-    init(sessionToken: String, fromViewController: FacialScanViewController) {
+    init(sessionToken: String, fromViewController: UIViewController) {
         self.sessionToken = sessionToken
         self.fromViewController = fromViewController
         super.init()
@@ -52,7 +52,7 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
         //fromViewController.setLatestSessionResult(sessionResult: sessionResult)
 
         self.faceScanResultCallback = faceScanResultCallback
-        self.fromViewController.processorResponse?()
+        //self.fromViewController.processorResponse?()
 
         print("@! >>> Escaneamento facial feito. Fazendo checagem...")
     
@@ -67,7 +67,7 @@ open class LivenessCheckProcessor: NSObject, Processor, FaceTecFaceScanProcessor
   
   public func onFaceTecSDKCompletelyDone() {
       if !userCanceled {
-          self.fromViewController.onComplete();
+          //self.fromViewController.onComplete();
       }
   }
   
