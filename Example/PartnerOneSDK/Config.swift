@@ -9,7 +9,7 @@ import FaceTecSDK
 open class Config {
     
   static let partnerManager = PartnerManager()
-  
+
   // -------------------------------------
   // This app can modify the customization to demonstrate different look/feel preferences
   // NOTE: This function is auto-populated by the FaceTec SDK Configuration Wizard based on your UI Customizations you picked in the Configuration Wizard GUI.
@@ -89,7 +89,7 @@ open class Config {
           // Set Feedback Customization
           defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
           defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-//          defaultCustomization.feedbackCustomization.textFont = Config.font!
+          defaultCustomization.feedbackCustomization.textFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
 
           // Set Cancel Customization
           defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -102,7 +102,7 @@ open class Config {
           defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
           defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
           defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-//          defaultCustomization.resultScreenCustomization.messageFont = Config.font!
+          defaultCustomization.resultScreenCustomization.messageFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
           
           // Set Security Watermark Customization
           defaultCustomization.securityWatermarkImage = .faceTec
@@ -202,7 +202,7 @@ open class Config {
       // Set Feedback Customization
       defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
       defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-//      defaultCustomization.feedbackCustomization.textFont = Config.font!
+      defaultCustomization.feedbackCustomization.textFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
 
       // Set Cancel Customization
       defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -215,7 +215,7 @@ open class Config {
       defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
       defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
       defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-//      defaultCustomization.resultScreenCustomization.messageFont = Config.font!
+      defaultCustomization.resultScreenCustomization.messageFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
       
       // Set Security Watermark Customization
       defaultCustomization.securityWatermarkImage = .faceTec
