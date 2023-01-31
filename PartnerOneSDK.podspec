@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
         'PartnerOneSDK/Assets/*.png',
         'PartnerOneSDK/Assets/Assets.xcassets',
         'PartnerOneSDK/Assets/Fonts/*.{ttf}',
-        'PartnerOneSDK/*.{strings}'
+        'PartnerOneSDK/Assets/FaceTec.strings'
      ]
    }
   
