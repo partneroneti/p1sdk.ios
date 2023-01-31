@@ -96,7 +96,7 @@
 "FaceTec_result_idscan_retry_barcode_not_read_message" = "Falha ao digitalizar o código de barras\nTente novamente";
 
 "FaceTec_retry_header" = "Vamos tentar de novo";
-"FaceTec_retry_subheader_message" = "Precisamos de uma selfie de vídeo mais nítida";
+"FaceTec_retry_subheader_message" = "Precisamos de uma selfie nítida";
 "FaceTec_retry_instruction_message_1" = "Expressão neutra, sem sorriso";
 "FaceTec_retry_instruction_message_2" = "Sem brilho ou iluminação extrema";
 "FaceTec_retry_instruction_message_3" = "Muito embaçada, limpe sua câmera";
