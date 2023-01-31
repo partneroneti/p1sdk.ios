@@ -24,7 +24,7 @@ class ThemeHelpers {
         
 
             currentCustomization = Config.retrieveConfigurationWizardCustomization()
-        currentCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offred")
+        currentCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offwhite")
         return currentCustomization
     }
     
@@ -35,14 +35,14 @@ class ThemeHelpers {
         
 
             currentCustomization = Config.retrieveConfigurationWizardCustomization()
-        currentCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offred")
+        currentCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offwhite")
         return currentCustomization
     }
     
     // Configure UX Color Scheme For Low Light Mode
     class func getDynamicDimmingCustomizationForTheme(theme: String) -> FaceTecCustomization {
         var currentDynamicDimmingCustomization: FaceTecCustomization = getCustomizationForTheme(theme: theme)
-        currentDynamicDimmingCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offred")
+        currentDynamicDimmingCustomization.cancelButtonCustomization.customImage = UIImage(named: "single_chevron_left_offwhite")
         return currentDynamicDimmingCustomization
     }
 }

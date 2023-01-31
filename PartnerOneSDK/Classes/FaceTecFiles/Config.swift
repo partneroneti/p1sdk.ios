@@ -38,7 +38,7 @@ open class Config {
           // For Frame Corner Radius Customization
           let frameCornerRadius: Int32 = 20
 
-          let cancelImage = UIImage(named: "single_chevron_left_offred", in: Bundle.getBundle(), compatibleWith: nil)
+          let cancelImage = UIImage(named: "single_chevron_left_offblack", in: Bundle.getBundle(), compatibleWith: nil)
           let cancelButtonLocation: FaceTecCancelButtonLocation = .topLeft
 
           
@@ -152,7 +152,7 @@ open class Config {
       // For Frame Corner Radius Customization
       let frameCornerRadius: Int32 = 20
 
-      let cancelImage = UIImage(named: "single_chevron_left_offred", in: Bundle.getBundle(), compatibleWith: nil)
+      let cancelImage = UIImage(named: "single_chevron_left_offwhite", in: Bundle.getBundle(), compatibleWith: nil)
       let cancelButtonLocation: FaceTecCancelButtonLocation = .topLeft
 
       // Set a default customization
