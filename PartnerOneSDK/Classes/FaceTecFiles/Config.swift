@@ -38,7 +38,7 @@ open class Config {
           // For Frame Corner Radius Customization
           let frameCornerRadius: Int32 = 20
 
-          let cancelImage = UIImage(named: "single_chevron_left_offred", in: Bundle.getBundle(), compatibleWith: nil)
+          let cancelImage = UIImage(named: "single_chevron_left_offblack", in: Bundle.getBundle(), compatibleWith: nil)
           let cancelButtonLocation: FaceTecCancelButtonLocation = .topLeft
 
           
@@ -89,7 +89,7 @@ open class Config {
           // Set Feedback Customization
           defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
           defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-//          defaultCustomization.feedbackCustomization.textFont = Config.font!
+          defaultCustomization.feedbackCustomization.textFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
 
           // Set Cancel Customization
           defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -102,7 +102,7 @@ open class Config {
           defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
           defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
           defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-//          defaultCustomization.resultScreenCustomization.messageFont = Config.font!
+          defaultCustomization.resultScreenCustomization.messageFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
           
           // Set Security Watermark Customization
           defaultCustomization.securityWatermarkImage = .faceTec
@@ -152,7 +152,7 @@ open class Config {
       // For Frame Corner Radius Customization
       let frameCornerRadius: Int32 = 20
 
-      let cancelImage = UIImage(named: "single_chevron_left_offred", in: Bundle.getBundle(), compatibleWith: nil)
+      let cancelImage = UIImage(named: "single_chevron_left_offwhite", in: Bundle.getBundle(), compatibleWith: nil)
       let cancelButtonLocation: FaceTecCancelButtonLocation = .topLeft
 
       // Set a default customization
@@ -202,7 +202,7 @@ open class Config {
       // Set Feedback Customization
       defaultCustomization.feedbackCustomization.backgroundColor = feedbackBackgroundLayer
       defaultCustomization.feedbackCustomization.textColor = buttonAndFeedbackBarTextColor
-//      defaultCustomization.feedbackCustomization.textFont = Config.font!
+      defaultCustomization.feedbackCustomization.textFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
 
       // Set Cancel Customization
       defaultCustomization.cancelButtonCustomization.customImage = cancelImage
@@ -215,7 +215,7 @@ open class Config {
       defaultCustomization.resultScreenCustomization.resultAnimationBackgroundColor = buttonAndFeedbackBarColor
       defaultCustomization.resultScreenCustomization.resultAnimationForegroundColor = buttonAndFeedbackBarTextColor
       defaultCustomization.resultScreenCustomization.uploadProgressFillColor = buttonAndFeedbackBarColor
-//      defaultCustomization.resultScreenCustomization.messageFont = Config.font!
+      defaultCustomization.resultScreenCustomization.messageFont = font ?? UIFont.systemFont(ofSize: UIFont.labelFontSize)
       
       // Set Security Watermark Customization
       defaultCustomization.securityWatermarkImage = .faceTec
