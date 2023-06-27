@@ -31,6 +31,18 @@ open class ScanView: BaseView {
     return label
   }()
   
+    let confirmationLabel: UILabel = {
+        let label = UILabel()
+        label.text = "A foto ficou boa?"
+        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        label.isHidden = true
+        return label
+    }()
+    
   lazy var takePicBtn: UIButton = {
     let button = UIButton()
     button.backgroundColor = .systemRed
@@ -42,7 +54,7 @@ open class ScanView: BaseView {
     return button
   }()
   
-  private lazy var returnBtn: UIButton = {
+  lazy var returnBtn: UIButton = {
     let button = UIButton()
     button.setTitle("Voltar", for: .normal)
     button.setTitleColor(.white, for: .normal)
@@ -60,6 +72,7 @@ open class ScanView: BaseView {
         addSubview(takePicBtn)
         addSubview(returnBtn)
         addSubview(cameraContainer)
+        addSubview(confirmationLabel)
         cameraContainer.addSubview(background)
     }
   
@@ -78,6 +91,9 @@ open class ScanView: BaseView {
                 
         viewTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
         viewTitle.widthAnchor.constraint(equalTo: widthAnchor),
+        
+        confirmationLabel.bottomAnchor.constraint(equalTo: takePicBtn.topAnchor, constant: -40),
+        confirmationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
         
         takePicBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
         takePicBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),

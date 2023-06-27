@@ -31,6 +31,7 @@ open class ScanViewController: BaseViewController<ScanView> {
       
       viewModel.sideTitle = viewTitle
       checkPermissions()
+      updateUIState()
   }
     
     open override func viewDidDisappear(_ animated: Bool) {
@@ -218,25 +219,33 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         print("view \(self.view.frame)")
         print("view 2 \(self.baseView.cameraContainer.frame)")
         
-        self.viewModel.navigateToNextView(self)
+        
         
         print("@! >>> Documento da \(viewTitle) adicionado.")
         print("@! >>> Numero de itens: \(partnerManager.documentsImages.count)")
+        
+        viewModel.takePictureState = .confirmation
+        updateUIState()
   }
     
     private func convertImageToBase64String (img: UIImage) -> String {
         return img.compress(.medium)?.base64EncodedString() ?? ""
     }
   
-  @objc
-  func takePicure() {
-    let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-    
-    if let photoPreviewType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
-        photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoPreviewType]
-        photoOutput.capturePhoto(with: photoSettings, delegate: self)
+    @objc
+    func takePicure() {
+        switch viewModel.takePictureState {
+        case .takePicture:
+          let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+          
+          if let photoPreviewType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
+              photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoPreviewType]
+              photoOutput.capturePhoto(with: photoSettings, delegate: self)
+          }
+        case .confirmation:
+          self.viewModel.navigateToNextView(self)
+        }
     }
-  }
 }
 
 extension ScanViewController {
@@ -253,9 +262,9 @@ extension ScanViewController {
         return
       }
       
-      if self.viewTitle == self.viewModel.setPhotoSide(.backView) {
-        self.baseView.takePicBtn.isUserInteractionEnabled = false
-      }
+//      if self.viewTitle == self.viewModel.setPhotoSide(.backView) {
+//        self.baseView.takePicBtn.isUserInteractionEnabled = false
+//      }
       
       if #available(iOS 11.0, *) {
         self.takePicure()
@@ -266,12 +275,34 @@ extension ScanViewController {
     baseView.didTapBack = { [weak self] in
       guard let self = self else { return }
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            self.captureSession?.stopRunning()
-        }
-      
-      self.navigationController?.popViewController(animated: true)
+        switch viewModel.takePictureState {
+        case .takePicture:
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.captureSession?.stopRunning()
+            }
+          
+          self.navigationController?.popViewController(animated: true)
         
+        case .confirmation:
+            viewModel.takePictureState = .takePicture
+            updateUIState()
+            DispatchQueue.global(qos: .background).async {
+                self.captureSession?.startRunning()
+            }
+        }
     }
   }
+    
+    private func updateUIState() {
+        switch viewModel.takePictureState {
+        case .takePicture:
+            baseView.confirmationLabel.isHidden = true
+            baseView.takePicBtn.setTitle("Fotografar", for: .normal)
+            baseView.returnBtn.setTitle("Voltar", for: .normal)
+        case .confirmation:
+            baseView.confirmationLabel.isHidden = false
+            baseView.takePicBtn.setTitle("Sim", for: .normal)
+            baseView.returnBtn.setTitle("Refazer", for: .normal)
+        }
+    }
 }
