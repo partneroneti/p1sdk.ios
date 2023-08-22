@@ -113,50 +113,49 @@ extension ScanViewController {
   }
   
   func startCaptureSession() {
-    DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-      guard let self = self else { return }
+      DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let self = self else { return }
       
-      if #available(iOS 10.0, *) {
-        self.captureSession?.automaticallyConfiguresCaptureDeviceForWideColor = true
-      }
-      
-      self.setupInputs()
-      
-      DispatchQueue.main.async {
-        self.setupPreviewLayer()
-      }
-      
-      self.setupOutput()
-      
-      self.captureSession?.commitConfiguration()
-      self.captureSession?.startRunning()
+            self.captureSession?.automaticallyConfiguresCaptureDeviceForWideColor = true
+          
+            self.setupInputs()
+
+            DispatchQueue.main.async {
+                self.setupPreviewLayer()
+            }
+
+            self.setupOutput()
+
+            self.captureSession?.commitConfiguration()
+            self.captureSession?.startRunning()
+        }
     }
-  }
   
   func setupInputs() {
     if #available(iOS 10.0, *) {
       if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
         self.backCamera = device
       } else {
-        fatalError("Sorry! There's no back camera available at this moment.")
+        return
       }
     }
     
     guard let bInput = try? AVCaptureDeviceInput(device: backCamera) else {
-      fatalError("could not create input device from back camera")
-    }
-    backInput = bInput
-      if !(captureSession?.canAddInput(backInput))! {
-      fatalError("could not add back camera input to capture session")
+      return
     }
     
-    captureSession?.addInput(backInput)
+      backInput = bInput
+      
+    if let session = captureSession, session.canAddInput(backInput) {
+        captureSession?.addInput(backInput)
+    }
   }
   
   func setupOutput() {
+     
       if ((captureSession?.canAddOutput(photoOutput)) != nil) {
-      captureSession?.addOutput(photoOutput)
-    }
+          captureSession?.addOutput(photoOutput)
+      }
     
     photoOutput.connections.first?.videoOrientation = .portrait
   }
@@ -180,6 +179,11 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
   
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         captureSession?.stopRunning()
+        
+        if let error = error {
+            showModal(title: "Atenção", message: "Ocorreu um erro ao tirar a foto. Tente novamente")
+            return
+        }
         
         guard let cgImage = photo.cgImageRepresentation() else { return }
         var previewImage = UIImage(cgImage: cgImage)
@@ -216,14 +220,6 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             byte: self.convertImageToBase64String(img:croppedImage)
         )
         
-        print("view \(self.view.frame)")
-        print("view 2 \(self.baseView.cameraContainer.frame)")
-        
-        
-        
-        print("@! >>> Documento da \(viewTitle) adicionado.")
-        print("@! >>> Numero de itens: \(partnerManager.documentsImages.count)")
-        
         viewModel.takePictureState = .confirmation
         updateUIState()
   }
@@ -236,12 +232,14 @@ extension ScanViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     func takePicure() {
         switch viewModel.takePictureState {
         case .takePicture:
-          let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-          
-          if let photoPreviewType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
-              photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoPreviewType]
-              photoOutput.capturePhoto(with: photoSettings, delegate: self)
-          }
+            let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+            
+            if let photoPreviewType = photoSettings.availablePreviewPhotoPixelFormatTypes.first, !photoOutput.connections.isEmpty {
+                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoPreviewType]
+                photoOutput.capturePhoto(with: photoSettings, delegate: self)
+            } else {
+                showModal(title: "Atenção", message: "Ocorreu um erro ao tirar a foto. Tente novamente")
+            }
         case .confirmation:
           self.viewModel.navigateToNextView(self)
         }
