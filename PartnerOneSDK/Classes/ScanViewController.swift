@@ -297,7 +297,15 @@ extension ScanViewController {
             baseView.confirmationLabel.isHidden = true
             baseView.takePicBtn.setTitle("Fotografar", for: .normal)
             baseView.returnBtn.setTitle("Voltar", for: .normal)
+            baseView.transparentImageView.isHidden = false
+            if viewTitle == "Frente"{
+                baseView.transparentImageView.image = ScanView.doc_frente
+            }else{
+                baseView.transparentImageView.image = ScanView.doc_verso
+            }
+        
         case .confirmation:
+            baseView.transparentImageView.isHidden = true
             baseView.confirmationLabel.isHidden = false
             baseView.takePicBtn.setTitle("Sim", for: .normal)
             baseView.returnBtn.setTitle("Refazer", for: .normal)
