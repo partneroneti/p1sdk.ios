@@ -6,7 +6,7 @@ extension UIImage {
         let max = max(self.size.width, self.size.height)
         if(max > MAX_SIZE_IMAGE) {
             let percents = MAX_SIZE_IMAGE / max
-            return self.resize(width: self.size.width * percents, height: self.size.height * percents)
+            return self.imageResized(to: CGSize(width: self.size.width * percents, height: self.size.height * percents))
         }
         
         return self
