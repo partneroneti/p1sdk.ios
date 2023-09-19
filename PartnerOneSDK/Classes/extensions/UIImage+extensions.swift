@@ -1,12 +1,12 @@
 extension UIImage {
     
-    private var MAX_SIZE_IMAGE: CGFloat { return 800 }
+    private var MAX_SIZE_IMAGE: CGFloat { return 1000 }
     
     func imageResizedIfNedd() -> UIImage {
         let max = max(self.size.width, self.size.height)
         if(max > MAX_SIZE_IMAGE) {
-            let percents = max / MAX_SIZE_IMAGE
-            return self.imageResized(to: CGSize(width: self.size.width / percents, height: self.size.height / percents))
+            let percents = MAX_SIZE_IMAGE / max
+            return self.resize(width: self.size.width * percents, height: self.size.height * percents)
         }
         
         return self
