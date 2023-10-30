@@ -303,6 +303,12 @@ extension ScanViewController {
             }else{
                 baseView.transparentImageView.image = ScanView.doc_verso
             }
+            baseView.transparentImageView.isHidden = false
+            if viewTitle == "Frente"{
+                baseView.transparentImageView.image = ScanView.doc_frente
+            }else{
+                baseView.transparentImageView.image = ScanView.doc_verso
+            }
         
         case .confirmation:
             baseView.transparentImageView.isHidden = true
