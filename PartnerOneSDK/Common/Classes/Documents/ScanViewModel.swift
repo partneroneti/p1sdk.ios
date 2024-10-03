@@ -12,13 +12,13 @@ enum TakePictureState  {
 
 open class ScanViewModel {
   
-    var partnerManager: PartnerManager
+    var partnerManager: BasePartnerManager
     var sideTitle: String = ""
     var transactionID: String = ""
     var documents = [AnyObject]()
     var takePictureState: TakePictureState = .takePicture
   
-  init(partnerManager: PartnerManager) {
+  init(partnerManager: BasePartnerManager) {
     self.partnerManager = partnerManager
   }
   
@@ -32,7 +32,7 @@ open class ScanViewModel {
   func navigateToNextView(_ viewController: UIViewController) {
     if sideTitle == setPhotoSide(.frontView) {
         takePictureState = .takePicture
-      let nextViewController = ScanViewController(viewModel: self, partnerManager: self.partnerManager, viewTitle: "Verso")
+      let nextViewController = ScanViewController(viewModel: self, viewTitle: "Verso")
       viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
     

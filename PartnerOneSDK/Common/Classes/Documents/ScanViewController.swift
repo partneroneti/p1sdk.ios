@@ -4,7 +4,6 @@ import AVFoundation
 open class ScanViewController: BaseViewController<ScanView> {
       
     private var viewModel: ScanViewModel
-    private var partnerManager: PartnerManager
     var viewTitle: String
 
     /// Camera Setup Variables
@@ -18,9 +17,8 @@ open class ScanViewController: BaseViewController<ScanView> {
     private var photoOutput = AVCapturePhotoOutput()
   
     //MARK: - init
-    public init(viewModel: ScanViewModel, partnerManager: PartnerManager, viewTitle: String = "") {
+    public init(viewModel: ScanViewModel, viewTitle: String = "") {
         self.viewModel = viewModel
-        self.partnerManager = partnerManager
         self.viewTitle = viewTitle
         super.init()
     }
@@ -168,7 +166,7 @@ extension ScanViewController {
         
         baseView.cameraContainer.layer.insertSublayer(previewLayer, below: baseView.background.cropReferenceView.layer)
         baseView.cameraContainer.addSubview(baseView.background)
-        baseView.sendSubview(toBack: baseView.cameraContainer)
+        baseView.sendSubviewToBack(baseView.cameraContainer)
     }
 }
 
