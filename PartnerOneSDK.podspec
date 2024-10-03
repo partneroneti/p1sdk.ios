@@ -27,20 +27,36 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-
-  s.source_files = 'PartnerOneSDK/Classes/**/*'
-  s.vendored_frameworks = 'PartnerOneSDK/Frameworks/*.framework', 'PartnerOneSDK/Frameworks/*.xcframework'
+ 
+  s.subspec 'Common' do |sp|
+    sp.source_files = 'PartnerOneSDK/Common/Classes/**/*'
+  end
   
-   s.resource_bundles = {
-     'PartnerOneSDK' => [
-        'PartnerOneSDK/Assets/*.png',
-        'PartnerOneSDK/Assets/*.jpg',
-        'PartnerOneSDK/Assets/Assets.xcassets',
-        'PartnerOneSDK/Assets/Assets.xcassets/DocumentScan/*.png',
-        'PartnerOneSDK/Assets/Fonts/*.{ttf}',
-        'PartnerOneSDK/FaceTec.strings'
-     ]
-   }
+  s.subspec 'FaceTec' do |sp|
+    sp.source_files = 'PartnerOneSDK/Facetec/Classes/**/*'
+    sp.vendored_frameworks = 'PartnerOneSDK/Facetec/Frameworks/*.framework', 'PartnerOneSDK/Facetec/Frameworks/*.xcframework'
+    
+     sp.resource_bundles = {
+       'PartnerOneSDK' => [
+          'PartnerOneSDK/Facetec/Assets/*.png',
+          'PartnerOneSDK/Facetec/Assets/*.jpg',
+          'PartnerOneSDK/Facetec/Assets/Assets.xcassets',
+          'PartnerOneSDK/Facetec/Assets/Assets.xcassets/DocumentScan/*.png',
+          'PartnerOneSDK/Facetec/Assets/Fonts/*.{ttf}',
+          'PartnerOneSDK/Facetec/FaceTec.strings'
+       ]
+     }
+     
+     sp.dependency 'PartnerOneSDK/Common'
+     
+  end
+  
+  s.subspec 'Unico' do |sp|
+    sp.source_files = 'PartnerOneSDK/Unico/Classes/**/*'
+    
+    sp.dependency 'PartnerOneSDK/Common'
+    sp.dependency 'unicocheck-ios', '~> 2.15.0'
+  end
   
    s.public_header_files = 'Pods/Classes/**/*.h'
 #   s.frameworks = 'FaceTecSDK'
