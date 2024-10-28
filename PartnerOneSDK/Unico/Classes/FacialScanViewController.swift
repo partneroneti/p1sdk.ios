@@ -45,7 +45,7 @@ public class FacialScanViewController: UIViewController {
     private func start() {
         
         manager = AcessoBioManager(viewController: self)
-        manager?.setTheme(SampleAppThemes())
+        manager?.setTheme(AppThemes())
         
         configureSelfieCamera()
         manager?.build().prepareSelfieCamera(
@@ -132,67 +132,9 @@ final class SDKConfig: AcessoBioConfigDataSource {
 
     func getMobileSdkAppId() -> String { configuration?.mobilesdkAppId ?? "" }
 
-    func getBundleIdentifier() -> String { "com.projeto.projetoexemplo"}
+    func getBundleIdentifier() -> String { configuration?.bundleIdentifier ?? ""}
 
     func getHostInfo() -> String { configuration?.hostInfo ?? "" }
     
     func getHostKey() -> String { configuration?.hostKey ?? ""}
-}
-
-final class SampleAppThemes: AcessoBioThemeDelegate {
-    func getColorBackground() -> Any! {
-        UIColor.white
-    }
-    
-    func getColorBoxMessage() -> Any! {
-        UIColor.red
-    }
-    
-    func getColorTextMessage() -> Any! {
-        UIColor.blue
-    }
-    
-    func getColorBackgroundPopupError() -> Any! {
-        UIColor.brown
-    }
-    
-    func getColorTextPopupError() -> Any! {
-        UIColor.cyan
-    }
-    
-    func getColorBackgroundButtonPopupError() -> Any! {
-        UIColor.darkGray
-    }
-    
-    func getColorTextButtonPopupError() -> Any! {
-        UIColor.purple
-    }
-    
-    func getColorBackgroundTakePictureButton() -> Any! {
-        UIColor.orange
-    }
-    
-    func getColorIconTakePictureButton() -> Any! {
-        UIColor.green
-    }
-    
-    func getColorBackgroundBottomDocument() -> Any! {
-        UIColor.magenta
-    }
-    
-    func getColorTextBottomDocument() -> Any! {
-        UIColor.gray
-    }
-    
-    func getColorSilhouetteSuccess() -> Any! {
-        UIColor.magenta
-    }
-    
-    func getColorSilhouetteError() -> Any! {
-        UIColor.orange
-    }
-    
-    func getColorSilhouetteNeutral() -> Any! {
-        UIColor.red
-    }
 }
