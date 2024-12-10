@@ -31,34 +31,10 @@ Pod::Spec.new do |s|
   s.subspec 'Common' do |sp|
     sp.source_files = 'PartnerOneSDK/Common/Classes/**/*'
   end
-  
-  s.subspec 'FaceTec' do |sp|
-    sp.source_files = 'PartnerOneSDK/Facetec/Classes/**/*'
-    sp.vendored_frameworks = 'PartnerOneSDK/Facetec/Frameworks/*.framework', 'PartnerOneSDK/Facetec/Frameworks/*.xcframework'
-    
-     sp.resource_bundles = {
-       'PartnerOneSDK' => [
-          'PartnerOneSDK/Facetec/Assets/*.png',
-          'PartnerOneSDK/Facetec/Assets/*.jpg',
-          'PartnerOneSDK/Facetec/Assets/Assets.xcassets',
-          'PartnerOneSDK/Facetec/Assets/Assets.xcassets/DocumentScan/*.png',
-          'PartnerOneSDK/Facetec/Assets/Fonts/*.{ttf}',
-          'PartnerOneSDK/Facetec/FaceTec.strings'
-       ]
-     }
-     
-     sp.dependency 'PartnerOneSDK/Common'
-     
-  end
-  
-  s.subspec 'Unico' do |sp|
-    sp.source_files = 'PartnerOneSDK/Unico/Classes/**/*'
-    
-    sp.dependency 'PartnerOneSDK/Common'
-    sp.dependency 'unicocheck-ios', '~> 2.15.0'
-  end
-  
+
+  s.source_files = 'PartnerOneSDK/Unico/Classes/**/*'
+  s.dependency 'PartnerOneSDK/Common'
+  s.dependency 'unicocheck-ios', '~> 2.15.0'
+
    s.public_header_files = 'Pods/Classes/**/*.h'
-#   s.frameworks = 'FaceTecSDK'
-#   s.dependency 'FaceTecSDK'
 end

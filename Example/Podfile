@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '12.1'
 
 target 'PartnerOneSDK_Example' do
-  pod 'PartnerOneSDK/Unico', :path => '../'
+  pod 'PartnerOneSDK', :path => '../'
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.5'
   
