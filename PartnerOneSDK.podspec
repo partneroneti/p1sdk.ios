@@ -27,13 +27,8 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
- 
-  s.subspec 'Common' do |sp|
-    sp.source_files = 'PartnerOneSDK/Common/Classes/**/*'
-  end
 
   s.source_files = 'PartnerOneSDK/Unico/Classes/**/*'
-  s.dependency 'PartnerOneSDK/Common'
   s.dependency 'unicocheck-ios', '~> 2.15.0'
 
    s.public_header_files = 'Pods/Classes/**/*.h'
