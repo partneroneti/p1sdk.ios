@@ -18,46 +18,11 @@
   "platforms": {
     "ios": "10.0"
   },
-  "public_header_files": "Pods/Classes/**/*.h",
-  "subspecs": [
-    {
-      "name": "Common",
-      "source_files": "PartnerOneSDK/Common/Classes/**/*"
-    },
-    {
-      "name": "FaceTec",
-      "source_files": "PartnerOneSDK/Facetec/Classes/**/*",
-      "vendored_frameworks": [
-        "PartnerOneSDK/Facetec/Frameworks/*.framework",
-        "PartnerOneSDK/Facetec/Frameworks/*.xcframework"
-      ],
-      "resource_bundles": {
-        "PartnerOneSDK": [
-          "PartnerOneSDK/Facetec/Assets/*.png",
-          "PartnerOneSDK/Facetec/Assets/*.jpg",
-          "PartnerOneSDK/Facetec/Assets/Assets.xcassets",
-          "PartnerOneSDK/Facetec/Assets/Assets.xcassets/DocumentScan/*.png",
-          "PartnerOneSDK/Facetec/Assets/Fonts/*.{ttf}",
-          "PartnerOneSDK/Facetec/FaceTec.strings"
-        ]
-      },
-      "dependencies": {
-        "PartnerOneSDK/Common": [
-
-        ]
-      }
-    },
-    {
-      "name": "Unico",
-      "source_files": "PartnerOneSDK/Unico/Classes/**/*",
-      "dependencies": {
-        "PartnerOneSDK/Common": [
-
-        ],
-        "unicocheck-ios": [
-          "~> 2.15.0"
-        ]
-      }
-    }
-  ]
+  "source_files": "PartnerOneSDK/Unico/Classes/**/*",
+  "dependencies": {
+    "unicocheck-ios": [
+      "~> 2.15.0"
+    ]
+  },
+  "public_header_files": "Pods/Classes/**/*.h"
 }
