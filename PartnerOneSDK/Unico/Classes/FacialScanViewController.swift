@@ -1,7 +1,7 @@
 
 import AcessoBio
 
-public struct Configuration: Decodable {
+struct Configuration: Decodable {
     let hostInfo: String?
     let hostKey: String?
     let bundleIdentifier: String?

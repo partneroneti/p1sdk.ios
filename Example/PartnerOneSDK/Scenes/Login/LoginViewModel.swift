@@ -157,29 +157,14 @@ extension LoginViewModel {
                     print("@! >>> FaceTec Certificado: ", model.objectReturn[0].certificate)
                     print("@! >>> FaceTec DeviceKeyIdentifier: ", model.objectReturn[0].deviceKeyIdentifier)
                     print("@! >>> FaceTec ProductionKey: ",  model.objectReturn[0].productionKeyText)
-                  
-                    var decodedString = ""
-                    if let decodedData = Data(base64Encoded: model.objectReturn[0].certificate) {
-                        let json = (try? JSONSerialization.jsonObject(with: decodedData, options: [])) as? [String:AnyObject]
-
-                        print("json \(json)")
-                    }
-                
-                guard let decodedData = Data(base64Encoded: model.objectReturn[0].certificate) else { return }
-                
-                let decoder = JSONDecoder()
-                let parsedData = try! decoder.decode(Configuration.self, from: decodedData)
-//                
-//                let controller = Authenticator()
-//                controller.config = parsedData
-//                self.viewController?.navigationController?.pushViewController(controller, animated: true)
                 
                     self.partnerManager.faceTecProductionKeyText = model.objectReturn[0].productionKeyText
                     self.partnerManager.faceTecPublicFaceScanEncryptionKey = model.objectReturn[0].certificate
                     self.partnerManager.faceTecDeviceKeyIdentifier = model.objectReturn[0].deviceKeyIdentifier
                 
-                    self.partnerManager.configuration = parsedData
-                
+                self.partnerManager.certificate = model
+                    .objectReturn[0].certificate
+
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                       self.setupTransactionID(self.transactionID)
                     }
