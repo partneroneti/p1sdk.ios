@@ -21,7 +21,7 @@
   "source_files": "PartnerOneSDK/Unico/Classes/**/*",
   "dependencies": {
     "unicocheck-ios": [
-      "~> 2.15.0"
+      "~> 2.16.9"
     ]
   },
   "public_header_files": "Pods/Classes/**/*.h"

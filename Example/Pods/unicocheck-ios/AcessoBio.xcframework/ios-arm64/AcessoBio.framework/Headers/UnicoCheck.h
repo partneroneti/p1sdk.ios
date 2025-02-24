@@ -36,16 +36,13 @@
 @protocol UnicoSetupProtocol;
 @class GeolocationDTO;
 @class UnicoCheckLivenessAdapter;
+@protocol SAdapterProtocol;
+@protocol SAdapterProtocolDelegate;
 
 typedef NS_ENUM(NSInteger, LanguageOrigin) {
     Native,
     Flutter,
     ReactNative
-};
-
-typedef NS_ENUM(NSInteger, CameraType) {
-    Selfie,
-    Document
 };
 
 @interface UnicoCheck:NSObject <UnicoCheckThemesDelegate, CLLocationManagerDelegate> {
@@ -74,9 +71,9 @@ typedef NS_ENUM(NSInteger, CameraType) {
     BOOL hasImplementationError;
 
     id<UnicoSetupProtocol> unicoSetup;
-    SDKConfigResponseDTOAdapter *sdkTokenResponse;
+    id<SAdapterProtocol> sAdapter;
 
-    CameraType cameraType;
+    SDKConfigResponseDTOAdapter *sdkTokenResponse;
     DocumentEnums documentType;
 
     void(^completionHandlerSetupConfig)(ErrorBio *_Nullable error);
@@ -99,7 +96,8 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
 - (id _Nullable)initWithViewController:(id _Nullable)view
                              delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
-                         sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker;
+                         sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker
+                            unicoSetup:(id<UnicoSetupProtocol>_Nonnull)unicoSetup;
 
 #pragma mark - Language Origin
 
@@ -114,6 +112,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 @property (readonly) BOOL isAutoCapture;
 @property (readonly) BOOL isSmartCamera;
 @property (nonatomic, assign) LocaleTypes localeTypes;
+@property (nonatomic, assign) EnvironmentEnum environment;
 
 #pragma mark - Config
 

@@ -31,9 +31,10 @@ public class FacialScanViewController: UIViewController {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     private func configureSelfieCamera() {
-        let smartCamera = true
+        let smartCamera = false
         manager?.setSmartFrame(smartCamera)
         manager?.setAutoCapture(smartCamera)
+        manager?.setTimeoutSession(50)
     }
     
     public override func viewDidLoad() {
@@ -46,8 +47,12 @@ public class FacialScanViewController: UIViewController {
         
         manager = AcessoBioManager(viewController: self)
         manager?.setTheme(AppThemes())
-        
-        configureSelfieCamera()
+        manager?.setSmartFrame(false)
+        manager?.setAutoCapture(false)
+        manager?.setTimeoutSession(50)
+    
+    
+        //configureSelfieCamera()
         manager?.build().prepareSelfieCamera(
             self,
             config: SDKConfig(configuration: config)

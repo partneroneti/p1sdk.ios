@@ -2,8 +2,8 @@ PODS:
   - Alamofire (4.9.1)
   - ObjectMapper (3.5.3)
   - PartnerOneSDK (0.1.0):
-    - unicocheck-ios (~> 2.15.0)
-  - unicocheck-ios (2.15.6)
+    - unicocheck-ios (~> 2.16.9)
+  - unicocheck-ios (2.16.9)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -23,8 +23,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  PartnerOneSDK: 71d829a4548ff21a55c186b9ffe9d7af5d4bb681
-  unicocheck-ios: ecd0d2de88304a3f41330c5623511ba70975de28
+  PartnerOneSDK: baadad1f0fc8b960d975d62f7c574d36b0a34137
+  unicocheck-ios: 298043b66012a399586c2b3b81612b9810ae4be5
 
 PODFILE CHECKSUM: 87f42745bc34e168892ede063ce1f574f09e7c9b
 

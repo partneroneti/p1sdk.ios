@@ -2,14 +2,13 @@
 // swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkLiveness
 // swift-module-flags-ignorable: -enable-experimental-feature AccessLevelOnImport -enable-bare-slash-regex
+import AVFAudio
 import DeveloperToolsSupport
 import FaceTecSDK
 import Foundation
 import Swift
 import UIKit
 import UnicoSdkBase
-import UnicoSdkBase/*.API*/
-import UnicoSdkBase/*.DataTransferService*/
 import UnicoSdkBase/*.Serializable*/
 @_exported import UnicoSdkLiveness
 import UnicoSdkPlugins
@@ -23,7 +22,7 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool, shouldRenewKeyBody: Swift.Bool)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {
@@ -35,7 +34,7 @@ extension UnicoSdkLiveness.PrepareData {
 }
 extension UnicoSdkLiveness.PrepareData {
   public struct FacetecData : Swift.Equatable {
-    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String)
+    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
     public static func == (a: UnicoSdkLiveness.PrepareData.FacetecData, b: UnicoSdkLiveness.PrepareData.FacetecData) -> Swift.Bool
   }
   public struct DorothyLicense : Swift.Equatable {
@@ -43,12 +42,20 @@ extension UnicoSdkLiveness.PrepareData {
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
   }
   public struct DorothyData : Swift.Equatable {
-    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense)
+    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
     public init(action: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag, b: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag) -> Swift.Bool
+  }
+  public enum PrepareDataLocalizationCode : Swift.String, Swift.Equatable {
+    case en, es, pt_BR
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
 }
 public struct Theme : Swift.Equatable {
@@ -59,6 +66,19 @@ public protocol UnicoLivenessDelegate : AnyObject {
   func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
   func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
+  func onRenewKeyBody(newKeyBody: Swift.String?)
+}
+public protocol RenewKeyBodyUseCase {
+  typealias Request = Swift.String
+  typealias Response = Swift.Result<UnicoSdkLiveness.RenewKeyBodyResponseDTO, UnicoSdkLiveness.DataTransferErrors>
+  func execute(_ request: Self.Request, completionHandler: @escaping (Self.Response) -> Swift.Void)
+}
+public struct LivenessSessionConfig {
+  public init(getToken: any UnicoSdkBase.GetToken, apiDataTransferService: any UnicoSdkBase.DataTransferService)
+}
+@_hasMissingDesignatedInitializers final public class DefaultRenewKeyBodyDataSource : UnicoSdkLiveness.RenewKeyBodyDataSource {
+  final public func renewKeyBody(_ request: Swift.String, token: Swift.String, completionHandler: @escaping (UnicoSdkLiveness.DefaultRenewKeyBodyDataSource.Response) -> Swift.Void)
+  @objc deinit
 }
 public struct LivenessError : Swift.Error, Swift.Equatable {
   public let code: Swift.Int
@@ -77,28 +97,65 @@ public protocol LivenessResult {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
   @objc deinit
 }
-public enum Env {
-  case custom(service: any UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)
-  case development(endpointKey: Swift.String, endpointIv: Swift.String)
-  case production(endpointKey: Swift.String, endpointIv: Swift.String)
+public struct Env {
+  public init(dataService: any UnicoSdkBase.DataTransferService, keyData: Swift.String, ivData: Swift.String)
 }
 public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
   func onCameraReady(unicoLivenessOpenCamera: any UnicoSdkLiveness.UnicoLivenessOpenCamera)
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 public struct OpenLivenessDTO {
-  public init(sdkKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
+  public init(sdkTokenKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
+}
+public protocol DataTransferBodyResponseDTO : Swift.Decodable, Swift.Equatable {
+}
+public protocol RenewKeyBodyDataSource {
+  typealias Response = Swift.Result<UnicoSdkLiveness.RenewKeyBodyResponseDTO, UnicoSdkLiveness.DataTransferErrors>
+  func renewKeyBody(_ request: Swift.String, token: Swift.String, completionHandler: @escaping (Self.Response) -> Swift.Void)
+}
+public struct RenewKeyBodyResponseDTO : UnicoSdkLiveness.DataTransferBodyResponseDTO {
+  public var body: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body?
+  public init(body: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body? = nil)
+  public static func == (a: UnicoSdkLiveness.RenewKeyBodyResponseDTO, b: UnicoSdkLiveness.RenewKeyBodyResponseDTO) -> Swift.Bool
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension UnicoSdkLiveness.RenewKeyBodyResponseDTO {
+  public struct Body : UnicoSdkLiveness.DataTransferBodyResponseDTO {
+    public let keyBody: Swift.String?
+    public init(keyBody: Swift.String?)
+    public static func == (a: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body, b: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body) -> Swift.Bool
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@_hasMissingDesignatedInitializers final public class DefaultRenewKeyBodyRepository {
+  final public func renewKeyBody(_ request: Swift.String, token: Swift.String, completionHandler: @escaping (UnicoSdkLiveness.DefaultRenewKeyBodyRepository.Response) -> Swift.Void)
+  @objc deinit
 }
 public protocol UnicoLivenessRepresentable {
+  var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase { get }
   func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
-  public init(viewController: UIKit.UIViewController, hostKey: Swift.String)
+  final public var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase {
+    get
+  }
+  public init(viewController: UIKit.UIViewController, hostKey: Swift.String, sessionConfiguration: UnicoSdkLiveness.LivenessSessionConfig)
   final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {
   func openCamera(data: UnicoSdkLiveness.OpenLivenessDTO, unicoLivenessDelegate: any UnicoSdkLiveness.UnicoLivenessDelegate)
+}
+public enum DataTransferErrors : Swift.Error {
+  case authenticationFailed
+  case networkFailed
+  case unknown
+  case unknownResponse
+  public static func == (a: UnicoSdkLiveness.DataTransferErrors, b: UnicoSdkLiveness.DataTransferErrors) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public protocol LivenessLoggerProvider {
   var name: Swift.String { get }
@@ -111,3 +168,8 @@ public protocol LivenessLogger {
   var maxAttempts: Swift.Int? { get set }
   var isLive: Swift.Bool? { get set }
 }
+extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.Hashable {}
+extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.RawRepresentable {}
+extension UnicoSdkLiveness.DefaultRenewKeyBodyRepository : UnicoSdkLiveness.RenewKeyBodyDataSource {}
+extension UnicoSdkLiveness.DataTransferErrors : Swift.Equatable {}
+extension UnicoSdkLiveness.DataTransferErrors : Swift.Hashable {}

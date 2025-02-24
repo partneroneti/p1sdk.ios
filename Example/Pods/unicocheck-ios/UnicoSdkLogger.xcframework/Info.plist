@@ -5,8 +5,6 @@
 	<key>AvailableLibraries</key>
 	<array>
 		<dict>
-			<key>BinaryPath</key>
-			<string>UnicoSdkLogger.framework/UnicoSdkLogger</string>
 			<key>DebugSymbolsPath</key>
 			<string>dSYMs</string>
 			<key>LibraryIdentifier</key>
@@ -24,8 +22,6 @@
 			<string>simulator</string>
 		</dict>
 		<dict>
-			<key>BinaryPath</key>
-			<string>UnicoSdkLogger.framework/UnicoSdkLogger</string>
 			<key>DebugSymbolsPath</key>
 			<string>dSYMs</string>
 			<key>LibraryIdentifier</key>
