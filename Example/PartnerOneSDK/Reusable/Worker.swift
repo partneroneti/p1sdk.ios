@@ -24,8 +24,8 @@ protocol PhotoFaceWorkerProtocol: AnyObject {
 class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
   
   let network = DataParser()
-//  var apiURL: String = "https://integracao-sodexo-homologacao.partner1.com.br/api"
-    var apiURL: String = "https://integracao-sodexo-desenvolvimento.partner1.com.br/api"
+  var apiURL: String = "https://integracao-sodexo-homologacao.partner1.com.br/api"
+//    var apiURL: String = "http://192.168.0.238:5215/api"
   let webhookURL: String = "https://webhook.site/a06873e0-57ff-49b2-8205-59fb18b5ca4c"
   
   var accessToken: String
@@ -41,9 +41,9 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
     }
     
     let body: [String:Any] = [
-      "username": "HMG.IOS",
-      "password": "eQtlC7BM",
-      "grant_type": "password"
+        "password": "ifnEQrBy",
+        "username": "SODEXO.HMG",
+        "grant_type": "client_credentials+password"
     ]
     
     network.mainParser(url: url, body: body, method: .post, completion: completion)
@@ -54,9 +54,13 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
     guard let url = URL(string: "\(apiURL)/transaction") else {
       return
     }
-    
+    let deviceID = UIDevice.current.identifierForVendor?.uuidString ?? ""
     let body: [String:Any] = [
-      "cpf": cpf
+      "cpf": cpf,
+      "product": "teste_ios_prtner",
+      "additionalData": [
+          "deviceId": deviceID
+      ]
     ]
     
     network.loginParser(url: url, body: body, header: accessToken, method: .post, completion: completion)
@@ -71,7 +75,7 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
   }
   
   func getCredentials(completion: @escaping (Response<ResponseModel<FaceTecDataModel>>) -> Void) {
-    guard let url = URL(string: "\(apiURL)/credentials/0") else {
+    guard let url = URL(string: "\(apiURL)/credentials/1") else {
       return
     }
     
@@ -110,6 +114,7 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
     guard let url = URL(string: "\(apiURL)/liveness") else {
       return
     }
+
     
     let body: [String:Any] = [
       "transactionId": transactionID,

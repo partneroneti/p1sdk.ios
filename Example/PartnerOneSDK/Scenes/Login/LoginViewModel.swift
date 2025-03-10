@@ -317,9 +317,9 @@ extension LoginViewModel {
   }
   
   func postDocuments() {
-//      partnerManager.sendDocumentPicture = {
-//      self.sendDocuments()
-//    }
+      partnerManager.sendDocumentPicture = {
+      self.sendDocuments()
+    }
   }
   
   private

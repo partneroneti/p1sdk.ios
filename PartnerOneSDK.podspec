@@ -32,4 +32,12 @@ Pod::Spec.new do |s|
   s.dependency 'unicocheck-ios', '~> 2.16.9'
 
    s.public_header_files = 'Pods/Classes/**/*.h'
+   s.resource_bundles = {
+     'PartnerOneSDK' => [
+     'PartnerOneSDK/Assets/*.png',
+     'PartnerOneSDK/Assets/*.jpg',
+     'PartnerOneSDK/Assets/Assets.xcassets',
+     'PartnerOneSDK/Assets/Assets.xcassets/DocumentScan/*.png'
+     ]
+   }
 end
