@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'PartnerOneSDK/Unico/Classes/**/*'
+  s.source_files = 'Sources/PartnerOneSDK/Unico/Classes/**/*'
   s.dependency 'unicocheck-ios', '~> 2.15.0'
 
    s.public_header_files = 'Pods/Classes/**/*.h'

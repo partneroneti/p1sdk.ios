@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "PartnerOneSDK/Unico/Classes/**/*",
+  "source_files": "Sources/PartnerOneSDK/Unico/Classes/**/*",
   "dependencies": {
     "unicocheck-ios": [
       "~> 2.15.0"

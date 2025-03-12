@@ -11,7 +11,7 @@ struct Configuration: Decodable {
 }
 
 public class FacialScanViewController: UIViewController {
-    
+
     private let partnerManager: PartnerManager
     private let config: Configuration?
     private var manager: AcessoBioManager?
@@ -22,19 +22,13 @@ public class FacialScanViewController: UIViewController {
     ) {
         self.partnerManager = partnerManager
         self.config = config
-        
+
         super.init(nibName: nil, bundle: nil)
-        
+
         start()
     }
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
-    private func configureSelfieCamera() {
-        let smartCamera = true
-        manager?.setSmartFrame(smartCamera)
-        manager?.setAutoCapture(smartCamera)
-    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +37,10 @@ public class FacialScanViewController: UIViewController {
     }
     
     private func start() {
-        
         manager = AcessoBioManager(viewController: self)
         manager?.setTheme(AppThemes())
-        
-        configureSelfieCamera()
+        manager?.setSmartFrame(false)
+        manager?.setAutoCapture(false)
         manager?.build().prepareSelfieCamera(
             self,
             config: SDKConfig(configuration: config)
@@ -101,7 +94,7 @@ extension FacialScanViewController: SelfieCameraDelegate {
     
     public func onCameraFailed(_ message: ErrorPrepare!) {
         print("\(#fileID) > \(#function) > \(message.desc)")
-        
+
         PartnerManager.livenessCancelCallBack?()
     }
 }
@@ -114,8 +107,13 @@ extension FacialScanViewController: AcessoBioSelfieDelegate {
     
     public func onErrorSelfie(_ errorBio: ErrorBio!) {
         print("\(#fileID) > \(#function) > \(errorBio.code)")
+        PartnerManager.livenessErrorCallBack?()
     }
 }
+//
+//extension FacialScanViewController: AcessoBioListener {
+//
+//}
 
 ////
 ///

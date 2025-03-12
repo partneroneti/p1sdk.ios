@@ -2,9 +2,10 @@ import UIKit
 
 open class PartnerManager: BasePartnerManager {
   
-  //MARK: - Public Properties
-  public static var livenessCallBack: ((_ faceScan:String, _ auditTrailImage:String ,_ lowQualityAuditTrailImage:String) -> Void)?
-        
+    //MARK: - Public Properties
+    public static var livenessCallBack: ((_ faceScan:String, _ auditTrailImage:String ,_ lowQualityAuditTrailImage:String) -> Void)?
+    public static var livenessErrorCallBack: (() -> Void)?
+
     public static var livenessCancelCallBack: (()-> Void)?
     
     public var faceTecDeviceKeyIdentifier: String = ""
@@ -27,7 +28,7 @@ open class PartnerManager: BasePartnerManager {
     public var getLowQualityAuditTrailImage: String = ""
 
     public func startFaceCapture() -> UIViewController {
-      let viewController = FacialScanViewController(partnerManager: self, config: configuration)
-    return viewController
+        let viewController = FacialScanViewController(partnerManager: self, config: configuration)
+        return viewController
     }
 }

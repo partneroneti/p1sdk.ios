@@ -192,23 +192,24 @@ extension StatusViewModel {
   func openFaceCapture(_ viewController: UIViewController) {
       createSession(onComplete: {
           
-          let faceCaptureViewController = self.partnerManager.startFaceCapture()
-          faceCaptureViewController.navigationController?.hidesBottomBarWhenPushed = true
-          viewController.navigationController?.present(faceCaptureViewController, animated: true)
-          print("@! >>> Abrindo face scan...")
-            
+            let faceCaptureViewController = self.partnerManager.startFaceCapture()
+            faceCaptureViewController.navigationController?.hidesBottomBarWhenPushed = true
+            viewController.navigationController?.present(faceCaptureViewController, animated: true)
+            print("@! >>> Abrindo face scan...")
+
             PartnerManager.livenessCallBack = {faceScan, auditTrailImage , lowQualityAuditTrailImage in
-                
+
                 faceCaptureViewController.dismiss(animated: true)
-                
+
                 self.setupLiveness(faceScan: faceScan, auditTrailImage: auditTrailImage, lowQualityAuditTrailImage: lowQualityAuditTrailImage)
             }
-          
+
             PartnerManager.livenessCancelCallBack = {
                 faceCaptureViewController.dismiss(animated: true)
                 self.viewController?.navigationController?.popToRootViewController(animated: true)
             }
-      })
+        }
+      )
   }
   
   private

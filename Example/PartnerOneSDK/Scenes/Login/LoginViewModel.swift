@@ -345,23 +345,25 @@ extension LoginViewModel {
     }
   
   func openFaceCapture() {
-    createSession(onComplete: {
-        let faceCaptureViewController = self.partnerManager.startFaceCapture()
-        self.viewController?.navigationController?.pushViewController(faceCaptureViewController, animated: true)
-          
-        PartnerManager.livenessCallBack = {faceScan, auditTrailImage , lowQualityAuditTrailImage in
-            self.setupLiveness(faceScan: faceScan, auditTrailImage: auditTrailImage, lowQualityAuditTrailImage: lowQualityAuditTrailImage)
-        }
+    createSession(
+        onComplete: {
+            let faceCaptureViewController = self.partnerManager.startFaceCapture( )
+            self.viewController?.navigationController?.pushViewController(faceCaptureViewController, animated: true)
+
+            PartnerManager.livenessCallBack = {faceScan, auditTrailImage , lowQualityAuditTrailImage in
+                self.setupLiveness(faceScan: faceScan, auditTrailImage: auditTrailImage, lowQualityAuditTrailImage: lowQualityAuditTrailImage)
+            }
         
-        PartnerManager.livenessCancelCallBack = {
-            self.viewController?.navigationController?.popToRootViewController(animated: true)
-        }
+            PartnerManager.livenessCancelCallBack = {
+                self.viewController?.navigationController?.popToRootViewController(animated: true)
+            }
         
-        self.partnerManager.navigateToStatus = {
+            self.partnerManager.navigateToStatus = {
 //            self.openStatus()
 //            print("Navegando para tela de Status...")
+            }
         }
-    })
+    )
   }
   
   private
