@@ -1,5 +1,8 @@
+
+import UIKit
+
 class ImageHelper {
-    
+
     static func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, imageViewWidth: CGFloat, imageViewHeight: CGFloat) -> UIImage? {
         let imageViewScaleX = (inputImage.size.width / imageViewWidth) * inputImage.scale
         let imageViewScaleY = (inputImage.size.height / imageViewHeight) * inputImage.scale
