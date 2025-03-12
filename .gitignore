@@ -17,6 +17,8 @@ xcuserdata/
 DerivedData
 *.hmap
 *.ipa
+_Pods.xcodeproj
+_Pods.xcworkspace
 
 # Bundler
 .bundle

@@ -28,8 +28,18 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Sources/PartnerOneSDK/Unico/Classes/**/*'
+  s.source_files = 'Sources/PartnerOneSDK/Classes/**/*'
   s.dependency 'unicocheck-ios', '~> 2.15.0'
+
+  s.resource_bundles = {
+    'PartnerOneSDK' => [
+       'Sources/PartnerOneSDK/Resources/Assets/*.png',
+       'Sources/PartnerOneSDK/Resources/Assets/*.jpg',
+       'Sources/PartnerOneSDK/Resources/Assets/Assets.xcassets',
+       'Sources/PartnerOneSDK/Resources/Assets/Assets.xcassets/DocumentScan/*.png',
+       'Sources/PartnerOneSDK/Resources/Fonts/*.{ttf}',
+    ]
+  }
 
    s.public_header_files = 'Pods/Classes/**/*.h'
 end

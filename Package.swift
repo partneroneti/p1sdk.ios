@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "p1-ios",
+    name: "PartnerOneSDK",
     defaultLocalization: "pt",
     products: [
         .library(name: "PartnerOneSDK", targets: ["PartnerOneSDK"]),
@@ -15,10 +15,13 @@ let package = Package(
     targets: [
         .target(
             name: "PartnerOneSDK",
+            dependencies: [
+                .product(name: "unicocheck-ios-spm", package: "unico-check-ios")
+            ],
             resources: [
                 .process("Resources")
             ]
-        ),
+        )
 //        .testTarget(name: "PartnerOneSDKTests", dependencies: ["PartnerOneSDK"])
     ]
 )
