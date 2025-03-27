@@ -1,9 +1,5 @@
-//
-//  UIViewController+extension.swift
-//  PartnerOneSDK
-//
-//  Created by Adriano Mazucato on 22/08/23.
-//
+
+import UIKit
 
 public extension UIViewController {
     

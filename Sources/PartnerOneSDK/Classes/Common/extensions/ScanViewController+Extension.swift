@@ -1,9 +1,5 @@
-//
-//  ScanViewController+Extension.swift
-//  PartnerOneSDK
-//
-//  Created by Adriano Mazucato on 27/10/23.
-//
+
+import UIKit
 
 extension ScanViewController {
     
