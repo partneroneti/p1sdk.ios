@@ -1,16 +1,31 @@
 PODS:
-  - PartnerOneSDK (0.1.0)
+  - Alamofire (4.9.1)
+  - ObjectMapper (3.5.3)
+  - PartnerOneSDK (0.1.0):
+    - unicocheck-ios (~> 2.16.9)
+  - unicocheck-ios (2.16.10)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - ObjectMapper (~> 3.5)
   - PartnerOneSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ObjectMapper
+    - unicocheck-ios
 
 EXTERNAL SOURCES:
   PartnerOneSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PartnerOneSDK: 3cda736d817e85daef32afccfb438d8323fd8e12
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  PartnerOneSDK: 94e733457502090cb8b46582f08f476f71d1a67a
+  unicocheck-ios: d52268dfeeb5002525aa8d8c6389085b846e063d
 
-PODFILE CHECKSUM: fbdd4fedbebe1a4340ea027d5aad31f4264cec46
+PODFILE CHECKSUM: 87f42745bc34e168892ede063ce1f574f09e7c9b
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2

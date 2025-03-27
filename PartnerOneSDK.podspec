@@ -28,21 +28,18 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'PartnerOneSDK/Classes/**/*'
-  s.vendored_frameworks = 'PartnerOneSDK/Frameworks/*.framework', 'PartnerOneSDK/Frameworks/*.xcframework'
-  
-   s.resource_bundles = {
-     'PartnerOneSDK' => [
-        'PartnerOneSDK/Assets/*.png',
-        'PartnerOneSDK/Assets/*.jpg',
-        'PartnerOneSDK/Assets/Assets.xcassets',
-        'PartnerOneSDK/Assets/Assets.xcassets/DocumentScan/*.png',
-        'PartnerOneSDK/Assets/Fonts/*.{ttf}',
-        'PartnerOneSDK/FaceTec.strings'
-     ]
-   }
-  
+  s.source_files = 'Sources/PartnerOneSDK/Classes/**/*'
+  s.dependency 'unicocheck-ios', '~> 2.15.0'
+
+  s.resource_bundles = {
+    'PartnerOneSDK' => [
+       'Sources/PartnerOneSDK/Resources/Assets/*.png',
+       'Sources/PartnerOneSDK/Resources/Assets/*.jpg',
+       'Sources/PartnerOneSDK/Resources/Assets/Assets.xcassets',
+       'Sources/PartnerOneSDK/Resources/Assets/Assets.xcassets/DocumentScan/*.png',
+       'Sources/PartnerOneSDK/Resources/Fonts/*.{ttf}',
+    ]
+  }
+
    s.public_header_files = 'Pods/Classes/**/*.h'
-#   s.frameworks = 'FaceTecSDK'
-#   s.dependency 'FaceTecSDK'
 end

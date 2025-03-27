@@ -18,7 +18,19 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "PartnerOneSDK/Classes/**/*",
+  "source_files": "PartnerOneSDK/Unico/Classes/**/*",
+  "dependencies": {
+    "unicocheck-ios": [
+      "~> 2.16.9"
+    ]
+  },
   "public_header_files": "Pods/Classes/**/*.h",
-  "frameworks": "FaceTecSDK"
+  "resource_bundles": {
+    "PartnerOneSDK": [
+      "PartnerOneSDK/Assets/*.png",
+      "PartnerOneSDK/Assets/*.jpg",
+      "PartnerOneSDK/Assets/Assets.xcassets",
+      "PartnerOneSDK/Assets/Assets.xcassets/DocumentScan/*.png"
+    ]
+  }
 }
