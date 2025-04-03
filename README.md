@@ -5,25 +5,49 @@
 [![License](https://img.shields.io/cocoapods/l/PartnerOneSDK.svg?style=flat)](https://cocoapods.org/pods/PartnerOneSDK)
 [![Platform](https://img.shields.io/cocoapods/p/PartnerOneSDK.svg?style=flat)](https://cocoapods.org/pods/PartnerOneSDK)
 
-## Example
+## Descrição
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+PartnerOneSDK é um SDK para iOS que fornece funcionalidades para integração com a plataforma PartnerOne. Ele inclui recursos para captura de documentos, reconhecimento facial e outras funcionalidades relacionadas.
 
-## Requirements
+## Exemplo
 
-## Installation
+Para executar o projeto de exemplo, clone o repositório e execute `pod install` a partir do diretório `Example` primeiro.
 
-PartnerOneSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## Requisitos
+
+* iOS 12.1 ou superior
+* Xcode 12.0 ou superior
+* Swift 5.0 ou superior
+
+## Instalação
+
+PartnerOneSDK pode ser instalado usando **CocoaPods** ou **Swift Package Manager (SPM)**.
+
+### CocoaPods
+
+Para instalar via CocoaPods, adicione a seguinte linha ao seu `Podfile`:
 
 ```ruby
 pod 'PartnerOneSDK'
 ```
 
-## Author
+Em seguida, execute pod install no terminal.
+
+### Swift Package Manager (SPM)
+
+Para instalar via SPM, siga estes passos:
+
+Abra seu projeto no Xcode.
+Vá para File > Swift Packages > Add Package Dependency.
+Cole a URL do repositório do PartnerOneSDK no campo de busca:
+<https://github.com/ci-mobile-unicred/PartnerOneSDK.git>
+Siga as instruções do Xcode para adicionar o pacote.
+Selecione a versão desejada ou defina as regras de versão.
+
+## Autor
 
 PartnerOne TI
 
-## License
+## Licença
 
-PartnerOneSDK is available under the MIT license. See the LICENSE file for more info.
+PartnerOneSDK está disponível sob a licença MIT. Veja o arquivo LICENSE para mais informações.
