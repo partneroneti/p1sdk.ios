@@ -186,6 +186,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLiveness.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLogger.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkPlugins.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDKResources.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
@@ -198,6 +200,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLiveness.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLogger.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkPlugins.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDKResources.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

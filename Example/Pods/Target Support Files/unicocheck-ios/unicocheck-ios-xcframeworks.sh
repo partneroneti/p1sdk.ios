@@ -59,6 +59,18 @@ variant_for_slice()
   "UnicoSdkPlugins.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
+  "USDK.xcframework/ios-arm64")
+    echo ""
+    ;;
+  "USDK.xcframework/ios-arm64_x86_64-simulator")
+    echo "simulator"
+    ;;
+  "USDKResources.xcframework/ios-arm64")
+    echo ""
+    ;;
+  "USDKResources.xcframework/ios-arm64_x86_64-simulator")
+    echo "simulator"
+    ;;
   esac
 }
 
@@ -105,6 +117,18 @@ archs_for_slice()
     echo "arm64"
     ;;
   "UnicoSdkPlugins.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
+    ;;
+  "USDK.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
+  "USDK.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
+    ;;
+  "USDKResources.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
+  "USDKResources.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   esac
@@ -196,4 +220,6 @@ install_xcframework "${PODS_ROOT}/unicocheck-ios/UnicoSdkBase.xcframework" "unic
 install_xcframework "${PODS_ROOT}/unicocheck-ios/UnicoSdkLiveness.xcframework" "unicocheck-ios" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/unicocheck-ios/UnicoSdkLogger.xcframework" "unicocheck-ios" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/unicocheck-ios/UnicoSdkPlugins.xcframework" "unicocheck-ios" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/unicocheck-ios/USDK.xcframework" "unicocheck-ios" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/unicocheck-ios/USDKResources.xcframework" "unicocheck-ios" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 
