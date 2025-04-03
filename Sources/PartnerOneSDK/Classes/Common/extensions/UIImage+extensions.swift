@@ -30,7 +30,7 @@ extension UIImage {
     }
     
     func compress(_ jpegQuality: JPEGQuality) -> Data? {
-        return self.jpegData(compressionQuality: jpegQuality.rawValue)
+        return UIImageJPEGRepresentation(self, jpegQuality.rawValue) // Use UIImageJPEGRepresentation
     }
     
     func rotate(degrees: CGFloat)-> UIImage? {

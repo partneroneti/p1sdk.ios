@@ -18,19 +18,20 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "PartnerOneSDK/Unico/Classes/**/*",
+  "source_files": "Sources/PartnerOneSDK/Classes/**/*",
   "dependencies": {
     "unicocheck-ios": [
-      "~> 2.16.9"
+      "~> 2.16.11"
     ]
   },
-  "public_header_files": "Pods/Classes/**/*.h",
   "resource_bundles": {
     "PartnerOneSDK": [
-      "PartnerOneSDK/Assets/*.png",
-      "PartnerOneSDK/Assets/*.jpg",
-      "PartnerOneSDK/Assets/Assets.xcassets",
-      "PartnerOneSDK/Assets/Assets.xcassets/DocumentScan/*.png"
+      "Sources/PartnerOneSDK/Resources/Assets/*.png",
+      "Sources/PartnerOneSDK/Resources/Assets/*.jpg",
+      "Sources/PartnerOneSDK/Resources/Assets/Assets.xcassets",
+      "Sources/PartnerOneSDK/Resources/Assets/Assets.xcassets/DocumentScan/*.png",
+      "Sources/PartnerOneSDK/Resources/Fonts/*.{ttf}"
     ]
-  }
+  },
+  "public_header_files": "Pods/Classes/**/*.h"
 }

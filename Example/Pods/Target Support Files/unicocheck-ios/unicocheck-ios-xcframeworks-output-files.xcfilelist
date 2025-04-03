@@ -1,7 +1,0 @@
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/AcessoBio.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/DeviceProfiling.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/FaceTecSDK.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkBase.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLiveness.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLogger.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkPlugins.framework
