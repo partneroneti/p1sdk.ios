@@ -178,30 +178,10 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/PartnerOneSDK/PartnerOneSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/AcessoBio.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/DeviceProfiling.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/FaceTecSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkBase.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLiveness.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLogger.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkPlugins.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDKResources.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/PartnerOneSDK/PartnerOneSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/AcessoBio.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/DeviceProfiling.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/FaceTecSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkBase.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLiveness.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLogger.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkPlugins.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDKResources.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

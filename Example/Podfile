@@ -3,7 +3,8 @@ use_frameworks!
 platform :ios, '12.1'
 
 target 'PartnerOneSDK_Example' do
-  pod 'PartnerOneSDK', :git => 'https://github.com/partneroneti/p1sdk.ios', :branch => 'main'
+#  pod 'PartnerOneSDK', :path => '../'
+  #:git => 'https://github.com/partneroneti/p1sdk.ios', :branch => 'main'
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.5'
   

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,6 +44,7 @@
 		0EDDAFE42CB6AAA90073D041 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDAFE22CB6AAA90073D041 /* DocumentBrowserViewController.swift */; };
 		0EDDAFE52CB6AAA90073D041 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDAFE12CB6AAA90073D041 /* Document.swift */; };
 		0EDDAFE62CB6AAA90073D041 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDAFE32CB6AAA90073D041 /* DocumentViewController.swift */; };
+		432996E52DBBC5500031B61F /* PartnerOneSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 432996E42DBBC5500031B61F /* PartnerOneSDK */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -138,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1A2A507C7C2603BD4D7328 /* Pods_PartnerOneSDK_Example.framework in Frameworks */,
+				432996E52DBBC5500031B61F /* PartnerOneSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +364,6 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				EF073A73293FA63100A31D9A /* Embed Frameworks */,
 				075087998593D803AF37CA9B /* [CP] Embed Pods Frameworks */,
-				0001A98E954203575333C9A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,6 +427,9 @@
 				Base,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
+			packageReferences = (
+				432996E32DBBC5500031B61F /* XCLocalSwiftPackageReference "p1sdk.ios" */,
+			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,24 +460,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0001A98E954203575333C9A5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/unicocheck-ios/unicocheck-ios.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/unicocheck-ios.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		075087998593D803AF37CA9B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,31 +469,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-PartnerOneSDK_Example/Pods-PartnerOneSDK_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/PartnerOneSDK/PartnerOneSDK.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/AcessoBio.framework/AcessoBio",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/DeviceProfiling.framework/DeviceProfiling",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/FaceTecSDK.framework/FaceTecSDK",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkBase.framework/UnicoSdkBase",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLiveness.framework/UnicoSdkLiveness",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkLogger.framework/UnicoSdkLogger",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/UnicoSdkPlugins.framework/UnicoSdkPlugins",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDK.framework/USDK",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/unicocheck-ios/USDKResources.framework/USDKResources",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PartnerOneSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcessoBio.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceProfiling.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceTecSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnicoSdkBase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnicoSdkLiveness.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnicoSdkLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnicoSdkPlugins.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/USDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/USDKResources.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -738,7 +704,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -758,7 +725,10 @@
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.projeto.projetoexemplo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -784,7 +754,10 @@
 				);
 				INFOPLIST_FILE = PartnerOneSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.projeto.projetoexemplo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -809,7 +782,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.partner1.PartnerOneSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -829,7 +806,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.partner1.PartnerOneSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -869,6 +850,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		432996E32DBBC5500031B61F /* XCLocalSwiftPackageReference "p1sdk.ios" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../p1sdk.ios;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		432996E42DBBC5500031B61F /* PartnerOneSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PartnerOneSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

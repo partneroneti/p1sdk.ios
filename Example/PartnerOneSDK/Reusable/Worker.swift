@@ -75,7 +75,7 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
   }
   
   func getCredentials(completion: @escaping (Response<ResponseModel<FaceTecDataModel>>) -> Void) {
-    guard let url = URL(string: "\(apiURL)/credentials/1") else {
+    guard let url = URL(string: "\(apiURL)/credentials/2") else {
       return
     }
     
