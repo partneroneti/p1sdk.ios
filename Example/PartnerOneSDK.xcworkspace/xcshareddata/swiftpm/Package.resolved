@@ -1,13 +1,13 @@
 {
-  "originHash" : "cd7e607c47873b8d8e59f31b0c538fd7c6f721d65158e451f8990d611be41f29",
+  "originHash" : "0d8c0e17625337e258996d4669411c461dcef6cb3a56982315ecabdbcf9ab434",
   "pins" : [
     {
       "identity" : "unico-check-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/acesso-io/unico-check-ios.git",
       "state" : {
-        "revision" : "24859bacba133c2c8d0daa7cdfe41c5ff8e75a83",
-        "version" : "2.16.12"
+        "revision" : "795d66c1d45581d188b39ad01f702da365cdaeec",
+        "version" : "2.20.1"
       }
     }
   ],
