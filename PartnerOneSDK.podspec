@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Sources/PartnerOneSDK/Classes/**/*'
-  s.dependency 'unicocheck-ios', '~> 2.20.1'
+  s.dependency 'unicocheck-ios', '~> 2.21.3'
 
   s.resource_bundles = {
     'PartnerOneSDK' => [

@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "PartnerOneSDK", targets: ["PartnerOneSDK"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/acesso-io/unico-check-ios.git", .upToNextMajor(from: "2.20.1"))
+        .package(url: "https://github.com/acesso-io/unico-check-ios.git", .upToNextMajor(from: "2.21.3"))
     ],
     targets: [
         .target(
