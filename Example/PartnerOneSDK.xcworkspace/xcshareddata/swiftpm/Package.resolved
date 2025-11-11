@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/acesso-io/unico-check-ios.git",
       "state" : {
-        "revision" : "795d66c1d45581d188b39ad01f702da365cdaeec",
-        "version" : "2.20.1"
+        "revision" : "a52fa27e2d7c6f2bea5a8f69a73a78ae43b4247e",
+        "version" : "2.21.3"
       }
     }
   ],

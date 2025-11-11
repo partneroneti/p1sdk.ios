@@ -8,6 +8,7 @@ struct Configuration: Decodable {
     let mobilesdkAppId: String?
     let projectId: String?
     let projectNumber: String?
+    let environment: String?
 }
 
 public class FacialScanViewController: UIViewController {
@@ -50,7 +51,17 @@ public class FacialScanViewController: UIViewController {
         manager?.setSmartFrame(false)
         manager?.setAutoCapture(false)
         manager?.setTimeoutSession(50)
-    
+        
+        switch config?.environment {
+        case "DEV":
+            manager?.setEnvironment(EnvironmentEnum.UAT)
+            break
+        case "PRD":
+            manager?.setEnvironment(EnvironmentEnum.PROD)
+        default:
+            break
+        }
+        
     
         //configureSelfieCamera()
         manager?.build().prepareSelfieCamera(
@@ -114,7 +125,7 @@ extension FacialScanViewController: SelfieCameraDelegate {
 // MARK: - AcessoBioSelfieDelegate
 extension FacialScanViewController: AcessoBioSelfieDelegate {
     public func onSuccessSelfie(_ result: AcessoBio.SelfieResult!) {
-        PartnerManager.livenessCallBack!(result.encrypted + "/u", result.base64, "")
+        PartnerManager.livenessCallBack!(result.encrypted + "/ID", result.base64, "")
     }
     
     public func onErrorSelfie(_ errorBio: ErrorBio!) {
@@ -131,15 +142,15 @@ final class SDKConfig: AcessoBioConfigDataSource {
         self.configuration = configuration
     }
     
-    func getProjectNumber() -> String { configuration?.projectNumber ?? "" }
+   // func getProjectNumber() -> String { configuration?.projectNumber ?? "" }
 
-    func getProjectId() -> String { configuration?.projectId ?? ""}
+//    func getProjectId() -> String { configuration?.projectId ?? ""}
 
-    func getMobileSdkAppId() -> String { configuration?.mobilesdkAppId ?? "" }
+ //   func getMobileSdkAppId() -> String { configuration?.mobilesdkAppId ?? "" }
 
-    func getBundleIdentifier() -> String { configuration?.bundleIdentifier ?? ""}
+    func getBundleIdentifier() -> String { Bundle.main.bundleIdentifier ?? ""}
 
-    func getHostInfo() -> String { configuration?.hostInfo ?? "" }
+  //  func getHostInfo() -> String { configuration?.hostInfo ?? "" }
     
     func getHostKey() -> String { configuration?.hostKey ?? ""}
 }
