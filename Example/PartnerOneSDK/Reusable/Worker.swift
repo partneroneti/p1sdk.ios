@@ -12,7 +12,7 @@ protocol PhotoFaceWorkerProtocol: AnyObject {
   func getTransactionID(transactionID: String, completion: @escaping ((Response<ResponseModel<TransactionIDModel>>) -> Void))
   func getCredentials(completion: @escaping (Response<ResponseModel<FaceTecDataModel>>) -> Void)
   func sendDocumentPictures(transactionId: String, documents: [String:Any], completion: @escaping ((Response<ResponseModel<DocumentDataModel>>) -> Void))
-  //func getSession(userAgent: String, deviceKey: String, completion: @escaping ((Response<ResponseModel<SessionIDModel>>) -> Void))
+  func getSession(userAgent: String, deviceKey: String, completion: @escaping ((Response<ResponseModel<SessionIDModel>>) -> Void))
   func getLiveness(transactionID: String,
                    faceScan: String,
                    auditTrailImage: String,
@@ -92,7 +92,7 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
     network.loginParser(url: url, body: documents, header: accessToken, method: .post, completion: completion)
   }
   
-    /*
+
   func getSession(userAgent: String,
                   deviceKey: String,
                   completion: @escaping ((Response<ResponseModel<SessionIDModel>>) -> Void)) {
@@ -102,7 +102,7 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
     
     network.getParser(url: url, header: accessToken, method: .get, isSession: true, userAgent: userAgent, xDeviceKey: deviceKey, completion: completion)
   }
-     */
+     
     
 
   

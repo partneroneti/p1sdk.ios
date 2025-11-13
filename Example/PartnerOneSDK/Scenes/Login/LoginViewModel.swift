@@ -219,7 +219,6 @@ extension LoginViewModel {
       viewController?.navigationController?.popToRootViewController(animated: false)
   }
   
-    /*
     func createSession(onComplete: @escaping ()->Void) {
     guard let deviceKeyIdentifier = deviceKeyIdentifier else { return }
     
@@ -252,7 +251,7 @@ extension LoginViewModel {
       }
     }
   }
-  */
+  
     func setupLiveness(faceScan: String, auditTrailImage: String, lowQualityAuditTrailImage: String) {
         worker.getLiveness(transactionID: self.transactionID,
                            faceScan: faceScan,
@@ -346,7 +345,7 @@ extension LoginViewModel {
     }
   
   func openFaceCapture() {
-    //createSession(onComplete: {
+    createSession(onComplete: {
         let faceCaptureViewController = self.partnerManager.startFaceCapture()
         self.viewController?.navigationController?.pushViewController(faceCaptureViewController, animated: true)
           
@@ -362,7 +361,7 @@ extension LoginViewModel {
 //            self.openStatus()
 //            print("Navegando para tela de Status...")
         }
-    //})
+    })
   }
   
   private

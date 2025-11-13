@@ -74,7 +74,7 @@ class StatusViewModel {
     }
   }
   
-  /*
+  
 func createSession(onComplete: @escaping ()->Void) {
     worker.getSession(
         userAgent: "xcode",
@@ -107,7 +107,7 @@ func createSession(onComplete: @escaping ()->Void) {
       }
     }
   }
-  */
+  
   func setupLiveness(faceScan: String, auditTrailImage: String, lowQualityAuditTrailImage: String) {
     worker.getLiveness(transactionID: self.transactionID,
                        faceScan: faceScan,
@@ -190,7 +190,7 @@ extension StatusViewModel {
   }
   
   func openFaceCapture(_ viewController: UIViewController) {
-     // createSession(onComplete: {
+      createSession(onComplete: {
           
           let faceCaptureViewController = self.partnerManager.startFaceCapture()
           faceCaptureViewController.navigationController?.hidesBottomBarWhenPushed = true
@@ -208,7 +208,7 @@ extension StatusViewModel {
                 faceCaptureViewController.dismiss(animated: true)
                 self.viewController?.navigationController?.popToRootViewController(animated: true)
             }
-     // })
+      })
   }
   
   private
