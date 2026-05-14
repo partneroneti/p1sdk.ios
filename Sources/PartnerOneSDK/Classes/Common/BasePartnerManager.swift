@@ -1,5 +1,5 @@
 import UIKit
-import FaceTecSDK
+// import FaceTecSDK (Removido na v2.22.0)
 
 open class BasePartnerManager {
   
@@ -23,7 +23,7 @@ open class BasePartnerManager {
   public var documentByte: String = ""
   
   public var wasProcessed: Bool = false
-  public var faceScanResultCallback: FaceTecFaceScanResultCallback?
+  public var faceScanResultCallback: Any? // FaceTecFaceScanResultCallback? (Removido na v2.22.0)
   
   //MARK: - init
 
@@ -52,11 +52,11 @@ open class BasePartnerManager {
   }
   
   public func createUserAgentForNewSession() -> String {
-    return FaceTec.sdk.createFaceTecAPIUserAgentString("")
+    return "" // FaceTec.sdk.createFaceTecAPIUserAgentString("") (Gerenciado internamente na v2.22.0)
   }
   
   public func createUserAgentForSession(_ sessionToken: String = "") -> String {
-    return FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken)
+    return "" // FaceTec.sdk.createFaceTecAPIUserAgentString(sessionToken) (Gerenciado internamente na v2.22.0)
   }
   
   public func setDocumentType(_ type: String) {
