@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PartnerOneSDK'
-  s.version          = '0.1.0'
+  s.version          = '2.22.0'
   s.summary          = 'A short description of PartnerOneSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Sources/PartnerOneSDK/Classes/**/*'
-  s.dependency 'unicocheck-ios', '~> 2.21.3'
+  s.dependency 'unicocheck-ios', '~> 2.22.0'
 
   s.resource_bundles = {
     'PartnerOneSDK' => [
