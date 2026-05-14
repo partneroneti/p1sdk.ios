@@ -24,9 +24,8 @@ protocol PhotoFaceWorkerProtocol: AnyObject {
 class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
   
   let network = DataParser()
-  var apiURL: String = "https://integracao-sodexo-homologacao.partner1.com.br/api"
-//    var apiURL: String = "http://192.168.0.238:5215/api"
-  let webhookURL: String = "https://webhook.site/a06873e0-57ff-49b2-8205-59fb18b5ca4c"
+  var apiURL: String = SecretsManager.shared.apiUrl
+  let webhookURL: String = SecretsManager.shared.webhookUrl
   
   var accessToken: String
   
@@ -41,8 +40,8 @@ class PhotoFaceWorker: Request, PhotoFaceWorkerProtocol, AccessTokeProtocol {
     }
     
     let body: [String:Any] = [
-        "password": "ifnEQrBy",
-        "username": "SODEXO.HMG",
+        "password": SecretsManager.shared.hmgPassword,
+        "username": SecretsManager.shared.hmgUser,
         "grant_type": "client_credentials+password"
     ]
     

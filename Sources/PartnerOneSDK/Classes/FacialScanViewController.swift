@@ -24,8 +24,6 @@ public class FacialScanViewController: UIViewController {
         self.config = config
         
         super.init(nibName: nil, bundle: nil)
-        
-        start()
     }
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -41,6 +39,14 @@ public class FacialScanViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if manager == nil {
+            start()
+        }
     }
     
     private func start() {
@@ -61,17 +67,19 @@ public class FacialScanViewController: UIViewController {
 }
 
 extension FacialScanViewController: AcessoBioCameraDelegate {
-    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)!, jsonConfigName: String!) { }
+    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)?, jsonConfigName: String?) { }
     
-    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)!, jsonConfigName: String!, bundle: Bundle!) { }
+    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)?, jsonConfigName: String?, bundle: Bundle?) { }
     
-    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)!, config: (any AcessoBio.AcessoBioConfigDataSource)!) { }
+    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)?, config: (any AcessoBioConfigDataSource)?) { }
     
-    public func prepareDocumentCamera(_ delegate: (any DocumentCameraDelegate)!, jsonConfigName: String!) { }
+    public func prepareSelfieCamera(_ delegate: (any SelfieCameraDelegate)?, config: (any AcessoBioConfigDataSource)?, prepareInfo: PrepareInfo) { }
     
-    public func prepareDocumentCamera(_ delegate: (any DocumentCameraDelegate)!, jsonConfigName: String!, bundle: Bundle!) { }
+    public func prepareDocumentCamera(_ delegate: (any DocumentCameraDelegate)?, jsonConfigName: String?) { }
     
-    public func prepareDocumentCamera(_ delegate: (any DocumentCameraDelegate)!, config: (any AcessoBio.AcessoBioConfigDataSource)!) { }
+    public func prepareDocumentCamera(_ delegate: (any DocumentCameraDelegate)?, jsonConfigName: String?, bundle: Bundle?) { }
+    
+    public func prepareDocumentCamera(_ delegate: (any DocumentCameraDelegate)?, config: (any AcessoBioConfigDataSource)?) { }
 }
 
 // MARK: - AcessoBioManagerDelegate

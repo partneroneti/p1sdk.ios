@@ -41,6 +41,8 @@
 		0EB5EE442CB6A9BF00A5058C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5EE0E2CB6A9BF00A5058C /* BaseView.swift */; };
 		0EB5EE452CB6A9BF00A5058C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5EE0A2CB6A9BF00A5058C /* Response.swift */; };
 		0EB5EE462CB6A9BF00A5058C /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5EE072CB6A9BF00A5058C /* ErrorResponse.swift */; };
+		0EB5EE912CB6A9BF00A5058C /* SecretsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5EE902CB6A9BF00A5058C /* SecretsManager.swift */; };
+		0EB5EE932CB6A9BF00A5058C /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB5EE922CB6A9BF00A5058C /* Secrets.plist */; };
 		0EDDAFE42CB6AAA90073D041 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDAFE22CB6AAA90073D041 /* DocumentBrowserViewController.swift */; };
 		0EDDAFE52CB6AAA90073D041 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDAFE12CB6AAA90073D041 /* Document.swift */; };
 		0EDDAFE62CB6AAA90073D041 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDAFE32CB6AAA90073D041 /* DocumentViewController.swift */; };
@@ -112,6 +114,8 @@
 		0EB5EE202CB6A9BF00A5058C /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		0EB5EE212CB6A9BF00A5058C /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		0EB5EE222CB6A9BF00A5058C /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		0EB5EE902CB6A9BF00A5058C /* SecretsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsManager.swift; sourceTree = "<group>"; };
+		0EB5EE922CB6A9BF00A5058C /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		0EDDAFE12CB6AAA90073D041 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		0EDDAFE22CB6AAA90073D041 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		0EDDAFE32CB6AAA90073D041 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				0EB5EE092CB6A9BF00A5058C /* Request.swift */,
 				0EB5EE0A2CB6A9BF00A5058C /* Response.swift */,
 				0EB5EE0B2CB6A9BF00A5058C /* Result.swift */,
+				0EB5EE902CB6A9BF00A5058C /* SecretsManager.swift */,
 				0EB5EE0C2CB6A9BF00A5058C /* ServerError.swift */,
 			);
 			path = Networking;
@@ -248,6 +253,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		0EB5EE942CB6A9BF00A5058C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0EB5EE922CB6A9BF00A5058C /* Secrets.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +288,7 @@
 				0EB5EE052CB6A9BF00A5058C /* Models */,
 				0EB5EE0D2CB6A9BF00A5058C /* Networking */,
 				0EB5EE192CB6A9BF00A5058C /* Reusable */,
+				0EB5EE942CB6A9BF00A5058C /* Resources */,
 				0EB5EE242CB6A9BF00A5058C /* Scenes */,
 				EF073A84293FA7B400A31D9A /* Commmon */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -428,7 +442,7 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				432996E32DBBC5500031B61F /* XCLocalSwiftPackageReference "p1sdk.ios" */,
+				432996E32DBBC5500031B61F /* XCLocalSwiftPackageReference "../../p1sdk.ios" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -445,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB5EE932CB6A9BF00A5058C /* Secrets.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 			);
@@ -531,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB5EE912CB6A9BF00A5058C /* SecretsManager.swift in Sources */,
 				0EB5EE252CB6A9BF00A5058C /* DataParser.swift in Sources */,
 				0EB5EE262CB6A9BF00A5058C /* Worker.swift in Sources */,
 				0EB5EE272CB6A9BF00A5058C /* MainButton.swift in Sources */,
@@ -852,7 +868,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		432996E32DBBC5500031B61F /* XCLocalSwiftPackageReference "p1sdk.ios" */ = {
+		432996E32DBBC5500031B61F /* XCLocalSwiftPackageReference "../../p1sdk.ios" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../p1sdk.ios;
 		};
